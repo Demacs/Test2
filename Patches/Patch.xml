@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- <Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/MapGeneratorDef[defName = "Base_Player"]/genSteps</xpath>
+				<value>
+					<li>Settlement_Anty</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ScenarioDef[defName = *]/scenario/parts</xpath>
+				<value>
+					<li Class="ScenPart_DisableMapGen">
+						<def>AT_Disable_SettlementGen</def>
+					</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ScenarioDef[defName = "AT_Scenario_Drop"]/scenario/parts/li[19]</xpath>
+			</li>
+		</operations>
+	</Operation> -->
+	
+	<Operation Class="PatchOperationFindMod">
+		<success>Always</success>
+		<mods>
+			<li>Anomaly</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName = "Nociosphere"]</xpath>
+			<value>
+				<damageMultipliers>
+					<li>
+						<damageDef>AT_AcidDamage</damageDef>
+						<multiplier>0</multiplier>
+					</li>
+					<li>
+						<damageDef>AT_AcidDamage_High</damageDef>
+						<multiplier>0</multiplier>
+					</li>
+				</damageMultipliers>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+		<success>Always</success>
+		<mods>
+			<li>Save Our Ship 2</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName = "AntyAutodoor"]</xpath>
+			<value>
+				<thingClass>SaveOurShip2.Building_ShipAirlock</thingClass>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+		<success>Always</success>
+		<mods>
+			<li>Save Our Ship 2</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ScenarioDef[defName = "SoSDerelict"]/scenario/parts</xpath>
+			<value>
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>Largecolony</project>
+				</li>
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+		<success>Always</success>
+		<mods>
+			<li>Yuran race</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+			<value>
+			
+				<PawnKindDef Name="Proty_Doll_YuranBase" ParentName="Yuran_Colonist">
+					<defName>Tribal_Proty_Yuran</defName>
+					<label>Tribal Proty Doll</label>
+					<trader>true</trader>
+					<factionLeader>true</factionLeader>
+					<isFighter>true</isFighter>
+					<initialWillRange>2~4</initialWillRange>
+					<initialResistanceRange>9~15</initialResistanceRange>
+					<backstoryFiltersOverride Inherit="false">
+						<li>
+							<categories>
+								<li>Proty_Doll</li>
+							</categories>
+						</li>
+					</backstoryFiltersOverride>
+					<defaultFactionType>ProtyHive</defaultFactionType>
+					<inventoryOptions Inherit="false">
+					</inventoryOptions>
+				</PawnKindDef>
+	
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+		<success>Always</success>
+		<mods>
+			<li>Miho, the celestial fox</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+			<value>
+			
+				<PawnKindDef ParentName="MihoCivBase">
+					<defName>Tribal_Proty_Miho</defName>
+					<label>Tribal Proty Doll</label>
+					<apparelTags>
+					  <li>MihoCommonNecessary</li>
+					</apparelTags>
+					<trader>true</trader>
+						<factionLeader>true</factionLeader>
+						<isFighter>true</isFighter>
+						<xenotypeSet>
+							<xenotypeChances>
+								<Xeno_CelestialMiho MayRequire="Ludeon.RimWorld.Biotech">0.66</Xeno_CelestialMiho>
+								<Xeno_CelestialMiho_Arctic MayRequire="Ludeon.RimWorld.Biotech">0.16</Xeno_CelestialMiho_Arctic>
+								<Xeno_CelestialMiho_Desert MayRequire="Ludeon.RimWorld.Biotech">0.12</Xeno_CelestialMiho_Desert>
+								<Xeno_CelestialMiho_Highland MayRequire="Ludeon.RimWorld.Biotech">0.02</Xeno_CelestialMiho_Highland>
+								<Xeno_CelestialMiho_Highmate MayRequire="Ludeon.RimWorld.Biotech">0.04</Xeno_CelestialMiho_Highmate>
+
+
+
+								<Baseliner MayRequire="Ludeon.RimWorld.Biotech">0</Baseliner>
+								<Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0</Dirtmole>
+								<Genie MayRequire="Ludeon.RimWorld.Biotech">0</Genie>
+								<Hussar MayRequire="Ludeon.RimWorld.Biotech">0</Hussar>
+								<Sanguophage MayRequire="Ludeon.RimWorld.Biotech">0</Sanguophage>
+								<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0</Neanderthal>
+								<Pigskin MayRequire="Ludeon.RimWorld.Biotech">0</Pigskin>
+								<Impid MayRequire="Ludeon.RimWorld.Biotech">0</Impid>
+								<Waster MayRequire="Ludeon.RimWorld.Biotech">0</Waster>
+								<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0</Yttakin>
+								<Highmate MayRequire="Ludeon.RimWorld.Biotech">0</Highmate>
+							</xenotypeChances>
+						</xenotypeSet>
+					<specificApparelRequirements>
+					  <li>
+						<bodyPartGroup>Torso</bodyPartGroup>
+						<apparelLayer>Miho_Under</apparelLayer>
+						<requiredTag>MihoCommon</requiredTag>
+						<stuff>Cloth</stuff>
+					  </li>
+					  <li>
+						<bodyPartGroup>Torso</bodyPartGroup>
+						<requiredTag>MihoCommon</requiredTag>
+						<stuff>Cloth</stuff>
+						<alternateTagChoices>
+						  <li>
+							<tag>MihoCommon</tag>
+							<chance>0.2</chance>
+						  </li>
+						  <li>
+							<tag>MihoCommonNecessary</tag>
+							<chance>0.8</chance>
+						  </li>
+						</alternateTagChoices>
+					  </li>
+					</specificApparelRequirements>
+					<backstoryFiltersOverride Inherit="false">
+							<li>
+								<categories>
+									<li>Proty_Doll</li>
+								</categories>
+							</li>
+						</backstoryFiltersOverride>
+						<defaultFactionType>ProtyHive</defaultFactionType>
+						<inventoryOptions Inherit="false">
+						</inventoryOptions>
+				</PawnKindDef>
+	
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+		<success>Always</success>
+		<mods>
+			<li>Maru Race</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+			<value>
+			
+				<PawnKindDef ParentName="MRBasePawnKind">
+					<defName>Tribal_Proty_Maru</defName>
+					<label>Tribal Proty Doll</label>
+					<factionLeader>true</factionLeader>
+					<isFighter>true</isFighter>
+					<backstoryFiltersOverride Inherit="false">
+						<li>
+							<categories>
+								<li>Proty_Doll</li>
+							</categories>
+						</li>
+					</backstoryFiltersOverride>
+					<defaultFactionType>ProtyHive</defaultFactionType>
+					<inventoryOptions Inherit="false">
+					</inventoryOptions>
+					<apparelTags>
+						<li>MR_Starting</li>
+					</apparelTags>
+					<apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+					<apparelMoney>
+						<min>550</min>
+						<max>900</max>
+					</apparelMoney>
+					<backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+					<initialWillRange>0~0</initialWillRange>
+					<initialResistanceRange>13~20</initialResistanceRange>
+                </PawnKindDef>
+	
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+		<success>Always</success>
+		<mods>
+			<li>NewRatkinPlus</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs</xpath>
+			<value>
+			
+				<PawnKindDef ParentName="RKBasePawnKind">
+					<defName>Tribal_Proty_Ratkin</defName>
+					<label>Tribal Proty Doll</label>
+					<factionLeader>true</factionLeader>
+					<isFighter>true</isFighter>
+					<backstoryFiltersOverride Inherit="false">
+						<li>
+							<categories>
+								<li>Proty_Doll</li>
+							</categories>
+						</li>
+					</backstoryFiltersOverride>
+					<defaultFactionType>ProtyHive</defaultFactionType>
+					<inventoryOptions Inherit="false">
+					</inventoryOptions>
+					<apparelMoney>
+						<min>560</min>
+						<max>2400</max>
+					</apparelMoney>
+					<apparelTags>
+						<li>RK_Apparel</li>
+						<li>RK_Servant</li>
+					</apparelTags>
+			</PawnKindDef>
+	
+			</value>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+		<success>Always</success>
+		<mods>
+			<li>RimJobWorld</li>
+		</mods>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[@Name = "AT_PawnBase"]/alienRace/generalSettings/forcedRaceTraitEntries</xpath>
+			<value>
+				<forcedRaceTraitEntries>
+					<li>
+						<defName>Bisexual</defName>
+						<chance>25</chance>
+					</li>
+					<li>
+						<defName>AT_Solidexoskeleton</defName>
+						<chance>8</chance>
+					</li>
+				</forcedRaceTraitEntries>
+			</value>
+		</match>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!-- MeleeDodgeChance
+	ShootingAccuracyPawn
+	CookSpeed
+	MiningSpeed
+	DeepDrillingSpeed
+	MiningYield -->
+	
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Biotech</li>
+	  <li>Ludeon.RimWorld.Biotech</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/statBases/ConstructionSpeed</xpath>
+      <value>
+			<ConstructionSpeed>1</ConstructionSpeed>
+      </value>
+    </match>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Biotech</li>
+	  <li>Ludeon.RimWorld.Biotech</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/statBases/MeleeDodgeChance</xpath>
+      <value>
+			<MeleeDodgeChance>1</MeleeDodgeChance>
+      </value>
+    </match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Biotech</li>
+	  <li>Ludeon.RimWorld.Biotech</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/statBases/ShootingAccuracyPawn</xpath>
+      <value>
+			<ShootingAccuracyPawn>1</ShootingAccuracyPawn>
+      </value>
+    </match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Biotech</li>
+	  <li>Ludeon.RimWorld.Biotech</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/statBases/CookSpeed</xpath>
+      <value>
+			<CookSpeed>1</CookSpeed>
+      </value>
+    </match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Biotech</li>
+	  <li>Ludeon.RimWorld.Biotech</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/statBases/MiningSpeed</xpath>
+      <value>
+			<MiningSpeed>1</MiningSpeed>
+      </value>
+    </match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Biotech</li>
+	  <li>Ludeon.RimWorld.Biotech</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/statBases/DeepDrillingSpeed</xpath>
+      <value>
+			<DeepDrillingSpeed>1</DeepDrillingSpeed>
+      </value>
+    </match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Biotech</li>
+	  <li>Ludeon.RimWorld.Biotech</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/statBases/MiningYield</xpath>
+      <value>
+			<MiningYield>1</MiningYield>
+      </value>
+    </match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Biotech</li>
+	  <li>Ludeon.RimWorld.Biotech</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/statBases/ButcheryMechanoidEfficiency</xpath>
+      <value>
+			<ButcheryMechanoidEfficiency>1</ButcheryMechanoidEfficiency>
+      </value>
+    </match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Biotech</li>
+	  <li>Ludeon.RimWorld.Biotech</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/statBases/ButcheryMechanoidSpeed</xpath>
+      <value>
+			<ButcheryMechanoidSpeed>1</ButcheryMechanoidSpeed>
+      </value>
+    </match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Biotech</li>
+	  <li>Ludeon.RimWorld.Biotech</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/statBases/ButcheryFleshEfficiency</xpath>
+      <value>
+			<ButcheryFleshEfficiency>1</ButcheryFleshEfficiency>
+      </value>
+    </match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Biotech</li>
+	  <li>Ludeon.RimWorld.Biotech</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/statBases/ButcheryFleshSpeed</xpath>
+      <value>
+			<ButcheryFleshSpeed>1</ButcheryFleshSpeed>
+      </value>
+    </match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Biotech</li>
+	  <li>Ludeon.RimWorld.Biotech</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/statBases/MedicalSurgerySuccessChance</xpath>
+      <value>
+			<MedicalSurgerySuccessChance>1</MedicalSurgerySuccessChance>
+      </value>
+    </match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Biotech</li>
+	  <li>Ludeon.RimWorld.Biotech</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="EggAnty"]/comps</xpath>
+      <value>
+		<comps>
+			<li Class="Anty_EggClass.CompProperties_Hatcher_Anty">
+				<hatcherDaystoHatch>10</hatcherDaystoHatch>
+				<hatcherPawn>AT_Colonist_Baby_Bio</hatcherPawn>
+				<hatcherxeno>AntyXenotype</hatcherxeno>
+				<DevelopmentalStageSet>Child</DevelopmentalStageSet>
+			</li>
+		</comps>
+      </value>
+    </match>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Biotech</li>
+	  <li>Ludeon.RimWorld.Biotech</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="AT_AP_Shooter_A" or defName="AT_AP_Head_A" or defName="AT_AP_Additionalarmorplate_A"]/statBases/ArmorRating_Heat</xpath>
+      <value>
+		<ArmorRating_Heat>0.65</ArmorRating_Heat>
+      </value>
+    </match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Biotech</li>
+	  <li>Ludeon.RimWorld.Biotech</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="AT_AP_SH_A"]/statBases/ArmorRating_Heat</xpath>
+      <value>
+		<ArmorRating_Heat>0.85</ArmorRating_Heat>
+      </value>
+    </match>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Biotech</li>
+	  <li>Ludeon.RimWorld.Biotech</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Anty"]/statBases/PsychicSensitivity</xpath>
+      <value>
+		<PsychicSensitivity>1</PsychicSensitivity>
+      </value>
+    </match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Biotech</li>
+	  <li>Ludeon.RimWorld.Biotech</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ScenarioDef[defName = "AT_Scenario"]/scenario/parts</xpath>
+      <value>
+		<parts>
+				<li Class="ScenPart_ConfigPage_ConfigureStartingPawns_Xenotypes">
+					<def>ConfigurePawnsXenotypes</def>
+					<pawnChoiceCount>3</pawnChoiceCount>
+					<overrideKinds>
+						<li>
+							<xenotype>AntyXenotype</xenotype>
+							<pawnKind>AT_Colonist</pawnKind>
+						</li>
+					</overrideKinds>
+					<xenotypeCounts>
+						<li>
+							<xenotype>AntyXenotype</xenotype>
+							<count>3</count>
+							<allowedDevelopmentalStages>Adult</allowedDevelopmentalStages>
+						</li>
+					</xenotypeCounts>
+				</li>
+
+				<li Class="ScenPart_PlayerPawnsArriveMethod">
+					<def>PlayerPawnsArriveMethod</def>
+					<method>DropPods</method>
+					<visible>false</visible>
+				</li>
+
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Silver</thingDef>
+					<count>800</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>MealSurvivalPack</thingDef>
+					<count>50</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>MedicineIndustrial</thingDef>
+					<count>30</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>ComponentIndustrial</thingDef>
+					<count>30</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>AT_AcidCross</thingDef>
+					<count>3</count>
+				</li>
+				<li Class="ScenPart_StartingAnimal">
+				<def>StartingAnimal</def>
+				<animalKind>Anty_prototype</animalKind>
+				<count>6</count>
+				<bondToRandomPlayerPawnChance>0</bondToRandomPlayerPawnChance>
+				</li>
+
+				<li Class="ScenPart_ScatterThingsNearPlayerStart">
+					<def>ScatterThingsNearPlayerStart</def>
+					<thingDef>Steel</thingDef>
+					<count>450</count>
+				</li>
+				<li Class="ScenPart_ScatterThingsNearPlayerStart">
+					<def>ScatterThingsNearPlayerStart</def>
+					<thingDef>WoodLog</thingDef>
+					<count>300</count>
+				</li>
+
+				<li Class="ScenPart_ScatterThingsAnywhere">
+					<def>ScatterThingsAnywhere</def>
+					<thingDef>ShipChunk</thingDef>
+					<count>3</count>
+				</li>
+				<li Class="ScenPart_ScatterThingsAnywhere">
+					<def>ScatterThingsAnywhere</def>
+					<thingDef>Steel</thingDef>
+					<count>720</count>
+				</li>
+			</parts>
+      </value>
+    </match>
+	</Operation>
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Biotech</li>
+	  <li>Ludeon.RimWorld.Biotech</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ScenarioDef[defName = "AT_Scenario_B"]/scenario/parts</xpath>
+      <value>
+		<parts>
+				<li Class="ScenPart_ConfigPage_ConfigureStartingPawns_Xenotypes">
+					<def>ConfigurePawnsXenotypes</def>
+					<pawnChoiceCount>5</pawnChoiceCount>
+					<overrideKinds>
+						<li>
+							<xenotype>AntyXenotype</xenotype>
+							<pawnKind>AT_Colonist_B</pawnKind>
+						</li>
+					</overrideKinds>
+					<xenotypeCounts>
+						<li>
+							<xenotype>AntyXenotype</xenotype>
+							<count>5</count>
+							<allowedDevelopmentalStages>Adult</allowedDevelopmentalStages>
+						</li>
+					</xenotypeCounts>
+				</li>
+
+				<li Class="ScenPart_PlayerPawnsArriveMethod">
+					<def>PlayerPawnsArriveMethod</def>
+					<method>DropPods</method>
+					<visible>false</visible>
+				</li>
+
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Silver</thingDef>
+					<count>1200</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>AT_Aphidextract</thingDef>
+					<count>75</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>MedicineIndustrial</thingDef>
+					<count>40</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>ComponentIndustrial</thingDef>
+					<count>40</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>AT_AcidRifle</thingDef>
+					 <count>3</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>AT_Sickle</thingDef>
+					<stuff>Plasteel</stuff>
+					 <count>2</count>
+				</li>
+				<li Class="ScenPart_StartingAnimal">
+					<def>StartingAnimal</def>
+					<animalKind>Anty_prototype</animalKind>
+					<count>6</count>
+					<bondToRandomPlayerPawnChance>0</bondToRandomPlayerPawnChance>
+				</li>
+
+				<li Class="ScenPart_ScatterThingsNearPlayerStart">
+					<def>ScatterThingsNearPlayerStart</def>
+					<thingDef>Steel</thingDef>
+					<count>1500</count>
+				</li>
+				<li Class="ScenPart_ScatterThingsNearPlayerStart">
+					<def>ScatterThingsNearPlayerStart</def>
+					<thingDef>WoodLog</thingDef>
+					<count>300</count>
+				</li>
+
+				<li Class="ScenPart_CreateIncident">
+					<def>CreateIncident</def>
+					<incident>RaidEnemy</incident>
+					<minDays>5</minDays>
+					<maxDays>6</maxDays>
+					<repeat>True</repeat>
+					<occurTick>300000</occurTick>
+				</li>
+			</parts>
+      </value>
+    </match>
+	</Operation>
+	
+	<!-- <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Biotech</li>
+	  <li>Ludeon.RimWorld.Biotech</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ScenarioDef[defName = "AT_Scenario_Drop"]/scenario/parts</xpath>
+      <value>
+		<parts>
+				<li Class="ScenPart_ConfigPage_ConfigureStartingPawns_Xenotypes">
+					<def>ConfigurePawnsXenotypes</def>
+					<pawnChoiceCount>10</pawnChoiceCount>
+					<overrideKinds>
+						<li>
+							<xenotype>AntyXenotype</xenotype>
+							<pawnKind>AT_Colonist_C</pawnKind>
+						</li>
+					</overrideKinds>
+					<xenotypeCounts>
+						<li>
+							<xenotype>AntyXenotype</xenotype>
+							<count>10</count>
+							<allowedDevelopmentalStages>Adult</allowedDevelopmentalStages>
+						</li>
+					</xenotypeCounts>
+				</li>
+
+				<li Class="ScenPart_PlayerPawnsArriveMethod">
+					<def>PlayerPawnsArriveMethod</def>
+					<method>DropPods</method>
+					<visible>false</visible>
+				</li>
+
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Silver</thingDef>
+					<count>750</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>AT_Aphidextract</thingDef>
+					<count>200</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>MedicineIndustrial</thingDef>
+					<count>80</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>ComponentIndustrial</thingDef>
+					<count>60</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>AT_Halberd</thingDef>
+					<stuff>Plasteel</stuff>
+					 <count>2</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>AT_Hammer</thingDef>
+					<stuff>Uranium</stuff>
+					 <count>2</count>
+				</li>
+				<li Class="ScenPart_StartingAnimal">
+					<def>StartingAnimal</def>
+					<animalKind>Anty_prototype</animalKind>
+					<count>12</count>
+					<bondToRandomPlayerPawnChance>0</bondToRandomPlayerPawnChance>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Steel</thingDef>
+					<count>750</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>WoodLog</thingDef>
+					<count>600</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>AntyExoskeleton</thingDef>
+					<count>200</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Anty_Recyclecore</thingDef>
+					<count>4</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>AntyExoskeleton_Production</thingDef>
+					<count>3</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>AntyCopyTableMachining</thingDef>
+					<count>1</count>
+				</li>
+				<li Class="ScenPart_CreateIncident" MayRequire="Ludeon.RimWorld.Royalty">
+					<def>CreateIncident</def>
+					<incident>MechCluster</incident>
+					<minDays>10</minDays>
+					<maxDays>11</maxDays>
+					<repeat>True</repeat>
+					<occurTick>300000</occurTick>
+				</li>
+				
+				<li Class="ScenPart_ScatterThingsNearPlayerStart">
+					<def>ScatterThingsNearPlayerStart</def>
+					<thingDef>AT_SKYIncoming_Explode</thingDef>
+					<count>30</count>
+				</li>
+				
+				<li Class="ScenPart_ScatterThingsAnywhere">
+					<def>ScatterThingsAnywhere</def>
+					<thingDef>AT_SKYIncoming_Explode</thingDef>
+					<count>50</count>
+				</li>
+			</parts>
+      </value>
+    </match>
+	</Operation> -->
+	
+
+</Patch>

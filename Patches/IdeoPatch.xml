@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+		<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Ideology</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PreceptDef[defName = "IdeoRole_Moralist"]/roleApparelRequirements</xpath>
+			<value>
+				<li>
+					<requirement>
+						<bodyPartGroupsMatchAny>
+							<li>UpperHead</li>
+							<li>FullHead</li>
+						</bodyPartGroupsMatchAny>
+						<requiredTags>
+							<li>AntyCommender</li>
+						</requiredTags>
+					</requirement>
+				</li>
+				<li>
+					<requirement>
+						<bodyPartGroupsMatchAny>
+							<li>Torso</li>
+						</bodyPartGroupsMatchAny>
+						<requiredTags>
+							<li>AntyCommender</li>
+						</requiredTags>
+					</requirement>
+				</li>
+			</value>
+		</match>
+		</Operation>
+
+		<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Ideology</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/PreceptDef[defName = "IdeoRole_Leader"]/roleApparelRequirements</xpath>
+			<value>
+				<li>
+					<requirement>
+						<bodyPartGroupsMatchAny>
+							<li>UpperHead</li>
+							<li>FullHead</li>
+						</bodyPartGroupsMatchAny>
+						<requiredTags>
+							<li>AntyCommender</li>
+						</requiredTags>
+					</requirement>
+				</li>
+				<li>
+					<requirement>
+						<bodyPartGroupsMatchAny>
+							<li>Torso</li>
+						</bodyPartGroupsMatchAny>
+						<requiredTags>
+							<li>AntyCommender</li>
+						</requiredTags>
+					</requirement>
+				</li>
+			</value>
+		</match>
+		</Operation>
+
+</Patch>
