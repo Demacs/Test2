@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<loadFolders>
+    <v1.2>
+        <li>1.2</li>
+		<li>Cont</li>
+        <li IfModActive="Ludeon.Rimworld.Royalty">Compatibility/DLC/Royal1.2</li>
+    </v1.2>
+	<v1.3>
+        <li>1.3</li>
+		<li>Cont</li>
+        <li IfModActive="Ludeon.Rimworld.Royalty">Compatibility/DLC/Royal1.3</li>
+        <li IfModActive="Proxyer.DESurgeries.DESurgeries">Compatibility/Mods/DESurgeries</li>
+        <li IfModActive="Proxyer.DESurgeries.HARDColor">Compatibility/Mods/DESurgeries</li>
+        <li IfModActive="Proxyer.DESurgeries.HARD">Compatibility/Mods/DESurgeries</li>
+        <li IfModActive="Proxyer.DESurgeries.DESurgeriesColor">Compatibility/Mods/DESurgeries</li>
+        <li IfModActive="Proxyer.DESurgeries.RBSEonlyColor">Compatibility/Mods/DESurgeries</li>
+        <li IfModActive="Proxyer.DESurgeries.RBSEonly">Compatibility/Mods/DESurgeries</li>
+		<li IfModActive="automatic.gunplay">Compatibility/Mods/Gunplay</li>
+
+        <li IfModActive="Aelanna.WeaponRacks">Compatibility/Mods/WeaponRacks</li>
+		
+		<li IfModActive="kentington.saveourship2">Compatibility/Mods/Sos21.3</li>
+    </v1.3>
+	<v1.4>
+        <li>1.4</li>
+		<li>Cont</li>
+		<li IfModActive="Ludeon.RimWorld.Biotech">Compatibility/DLC/Bio1.4</li>
+        <li IfModActive="Ludeon.Rimworld.Royalty">Compatibility/DLC/Royal1.4</li>
+        <li IfModActive="Proxyer.DESurgeries.DESurgeries">Compatibility/Mods/DESurgeries</li>
+        <li IfModActive="Proxyer.DESurgeries.HARDColor">Compatibility/Mods/DESurgeries</li>
+        <li IfModActive="Proxyer.DESurgeries.HARD">Compatibility/Mods/DESurgeries</li>
+        <li IfModActive="Proxyer.DESurgeries.DESurgeriesColor">Compatibility/Mods/DESurgeries</li>
+        <li IfModActive="Proxyer.DESurgeries.RBSEonlyColor">Compatibility/Mods/DESurgeries</li>
+        <li IfModActive="Proxyer.DESurgeries.RBSEonly">Compatibility/Mods/DESurgeries</li>
+		<li IfModActive="automatic.gunplay">Compatibility/Mods/Gunplay</li>
+
+        <li IfModActive="Aelanna.WeaponRacks">Compatibility/Mods/WeaponRacks</li>
+		<li IfModActive="IssacZhuang.MuzzleFlash">Compatibility/Mods/Muzzle</li>
+		
+		<li IfModActive="kentington.saveourship2">Compatibility/Mods/Sos21.4</li>
+	
+		<li IfModActive="nkm.reload">Compatibility/Mods/WeaponAmmo</li>
+	</v1.4>
+	<v1.5>
+        <li>1.5</li>
+		<li>Cont</li>
+		
+		<li IfModActive="Ludeon.RimWorld.Biotech">Compatibility/DLC/Bio1.5</li>
+        <li IfModActive="Ludeon.Rimworld.Royalty">Compatibility/DLC/Royal1.5</li>
+		
+        <li IfModActive="Proxyer.DESurgeries.DESurgeries">Compatibility/Mods/DESurgeries</li>
+        <li IfModActive="Proxyer.DESurgeries.HARDColor">Compatibility/Mods/DESurgeries</li>
+        <li IfModActive="Proxyer.DESurgeries.HARD">Compatibility/Mods/DESurgeries</li>
+        <li IfModActive="Proxyer.DESurgeries.DESurgeriesColor">Compatibility/Mods/DESurgeries</li>
+        <li IfModActive="Proxyer.DESurgeries.RBSEonlyColor">Compatibility/Mods/DESurgeries</li>
+        <li IfModActive="Proxyer.DESurgeries.RBSEonly">Compatibility/Mods/DESurgeries</li>
+		<li IfModActive="automatic.gunplay">Compatibility/Mods/Gunplay</li>
+
+        <li IfModActive="Aelanna.WeaponRacks">Compatibility/Mods/WeaponRacks</li>
+		<li IfModActive="IssacZhuang.MuzzleFlash">Compatibility/Mods/Muzzle</li>
+		
+		<!-- <li IfModActive="RooAndGloomy.YuranRaceMod">Compatibility/Race/Yuran</li> -->
+	
+		<li IfModActive="nkm.reload">Compatibility/Mods/WeaponAmmo</li>
+		
+		<li IfModActive="kentington.saveourship2">Compatibility/Mods/Sos21.5</li>
+		
+		<li IfModActive="DimonSever000.FactionLanguages">Compatibility/Mods/RimLanguages</li>
+	</v1.5>
+	<v1.6>
+        <li>1.6</li>
+		<li>Cont</li>
+		
+		<li IfModActive="Ludeon.RimWorld.Biotech">Compatibility/DLC/Bio1.6</li>
+        <li IfModActive="Ludeon.Rimworld.Royalty">Compatibility/DLC/Royal1.6</li>
+		<li IfModActive="Ludeon.RimWorld.Odyssey">Compatibility/DLC/Odyssey1.6</li>
+		
+        <li IfModActive="Proxyer.DESurgeries.DESurgeries">Compatibility/Mods/DESurgeries</li>
+        <li IfModActive="Proxyer.DESurgeries.HARDColor">Compatibility/Mods/DESurgeries</li>
+        <li IfModActive="Proxyer.DESurgeries.HARD">Compatibility/Mods/DESurgeries</li>
+        <li IfModActive="Proxyer.DESurgeries.DESurgeriesColor">Compatibility/Mods/DESurgeries</li>
+        <li IfModActive="Proxyer.DESurgeries.RBSEonlyColor">Compatibility/Mods/DESurgeries</li>
+        <li IfModActive="Proxyer.DESurgeries.RBSEonly">Compatibility/Mods/DESurgeries</li>
+		<li IfModActive="automatic.gunplay">Compatibility/Mods/Gunplay</li>
+
+        <li IfModActive="Aelanna.WeaponRacks">Compatibility/Mods/WeaponRacks</li>
+		<li IfModActive="IssacZhuang.MuzzleFlash">Compatibility/Mods/Muzzle</li>
+		
+		<!-- <li IfModActive="RooAndGloomy.YuranRaceMod">Compatibility/Race/Yuran</li> -->
+	
+		<li IfModActive="nkm.reload">Compatibility/Mods/WeaponAmmo</li>
+		
+		<!-- <li IfModActive="kentington.saveourship2">Compatibility/Mods/Sos21.5</li> -->
+		
+		<li IfModActive="DimonSever000.FactionLanguages">Compatibility/Mods/RimLanguages</li>
+	</v1.6>
+</loadFolders>

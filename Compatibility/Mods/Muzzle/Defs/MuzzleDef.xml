@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<MuzzleFlash.MuzzleFlashDef>
+        <defName>MuzzleFlashAnty_Low_A</defName>
+        <texture>MuzzleFlash/Low/MuzzleFlashAnty_A</texture>
+        <defaultSize>(0.8,0.8)</defaultSize>
+        <splits>(5,5)</splits>
+        <drawOffsetMultiplier>(0.37,0)</drawOffsetMultiplier>
+        <duration>5</duration>
+        <framesPerAnimation>5</framesPerAnimation>
+        <lightIntensity>1.4</lightIntensity>
+    </MuzzleFlash.MuzzleFlashDef>
+
+	<MuzzleFlash.MuzzleFlashDef>
+        <defName>MuzzleFlashAnty_Low_B</defName>
+        <texture>MuzzleFlash/Low/MuzzleFlashAnty_B</texture>
+        <defaultSize>(0.8,0.8)</defaultSize>
+        <splits>(5,4)</splits>
+        <drawOffsetMultiplier>(0.37,0)</drawOffsetMultiplier>
+        <duration>5</duration>
+        <framesPerAnimation>5</framesPerAnimation>
+        <lightIntensity>1.4</lightIntensity>
+    </MuzzleFlash.MuzzleFlashDef>
+	
+	<MuzzleFlash.MuzzleFlashDef>
+        <defName>MuzzleFlashAnty_Low_C</defName>
+        <texture>MuzzleFlash/Low/MuzzleFlashAnty_C</texture>
+        <defaultSize>(0.8,0.8)</defaultSize>
+        <splits>(5,4)</splits>
+        <drawOffsetMultiplier>(0.37,0)</drawOffsetMultiplier>
+        <duration>5</duration>
+        <framesPerAnimation>5</framesPerAnimation>
+        <lightIntensity>1.4</lightIntensity>
+    </MuzzleFlash.MuzzleFlashDef>
+	
+	<!--  -->
+	
+    <MuzzleFlash.MuzzleFlashDef>
+        <defName>MuzzleFlashAnty_High_A</defName>
+        <texture>MuzzleFlash/High/MuzzleFlashAnty_A</texture>
+        <defaultSize>(0.8,0.8)</defaultSize>
+        <splits>(5,5)</splits>
+        <drawOffsetMultiplier>(0.37,0)</drawOffsetMultiplier>
+        <duration>5</duration>
+        <framesPerAnimation>5</framesPerAnimation>
+        <lightIntensity>1.4</lightIntensity>
+    </MuzzleFlash.MuzzleFlashDef>
+
+	<MuzzleFlash.MuzzleFlashDef>
+        <defName>MuzzleFlashAnty_High_B</defName>
+        <texture>MuzzleFlash/High/MuzzleFlashAnty_B</texture>
+        <defaultSize>(0.8,0.8)</defaultSize>
+        <splits>(5,4)</splits>
+        <drawOffsetMultiplier>(0.37,0)</drawOffsetMultiplier>
+        <duration>5</duration>
+        <framesPerAnimation>5</framesPerAnimation>
+        <lightIntensity>1.4</lightIntensity>
+    </MuzzleFlash.MuzzleFlashDef>
+	
+	<MuzzleFlash.MuzzleFlashDef>
+        <defName>MuzzleFlashAnty_High_C</defName>
+        <texture>MuzzleFlash/High/MuzzleFlashAnty_C</texture>
+        <defaultSize>(0.8,0.8)</defaultSize>
+        <splits>(5,4)</splits>
+        <drawOffsetMultiplier>(0.37,0)</drawOffsetMultiplier>
+        <duration>5</duration>
+        <framesPerAnimation>5</framesPerAnimation>
+        <lightIntensity>1.4</lightIntensity>
+    </MuzzleFlash.MuzzleFlashDef>
+</Defs>

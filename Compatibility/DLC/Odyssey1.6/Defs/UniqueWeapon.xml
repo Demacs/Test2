@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- <ThingDef ParentName="AT_hydroheliumion_A">
+		<defName>AT_hydroheliumion_A_Unique</defName>
+		<label>Unique Red-Burst Rifle</label>
+		<description>TEST</description>
+		<graphicData>
+			<texPath>Things/Weapons/UniqueWeapon/AT_hydroheliumion_A</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<generateCommonality>0.3</generateCommonality>
+		<weaponTags Inherit="False">
+			<li>hydroheliumion_A_Unique</li>
+			<li>ammo_none</li>
+		</weaponTags>
+		<recipeMaker Inherit="False" IsNull="True" />
+		<comps Inherit="False">
+			<li Class="CompProperties_EquippableAbilityReloadable" />
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Biocodable"/>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Art">
+				<nameMaker>NamerArtWeaponGun</nameMaker>
+				<descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+				<minQualityForArtistic>Excellent</minQualityForArtistic>
+			</li>
+			<li Class="CompProperties_UniqueWeapon">
+				<weaponCategories>
+					<li>Ranged</li>
+					<li>BulletFiring</li>
+					<li>Gun</li>
+					<li>Pistol</li>
+					<li>Sighted</li>
+				</weaponCategories>
+				<namerLabels>
+					<li>TESTSETSETSETSETSETSETSET</li>
+				</namerLabels>
+			</li>
+		</comps>
+	</ThingDef> -->
+
+</Defs>

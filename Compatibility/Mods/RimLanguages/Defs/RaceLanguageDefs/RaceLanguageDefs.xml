@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<FactionLanguages.RaceLanguageDef>
+		<defName>AntyLanguages</defName>
+		<label>Anty language</label>
+		<description>It is a language system that uses both sounds and pheromones. It is a difficult language to learn because it allows for active encryption when necessary.</description>
+		<nameMaker>AntyLanguage</nameMaker>
+		<learningDifficulty>1.25</learningDifficulty>
+	</FactionLanguages.RaceLanguageDef>
+</Defs>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+  <ThoughtDef ParentName="BaseHeardBaby">
+    <defName>CryingBaby_B</defName>
+    <icon>Things/Mote/Childcare/BabyCrying/BabyCryingIcon</icon>
+    <stages>
+      <li>
+        <label>product crying</label>
+        <description>Crying is so interesting!</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="BaseHeardBaby">
+    <defName>GigglingBaby_B</defName>
+    <icon>Things/Mote/Childcare/BabyGiggling/BabyGigglingIcon</icon>
+    <stages>
+      <li>
+        <label>product giggling</label>
+        <description>Why are you smiling like that?</description>
+        <baseMoodEffect>-1</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>BabySick_B</defName>
+    <workerClass>ThoughtWorker_BabySick</workerClass>
+    <stackLimit>3</stackLimit>
+    <stages>
+      <li>
+        <label>my product {BABY_nameDef} is sick</label>
+        <description>My product is sick. It's medical practice time!</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+      <li>
+        <label>my products are sick</label>
+        <description>My products are sick. It's medical practice time!</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+    </stages>
+    <validWhileDespawned>true</validWhileDespawned>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+    </nullifyingTraits>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>ChildInGrowthVat_B</defName>
+    <stackLimit>3</stackLimit>
+    <workerClass>ThoughtWorker_ChildInGrowthVat</workerClass>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+    </nullifyingTraits>
+    <nullifyingPrecepts>
+      <li>GrowthVat_Essential</li>
+      <li>GrowthVat_Prohibited</li>
+    </nullifyingPrecepts>
+    <stages>
+      <li>
+        <label>my child is in a growth vat</label>
+        <description>You can get to the battlefield faster!</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

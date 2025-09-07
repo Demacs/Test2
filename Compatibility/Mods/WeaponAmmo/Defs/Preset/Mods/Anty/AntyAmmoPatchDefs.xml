@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<Reload.Defs.AmmoDef ParentName="ResourceBase">
+		<defName>AT_Ammo_Acid_Special</defName>
+		<label>Anty Acid capsule</label>
+		<description>Anty Acid capsule.</description>
+		<stackLimit>250</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<thingCategories>
+			<li>R_Category_Ammo</li>
+		</thingCategories>
+		<tradeTags>
+			<li>Ammo_Anty</li>
+		</tradeTags>
+		<graphicData>
+			<texPath>Things/Weapons/AT_Ammo_A</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<intricate>true</intricate>
+		<techLevel>Industrial</techLevel>
+		<statBases>
+			<MaxHitPoints>40</MaxHitPoints>
+			<Mass>0.05</Mass>
+			<Flammability>0.2</Flammability>
+			<DeteriorationRate>1.0</DeteriorationRate>
+			<MarketValue>4.8</MarketValue>
+		</statBases>
+		<costList>
+			<AntyExoskeleton>2</AntyExoskeleton>
+		</costList>
+		<ammoType>Special</ammoType>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>2</explosiveRadius>
+				<explosiveDamageType>AT_AcidBomb</explosiveDamageType>
+				<explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
+				<startWickHitPointsPercent>0.7</startWickHitPointsPercent>
+				<wickTicks>30~60</wickTicks>
+			</li>
+		</comps>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<productCount>10</productCount>
+			<bulkRecipeCount>30</bulkRecipeCount>
+			<recipeUsers>
+				<li>AntyCopyTableMachining</li>
+			</recipeUsers>
+			<skillRequirements>
+				<Crafting>3</Crafting>
+			</skillRequirements>
+			<researchPrerequisite>AntyAcidweapon_B</researchPrerequisite>
+			<unfinishedThingDef>R_Industrial_Ammo_Unfinish</unfinishedThingDef>
+		</recipeMaker>
+	</Reload.Defs.AmmoDef>
+	
+	<Reload.Defs.ReloadPresetDef>
+        <defName>AT_AcidCross</defName>
+        <ammoDef>R_Ammo_Primitive</ammoDef>
+        <magazineCapacity>1</magazineCapacity>
+        <reloadTicks>40</reloadTicks>
+		<moveSpeedPenalty>2</moveSpeedPenalty>
+    </Reload.Defs.ReloadPresetDef>
+	
+	<Reload.Defs.ReloadPresetDef>
+        <defName>AT_AcidRifle</defName>
+        <ammoDef>AT_Ammo_Acid_Special</ammoDef>
+        <magazineCapacity>12</magazineCapacity>
+        <reloadTicks>70</reloadTicks>
+        <beginSound>AssaultRifle_Begin</beginSound>
+        <endSound>AssaultRifle_End</endSound>
+		<moveSpeedPenalty>2</moveSpeedPenalty>
+    </Reload.Defs.ReloadPresetDef>
+	
+	<Reload.Defs.ReloadPresetDef>
+        <defName>AT_AcidAssaultRifle</defName>
+        <ammoDef>AT_Ammo_Acid_Special</ammoDef>
+        <magazineCapacity>40</magazineCapacity>
+        <reloadTicks>60</reloadTicks>
+        <beginSound>AssaultRifle_Begin</beginSound>
+        <endSound>AssaultRifle_End</endSound>
+		<moveSpeedPenalty>2</moveSpeedPenalty>
+    </Reload.Defs.ReloadPresetDef>
+	
+	<Reload.Defs.ReloadPresetDef>
+        <defName>AT_AcidLineRifle</defName>
+        <ammoDef>AT_Ammo_Acid_Special</ammoDef>
+        <magazineCapacity>40</magazineCapacity>
+        <reloadTicks>60</reloadTicks>
+        <beginSound>AssaultRifle_Begin</beginSound>
+        <endSound>AssaultRifle_End</endSound>
+		<moveSpeedPenalty>2</moveSpeedPenalty>
+    </Reload.Defs.ReloadPresetDef>
+	
+	<Reload.Defs.ReloadPresetDef>
+        <defName>AT_LMG</defName>
+        <ammoDef>AT_Ammo_Acid_Special</ammoDef>
+        <magazineCapacity>150</magazineCapacity>
+        <reloadTicks>155</reloadTicks>
+        <beginSound>LMG_Begin</beginSound>
+        <endSound>LMG_End</endSound>
+		<moveSpeedPenalty>2</moveSpeedPenalty>
+    </Reload.Defs.ReloadPresetDef>
+	
+	<Reload.Defs.ReloadPresetDef>
+        <defName>AT_AcidLauncher</defName>
+        <ammoDef>AT_Ammo_Acid_Special</ammoDef>
+        <magazineCapacity>4</magazineCapacity>
+        <reloadTicks>200</reloadTicks>
+        <loadsAmountPerReload>1</loadsAmountPerReload>
+        <beginSound>Launcher_Begin</beginSound>
+        <reloadSound>Launcher_Reload</reloadSound>
+        <endSound>Launcher_End</endSound>
+		<moveSpeedPenalty>2</moveSpeedPenalty>
+    </Reload.Defs.ReloadPresetDef>
+	
+	<Reload.Defs.ReloadPresetDef>
+        <defName>AT_Combatglue</defName>
+        <ammoDef>AT_Ammo_Acid_Special</ammoDef>
+        <magazineCapacity>4</magazineCapacity>
+        <reloadTicks>200</reloadTicks>
+        <loadsAmountPerReload>1</loadsAmountPerReload>
+        <beginSound>Launcher_Begin</beginSound>
+        <reloadSound>Launcher_Reload</reloadSound>
+        <endSound>Launcher_End</endSound>
+		<moveSpeedPenalty>2</moveSpeedPenalty>
+    </Reload.Defs.ReloadPresetDef>
+	
+	<Reload.Defs.AmmoDef ParentName="ResourceBase">
+		<defName>AT_Ammo_SuperAcid_Special</defName>
+		<label>Anty SuperAcid capsule</label>
+		<description>Anty SuperAcid capsule.</description>
+		<graphicData>
+			<texPath>Things/Weapons/AT_Ammo_B</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<intricate>true</intricate>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<MaxHitPoints>40</MaxHitPoints>
+			<Mass>0.05</Mass>
+			<Flammability>0.2</Flammability>
+			<DeteriorationRate>1.0</DeteriorationRate>
+			<MarketValue>20</MarketValue>
+		</statBases>
+		<stackLimit>250</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<thingCategories>
+			<li>R_Category_Ammo</li>
+		</thingCategories>
+		<tradeTags>
+			<li>Ammo_Anty</li>
+		</tradeTags>
+		<costList>
+			<Refleum>2</Refleum>
+		</costList>
+		<ammoType>Special</ammoType>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>6</explosiveRadius>
+				<explosiveDamageType>AT_AcidBomb_B</explosiveDamageType>
+				<explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
+				<startWickHitPointsPercent>0.5</startWickHitPointsPercent>
+				<wickTicks>30~60</wickTicks>
+			</li>
+		</comps>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<productCount>10</productCount>
+			<bulkRecipeCount>30</bulkRecipeCount>
+			<recipeUsers>
+				<li>AntyCopyTableMachining</li>
+			</recipeUsers>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<researchPrerequisite>hydroheliumion</researchPrerequisite>
+			<unfinishedThingDef>R_Spacer_Ammo_Unfinish</unfinishedThingDef>
+		</recipeMaker>
+	</Reload.Defs.AmmoDef>
+	
+	<Reload.Defs.ReloadPresetDef>
+        <defName>AT_hydroheliumion_A</defName>
+        <ammoDef>AT_Ammo_SuperAcid_Special</ammoDef>
+        <magazineCapacity>25</magazineCapacity>
+        <reloadTicks>55</reloadTicks>
+        <beginSound>AssaultRifle_Begin</beginSound>
+        <endSound>hydroheliumion_A</endSound>
+		<moveSpeedPenalty>2</moveSpeedPenalty>
+    </Reload.Defs.ReloadPresetDef>
+	
+	<Reload.Defs.ReloadPresetDef>
+        <defName>AT_hydroheliumion_B</defName>
+        <ammoDef>AT_Ammo_SuperAcid_Special</ammoDef>
+        <magazineCapacity>30</magazineCapacity>
+        <reloadTicks>55</reloadTicks>
+        <beginSound>AssaultRifle_Begin</beginSound>
+        <endSound>hydroheliumion_A</endSound>
+		<moveSpeedPenalty>2</moveSpeedPenalty>
+    </Reload.Defs.ReloadPresetDef>
+	
+	<Reload.Defs.ReloadPresetDef>
+        <defName>AT_hydroheliumion_C</defName>
+        <ammoDef>AT_Ammo_SuperAcid_Special</ammoDef>
+        <magazineCapacity>1</magazineCapacity>
+        <reloadTicks>55</reloadTicks>
+        <beginSound>AssaultRifle_Begin</beginSound>
+        <endSound>hydroheliumion_A</endSound>
+		<moveSpeedPenalty>2</moveSpeedPenalty>
+    </Reload.Defs.ReloadPresetDef>
+	
+	<Reload.Defs.ReloadPresetDef>
+        <defName>AT_hydroheliumion_D</defName>
+        <ammoDef>AT_Ammo_SuperAcid_Special</ammoDef>
+        <magazineCapacity>100</magazineCapacity>
+        <reloadTicks>55</reloadTicks>
+        <beginSound>AssaultRifle_Begin</beginSound>
+        <endSound>hydroheliumion_A</endSound>
+		<moveSpeedPenalty>2</moveSpeedPenalty>
+    </Reload.Defs.ReloadPresetDef>
+
+</Defs>

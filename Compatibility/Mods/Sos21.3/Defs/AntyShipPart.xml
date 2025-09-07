@@ -1,0 +1,1225 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- 		<crewDef>AT_Colonist_C</crewDef>
+		<marineDef>AT_Power_A</marineDef>
+		<marineHeavyDef>AT_Power_B</marineHeavyDef>
+
+		<combatPoints>562</combatPoints>
+		<marineDef>AT_Power_A</marineDef>
+		<marineHeavyDef>AT_Power_B</marineHeavyDef>
+
+		<crewDef>AT_Power_A_B</crewDef>
+		<marineDef>AT_Power_A</marineDef>
+		<marineHeavyDef>AT_Power_B</marineHeavyDef>		-->
+
+	<!-- corners -->
+	<ThingDef ParentName="BuildingBase" Name="ShipCornerBase_AT" Abstract="True">
+		<thingClass>Building</thingClass>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+				<edgeTop>Damage/Edge</edgeTop>
+				<edgeBot>Damage/Edge</edgeBot>
+				<edgeLeft>Damage/Edge</edgeLeft>
+				<edgeRight>Damage/Edge</edgeRight>
+			</damageData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<blockWind>true</blockWind>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>1</fillPercent>
+		<blockLight>true</blockLight>
+		<canOverlapZones>false</canOverlapZones>
+		<statBases>
+			<WorkToBuild>800</WorkToBuild>
+			<Flammability>0</Flammability>
+		</statBases>
+		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<placeWorkers>
+		</placeWorkers>
+		<rotatable>true</rotatable>
+		<building>
+			<shipPart>true</shipPart>
+		</building>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<staticSunShadowHeight>1.0</staticSunShadowHeight>
+		<holdsRoof>true</holdsRoof>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<comps>
+		<li Class="CompProperties_Power">
+			<compClass>CompPowerTransmitter</compClass>
+			<transmitsPower>true</transmitsPower>
+		</li>
+		<li Class="CompProperties_ShipHeat">
+			<compClass>CompShipHeat</compClass>
+		</li>
+    </comps>
+	</ThingDef>
+	<ThingDef ParentName="ShipCornerBase_AT" Name="ShipCorner_AT" Abstract="True">
+		<designatorDropdown>AT_Wall_Ship_Corner</designatorDropdown>
+		<description>Angled armor for a ship's outer hull.</description>
+		<designationCategory>Antybuilding</designationCategory>
+		<researchPrerequisites>
+			<li>ShipBasics</li>
+			<li>Largecolony</li>
+		</researchPrerequisites>
+		
+		<damageMultipliers>
+      <li>
+        <damageDef>Thump</damageDef>
+        <multiplier>0.5</multiplier>
+      </li>
+      <li>
+        <damageDef>Bomb</damageDef>
+        <multiplier>0.25</multiplier>
+      </li>
+      <li>
+        <damageDef>BombSuper</damageDef>
+        <multiplier>0.25</multiplier>
+      </li>
+	  <li>
+        <damageDef>AT_AcidBullet</damageDef>
+        <multiplier>0.2</multiplier>
+      </li>
+	  <li>
+        <damageDef>AT_AcidBomb</damageDef>
+        <multiplier>0.2</multiplier>
+      </li>
+	  <li>
+        <damageDef>AT_AcidBomb_B</damageDef>
+        <multiplier>0.2</multiplier>
+      </li>
+	  
+	  <li>
+        <damageDef>BombACI</damageDef>
+        <multiplier>0.25</multiplier>
+      </li>
+	  <li>
+        <damageDef>BombACII</damageDef>
+        <multiplier>0.25</multiplier>
+      </li>
+	  <li>
+        <damageDef>BombACIII</damageDef>
+        <multiplier>0.25</multiplier>
+      </li>
+	  <li>
+        <damageDef>ShipLaserSmall</damageDef>
+        <multiplier>0.8</multiplier>
+      </li>
+	  <li>
+        <damageDef>ShipPlasmaSmall</damageDef>
+        <multiplier>0.25</multiplier>
+      </li>
+	  <li>
+        <damageDef>BombKinetic</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+	  <li>
+        <damageDef>ShipLaserTwo</damageDef>
+        <multiplier>0.8</multiplier>
+      </li>
+	  <li>
+        <damageDef>ShipPlasmaLarge</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+	  <li>
+        <damageDef>BombKineticLarge</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+	  
+	  <li>
+        <damageDef>ShipTorpedoBomb</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+	  <li>
+        <damageDef>ShipTorpedoBombSuper</damageDef>
+        <multiplier>0.01</multiplier>
+      </li>
+    </damageMultipliers>
+	</ThingDef>
+	
+	<DesignatorDropdownGroupDef>
+		<defName>AT_Wall_Ship_Corner</defName>
+		<label>Anty hull corner</label>
+	</DesignatorDropdownGroupDef>
+
+	<ThingDef ParentName="ShipCorner_AT">
+		<defName>AT_Wall_Ship_Corner_OneOne</defName>
+		<label>Anty hull corner (1x1)</label>
+		<graphicData>
+			<texPath>Things/Building/Linked/AT_ShipAngle1x1</texPath>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>500</MaxHitPoints>
+		</statBases>
+		<costList>
+			<Steel>8</Steel>
+			<Refleum>2</Refleum>
+		</costList>
+	</ThingDef>
+	<ThingDef ParentName="ShipCorner_AT">
+		<defName>AT_Wall_Ship_Corner_OneOneFlip</defName>
+		<label>Anty hull corner (1x1) flip</label>
+		<graphicData>
+			<texPath>Things/Building/Linked/AT_ShipAngle1x1Flip</texPath>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>500</MaxHitPoints>
+		</statBases>
+		<costList>
+			<Steel>8</Steel>
+			<Refleum>2</Refleum>
+		</costList>
+	</ThingDef>
+	<ThingDef ParentName="ShipCorner_AT">
+		<defName>AT_Wall_Ship_Corner_OneTwo</defName>
+		<label>Anty hull corner (1x2)</label>
+		<graphicData>
+			<texPath>Things/Building/Linked/AT_ShipAngle1x2</texPath>
+			<drawSize>(1,2)</drawSize>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+		</statBases>
+		<costList>
+			<Steel>16</Steel>
+			<Refleum>2</Refleum>
+		</costList>
+		<size>(1,2)</size>
+	</ThingDef>
+	<ThingDef ParentName="ShipCorner_AT">
+		<defName>AT_Wall_Ship_Corner_OneTwoFlip</defName>
+		<label>Anty hull corner (1x2) flip</label>
+		<graphicData>
+			<texPath>Things/Building/Linked/AT_ShipAngle1x2Flip</texPath>
+			<drawSize>(1,2)</drawSize>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+		</statBases>
+		<costList>
+			<Steel>16</Steel>
+			<Refleum>2</Refleum>
+		</costList>
+		<size>(1,2)</size>
+	</ThingDef>
+	<ThingDef ParentName="ShipCorner_AT">
+		<defName>AT_Wall_Ship_Corner_OneThree</defName>
+		<label>Anty hull corner (1x3)</label>
+		<graphicData>
+			<texPath>Things/Building/Linked/AT_ShipAngle1x3</texPath>
+			<drawSize>(1,3)</drawSize>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>1500</MaxHitPoints>
+		</statBases>
+		<costList>
+			<Steel>24</Steel>
+			<Refleum>2</Refleum>
+		</costList>
+		<size>(1,3)</size>
+	</ThingDef>
+	<ThingDef ParentName="ShipCorner_AT">
+		<defName>AT_Wall_Ship_Corner_OneThreeFlip</defName>
+		<label>Anty hull corner (1x3) flip</label>
+		<graphicData>
+			<texPath>Things/Building/Linked/AT_ShipAngle1x3Flip</texPath>
+			<drawSize>(1,3)</drawSize>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>1500</MaxHitPoints>
+		</statBases>
+		<costList>
+			<Steel>24</Steel>
+			<Refleum>2</Refleum>
+		</costList>
+		<size>(1,3)</size>
+	</ThingDef>
+	
+	<!-- bridge -->
+	<ThingDef ParentName="BuildingBase">
+		<defName>AT_Ship_ComputerCore</defName>
+		<label>Anty ship core</label>
+		<designatorDropdown>Ship_Bridges</designatorDropdown>
+		<thingClass>Building_ShipBridge</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Ship/ShipComputerCore_Anty</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<researchPrerequisites>
+			<li>ShipComputerCore</li>
+			<li>Largecolony</li>
+		</researchPrerequisites>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<blockWind>true</blockWind>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>1</fillPercent>
+		<blockLight>true</blockLight>
+		<canOverlapZones>false</canOverlapZones>
+		<statBases>
+			<WorkToBuild>16000</WorkToBuild>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Flammability>0</Flammability>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<description>A computer core capable of housing a superhumanlike AI who can guide a ship on interstellar journeys. Once in orbit, automatically scans for nearby sites of interest. If you put one part on it...it could be something else.</description>
+		<size>(3,3)</size>
+		<designationCategory>Antybuilding</designationCategory>
+		<comps>
+			<li Class="CompProperties_ShipPart"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>1000</basePowerConsumption>
+				<transmitsPower>true</transmitsPower>
+			</li>
+			<li Class="CompProperties_LongRangeMineralScannerSpaceAI"/>
+			<li Class="CompProperties_RoofMe"/>
+			<li Class="CompProperties_ShipHeat">
+				<compClass>CompShipHeat</compClass>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_BuildingConsciousness">
+				<holoHediff>SoSHologramMachine</holoHediff>
+				<holoWeapon>HologramLaser</holoWeapon>
+				<holoWeaponMelee>HologramSword</holoWeaponMelee>
+				<holoShield>HologramShield</holoShield>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>3</glowRadius>
+				<glowColor>(255,0,0,0)</glowColor>
+			</li>
+		</comps>
+		<placeWorkers>
+		</placeWorkers>
+		<rotatable>false</rotatable>
+		<building>
+			<shipPart>true</shipPart>
+		</building>
+		<costList>
+			<Refleum>250</Refleum>
+			<ComponentSpacer>4</ComponentSpacer>
+			<Gold>70</Gold>
+			<Anty_Recyclecore>25</Anty_Recyclecore>
+		</costList>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<staticSunShadowHeight>1.0</staticSunShadowHeight>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<resourcesFractionWhenDeconstructed>0.8</resourcesFractionWhenDeconstructed>
+	</ThingDef>
+	
+	<!-- small -->
+	<ThingDef ParentName="BaseShipArtilleryBuilding">
+	<designatorDropdown>ShipTurrets_Laser</designatorDropdown>
+		<defName>ShipTurret_AT_Redburst</defName>
+		<label>Red-Burst turret</label>
+		<!-- <designatorDropdown>ShipTurrets_Laser</designatorDropdown> -->
+		<designationCategory>Antybuilding</designationCategory>
+		<description>A starship turret that fires a powerful Red-Burst. While it can inflict devastating damage, it is only usable at short range.\n\nWill vent heat to the surrounding room if no heatsink capacity is available.</description>
+		<graphicData>
+			<texPath>Things/Building/Ship/ShipTurret_AT_Redburst</texPath>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_ShipHeat">
+				<compClass>CompShipHeatSource</compClass>
+				<heatPerPulse>5</heatPerPulse>
+				<energyToFire>7</energyToFire>
+				<maxRange>50</maxRange>
+				<projectileSpeed>25</projectileSpeed>
+				<pointDefense>true</pointDefense>
+				<singleFireSound>ShipCombatLaser</singleFireSound>
+				<threat>15</threat>
+			</li>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>150</basePowerConsumption>
+				<transmitsPower>true</transmitsPower>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+		</comps>
+		<building>
+			<turretGunDef>ShipTurret_AT_RedburstTOP</turretGunDef>
+			<turretBurstWarmupTime>1</turretBurstWarmupTime>
+			<turretBurstCooldownTime>3.5</turretBurstCooldownTime>
+		</building>
+		<costList>
+			<Uranium>40</Uranium>
+			<Refleum>200</Refleum>
+			<ComponentSpacer>3</ComponentSpacer>
+			<Anty_Recyclecore>3</Anty_Recyclecore>
+		</costList>
+		<uiIconPath>Things/Building/Ship/ShipTurret_AT_Redburst_Icon</uiIconPath>
+		<researchPrerequisites>
+			<li>ShipTurretLaser</li>
+			<li>hydroheliumion_B</li>
+		</researchPrerequisites>
+		<altitudeLayer>WorldClipper</altitudeLayer>
+	</ThingDef>
+	<ThingDef ParentName="BaseShipArtilleryWeapon">
+		<defName>ShipTurret_AT_RedburstTOP</defName>
+		<label>Red-Burst</label>
+		<description>Red-Burst cannon. Short-ranged but devastating.</description>
+		<graphicData>
+			<texPath>Things/Building/Ship/ShipTurret_AT_RedburstTOP</texPath>
+		</graphicData>
+		<verbs>
+			<li>
+				<label>shoot Red-Burst</label>
+				<verbClass>Verb_LaunchProjectileShip</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<range>12.9</range>
+				<warmupTime>0</warmupTime>
+				<noiseRadius>4</noiseRadius>
+				<burstShotCount>10</burstShotCount>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<requireLineOfSight>false</requireLineOfSight>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<defaultProjectile>Bullet_Fake_Laser</defaultProjectile>
+				<spawnDef>Proj_AT_Redburst</spawnDef>
+				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+			</li>
+		</verbs>
+	</ThingDef>
+	<ThingDef ParentName="BaseGrenadeProjectile">
+		<defName>Proj_AT_Redburst</defName>
+		<label>Red-Burst beam</label>
+		<thingClass>Projectile_ExplosiveShipCombatLaser</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Ship/HullPlateTransparent</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<explosionRadius>2.1</explosionRadius>
+			<damageDef>AT_AcidBomb_B</damageDef>
+			<damageAmountBase>20</damageAmountBase>
+			<speed>200</speed>
+			<preExplosionSpawnThingDef>Filth_ApproachSmoke_B</preExplosionSpawnThingDef>
+			<preExplosionSpawnChance>0.02</preExplosionSpawnChance>
+		</projectile>
+	</ThingDef>
+	
+	<!-- Large -->
+	<ThingDef ParentName="BaseShipArtilleryBuilding">
+	<designatorDropdown>ShipTurrets_Laser</designatorDropdown>
+		<defName>ShipTurret_AT_Redburst_Large</defName>
+		<label>Red-Burst large turret</label>
+		<!-- <designatorDropdown>ShipTurrets_Laser</designatorDropdown> -->
+		<designationCategory>Antybuilding</designationCategory>
+		<description>A starship turret that fires a powerful Red-Burst. While it can inflict devastating damage, it is only usable at short range.\n\nWill vent heat to the surrounding room if no heatsink capacity is available.</description>
+		<graphicData>
+			<texPath>Things/Building/Ship/ShipTurret_AT_Redburst</texPath>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_ShipHeat">
+				<compClass>CompShipHeatSource</compClass>
+				<heatPerPulse>40</heatPerPulse>
+				<energyToFire>120</energyToFire>
+				<maxRange>50</maxRange>
+				<projectileSpeed>25</projectileSpeed>
+				<pointDefense>false</pointDefense>
+				<singleFireSound>ShipCombatLaser</singleFireSound>
+				<threat>40</threat>
+			</li>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>280</basePowerConsumption>
+				<transmitsPower>true</transmitsPower>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+		</comps>
+		<building>
+			<turretGunDef>ShipTurret_AT_RedburstTOP_Large</turretGunDef>
+			<turretBurstWarmupTime>1</turretBurstWarmupTime>
+			<turretBurstCooldownTime>19</turretBurstCooldownTime>
+		</building>
+		<costList>
+			<Uranium>60</Uranium>
+			<Refleum>350</Refleum>
+			<ComponentSpacer>3</ComponentSpacer>
+			<Anty_Recyclecore>3</Anty_Recyclecore>
+		</costList>
+		<uiIconPath>Things/Building/Ship/ShipTurret_AT_Redburst_Icon</uiIconPath>
+		<researchPrerequisites>
+			<li>ShipTurretLaser</li>
+			<li>hydroheliumion_B</li>
+		</researchPrerequisites>
+		<altitudeLayer>WorldClipper</altitudeLayer>
+		<size>(3,3)</size>
+	</ThingDef>
+	<ThingDef ParentName="BaseShipArtilleryWeapon">
+		<defName>ShipTurret_AT_RedburstTOP_Large</defName>
+		<label>Red-Burst</label>
+		<description>Red-Burst cannon. Short-ranged but devastating.</description>
+		<graphicData>
+			<texPath>Things/Building/Ship/ShipTurret_AT_RedburstTOPL</texPath>
+		</graphicData>
+		<verbs>
+			<li>
+				<label>shoot Red-Burst</label>
+				<verbClass>Verb_LaunchProjectileShip</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<range>12.9</range>
+				<warmupTime>0</warmupTime>
+				<noiseRadius>4</noiseRadius>
+				<burstShotCount>10</burstShotCount>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<requireLineOfSight>false</requireLineOfSight>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<defaultProjectile>Bullet_Fake_Laser</defaultProjectile>
+				<spawnDef>Proj_AT_Redburst_Large</spawnDef>
+				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+			</li>
+		</verbs>
+	</ThingDef>
+	<ThingDef ParentName="BaseGrenadeProjectile">
+		<defName>Proj_AT_Redburst_Large</defName>
+		<label>Red-Burst beam</label>
+		<thingClass>Projectile_ExplosiveShipCombatLaser</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Ship/HullPlateTransparent</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<explosionRadius>2.1</explosionRadius>
+			<damageDef>AT_AcidBomb_B</damageDef>
+			<damageAmountBase>60</damageAmountBase>
+			<speed>200</speed>
+			<preExplosionSpawnThingDef>Filth_ApproachSmoke_B</preExplosionSpawnThingDef>
+			<preExplosionSpawnChance>0.02</preExplosionSpawnChance>
+		</projectile>
+	</ThingDef>
+	
+	<!-- XLarge -->
+	<ThingDef ParentName="BaseShipArtilleryBuilding">
+	<designatorDropdown>ShipTurrets_Laser</designatorDropdown>
+		<defName>ShipTurret_AT_Redburst_XLarge</defName>
+		<label>Red-Burst Xlarge turret</label>
+		<!-- <designatorDropdown>ShipTurrets_Laser</designatorDropdown> -->
+		<designationCategory>Antybuilding</designationCategory>
+		<description>A starship turret that fires a powerful Red-Burst. While it can inflict devastating damage, it is only usable at short range.\n\nWill vent heat to the surrounding room if no heatsink capacity is available.</description>
+		<graphicData>
+			<texPath>Things/Building/Ship/ShipTurret_AT_Redburst</texPath>
+			<drawSize>(5,5)</drawSize>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_ShipHeat">
+				<compClass>CompShipHeatSource</compClass>
+				<heatPerPulse>100</heatPerPulse>
+				<energyToFire>340</energyToFire>
+				<maxRange>50</maxRange>
+				<projectileSpeed>25</projectileSpeed>
+				<pointDefense>false</pointDefense>
+				<singleFireSound>ShipCombatLaser</singleFireSound>
+				<threat>100</threat>
+			</li>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>280</basePowerConsumption>
+				<transmitsPower>true</transmitsPower>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+		</comps>
+		<building>
+			<turretGunDef>ShipTurret_AT_RedburstTOP_XLarge</turretGunDef>
+			<turretBurstWarmupTime>1</turretBurstWarmupTime>
+			<turretBurstCooldownTime>24</turretBurstCooldownTime>
+		</building>
+		<costList>
+			<Uranium>110</Uranium>
+			<Refleum>550</Refleum>
+			<ComponentSpacer>3</ComponentSpacer>
+			<Anty_Recyclecore>3</Anty_Recyclecore>
+		</costList>
+		<uiIconPath>Things/Building/Ship/ShipTurret_AT_Redburst_Icon</uiIconPath>
+		<researchPrerequisites>
+			<li>ShipTurretLaser</li>
+			<li>hydroheliumion_B</li>
+		</researchPrerequisites>
+		<altitudeLayer>WorldClipper</altitudeLayer>
+		<size>(5,5)</size>
+	</ThingDef>
+	<ThingDef ParentName="BaseShipArtilleryWeapon">
+		<defName>ShipTurret_AT_RedburstTOP_XLarge</defName>
+		<label>Red-Burst</label>
+		<description>Red-Burst cannon. Short-ranged but devastating.</description>
+		<graphicData>
+			<texPath>Things/Building/Ship/ShipTurret_AT_RedburstTOPXL</texPath>
+		</graphicData>
+		<verbs>
+			<li>
+				<label>shoot Red-Burst</label>
+				<verbClass>Verb_LaunchProjectileShip</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<range>12.9</range>
+				<warmupTime>0</warmupTime>
+				<noiseRadius>4</noiseRadius>
+				<burstShotCount>10</burstShotCount>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<requireLineOfSight>false</requireLineOfSight>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<defaultProjectile>Bullet_Fake_Laser</defaultProjectile>
+				<spawnDef>Proj_AT_Redburst_XLarge</spawnDef>
+				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+			</li>
+		</verbs>
+	</ThingDef>
+	<ThingDef ParentName="BaseGrenadeProjectile">
+		<defName>Proj_AT_Redburst_XLarge</defName>
+		<label>Red-Burst beam</label>
+		<thingClass>Projectile_ExplosiveShipCombatLaser</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Ship/HullPlateTransparent</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<explosionRadius>2.1</explosionRadius>
+			<damageDef>AT_AcidBomb_B</damageDef>
+			<damageAmountBase>100</damageAmountBase>
+			<speed>200</speed>
+			<preExplosionSpawnThingDef>AT_Proj_AT_Redburst_XLargeBomb</preExplosionSpawnThingDef>
+			<preExplosionSpawnChance>0.1</preExplosionSpawnChance>
+		</projectile>
+	</ThingDef>
+	<ThingDef ParentName="AT_SuicideBase">
+		<defName>AT_Proj_AT_Redburst_XLargeBomb</defName>
+		<label>Red-Burst beam</label>
+		<description>.</description>
+		<graphicData>
+			<texPath>Things/Item/pheromone/BB</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>2.1</explosiveRadius>
+				<explosiveDamageType>AT_AcidBomb_B</explosiveDamageType>
+				<damageAmountBase>100</damageAmountBase>
+				<preExplosionSpawnThingDef>Filth_ApproachSmoke_B</preExplosionSpawnThingDef>
+				<preExplosionSpawnChance>0.5</preExplosionSpawnChance>
+				<explosiveExpandPerStackcount>1</explosiveExpandPerStackcount>
+				<startWickHitPointsPercent>1</startWickHitPointsPercent>
+				<wickTicks>0</wickTicks>
+			</li>
+			<li Class="CompProperties_ProximityFuseAnty">
+				<target>AT_SuicideBomb</target>
+				<radius>1.9</radius>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<!-- Large Charge -->
+	<ThingDef ParentName="BaseShipArtilleryBuilding">
+	<!-- <thingClass>Building_ShipTurretTorpedo</thingClass> -->
+	<designatorDropdown>ShipTurrets_Laser</designatorDropdown>
+	<drawerType>MapMeshOnly</drawerType>
+		<defName>ShipTurret_AT_Redburst_Large_Charge</defName>
+		<label>Long-range Red-Burst turret</label>
+		<designationCategory>Antybuilding</designationCategory>
+		<description>A starship Cannon that fires a powerful Red-Burst.\n\nWill vent heat to the surrounding room if no heatsink capacity is available.</description>
+		<graphicData>
+			<texPath>Things/Building/Ship/ShipTurret_AT_RedburstCharge</texPath>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_ShipHeat">
+				<compClass>CompShipHeatSource</compClass>
+				<heatPerPulse>35</heatPerPulse>
+				<energyToFire>340</energyToFire>
+				<maxRange>200</maxRange>
+				<projectileSpeed>25</projectileSpeed>
+				<pointDefense>false</pointDefense>
+				<singleFireSound>ShotAnty_A</singleFireSound>
+				<threat>200</threat>
+			</li>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>280</basePowerConsumption>
+				<transmitsPower>true</transmitsPower>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+		</comps>
+		<building>
+			<turretGunDef>ShipTurret_AT_RedburstTOP_Large_Charge</turretGunDef>
+			<turretBurstWarmupTime>1</turretBurstWarmupTime>
+			<turretBurstCooldownTime>6.5</turretBurstCooldownTime>
+		</building>
+		<costList>
+			<Uranium>110</Uranium>
+			<Refleum>550</Refleum>
+			<ComponentSpacer>3</ComponentSpacer>
+			<Anty_Recyclecore>3</Anty_Recyclecore>
+		</costList>
+		<uiIconPath>Things/Building/Ship/ShipTurret_AT_RedburstCharge</uiIconPath>
+		<researchPrerequisites>
+			<li>ShipTurretLaser</li>
+			<li>hydroheliumion_B</li>
+		</researchPrerequisites>
+		<altitudeLayer>WorldClipper</altitudeLayer>
+		<size>(3,3)</size>
+	</ThingDef>
+	<ThingDef ParentName="BaseShipArtilleryWeapon">
+		<defName>ShipTurret_AT_RedburstTOP_Large_Charge</defName>
+		<label>Red-Burst</label>
+		<description>Red-Burst cannon.</description>
+		<graphicData>
+			<texPath>Things/Building/Ship/HullPlateTransparent</texPath>
+		</graphicData>
+		<verbs>
+			<li>
+				<label>shoot Red-Burst</label>
+				<verbClass>Verb_LaunchProjectileShip</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<range>12.9</range>
+				<warmupTime>0</warmupTime>
+				<noiseRadius>4</noiseRadius>
+				<burstShotCount>1</burstShotCount>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<requireLineOfSight>false</requireLineOfSight>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<defaultProjectile>Proj_AT_Redburst_Large_Charge_Fake</defaultProjectile>
+				<spawnDef>Proj_AT_Redburst_Large_Charge</spawnDef>
+				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+				<soundCast>ShotAnty_A</soundCast>
+			</li>
+		</verbs>
+	</ThingDef>
+	<ThingDef ParentName="BaseBullet">
+		<defName>Proj_AT_Redburst_Large_Charge_Fake</defName>
+		<label>Red-Burst</label>
+		<graphicData>
+			<texPath>Things/Weapons/kanC</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>(5, 8)</drawSize>
+		</graphicData>
+		<thingClass>Projectile_SoSFake</thingClass>
+		<projectile>
+			<damageDef>Bomb</damageDef>
+			<speed>100</speed>
+			<explosionRadius>0</explosionRadius>
+			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+		</projectile>
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+		<seeThroughFog>true</seeThroughFog>
+	</ThingDef>
+	<ThingDef ParentName="BaseGrenadeProjectile">
+		<defName>Proj_AT_Redburst_Large_Charge</defName>
+		<label>Red-Burst beam</label>
+		<thingClass>Projectile_ExplosiveShipCombat</thingClass>
+		<graphicData>
+			<texPath>Things/Weapons/kanC</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>(5, 8)</drawSize>
+		</graphicData>
+		<projectile>
+			<explosionRadius>3.9</explosionRadius>
+			<damageDef>AT_AcidBomb_B</damageDef>
+			<damageAmountBase>400</damageAmountBase>
+			<speed>100</speed>
+			<soundExplode>fallimpactAnty_A</soundExplode>
+		</projectile>
+	</ThingDef>
+	
+	<!-- Missile -->
+	<ThingDef ParentName="BaseShipArtilleryBuilding">
+		<defName>ShipTurret_AT_RedburstMissile</defName>
+		<label>Red-Burst Torpedo swarm</label>
+		<designationCategory>Antybuilding</designationCategory>
+		<description>A starship turret that fires a powerful Red-Burst Torpedo. While it can inflict devastating damage, it is only usable at short range.\n\nWill vent heat to the surrounding room if no heatsink capacity is available.\n\n Red-Burst Torpedo is Immune to shields and intercepts.</description>
+		<graphicData>
+			<texPath>Things/Building/Ship/ShipTurret_AT_Redburst</texPath>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_ShipHeat">
+				<compClass>CompShipHeatSource</compClass>
+				<heatPerPulse>111</heatPerPulse>
+				<energyToFire>5</energyToFire>
+				<maxRange>50</maxRange>
+				<projectileSpeed>0.4</projectileSpeed>
+				<pointDefense>false</pointDefense>
+				<singleFireSound>Mortar_LaunchA</singleFireSound>
+				<threat>40</threat>
+			</li>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>280</basePowerConsumption>
+				<transmitsPower>true</transmitsPower>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+		</comps>
+		<building>
+			<turretGunDef>ShipTurret_AT_RedburstMissileTOP</turretGunDef>
+			<turretBurstWarmupTime>1</turretBurstWarmupTime>
+			<turretBurstCooldownTime>79</turretBurstCooldownTime>
+		</building>
+		<costList>
+			<Uranium>60</Uranium>
+			<Refleum>350</Refleum>
+			<ComponentSpacer>3</ComponentSpacer>
+			<Anty_Recyclecore>3</Anty_Recyclecore>
+		</costList>
+		<uiIconPath>Things/Building/Ship/ShipTurret_AT_RedburstMissile</uiIconPath>
+		<researchPrerequisites>
+			<li>ShipTurretLaser</li>
+			<li>hydroheliumion_B</li>
+		</researchPrerequisites>
+		<altitudeLayer>WorldClipper</altitudeLayer>
+		<size>(3,3)</size>
+	</ThingDef>
+	<ThingDef ParentName="BaseShipArtilleryWeapon">
+		<defName>ShipTurret_AT_RedburstMissileTOP</defName>
+		<label>Red-Burst</label>
+		<description>Red-Burst Torpedo launcher. Short-ranged but devastating. Red-Burst Torpedo is Immune to shields and intercepts.</description>
+		<graphicData>
+			<texPath>Things/Building/Ship/ShipTurret_AT_RedburstMissile</texPath>
+		</graphicData>
+		<verbs>
+			<li>
+				<label>shoot Red-Burst</label>
+				<verbClass>Verb_LaunchProjectileShip</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<range>12.9</range>
+				<warmupTime>0</warmupTime>
+				<noiseRadius>4</noiseRadius>
+				<burstShotCount>9</burstShotCount>
+				<ticksBetweenBurstShots>600</ticksBetweenBurstShots>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<requireLineOfSight>false</requireLineOfSight>
+				<soundCast>Mortar_LaunchA</soundCast>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<defaultProjectile>AT_RedburstMissile_Fake</defaultProjectile>
+				<spawnDef>AT_RedburstMissile</spawnDef>
+				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+			</li>
+		</verbs>
+	</ThingDef>
+	<ThingDef ParentName="BaseBullet">
+		<defName>AT_RedburstMissile_Fake</defName>
+		<label>Red-Burst Torpedo</label>
+		<graphicData>
+			<texPath>Things/Building/Ship/AT_RedburstMissile</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<thingClass>Projectile_SoSFake</thingClass>
+		<projectile>
+			<damageDef>Bomb</damageDef>
+			<speed>200</speed>
+			<explosionRadius>0</explosionRadius>
+			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+			<soundAmbient>MortarRound_Ambient</soundAmbient>
+		</projectile>
+		<interactionCellIcon>Bullet_Torpedo_HighExplosive</interactionCellIcon> <!-- This is such a horrible kludge, but it's a way to attach a ThingDef to another ThingDef!-->
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+	</ThingDef>
+	<ThingDef ParentName="BaseGrenadeProjectile">
+		<defName>AT_RedburstMissile</defName>
+		<label>Red-Burst Torpedo</label>
+		<graphicData>
+			<texPath>Things/Building/Ship/AT_RedburstMissile</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<thingClass>TorgueAnty.Projectile_Torgue_Rocket</thingClass>
+		<projectile Class="TorgueAnty.TorgueProjectileProps">
+			<explosionRadius>1.9</explosionRadius>
+			<damageDef>AT_AcidBomb_C</damageDef>
+			<damageAmountBase>5</damageAmountBase>
+			<speed>8</speed>
+			<subProjectile>Bullethydroheliumion_C_B</subProjectile>
+			<clusterCount>10</clusterCount>
+			<clusterRadius>8</clusterRadius>
+			<preExplosionSpawnThingDef>Filth_ApproachSmoke_B</preExplosionSpawnThingDef>
+			<preExplosionSpawnChance>1</preExplosionSpawnChance>
+			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+			<soundAmbient>MortarRound_Ambient</soundAmbient>
+		</projectile>
+		<comps>
+			<li Class="CompProperties_Spawner">
+				<requiresPower>false</requiresPower>
+				<thingToSpawn>Filth_ApproachSmoke_A</thingToSpawn>
+				<spawnCount>1</spawnCount>
+				<spawnIntervalRange><min>5</min><max>5</max></spawnIntervalRange>
+				<writeTimeLeftToSpawn>false</writeTimeLeftToSpawn>
+				<showMessageIfOwned>false</showMessageIfOwned>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<!-- engines -->
+	<ThingDef ParentName="BuildingBase">
+		<defName>AT_Ship_Engine_Small</defName>
+		<label>small Red-Burst engine</label>
+		<designatorDropdown>Ship_Engines</designatorDropdown>
+		<thingClass>Building</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/Ship/AT_Ship_Engine_Small</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(7,5.5)</drawSize>
+		</graphicData>
+		<researchPrerequisites>
+			<li>ShipEngine</li>
+			<li>Largecolony</li>
+		</researchPrerequisites>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<blockWind>true</blockWind>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>1</fillPercent>
+		<blockLight>true</blockLight>
+		<canOverlapZones>false</canOverlapZones>
+		<statBases>
+			<WorkToBuild>20000</WorkToBuild>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<Flammability>0</Flammability>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<description>A Red-Burst engine capable of launching a ship into orbit. Not suitable for interplanetary travel.</description>
+		<size>(2,3)</size>
+		<receivesSignals>true</receivesSignals>
+		<designationCategory>Antybuilding</designationCategory>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<transmitsPower>true</transmitsPower>
+			</li>
+			<li Class="CompProperties_ShipPart"/>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Refuelable">
+				<fuelCapacity>500.0</fuelCapacity>
+				<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+				<fuelFilter>
+					<thingDefs>
+						<li>Refleum</li>
+					</thingDefs>
+				</fuelFilter>
+				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+				<autoRefuelPercent>25</autoRefuelPercent>
+				<showFuelGizmo>false</showFuelGizmo>
+				<drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
+				<drawFuelGaugeInMap>false</drawFuelGaugeInMap>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+			<li Class="CompProperties_RoofMe"/>
+			<li Class="CompProperties_EngineTrail">
+				<thrust>3</thrust>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_ShipEngine</li>
+		</placeWorkers>
+		<building>
+			<shipPart>true</shipPart>
+		</building>
+		<costList>
+			<Refleum>100</Refleum>
+			<ComponentIndustrial>6</ComponentIndustrial>
+			<Anty_Recyclecore>3</Anty_Recyclecore>
+		</costList>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<staticSunShadowHeight>1.0</staticSunShadowHeight>
+	</ThingDef>
+	<ThingDef ParentName="BuildingBase">
+		<defName>AT_Ship_Engine</defName>
+		<label>Red-Burst engine</label>
+		<designatorDropdown>Ship_Engines</designatorDropdown>
+		<thingClass>Building</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/Ship/AT_Ship_Engine</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(6,5.5)</drawSize>
+		</graphicData>
+		<researchPrerequisites>
+			<li>ShipEngine</li>
+			<li>Largecolony</li>
+		</researchPrerequisites>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<blockWind>true</blockWind>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>1</fillPercent>
+		<blockLight>true</blockLight>
+		<canOverlapZones>false</canOverlapZones>
+		<statBases>
+			<WorkToBuild>40000</WorkToBuild>
+			<MaxHitPoints>1500</MaxHitPoints>
+			<Flammability>0</Flammability>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<description>A Red-Burst engine capable of launching a ship into orbit. Not suitable for interplanetary travel.\n\nIn combat, provides double the speed of smaller engines at the cost of double fuel consumption.</description>
+		<size>(3,3)</size>
+		<receivesSignals>true</receivesSignals>
+		<designationCategory>Antybuilding</designationCategory>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<transmitsPower>true</transmitsPower>
+			</li>
+			<li Class="CompProperties_ShipPart"/>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Refuelable">
+				<fuelCapacity>1000.0</fuelCapacity>
+				<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+				<fuelFilter>
+					<thingDefs>
+						<li>Refleum</li>
+					</thingDefs>
+				</fuelFilter>
+				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+				<autoRefuelPercent>25</autoRefuelPercent>
+				<showFuelGizmo>false</showFuelGizmo>
+				<drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
+				<drawFuelGaugeInMap>false</drawFuelGaugeInMap>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+			<li Class="CompProperties_RoofMe"/>
+			<li Class="CompProperties_EngineTrail">
+				<thrust>4</thrust>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_ShipEngine</li>
+		</placeWorkers>
+		<building>
+			<shipPart>true</shipPart>
+		</building>
+		<costList>
+			<Refleum>200</Refleum>
+			<ComponentIndustrial>12</ComponentIndustrial>
+			<Anty_Recyclecore>3</Anty_Recyclecore>
+		</costList>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<staticSunShadowHeight>1.0</staticSunShadowHeight>
+	</ThingDef>
+	<ThingDef ParentName="BuildingBase">
+		<defName>AT_Ship_Engine_Large</defName>
+		<label>Large Red-Burst engine</label>
+		<designatorDropdown>Ship_Engines</designatorDropdown>
+		<thingClass>Building</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/Ship/AT_Ship_Engine_Large</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(5,7)</drawSize>
+		</graphicData>
+		<researchPrerequisites>
+			<li>ShipEngine</li>
+			<li>Largecolony</li>
+		</researchPrerequisites>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<blockWind>true</blockWind>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>1</fillPercent>
+		<blockLight>true</blockLight>
+		<canOverlapZones>false</canOverlapZones>
+		<statBases>
+			<WorkToBuild>80000</WorkToBuild>
+			<MaxHitPoints>2500</MaxHitPoints>
+			<Flammability>0</Flammability>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<description>A Red-Burst engine capable of launching a ship into orbit, at the cost of irradiating the surrounding area. Not suitable for interplanetary travel.\n\nProvides six times the speed of small engines.</description>
+		<size>(5,5)</size>
+		<receivesSignals>true</receivesSignals>
+		<designationCategory>Antybuilding</designationCategory>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<transmitsPower>true</transmitsPower>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Refuelable">
+				<fuelCapacity>2000.0</fuelCapacity>
+				<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+				<fuelFilter>
+					<thingDefs>
+						<li>Refleum</li>
+					</thingDefs>
+				</fuelFilter>
+				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+				<autoRefuelPercent>25</autoRefuelPercent>
+				<showFuelGizmo>false</showFuelGizmo>
+				<drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
+				<drawFuelGaugeInMap>false</drawFuelGaugeInMap>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+			<li Class="CompProperties_ShipPart"/>
+			<li Class="CompProperties_RoofMe"/>
+			<li Class="CompProperties_EngineTrail">
+				<thrust>8</thrust>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_ShipEngine</li>
+		</placeWorkers>
+		<building>
+			<shipPart>true</shipPart>
+		</building>
+		<costList>
+			<Refleum>600</Refleum>
+			<ComponentIndustrial>12</ComponentIndustrial>
+			<ComponentSpacer>8</ComponentSpacer>
+			<Anty_Recyclecore>5</Anty_Recyclecore>
+		</costList>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<staticSunShadowHeight>1.0</staticSunShadowHeight>
+	</ThingDef>
+	
+	<ThingDef Name="AT_AP_Space_Breathing" ParentName="Anty_GearBase"><!-- 앤티 우주 호흡장치 -->
+		<defName>AT_AP_Space_Breathing</defName>
+		<label>Anty space breathing apparatus</label>
+		<description>A device that allows the Anties to breathe in space.\nValid for Anty, Anty mutants.\nWhen worn, a thin film covers the entire body and protects the body from space.</description>
+
+		<recipeMaker>
+			<researchPrerequisite>Largecolony</researchPrerequisite>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+		</recipeMaker>
+
+		<graphicData>
+			<texPath>Antylike/Apparel/AT_AP_Space_Breathing</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+
+		<costList>
+			<Refleum>25</Refleum>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<Uranium>8</Uranium>
+		</costList>
+
+		<statBases>
+			<MaxHitPoints>220</MaxHitPoints>
+			<WorkToMake>16000</WorkToMake>
+			<Mass>1</Mass>
+			<Flammability>0.1</Flammability>
+
+			<ArmorRating_Sharp>0</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0</ArmorRating_Blunt>
+			<ArmorRating_Heat>0</ArmorRating_Heat>
+			<Insulation_Cold>45</Insulation_Cold>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<apparel>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<careIfWornByCorpse>false</careIfWornByCorpse>
+			<careIfDamaged>false</careIfDamaged>
+			<wearPerDay>14</wearPerDay>
+			<bodyPartGroups>
+				<li>AntyToolkit</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Overhead</li>
+				<li>Shell</li>
+			</layers>
+			<defaultOutfitTags>
+				<li>Worker</li>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<tags>
+				<li>AntyEVA</li>
+				<li>Spacer</li>
+				<li>EVA</li>
+				<li>PrestigeCombatGear</li>
+				<li>Royal</li>
+				<li>RoyalTier2</li>
+				<li>RoyalTier3</li>
+				<li>RoyalTier4</li>
+				<li>RoyalTier5</li>
+				<li>RoyalTier6</li>
+				<li>RoyalTier7</li>
+			</tags>
+		</apparel>
+		<comps>
+			<li Class="CompProperties_CauseHediff_Apparel">
+				<hediff>AT_Space_Shield</hediff>
+				<part>Torso</part>
+			</li>
+		</comps>
+		<techLevel>Spacer</techLevel>
+	</ThingDef>
+	
+	<HediffDef>
+		<defName>AT_Space_Shield</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>AT_Space_Shield</label>
+		<description>AT_Space_Shield</description>
+		<defaultLabelColor>(0.7,0,0.5)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>AT_Space_Shield</stateEffecter>
+				<severityIndices>0~5</severityIndices>
+			</li>
+			<li Class="HediffCompProperties_RemoveIfApparelDropped" />
+		</comps>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<ThingDef ParentName="MoteBase">
+		<defName>Mote_AT_Space_Shield</defName>
+		<graphicData>
+			<texPath>Things/Mote/IngressbreakerRadius</texPath>
+			<shaderType>MoteGlow</shaderType>
+			<color>(1, 1, 1)</color>
+		</graphicData>
+		<thingClass>MoteThrownAttached</thingClass>
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+		<mote>
+			<fadeInTime>0.25</fadeInTime>
+			<solidTime>0</solidTime>
+			<fadeOutTime>0.25</fadeOutTime>
+			<attachedDrawOffset>(0, 0, 0)</attachedDrawOffset>
+		</mote>
+	</ThingDef>
+
+	<EffecterDef>
+		<defName>AT_Space_Shield</defName>
+			<children>
+				<li>
+					<subEffecterClass>SubEffecter_DrifterEmoteChance</subEffecterClass>
+					<scale>1.85</scale>
+					<chancePerTick>0.15</chancePerTick>
+					<positionRadius>0</positionRadius>
+					<moteDef>Mote_AT_Space_Shield</moteDef>
+					<speed>0</speed>
+					<angle>0~180</angle>
+				</li>
+			</children>
+	</EffecterDef>
+</Defs>

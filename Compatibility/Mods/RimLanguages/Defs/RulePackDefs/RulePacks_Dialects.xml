@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!---->
+	<RulePackDef>
+		<defName>AntyDialect_Base</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_name->Moderate encryption</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+	
+	<RulePackDef>
+		<defName>AntyDialect_Mutant</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_name->Triple helix encryption</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+	<!---->
+</Defs>

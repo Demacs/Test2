@@ -1,0 +1,841 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>Anty_Generestorationcapsule</defName>
+		<label>Gene restoration capsule</label>
+		<description>It is a gene restoration agent made by mixing gene packs.</description>
+		<descriptionHyperlinks>
+			<ThingDef>Genepack</ThingDef>
+			<HediffDef>XenogermReplicating</HediffDef>
+			<RecipeDef>Anty_Generestoration</RecipeDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/Anty_Generestorationcapsule</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<stackLimit>3</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<useHitPoints>false</useHitPoints>
+		<statBases>
+			<MarketValue>400</MarketValue>
+			<Mass>2</Mass>
+			<Flammability>0</Flammability>
+		</statBases>
+		<intricate>true</intricate>
+		<thingCategories>
+			<li>ManufacturedAntyThingCategoryDef</li>
+		</thingCategories>
+		<recipeMaker>
+			<researchPrerequisites>
+				<li>Anty_Gene_Biotech</li>
+				<li>GeneProcessor</li>
+			</researchPrerequisites>
+				<recipeUsers>
+					<li>AntyCopyTableMachining</li>
+				</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<Genepack>3</Genepack>
+		</costList>
+	</ThingDef>
+	
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>Anty_Generestoration</defName>
+		<label>Gene restoration</label>
+		<description>Remove genes regrowing.</description>
+		<workerClass>Recipe_RemoveHediff</workerClass>
+		<jobString>Removing genes regrowing.</jobString>
+		<workAmount>2000</workAmount>
+		<isViolation>false</isViolation>
+		<targetsBodyPart>false</targetsBodyPart>
+		<removesHediff>XenogermReplicating</removesHediff>
+		<successfullyRemovedHediffMessage>{0} has successfully restoration {1}'s gene.</successfullyRemovedHediffMessage>
+		<skillRequirements>
+		<Medicine>10</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>10</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Anty_Generestorationcapsule</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>Anty_Generestorationcapsule</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<uiIconThing>Anty_Generestorationcapsule</uiIconThing>
+		<recipeUsers>
+			<li>Human</li>
+		</recipeUsers>
+	</RecipeDef>
+
+	<ThingDef ParentName="ProtyBase">
+		<defName>Anty_swarmy</defName>
+		<label>Swarmy</label>
+		<description>It is a mutant proty created by Transition Refleum.\nIn exchange for losing the ability to reproduce, it has gained the ability to range attack.</description>
+		<race>
+			<maxPreyBodySize>3.1</maxPreyBodySize>
+		</race>
+		<statBases>
+			<MarketValue>500</MarketValue>
+			<ToxicResistance>-0.25</ToxicResistance>
+			<ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">-0.25</ToxicEnvironmentResistance>
+			<MoveSpeed>4.2</MoveSpeed>
+			<ArmorRating_Blunt>0.14</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+			<Fertility MayRequire="Ludeon.RimWorld.Biotech">0</Fertility>
+			
+			<HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
+			<DecompressionResistance MayRequire="kentington.saveourship2">1</DecompressionResistance>
+			<VacuumSpeedMultiplier MayRequire="kentington.saveourship2">6</VacuumSpeedMultiplier>
+		</statBases>
+		<tradeTags Inherit="false">
+		</tradeTags>
+		<tradeability>None</tradeability>
+		<comps>
+			<li Class="CompProperties_TurretGun">
+				<turretDef>AT_AcidRifle_swarmy</turretDef>
+				<angleOffset>0</angleOffset>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="EggProty_Base">
+		<defName>AT_Eggswarmy</defName>
+		<label>Swarmy egg</label>
+		<description>This is swarmy's egg.</description>
+		<graphicData>
+			<color>(245,120,120)</color>
+			<drawSize>1.5</drawSize>
+		</graphicData>
+		<uiIconScale>1</uiIconScale>
+		<statBases>
+			<MarketValue>120.0</MarketValue>
+			<Mass>2</Mass>
+		</statBases>
+		<stackLimit>3</stackLimit>
+		<comps Inherit="False">
+			<li Class="Anty_EggClass.CompProperties_Hatcher_Anty">
+				<hatcherDaystoHatch>3</hatcherDaystoHatch>
+				<hatcherPawn>Anty_swarmy</hatcherPawn>
+			</li>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>6000</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+			<li Class="CompProperties_TemperatureRuinable">
+				<minSafeTemperature>-20</minSafeTemperature>
+				<maxSafeTemperature>80</maxSafeTemperature>
+				<progressPerDegreePerTick>0.00003</progressPerDegreePerTick>
+			</li>
+		</comps>
+		<thingCategories Inherit="False">
+			<li>ManufacturedAntyThingCategoryDef</li>
+		</thingCategories>
+	</ThingDef>
+	
+	<RecipeDef>
+		<defName>Anty_Make_Swarmy</defName>
+		<label>Make Swarmy egg</label>
+		<description>Make Swarmy egg.</description>
+		<jobString>Making Swarmy egg.</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<workAmount>10000</workAmount>
+		<unfinishedThingDef>UnfinishedAntyEgg</unfinishedThingDef>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>EggProty</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>AntyTransitionRefleum_Thing</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<AT_Eggswarmy>5</AT_Eggswarmy>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>EggProty</li>
+				<li>AntyTransitionRefleum_Thing</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<thingDefs>
+				<li>EggProty</li>
+				<li>AntyTransitionRefleum_Thing</li>
+			</thingDefs>
+		</defaultIngredientFilter>
+		<workSkill>Intellectual</workSkill>
+		<researchPrerequisite>AT_TransitionRefleumTest</researchPrerequisite>
+	</RecipeDef>
+	
+	<ThingDef ParentName="BaseWeaponTurret">
+		<defName>AT_AcidRifle_swarmy</defName>
+		<label>Swarmy Acid</label>
+		<description>Swarmy Acid.</description>
+		<tradeability>None</tradeability>
+		<destroyOnDrop>true</destroyOnDrop>
+		<graphicData>
+			<texPath>Antylike/Heads/AT_PE_CC</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawOffset>(0,0,-0.2)</drawOffset>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<recipeMaker Inherit="false">
+        </recipeMaker>
+		<weaponTags>
+			<li>ammo_none</li>
+		</weaponTags>
+		<statBases>
+			<Mass>4.5</Mass>
+			<AccuracyTouch>0.65</AccuracyTouch>
+			<AccuracyShort>0.6</AccuracyShort>
+			<AccuracyMedium>0.6</AccuracyMedium>
+			<AccuracyLong>0.4</AccuracyLong>
+			<RangedWeapon_DamageMultiplier>7</RangedWeapon_DamageMultiplier>
+		</statBases>
+		<equippedAngleOffset>45</equippedAngleOffset>
+		<costList>
+			<AntyExoskeleton>2</AntyExoskeleton>
+		</costList>
+        <verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<defaultProjectile>Bullet_AcidRifle</defaultProjectile>
+				<defaultCooldownTime>4</defaultCooldownTime>
+				<warmupTime>0.12</warmupTime>
+				<range>11.9</range>
+				<burstShotCount>1</burstShotCount>
+				<ticksBetweenBurstShots>300</ticksBetweenBurstShots>
+				<soundCast>Impact_Glue</soundCast>
+				<muzzleFlashScale>0</muzzleFlashScale>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			</li>
+	  	</verbs>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase" Name="Anty_swarmy_KindBase">
+		<defName>Anty_swarmy</defName>
+		<label>Swarmy</label>
+		<race>Anty_swarmy</race>
+		<combatPower>110</combatPower>
+		<isFighter>true</isFighter>
+		<canArriveManhunter>false</canArriveManhunter>
+		<ecoSystemWeight>0.15</ecoSystemWeight>
+		<defaultFactionType>AT_PlayerFaction</defaultFactionType>
+		<maxGenerationAge>3</maxGenerationAge>
+		<minGenerationAge>2</minGenerationAge>
+		<lifeStages>
+		<li>
+			<bodyGraphicData>
+				<texPath>Protylike/Swarmy</texPath>
+				<drawSize>1</drawSize>
+				<color>(255,255,255)</color>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+				<texPath>Protylike/ProtyDE</texPath>
+				<drawSize>1</drawSize>
+			</dessicatedBodyGraphicData>
+		</li>
+		<li>
+			<bodyGraphicData>
+				<texPath>Protylike/Swarmy</texPath>
+				<drawSize>1.25</drawSize>
+				<color>(255,255,255)</color>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+				<texPath>Protylike/ProtyDE</texPath>
+				<drawSize>1.25</drawSize>
+			</dessicatedBodyGraphicData>
+		</li>
+		<li>
+			<bodyGraphicData>
+				<texPath>Protylike/Swarmy</texPath>
+				<drawSize>1.5</drawSize>
+				<color>(255,255,255)</color>
+				<shadowData>
+					<volume>(0.2, 0.3, 0.2)</volume>
+					<offset>(0,0,0)</offset>
+				</shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+				<texPath>Protylike/ProtyDE</texPath>
+				<drawSize>1.5</drawSize>
+			</dessicatedBodyGraphicData>
+		</li>
+		</lifeStages>
+	</PawnKindDef>
+
+	<XenotypeIconDef>
+		<defName>AntyXenotypeIconDef_A</defName>
+		<texPath>Icon/AntyGene/Pentagon</texPath>
+	</XenotypeIconDef>
+	
+	<XenotypeIconDef>
+		<defName>AntyXenotypeIconDef_B</defName>
+		<texPath>Icon/AntyGene/Anoplolepis_gracilipes_P</texPath>
+	</XenotypeIconDef>
+	
+	<XenotypeIconDef>
+		<defName>AntyXenotypeIconDef_C</defName>
+		<texPath>Icon/AntyGene/Dorylus_P</texPath>
+	</XenotypeIconDef>
+	
+	<XenotypeIconDef>
+		<defName>AntyXenotypeIconDef_D</defName>
+		<texPath>Icon/AntyGene/Linepithema_humile_P</texPath>
+	</XenotypeIconDef>
+	
+	<XenotypeIconDef>
+		<defName>AntyXenotypeIconDef_E</defName>
+		<texPath>Icon/AntyGene/Solenopsis_Invicta_P</texPath>
+	</XenotypeIconDef>
+	
+	<XenotypeIconDef>
+		<defName>AntyXenotypeIconDef_F</defName>
+		<texPath>Icon/AntyGene/Tapinoma_melanocephalum_P</texPath>
+	</XenotypeIconDef>
+	
+	<ResearchProjectDef>
+		<defName>Anty_Gene_Biotech</defName>
+		<label>gene restoration</label>
+		<description>Restore the genes of some ants that Anty has.</description>
+		<tab>AntyHiveTech</tab>
+		<baseCost>1200</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+		  <li>Mediumcolony</li>
+		</prerequisites>
+		<researchViewX>3</researchViewX>
+		<researchViewY>4</researchViewY>
+		<tags>
+			<li>AntyHive</li>
+		</tags>
+	</ResearchProjectDef>
+	
+	<GeneCategoryDef>
+		<defName>Anty_Gene</defName>
+		<label>Anty</label>
+		<displayPriorityInXenotype>1200</displayPriorityInXenotype>
+	</GeneCategoryDef>
+	
+	<XenotypeDef Name="AntyXenotype" Abstract="True">
+		<factionlessGenerationWeight>0</factionlessGenerationWeight>
+		<genes>
+		  <li>Aggression_friendlyaggression_Anty</li>
+		  <li>AntyAcidResistant</li>
+		  <li>SuperAntyAcidResistant</li>
+		  
+		  <li>MoveSpeed_Quick</li>
+		  <li>PsychicAbility_Dull</li>
+		  
+		  <li>AptitudeRemarkable_Mining</li>
+		  <li>AptitudeStrong_Construction</li>
+		  <li>AptitudeTerrible_Social</li>
+		  <li>AptitudeTerrible_Cooking</li>
+		  
+		  <li>FireWeakness</li>
+		  
+		  <li>AntyCompoundeyes</li>
+		  <li>AntyDecomposer</li>
+		  <li>AntyGeneticFlexibility</li>
+		</genes>
+	</XenotypeDef>
+	
+	<XenotypeDef ParentName="AntyXenotype">
+		<defName>AntyXenotype</defName>
+		<label>Anty</label>
+		<description>Anties are genetically engineered beings by a private company to replace dying soldiers on the battle field.\n\nEverything has gone south when the company has let their guard down to celebrate their recent progress. Due to a mistake made by one of the employees, the Anties have been set free from the lab and ended up in space.\n\nTheir personalities are gentle by nature, but they were made to know only but war. On each planet they end up, they burn everything down to ash, using themselves as the main source of the fuel.\n\nAnty is hermaphrodite, has no externally exposed reproductive organs, but has both a scrotum and ovaries in the abdomen.\n\nAnty's gender is indicated based on her reproductive system, which was a little more developed prior to consuming the Nutritional jelly.\n\nThe average height of common anty ergates and queen ants is 140cm, while soldier ants are 170cm. Depending on needs or the type of hive, it can transform or grow up to 200cm.</description>
+		<iconPath>Icon/AntyGene/Pentagon</iconPath>
+		<inheritable>true</inheritable>
+		<displayPriority>1000</displayPriority>
+	</XenotypeDef>
+	
+	<!-- <biostatCpx>6</biostatCpx> 복잡도-->
+	<!-- <biostatMet>4</biostatMet> 대사 효율-->
+	<!-- <biostatArc>2</biostatArc> 초월 입자-->
+	
+	<GeneDef Name="Anty_GeneDef" Abstract="True">
+		<displayCategory>Anty_Gene</displayCategory>
+		<exclusionTags>
+		  <li>Anty_Gene</li>
+		</exclusionTags>
+		<biostatCpx>5</biostatCpx>
+		<biostatMet>-2</biostatMet>
+	</GeneDef>
+	
+	<GeneDef>
+		<defName>AntyAcidResistant</defName>
+		<label>Acid proof</label>
+		<description>Carriers of this gene have special fast-acting sweat glands and acid-resistant skin. They only take low of the damage from normal acid.</description>
+		<iconPath>Icon/AntyGene/AntyAcidResistant</iconPath>
+		<displayCategory>Anty_Gene</displayCategory>
+		<displayOrderInCategory>40</displayOrderInCategory>
+		<damageFactors>
+		  <AcidBurn>0.25</AcidBurn>
+		  <AT_AcidDamage>0.5</AT_AcidDamage>
+		  
+		  <AT_AcidBullet>0.8</AT_AcidBullet>
+		  <AT_AcidBomb>0.8</AT_AcidBomb>
+		</damageFactors>
+		<biostatMet>-1</biostatMet>
+		<descriptionHyperlinks>
+			<HediffDef>Chemicaldissolution</HediffDef>
+		</descriptionHyperlinks>
+	</GeneDef>
+	
+	<GeneDef>
+		<defName>SuperAntyAcidResistant</defName>
+		<label>Super Acid proof</label>
+		<description>Carriers of this gene have special fast-acting sweat glands and acid-resistant skin. They only take low of the damage from super acid.</description>
+		<iconPath>Icon/AntyGene/SuperAntyAcidResistant</iconPath>
+		<displayCategory>Anty_Gene</displayCategory>
+		<displayOrderInCategory>40</displayOrderInCategory>
+		<damageFactors>
+		  <AcidBurn>0.1</AcidBurn>
+		  <AT_AcidDamage_High>0.5</AT_AcidDamage_High>
+		  
+		  <AT_AcidBomb_B>0.8</AT_AcidBomb_B>
+		  <AT_AcidBomb_C>0.02</AT_AcidBomb_C>
+		</damageFactors>
+		<biostatMet>-1</biostatMet>
+		<descriptionHyperlinks>
+			<HediffDef>Chemicaldissolution_high</HediffDef>
+		</descriptionHyperlinks>
+	</GeneDef>
+	
+	<GeneDef>
+		<defName>AntyCompoundeyes</defName>
+		<label>Multi Compound eyes</label>
+		<description>Carriers of this gene see well in low light and are unaffected by mood penalties related to darkness.\n\nThey have a special eye structure that combines single eyes and compound eyes.</description>
+		<iconPath>Icon/AntyGene/Compoundeyes</iconPath>
+		<displayCategory>Anty_Gene</displayCategory>
+		<displayOrderInCategory>40</displayOrderInCategory>
+		<ignoreDarkness>true</ignoreDarkness>
+		<biostatMet>-1</biostatMet>
+		<biostatCpx>5</biostatCpx>
+		<statFactors>
+			<MeleeDodgeChance>0.8</MeleeDodgeChance>
+			<ShootingAccuracyPawn>0.8</ShootingAccuracyPawn>
+			<CookSpeed>0.3</CookSpeed>
+			<MiningSpeed>2</MiningSpeed>
+			<DeepDrillingSpeed>2</DeepDrillingSpeed>
+			<MiningYield>0.8</MiningYield>
+			<ReadingSpeed>1.75</ReadingSpeed>
+        </statFactors>
+	</GeneDef>
+	
+	<GeneDef>
+		<defName>AntyDecomposer</defName>
+		<label>Decomposer</label>
+		<description>Carriers of this gene have a curiosity about the internal structure of objects.</description>
+		<iconPath>Icon/AntyGene/Decomposer</iconPath>
+		<displayCategory>Anty_Gene</displayCategory>
+		<displayOrderInCategory>40</displayOrderInCategory>
+		<biostatMet>-4</biostatMet>
+		<biostatCpx>3</biostatCpx>
+		<statFactors>
+			<ButcheryMechanoidEfficiency>1.2</ButcheryMechanoidEfficiency>
+			<ButcheryMechanoidSpeed>1.2</ButcheryMechanoidSpeed>
+			<ButcheryFleshEfficiency>1.2</ButcheryFleshEfficiency>
+			<ButcheryFleshSpeed>1.2</ButcheryFleshSpeed>
+			<MedicalSurgerySuccessChance>1.1</MedicalSurgerySuccessChance>
+			<ConstructionSpeed>1.25</ConstructionSpeed>
+        </statFactors>
+	</GeneDef>
+	
+	<GeneDef>
+		<defName>AntyGeneticFlexibility</defName>
+		<label>Genetic Flexibility</label>
+		<description>Carriers of this gene respond very flexibly to gene mutations.</description>
+		<iconPath>Icon/AntyGene/GeneticFlexibility</iconPath>
+		<displayCategory>Anty_Gene</displayCategory>
+		<displayOrderInCategory>40</displayOrderInCategory>
+		<biostatMet>4</biostatMet>
+		<biostatCpx>15</biostatCpx>
+	</GeneDef>
+	
+	<GeneDef>
+		<displayCategory>Anty_Gene</displayCategory>
+		<defName>Aggression_friendlyaggression_Anty</defName>
+		<label>friendly aggression</label>
+		<description>A fight is a conversation.</description>
+		<iconPath>Icon/AntyGene/friendlyAggressive</iconPath>
+		<socialFightChanceFactor>5</socialFightChanceFactor>
+		<prisonBreakMTBFactor>0.4</prisonBreakMTBFactor>
+		<displayOrderInCategory>20</displayOrderInCategory>
+		<exclusionTags>
+		  <li>Aggressive</li>
+		</exclusionTags>
+		<biostatMet>3</biostatMet>
+	</GeneDef>
+	
+	<GeneDef ParentName="Anty_GeneDef">
+		<defName>Anty_Dorylus</defName>
+		<label>Dorylus</label>
+		<description>blind ant gene. At the cost of losing sight, gain powerful melee abilities.</description>
+		<iconPath>Icon/AntyGene/Dorylus_P</iconPath>
+		<statOffsets>
+			<MeleeHitChance>25</MeleeHitChance>
+			<MeleeDodgeChance>15</MeleeDodgeChance>
+        </statOffsets>
+		<statFactors>
+			<PawnTrapSpringChance>0.5</PawnTrapSpringChance>
+			<MeleeCooldownFactor>0.7</MeleeCooldownFactor>
+        </statFactors>
+		<painFactor>0.35</painFactor>
+		<capMods>
+			<li>
+				<capacity>Sight</capacity>
+				<setMax>0.5</setMax>
+			</li>
+		</capMods>
+	</GeneDef>
+	<XenotypeDef ParentName="AntyXenotype">
+		<defName>Anty_Dorylus</defName>
+		<label>Dorylus</label>
+		<description>Blind ant gene. At the cost of losing sight, gain powerful melee abilities.</description>
+		<iconPath>Icon/AntyGene/Dorylus_P</iconPath>
+		<inheritable>true</inheritable>
+		<genes>
+		  <li>Anty_Dorylus</li>
+		</genes>
+	</XenotypeDef>
+	<ThingDef ParentName="EggAnty_Base">
+		<defName>EggAnty_Dorylus</defName>
+		<label>Anty Dorylus Egg</label>
+		<graphicData>
+			<color>(80,80,80)</color>
+		</graphicData>
+		<descriptionHyperlinks>
+			<GeneDef>Anty_Dorylus</GeneDef>
+		</descriptionHyperlinks>
+		<comps>
+			<li Class="Anty_EggClass.CompProperties_Hatcher_Anty">
+				<hatcherDaystoHatch>9</hatcherDaystoHatch>
+				<hatcherPawn>AT_Colonist_Baby_Bio</hatcherPawn>
+				<hatcherxeno MayRequire="Ludeon.RimWorld.Biotech">Anty_Dorylus</hatcherxeno>
+				<DevelopmentalStageSet MayRequire="Ludeon.RimWorld.Biotech">Child</DevelopmentalStageSet>
+			</li>
+		</comps>
+	</ThingDef>
+	<RecipeDef ParentName="Anty_Make_Egg_Base">
+		<defName>Anty_Make_Egg_Dorylus</defName>
+		<label>breeding Dorylus Egg</label>
+		<description>breeding Dorylus Egg.</description>
+		<products Inherit="False">
+			<EggAnty_Dorylus>1</EggAnty_Dorylus>
+		</products>
+		<researchPrerequisite>Anty_Gene_Biotech</researchPrerequisite>
+	</RecipeDef>
+	
+	<GeneDef ParentName="Anty_GeneDef">
+		<defName>Anty_Linepithema_humile</defName>
+		<label>Linepithema</label>
+		<description>Argentine ant gene. have a short lifespan and reproduce rapidly.</description>
+		<iconPath>Icon/AntyGene/Linepithema_humile_P</iconPath>
+		<biologicalAgeTickFactorFromAgeCurve>
+			<points>
+				<li>(0, 1.5)</li>
+			</points>
+		</biologicalAgeTickFactorFromAgeCurve>
+		<statOffsets>
+			<MeleeDodgeChance>8</MeleeDodgeChance>
+        </statOffsets>
+		<statFactors>
+			<AT_BreedingSpeed>1.7</AT_BreedingSpeed>
+		</statFactors>
+	</GeneDef>
+	<XenotypeDef ParentName="AntyXenotype">
+		<defName>Anty_Linepithema_humile</defName>
+		<label>Linepithema</label>
+		<description>Argentine ant genes. have a short lifespan and reproduce rapidly.</description>
+		<iconPath>Icon/AntyGene/Linepithema_humile_P</iconPath>
+		<inheritable>true</inheritable>
+		<genes>
+		  <li>Anty_Linepithema_humile</li>
+		</genes>
+	</XenotypeDef>
+	<ThingDef ParentName="EggAnty_Base">
+		<defName>EggAnty_Linepithema_humile</defName>
+		<label>Anty Linepithema Egg</label>
+		<graphicData>
+			<color>(180,80,180)</color>
+		</graphicData>
+		<descriptionHyperlinks>
+			<GeneDef>Anty_Linepithema_humile</GeneDef>
+		</descriptionHyperlinks>
+		<comps>
+			<li Class="Anty_EggClass.CompProperties_Hatcher_Anty">
+				<hatcherDaystoHatch>9</hatcherDaystoHatch>
+				<hatcherPawn>AT_Colonist_Baby_Bio</hatcherPawn>
+				<hatcherxeno MayRequire="Ludeon.RimWorld.Biotech">Anty_Linepithema_humile</hatcherxeno>
+				<DevelopmentalStageSet MayRequire="Ludeon.RimWorld.Biotech">Child</DevelopmentalStageSet>
+			</li>
+		</comps>
+	</ThingDef>
+	<RecipeDef ParentName="Anty_Make_Egg_Base">
+		<defName>Anty_Make_Egg_Linepithema</defName>
+		<label>breeding Linepithema Egg</label>
+		<description>breeding Linepithema Egg.</description>
+		<products Inherit="False">
+			<EggAnty_Linepithema_humile>1</EggAnty_Linepithema_humile>
+		</products>
+		<researchPrerequisite>Anty_Gene_Biotech</researchPrerequisite>
+	</RecipeDef>
+	
+	<GeneDef ParentName="Anty_GeneDef">
+		<defName>Anty_Solenopsis_Invicta</defName>
+		<label>Solenopsis</label>
+		<description>Red fire ant gene. At the cost of losing ranged abilities, gain powerful melee abilities.</description>
+		<iconPath>Icon/AntyGene/Solenopsis_Invicta_P</iconPath>
+		<statOffsets>
+			<AimingDelayFactor>1.4</AimingDelayFactor>
+        </statOffsets>
+		<statFactors>
+			<AT_BreedingSpeed>1.2</AT_BreedingSpeed>
+			<MeleeDamageFactor>1.5</MeleeDamageFactor>
+		</statFactors>
+		<painFactor>0.5</painFactor>
+		<exclusionTags>
+			<li>Toughness</li>
+		</exclusionTags>
+	</GeneDef>
+	<XenotypeDef ParentName="AntyXenotype">
+		<defName>Anty_Solenopsis_Invicta</defName>
+		<label>Solenopsis</label>
+		<description>Red fire ant gene. At the cost of losing ranged abilities, gain powerful melee abilities.</description>
+		<iconPath>Icon/AntyGene/Solenopsis_Invicta_P</iconPath>
+		<inheritable>true</inheritable>
+		<genes>
+		  <li>Anty_Solenopsis_Invicta</li>
+		</genes>
+	</XenotypeDef>
+	<ThingDef ParentName="EggAnty_Base">
+		<defName>EggAnty_Solenopsis_Invicta</defName>
+		<label>Anty Solenopsis Egg</label>
+		<graphicData>
+			<color>(250,110,100)</color>
+		</graphicData>
+		<descriptionHyperlinks>
+			<GeneDef>Anty_Solenopsis_Invicta</GeneDef>
+		</descriptionHyperlinks>
+		<comps>
+			<li Class="Anty_EggClass.CompProperties_Hatcher_Anty">
+				<hatcherDaystoHatch>9</hatcherDaystoHatch>
+				<hatcherPawn>AT_Colonist_Baby_Bio</hatcherPawn>
+				<hatcherxeno MayRequire="Ludeon.RimWorld.Biotech">Anty_Solenopsis_Invicta</hatcherxeno>
+				<DevelopmentalStageSet MayRequire="Ludeon.RimWorld.Biotech">Child</DevelopmentalStageSet>
+			</li>
+		</comps>
+	</ThingDef>
+	<RecipeDef ParentName="Anty_Make_Egg_Base">
+		<defName>Anty_Make_Egg_Solenopsis</defName>
+		<label>breeding Solenopsis Egg</label>
+		<description>breeding Solenopsis Egg.</description>
+		<products Inherit="False">
+			<EggAnty_Solenopsis_Invicta>1</EggAnty_Solenopsis_Invicta>
+		</products>
+		<researchPrerequisite>Anty_Gene_Biotech</researchPrerequisite>
+	</RecipeDef>
+	
+	<GeneDef ParentName="Anty_GeneDef">
+		<defName>Anty_Anoplolepis_gracilipes</defName>
+		<label>Anoplolepis</label>
+		<description>Crazy ant gene. have a very short lifespan and a very fast reproduce rapidly.</description>
+		<iconPath>Icon/AntyGene/Anoplolepis_gracilipes_P</iconPath>
+		<biologicalAgeTickFactorFromAgeCurve>
+			<points>
+				<li>(0, 3)</li>
+			</points>
+		</biologicalAgeTickFactorFromAgeCurve>
+		<statFactors>
+			<MoveSpeed>1.8</MoveSpeed>
+			<AT_BreedingSpeed>2</AT_BreedingSpeed>
+		</statFactors>
+		<painFactor>1.2</painFactor>
+		<exclusionTags>
+			<li>MoveSpeed</li>
+			<li>Toughness</li>
+		</exclusionTags>
+	</GeneDef>
+	<XenotypeDef ParentName="AntyXenotype">
+		<defName>Anty_Anoplolepis_gracilipes</defName>
+		<label>Anoplolepis</label>
+		<description>Crazy ant gene. have a very short lifespan and a very fast reproduce rapidly.</description>
+		<iconPath>Icon/AntyGene/Anoplolepis_gracilipes_P</iconPath>
+		<inheritable>true</inheritable>
+		<genes>
+		  <li>Anty_Anoplolepis_gracilipes</li>
+		</genes>
+	</XenotypeDef>
+	<ThingDef ParentName="EggAnty_Base">
+		<defName>EggAnty_Anoplolepis_gracilipes</defName>
+		<label>Anty Anoplolepis Egg</label>
+		<graphicData>
+			<color>(177,135,100)</color>
+		</graphicData>
+		<descriptionHyperlinks>
+			<GeneDef>Anty_Anoplolepis_gracilipes</GeneDef>
+		</descriptionHyperlinks>
+		<comps>
+			<li Class="Anty_EggClass.CompProperties_Hatcher_Anty">
+				<hatcherDaystoHatch>9</hatcherDaystoHatch>
+				<hatcherPawn>AT_Colonist_Baby_Bio</hatcherPawn>
+				<hatcherxeno MayRequire="Ludeon.RimWorld.Biotech">Anty_Anoplolepis_gracilipes</hatcherxeno>
+				<DevelopmentalStageSet MayRequire="Ludeon.RimWorld.Biotech">Child</DevelopmentalStageSet>
+			</li>
+		</comps>
+	</ThingDef>
+	<RecipeDef ParentName="Anty_Make_Egg_Base">
+		<defName>Anty_Make_Egg_Anoplolepis</defName>
+		<label>breeding Anoplolepis Egg</label>
+		<description>breeding Anoplolepis Egg.</description>
+		<products Inherit="False">
+			<EggAnty_Anoplolepis_gracilipes>1</EggAnty_Anoplolepis_gracilipes>
+		</products>
+		<researchPrerequisite>Anty_Gene_Biotech</researchPrerequisite>
+	</RecipeDef>
+	
+	<GeneDef ParentName="Anty_GeneDef">
+		<defName>Anty_Tapinoma_melanocephalum</defName>
+		<label>Tapinoma</label>
+		<description>Ghost ant gene. Excellent camouflage and environmental adaptability.</description>
+		<iconPath>Icon/AntyGene/Tapinoma_melanocephalum_P</iconPath>
+		<statOffsets>
+			<HuntingStealth>0.5</HuntingStealth>
+			<ToxicResistance>3</ToxicResistance>
+			<ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">1.5</ToxicEnvironmentResistance>
+        </statOffsets>
+		<painFactor>0.8</painFactor>
+		<exclusionTags>
+			<li>ToxResistance</li>
+			<li>Toughness</li>
+		</exclusionTags>
+	</GeneDef>
+	<XenotypeDef ParentName="AntyXenotype">
+		<defName>Anty_Tapinoma_melanocephalum</defName>
+		<label>Tapinoma</label>
+		<description>Ghost ant gene. Excellent camouflage and environmental adaptability.</description>
+		<iconPath>Icon/AntyGene/Tapinoma_melanocephalum_P</iconPath>
+		<inheritable>true</inheritable>
+		<genes>
+		  <li>Anty_Tapinoma_melanocephalum</li>
+		</genes>
+	</XenotypeDef>
+	<ThingDef ParentName="EggAnty_Base">
+		<defName>EggAnty_Tapinoma_melanocephalum</defName>
+		<label>Anty Tapinoma Egg</label>
+		<graphicData>
+			<color>(108,66,80)</color>
+		</graphicData>
+		<descriptionHyperlinks>
+			<GeneDef>Anty_Tapinoma_melanocephalum</GeneDef>
+		</descriptionHyperlinks>
+		<comps>
+			<li Class="Anty_EggClass.CompProperties_Hatcher_Anty">
+				<hatcherDaystoHatch>9</hatcherDaystoHatch>
+				<hatcherPawn>AT_Colonist_Baby_Bio</hatcherPawn>
+				<hatcherxeno MayRequire="Ludeon.RimWorld.Biotech">Anty_Tapinoma_melanocephalum</hatcherxeno>
+				<DevelopmentalStageSet MayRequire="Ludeon.RimWorld.Biotech">Child</DevelopmentalStageSet>
+			</li>
+		</comps>
+	</ThingDef>
+	<RecipeDef ParentName="Anty_Make_Egg_Base">
+		<defName>Anty_Make_Egg_Tapinoma</defName>
+		<label>breeding Tapinoma Egg</label>
+		<description>breeding Tapinoma Egg.</description>
+		<products Inherit="False">
+			<EggAnty_Tapinoma_melanocephalum>1</EggAnty_Tapinoma_melanocephalum>
+		</products>
+		<researchPrerequisite>Anty_Gene_Biotech</researchPrerequisite>
+	</RecipeDef>
+	
+	<!-- <GeneDef>
+		<defName>AT_bloodraider</defName>
+		<label>Blood raider</label>
+		<description>TEST.</description>
+		<iconPath>UI/Icons/Genes/Gene_Bloodfeeder</iconPath>
+		<geneClass>Gene_Bloodfeeder</geneClass>
+		<prerequisite>Hemogenic</prerequisite>
+		<displayCategory>Anty_Gene</displayCategory>
+		<deathHistoryEvent>BloodfeederDied</deathHistoryEvent>
+		<abilities>
+			<li>AT_bloodplunder</li>
+		</abilities>
+		<descriptionHyperlinks>
+			<AbilityDef>AT_bloodplunder</AbilityDef>
+		</descriptionHyperlinks>
+		<biostatMet>-2</biostatMet>
+	</GeneDef>
+	
+	<AbilityDef ParentName="AbilityTouchBase">
+		<defName>AT_bloodplunder</defName>
+		<label>Blood plunder</label>
+		<description>TEST.</description>
+		<iconPath>UI/Icons/Genes/Gene_Bloodfeeder</iconPath>
+		<category>Sanguophage</category>
+		<displayOrder>100</displayOrder>
+		<warmupEffecter>Bloodfeed_Warmup</warmupEffecter>
+		<warmupStartSound>Bloodfeed_Cast</warmupStartSound>
+		<hostile>false</hostile>
+		<verbProperties>
+			<verbClass>Verb_CastAbilityTouch</verbClass>
+			<drawAimPie>false</drawAimPie>
+			<range>-1</range>
+			<warmupTime>5</warmupTime>
+			<targetParams>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetMechs>false</canTargetMechs>
+				<canTargetBloodfeeders>false</canTargetBloodfeeders>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityBloodfeederBite">
+				<hemogenGain>0.08</hemogenGain>
+				<bloodFilthToSpawnRange>2</bloodFilthToSpawnRange>
+				<thoughtDefToGiveTarget>FedOn</thoughtDefToGiveTarget>
+				<opinionThoughtDefToGiveTarget>FedOn_Social</opinionThoughtDefToGiveTarget>
+				<resistanceGain>5</resistanceGain>
+				<nutritionGain>0.22</nutritionGain>
+			</li>
+			<li Class="CompProperties_AbilityFleckOnTarget">
+				<fleckDef>BloodSplash</fleckDef>
+			</li>
+			<li Class="CompProperties_AbilityRequiresCapacity">
+				<capacity>Eating</capacity>
+			</li>
+		</comps>
+	</AbilityDef> -->
+</Defs>

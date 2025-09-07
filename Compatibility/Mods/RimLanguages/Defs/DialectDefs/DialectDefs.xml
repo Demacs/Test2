@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<FactionLanguages.DialectDef>
+		<defName>Anty_Standard</defName>
+		<label>Standard Anty dialect</label>
+		<description>It is a language with simple encryption applied.</description>
+		<nameMaker>AntyDialect_Base</nameMaker>
+		<difficultyByTechLevel>
+			<points>
+				<!-- Undefined -->
+				<li>0, 3</li>
+				<!-- Animal -->
+				<li>1, 3</li>
+				<!-- Neolithic -->
+				<li>2, 3</li>
+				<!-- Medieval -->
+				<li>3, 3</li>
+				<!-- Industrial -->
+				<li>4, 3</li>
+				<!-- Spacer -->
+				<li>5, 3</li>
+				<!-- Ultra -->
+				<li>6, 3</li>
+				<!-- Archotech -->
+				<li>7, 3</li>
+			</points>
+		</difficultyByTechLevel>
+	</FactionLanguages.DialectDef>
+	
+	<FactionLanguages.DialectDef>
+		<defName>Anty_Mutant</defName>
+		<label>Anty Mutant dialect</label>
+		<description>It is a language with triple helix encryption applied.</description>
+		<nameMaker>AntyDialect_Mutant</nameMaker>
+		<difficultyByTechLevel>
+			<points>
+				<!-- Undefined -->
+				<li>0, 8</li>
+				<!-- Animal -->
+				<li>1, 8</li>
+				<!-- Neolithic -->
+				<li>2, 8</li>
+				<!-- Medieval -->
+				<li>3, 8</li>
+				<!-- Industrial -->
+				<li>4, 8</li>
+				<!-- Spacer -->
+				<li>5, 8</li>
+				<!-- Ultra -->
+				<li>6, 8</li>
+				<!-- Archotech -->
+				<li>7, 8</li>
+			</points>
+		</difficultyByTechLevel>
+	</FactionLanguages.DialectDef>
+</Defs>
