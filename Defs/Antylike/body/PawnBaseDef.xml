@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<AlienRace.ThingDef_AlienRace Name="AT_PawnBase" ParentName="BasePawn" Abstract="True">
+		<comps>
+			<li MayRequire="Ludeon.RimWorld.Anomaly" Class="CompProperties_HoldingPlatformTarget">
+				<baseEscapeIntervalMtbDays>120</baseEscapeIntervalMtbDays>
+				<getsColdContainmentBonus>true</getsColdContainmentBonus>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Anomaly" Class="CompProperties_Studiable">
+				<frequencyTicks>120000</frequencyTicks>
+				<minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+				<requiresImprisonment>true</requiresImprisonment>
+			</li>
+		</comps>
+		
+		<statBases>
+			<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">10</CertaintyLossFactor>
+			<CrawlSpeed>1.95</CrawlSpeed>
+			<PawnBeauty>-3</PawnBeauty>
+			<Vulnerability MayRequire="rim.job.world">0.5</Vulnerability>
+		</statBases>
+		<alienRace>
+		
+			<raceRestriction>
+				
+				<onlyHaveRaceRestrictedGenes>false</onlyHaveRaceRestrictedGenes>
+		
+				<blackEndoCategories>
+					<li>Melanin</li>
+					<li>HairColor</li>
+					
+					<li MayRequire="Ludeon.RimWorld.Biotech">BodyType</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Ears</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Nose</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Voice</li>
+					
+					<li MayRequire="Ludeon.RimWorld.Biotech">Headbone</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Head</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Jaw</li>
+				</blackEndoCategories>
+				
+				<blackGeneList>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Furskin</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Brow_Heavy</li>
+					
+					<li MayRequire="Ludeon.RimWorld.Biotech">Hair_BaldOnly</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Beard_Always</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">FacialRidges</li>
+				</blackGeneList>
+				
+				<blackGeneTags>
+					<li MayRequire="Ludeon.RimWorld.Biotech">EyeColor</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Tail</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">BeardStyle</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Fur</li>
+				</blackGeneTags>
+				
+				<xenotypeList>
+					<li MayRequire="Ludeon.RimWorld.Biotech">AntyXenotype</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Anty_Dorylus</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Anty_Linepithema_humile</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Anty_Solenopsis_Invicta</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Anty_Anoplolepis_gracilipes</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Anty_Tapinoma_melanocephalum</li>
+				</xenotypeList>
+				
+				<blackXenotypeList>
+					<!-- <li MayRequire="Ludeon.RimWorld.Biotech">Baseliner</li> -->
+					<li MayRequire="Ludeon.RimWorld.Biotech">Dirtmole</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Genie</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Hussar</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Sanguophage</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Neanderthal</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Pigskin</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Impid</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Waster</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Yttakin</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Highmate</li>
+				</blackXenotypeList>
+				
+				<onlyUseRaceRestrictedXenotypes>false</onlyUseRaceRestrictedXenotypes><!-- asd -->
+				
+			</raceRestriction>
+			
+			<generalSettings>
+				<corpseCategory>CorpsesHumanlike</corpseCategory>
+				<maleGenderProbability>0.2</maleGenderProbability>
+				<immuneToAge>false</immuneToAge>
+				<humanRecipeImport>true</humanRecipeImport>
+				<canLayDown>true</canLayDown>
+				<maxDamageForSocialfight>3</maxDamageForSocialfight>
+				<immuneToXenophobia>false</immuneToXenophobia>
+				<minAgeForAdulthood>3</minAgeForAdulthood>
+				
+				<growthAges MayRequire="Ludeon.RimWorld.Biotech">
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+				</growthAges>
+				<reproduction MayRequire="Ludeon.RimWorld.Biotech">
+					<femaleFertilityAgeFactor>
+						<points>
+							<li>(1, 0)</li>
+							<li>(20, 0)</li>
+						</points>
+					</femaleFertilityAgeFactor>
+					<maleFertilityAgeFactor>
+						<points>
+							<li>(1, 0)</li>
+							<li>(20, 0)</li>
+						</points>
+					</maleFertilityAgeFactor>
+				</reproduction>
+				<growthFactorByAge MayRequire="Ludeon.RimWorld.Biotech">
+					<points>
+						<li>(0,3.5)</li>
+						<li>(1,3.5)</li>
+						<li>(2,3.5)</li>
+					</points>
+				</growthFactorByAge>
+
+				<factionRelations>
+					<li>
+						<factions>
+							<li>AntyHive</li>
+							<li>AntyHive_B</li>
+						</factions>
+						<goodwill>
+							<min>100</min>
+							<max>100</max>
+						</goodwill>
+					</li>
+					<li>
+						<factions>
+							<li>AntyHive_C</li>
+						</factions>
+						<goodwill>
+							<min>10</min>
+							<max>10</max>
+						</goodwill>
+					</li>
+				</factionRelations>
+				
+				<forcedRaceTraitEntries>
+					<li>
+						<defName>Asexual</defName>
+						<chance>100</chance>
+					</li>
+					<li>
+						<defName>AT_Solidexoskeleton</defName>
+						<chance>8</chance>
+					</li>
+				</forcedRaceTraitEntries>
+				<disallowedTraits>
+					<li>
+						<defName>Bloodlust</defName>
+						<chance>100</chance>
+					</li>
+					<li>
+						<defName>Psychopath</defName>
+						<chance>100</chance>
+					</li>
+					<li>
+						<defName>Cannibal</defName>
+						<chance>100</chance>
+					</li>
+					<li>
+						<defName>Undergrounder</defName>
+						<chance>100</chance>
+					</li>
+					<li>
+						<defName>Tough</defName>
+						<chance>100</chance>
+					</li>
+					<li>
+						<defName>BodyPurist</defName>
+						<chance>100</chance>
+					</li>
+					<li>
+						<defName>Gay</defName>
+						<chance>100</chance>
+					</li>
+					<li>
+						<defName>Bisexual</defName>
+						<chance>100</chance>
+					</li>
+				</disallowedTraits>
+				<alienPartGenerator>
+					<oldHairAgeRange>65.0~85.0</oldHairAgeRange>
+				</alienPartGenerator>
+			</generalSettings>
+			
+			<relationSettings><!-- 관계 -->
+					<relationChanceModifierLover>0</relationChanceModifierLover>
+					<relationChanceModifierExLover>0</relationChanceModifierExLover>
+
+					<relationChanceModifierFiance>0</relationChanceModifierFiance>
+					<relationChanceModifierSpouse>0</relationChanceModifierSpouse>
+					<relationChanceModifierExSpouse>0</relationChanceModifierExSpouse>
+
+					<relationChanceModifierParent>0</relationChanceModifierParent>
+					<relationChanceModifierChild>0</relationChanceModifierChild>
+					<relationChanceModifierSibling>0</relationChanceModifierSibling>
+			</relationSettings><!-- 관계 -->
+		
+			<thoughtSettings><!-- 생각 -->
+				<replacerList>
+					<li>
+						<original>KnowGuestExecuted</original>
+						<replacer>KnowGuestExecuted_B</replacer> 
+					</li>
+					<li>
+						<original>KnowColonistExecuted</original>
+						<replacer>KnowColonistExecuted_B</replacer> 
+					</li>
+					<li>
+						<original>KnowPrisonerDiedInnocent</original>
+						<replacer>KnowPrisonerDiedInnocent_B</replacer> 
+					</li>
+					<li>
+						<original>KnowColonistDied</original>
+						<replacer>KnowColonistDied_B</replacer> 
+					</li>
+					<li>
+						<original>PawnWithGoodOpinionDied</original>
+						<replacer>PawnWithGoodOpinionDied_B</replacer> 
+					</li>
+					<li>
+						<original>PawnWithBadOpinionDied</original>
+						<replacer>PawnWithBadOpinionDied_B</replacer> 
+					</li>
+					<li>
+						<original>KnowGuestOrganHarvested</original>
+						<replacer>KnowGuestOrganHarvested_B</replacer> 
+					</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">
+						<original>HarvestedOrgan_Abhorrent</original>
+						<replacer>KnowGuestOrganHarvested_B</replacer> 
+					</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">
+						<original>HarvestedOrgan_Know_Abhorrent_Mood</original>
+						<replacer>KnowGuestOrganHarvested_B</replacer> 
+					</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">
+						<original>HarvestedOrgan_Horrible</original>
+						<replacer>KnowGuestOrganHarvested_B</replacer> 
+					</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">
+						<original>HarvestedOrgan_Know_Horrible_Mood</original>
+						<replacer>KnowGuestOrganHarvested_B</replacer> 
+					</li>
+					<li>
+						<original>KnowColonistOrganHarvested</original>
+						<replacer>KnowColonistOrganHarvested_B</replacer> 
+					</li>
+					<li>
+						<original>MyOrganHarvested</original>
+						<replacer>MyOrganHarvested_B</replacer> 
+					</li>
+					<li>
+						<original>ButcheredHumanlikeCorpse</original>
+						<replacer>ButcheredHumanlikeCorpse_B</replacer> 
+					</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">
+						<original>ButcheredHuman_Abhorrent</original>
+						<replacer>ButcheredHumanlikeCorpse_B</replacer> 
+					</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">
+						<original>ButcheredHuman_Horrible</original>
+						<replacer>ButcheredHumanlikeCorpse_B</replacer> 
+					</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">
+						<original>ButcheredHuman_Disapproved</original>
+						<replacer>ButcheredHumanlikeCorpse_B</replacer> 
+					</li>
+					<li>
+						<original>HadAngeringFight</original>
+						<replacer>HadAngeringFight_B</replacer> 
+					</li>
+					<li>
+						<original>KilledMyRival</original>
+						<replacer>KilledMyRival_B</replacer>
+					</li>
+					<li>
+						<original>PawnWithBadOpinionLost</original>
+						<replacer>PawnWithBadOpinionLost_B</replacer>
+					</li>
+					<li>
+						<original>ReleasedHealthyPrisoner</original>
+						<replacer>ReleasedHealthyPrisoner_B</replacer>
+					</li>
+					<li>
+						<original>PrisonerBanishedToDie</original>
+						<replacer>ReleasedHealthyPrisoner_B</replacer>
+					</li>
+					<li>
+						<original>ObservedLayingCorpse</original>
+						<replacer>ObservedLayingCorpse_B</replacer>
+					</li>
+					<li>
+						<original>AteInsectMeatDirect</original>
+						<replacer>AteInsectMeatDirect_B</replacer>
+					</li>
+					<li>
+						<original>AteInsectMeatAsIngredient</original>
+						<replacer>AteInsectMeatAsIngredient_B</replacer>
+					</li>
+					<li>
+						<original>HarmedMe</original>
+						<replacer>HarmedMe_B</replacer>
+					</li>
+					<li>
+						<original>ObservedLayingRottingCorpse</original>
+						<replacer>ObservedLayingRottingCorpse_B</replacer>
+					</li>
+					
+					<li>
+						<original>Insulted</original>
+						<replacer>Insulted_B</replacer>
+					</li>
+					<li>
+						<original>InsultedMood</original>
+						<replacer>InsultedMood_B</replacer>
+					</li>
+					
+					<li>
+						<original>KindWords</original>
+						<replacer>KindWords_B</replacer>
+					</li>
+					<li>
+						<original>KindWordsMood</original>
+						<replacer>KindWordsMood_B</replacer>
+					</li>
+					<li>
+						<original>AteCorpse</original>
+						<replacer>AteCorpse_B</replacer>
+					</li>
+					<li>
+						<original>Chocolate_Mood</original>
+						<replacer>Chocolate_Mood_B</replacer>
+					</li>
+					<li>
+						<original>DefeatedMechCluster</original>
+						<replacer>DefeatedMechCluster_B</replacer>
+					</li>
+					<li>
+						<original>KilledHumanlikeBloodlust</original>
+						<replacer>KilledHumanlikeBloodlust_B</replacer>
+					</li>
+
+					<li MayRequire="Ludeon.RimWorld.Ideology">
+						<original>InnocentPrisonerDied_Know_Abhorrent_Mood</original>
+						<replacer>KnowPrisonerDiedInnocent_B</replacer>
+					</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">
+						<original>ExecutedPrisoner_Horrible</original>
+						<replacer>KnowPrisonerDiedInnocent_B</replacer>
+					</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">
+						<original>ExecutedPrisonerInnocent_Horrible</original>
+						<replacer>KnowPrisonerDiedInnocent_B</replacer>
+					</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">
+						<original>HAR_ButcheredAlien_Abhorrent</original>
+						<replacer>ButcheredHumanlikeCorpse_B</replacer>
+					</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">
+						<original>HAR_ButcheredAlien_Disapproved</original>
+						<replacer>ButcheredHumanlikeCorpse_B</replacer>
+					</li>
+					<li MayRequire="Ludeon.RimWorld.Royalty">
+						<original>CryingBaby</original>
+						<replacer>CryingBaby_B</replacer>
+					</li>
+					<li MayRequire="Ludeon.RimWorld.Royalty">
+						<original>GigglingBaby</original>
+						<replacer>GigglingBaby_B</replacer>
+					</li>
+				</replacerList>
+				<restrictedThoughts>
+					<li>NeedOutdoors_B</li>
+					<li>Expectations_B</li>
+					<li MayRequire="Ludeon.RimWorld.Royalty">TitleNoPersonalBedroom_B</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">BabySick_B</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">ChildInGrowthVat_B</li>
+				</restrictedThoughts>
+				<cannotReceiveThoughts>
+					<!-- <li>Pain</li> -->
+					<li>OpinionOfMyLover</li>
+					<li>WantToSleepWithSpouseOrLover</li>
+					<li>Expectations</li>
+					<li>NewColonyOptimism</li>
+					<li>NewColonyHope</li>
+					
+					<li>MySonDied</li>
+					<li>MyDaughterDied</li>
+					<li>MyBrotherDied</li>
+					<li>MySisterDied</li>
+					<li>MyGrandchildDied</li>
+					<li>MyNieceDied</li>
+					<li>MyNephewDied</li>
+					<li>MyHalfSiblingDied</li>
+					<li>MyAuntDied</li>
+					<li>MyUncleDied</li>
+					<li>MyCousinDied</li>
+					<li>MyKinDied</li>
+					<li>MyHusbandDied</li>
+					<li>MyWifeDied</li>
+					<li>MyFianceDied</li>
+					<li>MyFianceeDied</li>
+					<li>MyLoverDied</li>
+					<li>MyFatherDied</li>
+					<li>MyMotherDied</li>
+					<li>MyGrandparentDied</li>
+					
+					<li>KilledMyFriend</li>
+					<li>KilledMyLover</li>
+					<li>KilledMyFiance</li>
+					<li>KilledMySpouse</li>
+					<li>KilledMyFather</li>
+					<li>KilledMyMother</li>
+
+					<li>KilledMySon</li>
+					<li>KilledMyDaughter</li>
+					<li>KilledMyBrother</li>
+					<li>KilledMySister</li>
+					<li>KilledMyKin</li>
+					<li>KilledColonist</li>
+					<li>KilledColonyAnimal</li>
+					<li>KilledMyBondedAnimal</li>
+					
+					<li>AteHumanlikeMeatDirect</li>
+					<li>AteHumanlikeMeatAsIngredient</li>
+					<li>KnowButcheredHumanlikeCorpse</li>
+					<li>ButcheredHumanlikeCorpseOpinion</li>
+					<li>AteRawHumanlikeMeat</li>
+					
+					<li>WitnessedDeathAlly</li>
+					<li>WitnessedDeathNonAlly</li>
+					<li>WitnessedDeathFamily</li>
+					
+					<li>EnvironmentDark</li>
+					<li>NeedOutdoors</li>
+					
+					<li>DeadMansApparel</li>
+					<li>HumanLeatherApparelSad</li>
+					
+					<li>ExecutedPrisoner</li>
+					<li>PawnWithBadOpinionLost</li>
+					
+					<li>ColonistLeftUnburied</li>
+					
+					<li>ColonistLost</li>
+					<li>PawnWithGoodOpinionLost</li>
+					<li>PawnWithBadOpinionLost</li>
+					
+					<li>MySonLost</li>
+					<li>MyDaughterLost</li>
+					<li>MyHusbandLost</li>
+					<li>MyWifeLost</li>
+					<li>MyFianceLost</li>
+					<li>MyFianceeLost</li>
+					<li>MyLoverLost</li>
+					<li>MyBrotherLost</li>
+					<li>MySisterLost</li>
+					<li>MyGrandchildLost</li>
+					<li>MyFatherLost</li>
+					<li>MyMotherLost</li>
+					<li>MyNieceLost</li>
+					<li>MyNephewLost</li>
+					<li>MyHalfSiblingLost</li>
+					<li>MyAuntLost</li>
+					<li>MyUncleLost</li>
+					<li>MyGrandparentLost</li>
+					<li>MyCousinLost</li>
+					<li>MyKinLost</li>
+					<li>SharedBed</li>
+
+					<li>BondedAnimalBanished</li>
+					<li>SoldMyBondedAnimal</li>
+					<li>SoldMyBondedAnimalMood</li>
+					<li>BondedAnimalReleased</li>
+					<li>BondedAnimalLost</li>
+					<li>BondedAnimalDied</li>
+					<li>BondedAnimalMaster</li>
+					<li>NotBondedAnimalMaster</li>
+
+					<li>Ugly</li>
+					<li>Pretty</li>
+					
+					<li>AteNutrientPasteMeal</li>
+					
+					<li MayRequire="Ludeon.RimWorld.Royalty">TitleNoPersonalBedroom</li>
+
+					<li MayRequire="Ludeon.RimWorld.Ideology">HAR_AteAlienMeat_Know_Abhorrent</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">HAR_AteAlienMeat_Abhorrent</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">HAR_ButcheredAlien_Know_Abhorrent_Opinion</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">HAR_ButcheredAlien_Know_Abhorrent</li>
+					
+					<li MayRequire="Ludeon.RimWorld.Ideology">HAR_AteAlienMeat_Disapproved</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">HAR_AteAlienMeat_Know_Disapproved</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">HAR_ButcheredAlien_Know_Disapproved</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">HAR_ButcheredAlien_Know_Disapproved_Opinion</li>
+
+					<li MayRequire="Ludeon.RimWorld.Ideology">AteHumanMeat_Abhorrent</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">AteHumanMeat_Know_Abhorrent</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">HumanLeatherApparel_Abhorrent</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">ButcheredHuman_Know_Abhorrent</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">ButcheredHuman_Know_Abhorrent_Opinion</li>
+
+					<li MayRequire="Ludeon.RimWorld.Ideology">AteHumanMeat_Horrible</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">AteHumanMeat_Know_Horrible</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">HumanLeatherApparel_Horrible</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">ButcheredHuman_Know_Horrible</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">ButcheredHuman_Know_Horrible_Opinion</li>
+
+					<li MayRequire="Ludeon.RimWorld.Ideology">AteHumanMeat_Disapproved</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">AteHumanMeat_Know_Disapproved</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">HumanLeatherApparel_Disapproved</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">ButcheredHuman_Know_Disapproved</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">ButcheredHuman_Know_Disapproved_Opinion</li>
+
+					<li MayRequire="Ludeon.RimWorld.Ideology">HarvestedOrgan_Know_Abhorrent</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">HarvestedOrgan_Know_Horrible</li>
+
+					<li MayRequire="Ludeon.RimWorld.Ideology">TradedOrgan_Abhorrent</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">TradedOrgan_Know_Abhorrent</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">TradedOrgan_Know_Abhorrent_Mood</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">InstalledOrgan_Abhorrent</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">InstalledOrgan_Know_Abhorrent</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">InstalledOrgan_Know_Abhorrent_Mood</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">SoldOrgan_Disapproved</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">SoldOrgan_Know_Horrible_Mood</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">SoldOrgan_Know_Disapproved</li>
+
+					<li MayRequire="Ludeon.RimWorld.Ideology">ExecutedPrisoner_Know_Abhorrent</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">InnocentPrisonerDied_Know_Abhorrent</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">ExecutedPrisoner_Know_Horrible</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">InnocentPrisonerDied_Know_Horrible</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">ExecutedPrisonerInnocent_Know_Horrible</li>
+
+					<li MayRequire="Ludeon.RimWorld.Ideology">InnocentPrisonerDied_Abhorrent</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">InnocentPrisonerDied_Horrible</li>
+					
+					<li MayRequire="Smuffle.HarvestOrgansPostMortem">HarvestedHumanlikeCorpse</li>
+					<li MayRequire="Smuffle.HarvestOrgansPostMortem">KnowHarvestedHumanlikeCorpse</li>
+					
+					<li MayRequire="Ludeon.RimWorld.Biotech">KilledChild</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">MyBirthMotherDied</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">KilledMyBirthMother</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">MyBirthMotherLost</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">EnslavedChild</li>
+					
+					<li MayRequire="Ludeon.RimWorld.Biotech">PartnerMiscarried</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Miscarried</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Stillbirth</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">PsychicBondTorn</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">BabyBorn</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">MyCryingBaby</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">MyGigglingBaby</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">MyChildHappy</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">MyChildrenHappy</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">MyChildSad</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">MyChildrenSad</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">YoungstersHappy</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">YoungstersSad</li>
+					
+					<li MayRequire="Ludeon.RimWorld.Biotech">BabySick</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">ChildInGrowthVat</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">KilledChild</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">MyBirthMotherDied</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">KilledMyBirthMother</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">MyBirthMotherLost</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">KilledChild_Opinion</li>
+					
+					<li MayRequire="SutSutMan.YuranRJWAddon">YR_TentacleWiggle_Hediff</li>
+					<li MayRequire="SutSutMan.YuranRJWAddon">YR_Tentacle_Hediff</li>
+					
+					<li>AT_Aphidextract_Mood</li>
+				</cannotReceiveThoughts>
+			</thoughtSettings><!-- 생각 -->
+		</alienRace>
+		<race>
+			<renderTree>Humanlike</renderTree>
+			<!-- <isImmuneToInfection>true</isImmuneToInfection> -->
+			<canBecomeShambler>false</canBecomeShambler>
+			<hasUnnaturalCorpse>true</hasUnnaturalCorpse>
+			<bloodSmearDef>AT_Filth_BloodSmear</bloodSmearDef>
+		</race>
+		<damageMultipliers>
+			<li>
+				<damageDef>AT_AcidDamage</damageDef>
+				<multiplier>0</multiplier>
+			</li>
+			<li>
+				<damageDef>AT_AcidDamage_High</damageDef>
+				<multiplier>0</multiplier>
+			</li>
+			<li>
+				<damageDef>AT_glueBomb</damageDef>
+				<multiplier>0</multiplier>
+			</li>
+			<li>
+				<damageDef>AT_glueBomb_B</damageDef>
+				<multiplier>0</multiplier>
+			</li>
+			<li>
+				<damageDef>Thump</damageDef>
+				<multiplier>0</multiplier>
+			</li>
+			<li>
+				<damageDef>AT_AcidBullet</damageDef>
+				<multiplier>0.8</multiplier>
+			</li>
+			<li>
+				<damageDef>AT_AcidBomb</damageDef>
+				<multiplier>0.8</multiplier>
+			</li>
+			<li>
+				<damageDef>AT_AcidBomb_B</damageDef>
+				<multiplier>0.8</multiplier>
+			</li>
+			<li>
+				<damageDef>AT_AcidBomb_C</damageDef>
+				<multiplier>0.5</multiplier>
+			</li>
+			<li>
+				<damageDef>Flame</damageDef>
+				<multiplier>1.5</multiplier>
+			</li>
+			<li>
+				<damageDef>Burn</damageDef>
+				<multiplier>1.5</multiplier>
+			</li>
+			<li>
+				<damageDef>AcidBurn</damageDef>
+				<multiplier>0.5</multiplier>
+			</li>
+		</damageMultipliers>
+		<recipes>
+				<li>ExciseCarcinoma</li>
+				<li>AdministerMechSerumHealer</li>
+				<li>RemoveBodyPart</li>
+				<li>Euthanize</li>
+				<li>Anesthetize</li>
+				<li>CureScaria</li>
+				
+				<li MayRequire="Ludeon.RimWorld.Royalty">CureBloodRot</li>
+				<li MayRequire="Ludeon.RimWorld.Royalty">CureAbasia</li>
+				
+				<li MayRequire="Ludeon.RimWorld.Biotech">Vasectomy</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">ReverseVasectomy</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">TubalLigation</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">ExtractOvum</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">ExtractHemogenPack</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">BloodTransfusion</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">ImplantXenogerm</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">ImplantIUD</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">RemoveIUD</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">TerminatePregnancy</li>
+		</recipes><!-- 수술 -->
+	</AlienRace.ThingDef_AlienRace>
+</Defs>

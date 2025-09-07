@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HediffDef>
+		<defName>AT_LarvaLearningAid</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>curiosity</label>
+		<description>Curiosity has increased the learning rate.</description>
+		<defaultLabelColor>(125,160,140)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<initialSeverity>180</initialSeverity>
+		<maxSeverity>180</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-1</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+			<li Class="HediffCompProperties_Discoverable">
+				<sendLetterWhenDiscovered>true</sendLetterWhenDiscovered>
+				<discoverLetterLabel>{0}</discoverLetterLabel>
+				<discoverLetterText>{0}</discoverLetterText>
+				<letterType>AT_Soldierbirth</letterType>
+				<messageType>PositiveEvent</messageType>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+				<!-- <statFactors>
+					<WorkSpeedGlobal>1.8</WorkSpeedGlobal>
+				</statFactors> -->
+			</li>
+			<li>
+				<minSeverity>60</minSeverity>
+				<statOffsets>
+					<GlobalLearningFactor>2</GlobalLearningFactor>
+				</statOffsets>
+				<!-- <statFactors>
+					<WorkSpeedGlobal>2.5</WorkSpeedGlobal>
+				</statFactors> -->
+			</li>
+			<li>
+				<minSeverity>120</minSeverity>
+				<statOffsets>
+					<GlobalLearningFactor>3</GlobalLearningFactor>
+				</statOffsets>
+				<!-- <statFactors>
+					<WorkSpeedGlobal>3.5</WorkSpeedGlobal>
+				</statFactors> -->
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>AT_BloodLoss</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>BloodLoss</label>
+		<description>.</description>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+				<totalBleedFactor>0.6</totalBleedFactor>
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>

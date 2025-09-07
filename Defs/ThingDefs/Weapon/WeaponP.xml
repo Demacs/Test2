@@ -1,0 +1,916 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef Name="BaseGas_Anty" Abstract="True">
+		<thingClass>Gas</thingClass>
+		<label>gas</label>
+		<category>Gas</category>
+		<altitudeLayer>Gas</altitudeLayer>
+		<useHitPoints>true</useHitPoints>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+		  <graphicClass>Graphic_Gas</graphicClass>
+		  <shaderType>Transparent</shaderType>
+		</graphicData>
+		<fillPercent>0.55</fillPercent>
+		<statBases>
+			<MaxHitPoints>450</MaxHitPoints>
+		</statBases>
+		
+		<damageMultipliers>
+      <li>
+        <damageDef>Thump</damageDef>
+        <multiplier>0.5</multiplier>
+      </li>
+      <li>
+        <damageDef>Bomb</damageDef>
+        <multiplier>0.25</multiplier>
+      </li>
+      <li>
+        <damageDef>BombSuper</damageDef>
+        <multiplier>0.25</multiplier>
+      </li>
+	  <li>
+        <damageDef>AT_AcidBullet</damageDef>
+        <multiplier>0.2</multiplier>
+      </li>
+	  <li>
+        <damageDef>AT_AcidBomb</damageDef>
+        <multiplier>0.2</multiplier>
+      </li>
+	  <li>
+        <damageDef>AT_AcidBomb_B</damageDef>
+        <multiplier>0.2</multiplier>
+      </li>
+	  
+	  <li MayRequire="kentington.saveourship2">
+        <damageDef>BombACI</damageDef>
+        <multiplier>0.25</multiplier>
+      </li>
+	  <li MayRequire="kentington.saveourship2">
+        <damageDef>BombACII</damageDef>
+        <multiplier>0.25</multiplier>
+      </li>
+	  <li MayRequire="kentington.saveourship2">
+        <damageDef>BombACIII</damageDef>
+        <multiplier>0.25</multiplier>
+      </li>
+	  <li MayRequire="kentington.saveourship2">
+        <damageDef>ShipLaserSmall</damageDef>
+        <multiplier>0.8</multiplier>
+      </li>
+	  <!-- <li MayRequire="kentington.saveourship2">
+        <damageDef>ShipPlasmaSmall</damageDef>
+        <multiplier>0.5</multiplier>
+      </li> -->
+	  <li MayRequire="kentington.saveourship2">
+        <damageDef>BombKinetic</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+	  <li MayRequire="kentington.saveourship2">
+        <damageDef>ShipLaserTwo</damageDef>
+        <multiplier>0.8</multiplier>
+      </li>
+	  <!-- <li MayRequire="kentington.saveourship2">
+        <damageDef>ShipPlasmaLarge</damageDef>
+        <multiplier>0.5</multiplier>
+      </li> -->
+	  <li MayRequire="kentington.saveourship2">
+        <damageDef>BombKineticLarge</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+	  
+	  <li MayRequire="kentington.saveourship2">
+        <damageDef>ShipTorpedoBomb</damageDef>
+        <multiplier>0.01</multiplier>
+      </li>
+	  <li MayRequire="kentington.saveourship2">
+        <damageDef>ShipTorpedoBombSuper</damageDef>
+        <multiplier>0.01</multiplier>
+      </li>
+    </damageMultipliers>
+	</ThingDef>
+
+	<ThingDef Name="BaseMeleeWeaponAnty" Abstract="True" ParentName="BaseMeleeWeapon">
+		<techLevel>Industrial</techLevel>
+		<recipeMaker>
+			<recipeUsers Inherit="False">
+				<li>AntyCopyTableMachining</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+			<disallowedThingDefs>
+				<li>Silver</li>
+				<li>Gold</li>
+			</disallowedThingDefs>
+			</defaultIngredientFilter>
+		</recipeMaker>
+			
+			<comps>
+				<li>
+					<compClass>CompQuality</compClass>
+				</li>
+				<li Class="CompProperties_Art">
+					<nameMaker>NamerArtWeaponMelee</nameMaker>
+					<descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+					<minQualityForArtistic>Excellent</minQualityForArtistic>
+				</li>
+				<li Class="CompProperties_Biocodable"/>
+			</comps>
+
+			<descriptionHyperlinks>
+				<HediffDef>Chemicaldissolution_high</HediffDef>
+				<ThingDef>Anty_Recyclecore</ThingDef>
+			</descriptionHyperlinks>
+			<weaponClasses>
+				<li>Ultratech</li>
+				<li>MeleePiercer</li>
+			</weaponClasses>
+			<thingCategories Inherit="False">
+				<li>AT_Weapons</li>
+			</thingCategories>
+			<tradeTags>
+			  <li>WeaponRanged</li>
+			  <li>AT_AcidWeaponMelee</li>
+			</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseMakeableGun_Anty" Name="AT_hydroheliumion_A">
+		<defName>AT_hydroheliumion_A</defName>
+		<label>Red-Burst Rifle</label>
+		<description>Weapon developed by Anty to face against innately strong or heavily armored enemies.\n\n Unlike the standard acid weapons, this devastating weapon fires Redburst, the Antyacid-Refleum chemical compound.\n\n It is the most standard form of Redburst weapon.</description>
+		<descriptionHyperlinks Inherit="False">
+			<HediffDef>Chemicaldissolution_high</HediffDef>
+			<ThingDef>Anty_Recyclecore</ThingDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Weapons/AT_hydroheliumion_A</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<soundInteract>hydroheliumion_A</soundInteract>
+		<generateCommonality>0.3</generateCommonality>
+		<weaponTags>
+			<li>hydroheliumion_A</li>
+			<li>ammo_none</li>
+		</weaponTags>
+		<statBases>
+			<WorkToMake>90000</WorkToMake>
+			<Mass>3</Mass>
+			<RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+			<AT_Acid_damage>0.3</AT_Acid_damage>
+			<AT_Acid_damage_duration>40</AT_Acid_damage_duration>
+			<AT_Acid_damage_destruction>35</AT_Acid_damage_destruction>
+		</statBases>
+		<equippedAngleOffset>45</equippedAngleOffset>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.25</MoveSpeed>
+		</equippedStatOffsets>
+		<costList>
+			<AntyExoskeleton>80</AntyExoskeleton>
+			<Refleum>15</Refleum>
+			<Uranium>20</Uranium>
+			<ComponentSpacer>4</ComponentSpacer>
+			<Anty_Recyclecore>1</Anty_Recyclecore>
+		</costList>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>10</Crafting>
+				<Intellectual>5</Intellectual>
+			</skillRequirements>
+			<researchPrerequisite>hydroheliumion</researchPrerequisite>
+		</recipeMaker>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullethydroheliumion</defaultProjectile>
+				<warmupTime>1</warmupTime>
+				<minRange>7.1</minRange>
+				<range>34.9</range>
+				<forcedMissRadius>1.9</forcedMissRadius>
+				<burstShotCount>1</burstShotCount>
+				<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+				<soundCast>ShotAnty_G</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>8</muzzleFlashScale>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>Nozzle</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>3</cooldownTime>
+			</li>
+		</tools>
+		<techLevel>Spacer</techLevel>
+	</ThingDef>
+  
+	<ThingDef ParentName="BaseBullet" Name="Bullethydroheliumion">
+		<defName>Bullethydroheliumion</defName>
+		<label>Red-Burst Bullet</label>
+		<graphicData>
+			<texPath>Things/Weapons/kan</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<speed>70</speed>
+			<damageDef>AT_AcidBomb_B</damageDef>
+			<damageAmountBase>7</damageAmountBase>
+			<armorPenetrationBase>0.1</armorPenetrationBase>
+			<stoppingPower>3</stoppingPower>
+			<explosionRadius>1.9</explosionRadius>
+			<explosionDelay>0</explosionDelay>
+			
+			<landedEffecter>Fleck_AcidPuff</landedEffecter>
+		</projectile>
+		<comps>
+			<li Class="CompProperties_ProjectileEffecter">
+				<effecterDef>AT_SuperAcidLaunched</effecterDef>
+			</li>
+		</comps>
+	</ThingDef>
+  
+	<DamageDef Name="AT_AcidBomb_B">
+		<defName>AT_AcidBomb_B</defName>
+		<label>Red-Burst bomb</label>
+		<workerClass>TorgueAnty.TorgueAnty_DamageWorker_AddInjury</workerClass>
+		<externalViolence>true</externalViolence>
+		<isExplosive>true</isExplosive>
+		<deathMessage>{0} has died in an explosion.</deathMessage>
+		<hediff>Chemicaldissolution_high</hediff>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<impactSoundType>Toxic</impactSoundType>
+		<armorCategory>Blunt</armorCategory>
+		<minDamageToFragment>1</minDamageToFragment>
+		<defaultDamage>4</defaultDamage>
+		<defaultArmorPenetration>0</defaultArmorPenetration>
+		<buildingDamageFactor>1</buildingDamageFactor>
+		<plantDamageFactor>5</plantDamageFactor>
+		<!-- <explosionAffectOutsidePartsOnly>true</explosionAffectOutsidePartsOnly> -->
+		<explosionCellMote>Mote_HyBlast</explosionCellMote>
+		<explosionInteriorMote>Mote_AcidSmoke_B</explosionInteriorMote>
+		<explosionColorCenter>(1, 1, 1)</explosionColorCenter>
+		<explosionColorEdge>(0.8, 0.8, 1)</explosionColorEdge>
+		<soundExplosion>Explosion_Acid</soundExplosion>
+		<combatLogRules>Damage_Bomb</combatLogRules>
+		<makesAnimalsFlee>true</makesAnimalsFlee>
+		<defaultStoppingPower>2.0</defaultStoppingPower>
+	</DamageDef>
+		
+	<ThingDef ParentName="BaseGas_Anty">
+		<defName>Filth_ApproachSmoke_B</defName>
+		<label>Acid Refleum gas</label>
+		<graphicData>
+			<texPath>Things/Weapons/AcidSmoke</texPath>
+			<drawSize>2.5</drawSize>
+			<color>(60,0,0)</color>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<pathCost>25</pathCost>
+		<pathCostIgnoreRepeat>false</pathCostIgnoreRepeat>
+		<gas>
+			<expireSeconds>70~80</expireSeconds>
+			<!-- <blockTurretTracking>true</blockTurretTracking>
+			<accuracyPenalty>0.80</accuracyPenalty> -->
+			<rotationSpeed>50</rotationSpeed>
+		</gas>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseMeleeWeaponAnty">
+		<defName>AT_RedHalberd</defName>
+		<label>Red-burst halberd</label>
+		<description>A halberd with an in-built red-burst emitter, which releases red-burst upon impact. Stabbing with the spearhead, which the emitter is directly attached, will inject large amount of red-burst to the target.\n\nIt is equipped with a powerful EMP function.</description>
+		<graphicData>
+			<texPath>Things/Weapons/RedBurstHalberd</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<uiIconScale>1.2</uiIconScale>
+		<weaponTags>
+			<li>ATCharge_R</li>
+		</weaponTags>
+		<statBases>
+			<WorkToMake>43000</WorkToMake>
+			<Mass>3.85</Mass>
+			<AT_Acid_damage_Melee>0.3</AT_Acid_damage_Melee>
+			<AT_Acid_damage_duration_Melee>40</AT_Acid_damage_duration_Melee>
+			<AT_Acid_damage_destruction_Melee>35</AT_Acid_damage_destruction_Melee>
+		</statBases>
+		<costList>
+			<AntyExoskeleton>100</AntyExoskeleton>
+			<Refleum>20</Refleum>
+			<Uranium>20</Uranium>
+			<ComponentSpacer>2</ComponentSpacer>
+			<Anty_Recyclecore>1</Anty_Recyclecore>
+		</costList>
+		<equippedAngleOffset>45</equippedAngleOffset>
+		<tools>
+			<li>
+				<label>Axe</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>15</power>
+				<armorPenetration>0.3</armorPenetration>
+				<cooldownTime>1</cooldownTime>
+				<extraMeleeDamages>
+					<li>
+						<def>Anty_Cut</def>
+						<amount>8</amount>
+						<chance>0.5</chance>
+					</li>
+					<li>
+						<def>EMP</def>
+						<amount>20</amount>
+						<chance>0.15</chance>
+					</li>
+				</extraMeleeDamages>
+				<chanceFactor>0.4</chanceFactor>
+			</li>
+			<li>
+				<label>Spearhead</label>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+				<power>25</power>
+				<armorPenetration>0.5</armorPenetration>
+				<cooldownTime>3</cooldownTime>
+				<extraMeleeDamages>
+					<li>
+						<def>Anty_Poke</def>
+						<amount>10</amount>
+						<chance>0.5</chance>
+					</li>
+					<li>
+						<def>Anty_Cut</def>
+						<amount>10</amount>
+						<chance>0.5</chance>
+					</li>
+					<li>
+						<def>EMP</def>
+						<amount>20</amount>
+						<chance>0.15</chance>
+					</li>
+					<li>
+						<def>Stun</def>
+						<amount>10</amount>
+						<chance>0.1</chance>
+					</li>
+				</extraMeleeDamages>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+			<li>
+				<label>Hook</label>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+				<power>15</power>
+				<armorPenetration>0.35</armorPenetration>
+				<cooldownTime>1</cooldownTime>
+				<extraMeleeDamages>
+					<li>
+						<def>Anty_Poke</def>
+						<amount>8</amount>
+						<chance>0.5</chance>
+					</li>
+					<li>
+						<def>Stun</def>
+						<amount>2</amount>
+						<chance>0.1</chance>
+					</li>
+				</extraMeleeDamages>
+				<chanceFactor>0.4</chanceFactor>
+			</li>
+		</tools>
+		<meleeHitSound>AT_MeleeImpact_A</meleeHitSound>
+		<recipeMaker>
+			<skillRequirements>
+					<Crafting>10</Crafting>
+					<Intellectual>5</Intellectual>
+			</skillRequirements>
+			<researchPrerequisite>hydroheliumion</researchPrerequisite>
+		</recipeMaker>
+		<techLevel>Spacer</techLevel>
+	</ThingDef>
+	
+	<DamageDef ParentName="BluntBase">
+		<defName>Anty_Poke</defName>
+		<hediff>Chemicaldissolution_high</hediff>
+		<hediffSkin>Chemicaldissolution_high</hediffSkin>
+		<hediffSolid>Chemicaldissolution_high</hediffSolid>
+		<stabChanceOfForcedInternal>1</stabChanceOfForcedInternal>
+		<defaultArmorPenetration>0.01</defaultArmorPenetration>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<impactSoundType>Toxic</impactSoundType>
+		<damageEffecter>Fleck_AcidPuff</damageEffecter>
+	</DamageDef>
+	
+	<DamageDef ParentName="CutBase">
+		<defName>Anty_Cut</defName>
+		<hediff>Chemicaldissolution_high</hediff>
+		<hediffSkin>Chemicaldissolution_high</hediffSkin>
+		<hediffSolid>Chemicaldissolution_high</hediffSolid>
+		<cutCleaveBonus>1.4</cutCleaveBonus>
+		<defaultArmorPenetration>0.01</defaultArmorPenetration>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<armorCategory>Blunt</armorCategory>
+		<impactSoundType>Toxic</impactSoundType>
+		<damageEffecter>Fleck_AcidPuff</damageEffecter>
+	</DamageDef>
+	
+	<ThingDef ParentName="EtherealThingBase">
+		<defName>AntyMeleeExplosion</defName>
+		<label>explosion</label>
+		<thingClass>AntyMelee.AntyMeleeExplosion</thingClass>
+		<tickerType>Normal</tickerType>
+	</ThingDef>
+
+	<!-- <ToolCapacityDef>
+		<defName>AntyMeleeExplosion</defName>
+	</ToolCapacityDef>
+	<ManeuverDef>
+		<defName>AntyMeleeExplosion</defName>
+		<requiredCapacity>AntyMeleeExplosion</requiredCapacity>
+		<verb Class="AntyMelee.VerbProperties_AntyMelee">
+			<verbClass>AntyMelee.Verb_AntyMeleeFiring</verbClass>
+			<damageDef>AT_AcidBomb_B</damageDef>
+			<damageAmount>3</damageAmount>
+			<range>4.5</range>
+			<angle>60</angle>
+		</verb>
+		<logEntryDef>MeleeAttack</logEntryDef>
+		<combatLogRulesHit>Maneuver_Scratch_MeleeHit</combatLogRulesHit>
+		<combatLogRulesDeflect>Maneuver_Scratch_MeleeDeflect</combatLogRulesDeflect>
+		<combatLogRulesMiss>Maneuver_Scratch_MeleeMiss</combatLogRulesMiss>
+		<combatLogRulesDodge>Maneuver_Scratch_MeleeDodge</combatLogRulesDodge>
+	</ManeuverDef> -->
+	
+	<ThingDef ParentName="BaseMakeableGun_Anty">
+		<defName>AT_hydroheliumion_B</defName>
+		<label>Red-Burst Line Rifle</label>
+		<description>Weapon developed by Anty to face against innately strong or heavily armored enemies.\n\n Unlike the standard acid weapons, this devastating weapon fires Redburst, the Antyacid-Refleum chemical compound.\n\n It has shorter fire range due to the unstable nozzle, thus making it more effective in situations that does not require long fire range, such as urban warfare. Also, since it has superior firepower in close range, it can be utilized even in close combat.\n\nIt is equipped with a powerful EMP function.</description>
+		<descriptionHyperlinks Inherit="False">
+			<HediffDef>Chemicaldissolution_high</HediffDef>
+			<ThingDef>Anty_Recyclecore</ThingDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Weapons/AT_hydroheliumion_B</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<soundInteract>hydroheliumion_A</soundInteract>
+		<generateCommonality>0.3</generateCommonality>
+		<weaponTags>
+			<li>hydroheliumion_B</li>
+			<li>ammo_none</li>
+		</weaponTags>
+		<statBases>
+			<WorkToMake>90000</WorkToMake>
+			<Mass>3</Mass>
+			<AccuracyTouch>0.55</AccuracyTouch>
+			<AccuracyShort>0.30</AccuracyShort>
+			<AccuracyMedium>0.15</AccuracyMedium>
+			<AccuracyLong>0.1</AccuracyLong>
+			<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+			<AT_Acid_damage>0.3</AT_Acid_damage>
+			<AT_Acid_damage_duration>40</AT_Acid_damage_duration>
+			<AT_Acid_damage_destruction>35</AT_Acid_damage_destruction>
+			<AT_pelletCount>6</AT_pelletCount>
+		</statBases>
+		<equippedAngleOffset>45</equippedAngleOffset>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.25</MoveSpeed>
+		</equippedStatOffsets>
+		<costList>
+			<AntyExoskeleton>80</AntyExoskeleton>
+			<Refleum>15</Refleum>
+			<Uranium>20</Uranium>
+			<ComponentSpacer>4</ComponentSpacer>
+			<Anty_Recyclecore>1</Anty_Recyclecore>
+		</costList>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>10</Crafting>
+				<Intellectual>5</Intellectual>
+			</skillRequirements>
+			<researchPrerequisite>hydroheliumion</researchPrerequisite>
+		</recipeMaker>
+		<verbs>
+			<li Class="TorgueAnty.Verb_Properties_ShotGun">
+				<verbClass>TorgueAnty.Verb_Shoot_ShotGun</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullethydroheliumion_B</defaultProjectile>
+				<warmupTime>1</warmupTime>
+				<range>19.9</range>
+				<burstShotCount>3</burstShotCount>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+				<soundCast>ShotAnty_G</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>6</muzzleFlashScale>
+				<pelletCount>6</pelletCount>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>Nozzle</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>1.25</cooldownTime>
+				<extraMeleeDamages>
+					<li>
+						<def>Anty_Poke</def>
+						<amount>10</amount>
+						<chance>0.35</chance>
+					</li>
+					<li>
+						<def>EMP</def>
+						<amount>25</amount>
+						<chance>0.25</chance>
+					</li>
+					<li>
+						<def>Stun</def>
+						<amount>3</amount>
+						<chance>0.15</chance>
+					</li>
+				</extraMeleeDamages>
+			</li>
+		</tools>
+		<meleeHitSound>AT_MeleeImpact_B</meleeHitSound>
+		<techLevel>Spacer</techLevel>
+	</ThingDef>
+  
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullethydroheliumion_B</defName>
+		<label>Red-Burst Bullet</label>
+		<graphicData>
+			<texPath>Things/Weapons/kanB</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<speed>70</speed>
+			<damageDef>AT_AcidBullet_B</damageDef>
+			<damageAmountBase>2</damageAmountBase>
+			<armorPenetrationBase>0.2</armorPenetrationBase>
+			<stoppingPower>1</stoppingPower>
+			<extraDamages>
+					<li>
+						<def>EMP</def>
+						<amount>15</amount>
+						<chance>0.1</chance>
+					</li>
+			</extraDamages>
+			
+			<landedEffecter>Fleck_AcidPuff</landedEffecter>
+		</projectile>
+		<comps>
+			<li Class="CompProperties_ProjectileEffecter">
+				<effecterDef>AT_SuperAcidLaunched</effecterDef>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<DamageDef Name="AT_AcidBullet_B">
+		<defName>AT_AcidBullet_B</defName>
+		<label>Red-Burst Bullet</label>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has been shot to death.</deathMessage>
+		<hediff>Chemicaldissolution_high</hediff>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<impactSoundType>AntyAcid_Bullet</impactSoundType>
+		<damageEffecter>Fleck_AcidPuff</damageEffecter>
+		<armorCategory>Blunt</armorCategory>
+		<overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+		<defaultArmorPenetration>0</defaultArmorPenetration>
+		<isRanged>true</isRanged>
+		<makesAnimalsFlee>true</makesAnimalsFlee>
+		<makesBlood>false</makesBlood>
+	</DamageDef>
+	
+	<ThingDef ParentName="BaseMakeableGun_Anty">
+		<defName>AT_hydroheliumion_C</defName>
+		<label>Red-Burst Cluster</label>
+		<description>Weapon developed by Anty to face against innately strong or heavily armored enemies.\n\n Unlike the standard acid weapons, this devastating weapon fires Redburst, the Antyacid-Refleum chemical compound.\n\n It causes huge explosion of redburst. It is most effective against stationed or clustered enemies.</description>
+		<descriptionHyperlinks Inherit="False">
+			<HediffDef>Chemicaldissolution_high</HediffDef>
+			<ThingDef>Anty_Recyclecore</ThingDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Weapons/AT_hydroheliumion_C</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<soundInteract>hydroheliumion_A</soundInteract>
+		<generateCommonality>0.3</generateCommonality>
+		<weaponTags>
+			<li>hydroheliumion_C</li>
+			<li>ammo_none</li>
+		</weaponTags>
+		<statBases>
+			<WorkToMake>90000</WorkToMake>
+			<Mass>5</Mass>
+			<RangedWeapon_Cooldown>6</RangedWeapon_Cooldown>
+			
+			<AccuracyTouch>1</AccuracyTouch>
+			<AccuracyShort>1</AccuracyShort>
+			<AccuracyMedium>1</AccuracyMedium>
+			<AccuracyLong>1</AccuracyLong>
+			<AT_Acid_damage>0.3</AT_Acid_damage>
+			<AT_Acid_damage_duration>40</AT_Acid_damage_duration>
+			<AT_Acid_damage_destruction>35</AT_Acid_damage_destruction>
+		</statBases>
+		<equippedAngleOffset>45</equippedAngleOffset>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.45</MoveSpeed>
+			<ShootingAccuracyPawn>1000</ShootingAccuracyPawn>
+		</equippedStatOffsets>
+		<costList>
+			<AntyExoskeleton>80</AntyExoskeleton>
+			<Refleum>40</Refleum>
+			<Uranium>25</Uranium>
+			<AT_Aphidextract>50</AT_Aphidextract>
+			<ComponentSpacer>4</ComponentSpacer>
+			<Anty_Recyclecore>2</Anty_Recyclecore>
+		</costList>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>10</Crafting>
+				<Intellectual>8</Intellectual>
+			</skillRequirements>
+			<researchPrerequisite>hydroheliumion_B</researchPrerequisite>
+		</recipeMaker>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullethydroheliumion_C</defaultProjectile>
+				<warmupTime>3</warmupTime>
+				<minRange>12.9</minRange>
+				<range>44.9</range>
+				<burstShotCount>1</burstShotCount>
+				<ticksBetweenBurstShots>80</ticksBetweenBurstShots>
+				<soundCast>ShotAnty_A</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<soundAiming>AimingAnty_A</soundAiming>
+				<muzzleFlashScale>8</muzzleFlashScale>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<!-- <stopBurstWithoutLos>false</stopBurstWithoutLos> -->
+				
+				<!-- <aimingLineMote>Mote_HellsphereCannon_Aim</aimingLineMote> -->
+				<!-- <aimingChargeMote>Mote_HellsphereCannon_Charge</aimingChargeMote>
+				<aimingChargeMoteOffset>1.07</aimingChargeMoteOffset> -->
+				<!-- <aimingLineMoteFixedLength>8.9</aimingLineMoteFixedLength> -->
+				<aimingTargetMote>Mote_Bullethydroheliumion_C_Target</aimingTargetMote>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>Nozzle</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>3</cooldownTime>
+			</li>
+		</tools>
+		<techLevel>Spacer</techLevel>
+	</ThingDef>
+  
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullethydroheliumion_C</defName>
+		<label>Red-Burst Bullet</label>
+		<graphicData>
+			<texPath>Things/Weapons/kanC</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>(1.2,1.2)</drawSize>
+		</graphicData>
+		<thingClass>TorgueAnty.Projectile_Torgue_Rocket</thingClass>
+		<projectile Class="TorgueAnty.TorgueProjectileProps">
+			<speed>30</speed>
+			<damageDef>AT_AcidBomb_B</damageDef>
+			<damageAmountBase>8</damageAmountBase>
+			<armorPenetrationBase>0.1</armorPenetrationBase>
+			<explosionRadius>3.1</explosionRadius>
+			<subProjectile>Bullethydroheliumion_C_B</subProjectile>
+			<clusterCount>25</clusterCount>
+			<clusterRadius>8</clusterRadius>
+		</projectile>
+		<comps>
+			<li Class="CompProperties_ProjectileEffecter">
+				<effecterDef>AT_SuperAcidLaunched</effecterDef>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullethydroheliumion_C_B</defName>
+		<label>Red-Burst Bullet</label>
+		<graphicData>
+			<texPath>Things/Weapons/Han</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<speed>6.5</speed>
+			<damageDef>AT_AcidBomb_B</damageDef>
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetrationBase>0.1</armorPenetrationBase>
+			<stoppingPower>3</stoppingPower>
+			<explosionRadius>2.1</explosionRadius>
+			<explosionDelay>10</explosionDelay>
+			<arcHeightFactor>20</arcHeightFactor>
+			<shadowSize>0.6</shadowSize>
+			<flyOverhead>true</flyOverhead>
+			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef ParentName="MoteBase">
+		<defName>Mote_Bullethydroheliumion_C_Target</defName>
+		<thingClass>MoteAttached</thingClass>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<mote>
+		  <fadeInTime>2.5</fadeInTime>
+		  <fadeOutTime>3</fadeOutTime>
+		  <solidTime>999999</solidTime>
+			<needsMaintenance>True</needsMaintenance>
+		</mote>
+		<graphicData>
+		  <texPath>Things/Weapons/Mote_Bullethydroheliumion_C_Target</texPath>
+		  <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
+		  <shaderType>Mote_Bullethydroheliumion_C_Target</shaderType>
+		  <shaderParameters>
+			<_ScanTex>/Things/Weapons/Mote_Bullethydroheliumion_C_Target_scan</_ScanTex>
+			<_ScanMask>/Things/Weapons/Mote_Bullethydroheliumion_C_Target_scan_Mask</_ScanMask>
+		  </shaderParameters>
+		  <drawSize>(8, 8)</drawSize>
+		</graphicData>
+	</ThingDef>
+	
+	<ShaderTypeDef>
+		<defName>Mote_Bullethydroheliumion_C_Target</defName>
+		<shaderPath>Map/MoteHellfireCannon_Target</shaderPath>
+	</ShaderTypeDef>
+
+	<ThingDef ParentName="AT_hydroheliumion_A">
+		<defName>AT_hydroheliumion_D</defName>
+		<label>Refleum gas thrower</label>
+		<description>It is a weapon developed by Anties to reliably support the front-line. Unlike other Red Burst weapons, it is not effective against Mechanoids.\n\nAcid Refleum gas is not harmful to Anty, but dangerous to other races.\n\n※If used by other races, the user will also take damage.</description>
+		<graphicData>
+			<texPath>Things/Weapons/AT_hydroheliumion_D</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<soundInteract>hydroheliumion_A</soundInteract>
+		<generateCommonality>0.3</generateCommonality>
+		<weaponTags Inherit="false">
+			<li>hydroheliumion_D</li>
+			<li>ammo_none</li>
+		</weaponTags>
+		<statBases>
+			<AccuracyTouch>1</AccuracyTouch>
+			<AccuracyShort>0.8</AccuracyShort>
+			<AccuracyMedium>0.4</AccuracyMedium>
+			<AccuracyLong>0.25</AccuracyLong>
+			<RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
+			<AT_Acid_damage>0.3</AT_Acid_damage>
+			<AT_Acid_damage_duration>40</AT_Acid_damage_duration>
+			<AT_Acid_damage_destruction>35</AT_Acid_damage_destruction>
+		</statBases>
+		<costList  Inherit="false">
+			<AntyExoskeleton>40</AntyExoskeleton>
+			<Refleum>55</Refleum>
+			<Uranium>20</Uranium>
+			<ComponentSpacer>4</ComponentSpacer>
+			<Anty_Recyclecore>1</Anty_Recyclecore>
+		</costList>
+		<verbs Inherit="false">
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullethydroheliumion_D</defaultProjectile>
+				<warmupTime>3</warmupTime>
+				<minRange>4.1</minRange>
+				<range>14.9</range>
+				<forcedMissRadius>1.9</forcedMissRadius>
+				<burstShotCount>25</burstShotCount>
+				<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+				<soundCast>ShotAnty_Gas</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>1</muzzleFlashScale>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+			</li>
+		</verbs>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullethydroheliumion_D</defName>
+		<label>Acid Refleum gas</label>
+		<graphicData>
+			<texPath>Things/Weapons/AcidSmoke</texPath>
+			<drawSize>2</drawSize>
+			<color>(60,0,0)</color>
+			<shaderType>TransparentPostLight</shaderType>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_RangeHediffAnty">
+				<hediff>AT_Damage_Gas</hediff>
+				<range>2.5</range>
+				<severityPerSecond>0.2</severityPerSecond>
+			</li>
+			<li Class="CompProperties_Spawner">
+				<requiresPower>false</requiresPower>
+				<thingToSpawn>Filth_ApproachSmoke_B</thingToSpawn>
+				<spawnCount>1</spawnCount>
+				<spawnIntervalRange><min>5</min><max>5</max></spawnIntervalRange>
+				<writeTimeLeftToSpawn>false</writeTimeLeftToSpawn>
+				<showMessageIfOwned>false</showMessageIfOwned>
+			</li>
+		</comps>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile Inherit="false">
+			<speed>15</speed>
+			<damageDef>AT_AcidBomb_B</damageDef>
+			<damageAmountBase>0</damageAmountBase>
+			<preExplosionSpawnThingDef>Filth_ApproachSmoke_B</preExplosionSpawnThingDef>
+			<preExplosionSpawnChance>1</preExplosionSpawnChance>
+			<explosionRadius>0.1</explosionRadius>
+			<explosionDelay>5</explosionDelay>
+			<!-- <postExplosionGasType>BlindSmoke</postExplosionGasType> -->
+			
+			<landedEffecter>Fleck_AcidPuff</landedEffecter>
+		</projectile>
+		<tickerType>Normal</tickerType>
+	</ThingDef>
+
+	<HediffDef>
+		<defName>AT_Damage_Gas</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>AT_Damage_Gas</label>
+		<description>AT_Damage_Gas.</description>
+		<defaultLabelColor>(0.2,1,0.5)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>20</disappearsAfterTicks>
+			</li>
+			<li Class="ContDamAnty.HediffCompProperties_ContinuousDamage">
+				<damageDef>AT_AcidBomb_B</damageDef>
+				<ticksPerDamage>9</ticksPerDamage>
+				<damageAmount>0.3</damageAmount>
+				<endTicks>20</endTicks>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<ThingDef ParentName="BaseGas_Anty">
+		<defName>Filth_ApproachSmoke_A</defName>
+		<label>Acid Refleum gas</label>
+		<graphicData>
+			<texPath>Things/Weapons/AcidSmoke</texPath>
+			<drawSize>2</drawSize>
+			<color>(60,0,0)</color>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<pathCost>25</pathCost>
+		<pathCostIgnoreRepeat>false</pathCostIgnoreRepeat>
+		<gas>
+			<expireSeconds>4~6</expireSeconds>
+			<!-- <blockTurretTracking>true</blockTurretTracking>
+			<accuracyPenalty>0.80</accuracyPenalty> -->
+			<rotationSpeed>50</rotationSpeed>
+		</gas>
+	</ThingDef>
+	
+</Defs>

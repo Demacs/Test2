@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<HediffDef>
+		<defName>AntyGlandoverload</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Pheromone gland overloaded</label>
+		<labelNoun>Pheromone gland overloaded</labelNoun>
+		<description>Pheremone glands have been exhausted from overloading. Constant pheromone inhalation at current state can cause death.</description>
+		<defaultLabelColor>(1,0,1)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<initialSeverity>0.1</initialSeverity>
+		<maxSeverity>1.0</maxSeverity>
+		<lethalSeverity>1</lethalSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.5</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+			</li>
+			<li>
+				<lifeThreatening>true</lifeThreatening>
+				<minSeverity>0.7</minSeverity>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>Anty_pheromone_outcome</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>transformation Anty_pheromone_outcome</label>
+		<description>Anty_pheromone_outcome.</description>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>60</disappearsAfterTicks>
+			</li>
+		</comps>
+		<stages>
+		<li>
+			<becomeVisible>false</becomeVisible>
+		</li>
+		</stages>
+	</HediffDef>
+  
+	<ThingDef ParentName="ResourceBase">
+		<defName>Anty_pheromone</defName>
+		<label>Anty pheromone Pack</label>
+		<description>Concentrated Anty pheromone that has been packaged with mucous membrane.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>Anty_Make_pheromone</RecipeDef>
+			<ThingDef>Anty_breeding_Spot</ThingDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/pheromone/PO</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<soundInteract>Standard_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<stackLimit>75</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<statBases>
+			<MaxHitPoints>30</MaxHitPoints>
+			<MarketValue>4</MarketValue>
+			<Mass>0.2</Mass>
+			<Flammability>2</Flammability>
+			<DeteriorationRate>0.2</DeteriorationRate>
+		</statBases>
+		<intricate>true</intricate>
+		<thingCategories>
+			<li>ManufacturedAntyThingCategoryDef</li>
+		</thingCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="MakeableDrugBase">
+		<defName>Antypheromone_Charge_Fix</defName>
+		<label>Anty assault pheromone</label>
+		<description>A phermone inhaler. This particular inhaler is made with phermone that is released from Antys when they charge on to their enemies. Inhalation causes chainreaction within user's body, which releases more phermone and drastically enhances close-quarters combat performance.</description>
+		<descriptionHyperlinks>
+			<HediffDef>Antypheromone_ChargeHigh</HediffDef>
+			<HediffDef>AntyGlandoverload</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/pheromone/PC</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>false</socialPropernessMatters>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToMake>600</WorkToMake>
+			<MarketValue>25</MarketValue>
+			<Mass>0.005</Mass>
+			<Flammability>2</Flammability>
+			<Nutrition>0.01</Nutrition>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<ingestible>
+			<drugCategory>Hard</drugCategory>
+			<foodType>Processed, Fluid</foodType>
+			<preferability>NeverForNutrition</preferability>
+			<baseIngestTicks>20</baseIngestTicks>
+			<ingestSound>Ingest_Inject</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestCommandString>Inhale {0}</ingestCommandString>
+			<ingestReportString>Inhaling {0}.</ingestReportString>
+			<useEatingSpeedStat>false</useEatingSpeedStat>
+			<chairSearchRadius>0</chairSearchRadius>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>Anty_pheromone_outcome</hediffDef>
+					<severity>0.1</severity>
+					<toleranceChemical>Antypheromone_ChargeHigh_Addiction_chemical</toleranceChemical>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>Antypheromonestim</researchPrerequisite>
+				<recipeUsers>
+					<li>DrugLab</li>
+				</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<Anty_pheromone>4</Anty_pheromone>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>Antypheromone_ChargeHigh_Addiction_chemical</chemical>
+				<needLevelOffset>1.00</needLevelOffset>
+				<addictiveness>0</addictiveness>
+				<listOrder>1040</listOrder>
+				<isCombatEnhancingDrug>true</isCombatEnhancingDrug>
+			</li>
+		</comps>
+		<thingCategories Inherit="False">
+			<li>DrugAntyThingCategoryDef</li>
+		</thingCategories>
+	</ThingDef>
+	
+	<HediffDef ParentName="AddictionBase">
+		<defName>Antypheromone_ChargeHigh_Addiction</defName>
+		<label>bug</label>
+		<description>bug.</description>
+		<isBad>false</isBad>
+		<hediffClass>Hediff_Addiction</hediffClass>
+		<causesNeed>Antypheromone_ChargeHigh_Addiction_need</causesNeed>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<everCurableByItem>false</everCurableByItem>
+		<comps>
+		<li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>5</disappearsAfterTicks>
+		</li>
+		</comps>
+		<stages>
+		<li>
+			<becomeVisible>false</becomeVisible>
+		</li>
+		</stages>
+	</HediffDef>
+
+	<NeedDef ParentName="DrugAddictionNeedBase">
+		<defName>Antypheromone_ChargeHigh_Addiction_need</defName>
+		<needClass>Need_Chemical</needClass>
+		<label>bug</label>
+		<description>bug.</description>
+		<listPriority>982</listPriority>
+		<fallPerDay>0.01</fallPerDay>
+	</NeedDef>
+	
+	<ChemicalDef>
+		<defName>Antypheromone_ChargeHigh_Addiction_chemical</defName>
+		<label>pheromone</label>
+		<addictionHediff>Antypheromone_ChargeHigh_Addiction</addictionHediff>
+		<canBinge>false</canBinge>
+		<generateAddictionGenes>false</generateAddictionGenes>
+	</ChemicalDef>
+  
+	<HediffDef>
+		<defName>Antypheromone_ChargeHigh</defName>
+		<hediffClass>Hediff_High</hediffClass>
+		<label>Anty assault pheromone</label>
+		<description>Pheromone glands released an unusal amount of assault pheromone, giving a large boost to melee combat performance.</description>
+		<descriptionHyperlinks>
+			<ThingDef>Antypheromone_Charge_Fix</ThingDef>
+			<HediffDef>AntyGlandoverload</HediffDef>
+		</descriptionHyperlinks>
+		<defaultLabelColor>(1,0.2,0.2)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-8</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>Chargepheromone</stateEffecter>
+				<severityIndices>0~5</severityIndices>
+			</li>
+		</comps>
+			<stages>
+				<li>
+					<painOffset>-0.3</painOffset>
+					<statOffsets>
+						<MeleeHitChance>4</MeleeHitChance>
+						<MeleeDodgeChance>4</MeleeDodgeChance>
+						<AimingDelayFactor>0.5</AimingDelayFactor>
+						<ShootingAccuracyPawn>-8</ShootingAccuracyPawn>
+					</statOffsets>
+					<capMods>
+						<li>
+							<capacity>Moving</capacity>
+							<offset>0.25</offset>
+						</li>
+					</capMods>
+				</li>
+			</stages>
+	</HediffDef>
+	
+	
+	<ThingDef ParentName="MakeableDrugBase">
+		<defName>Antypheromone_Shooting</defName>
+		<label>Anty Shooting pheromone</label>
+		<description>a phermone inhaler. This particular inhaler is made with phermone that is released from Antys when they shoot firearms. Inhalation causes chainreaction within user's body, which releases more phermone and drastically enhances shooting ability.\n\n Larvae cannot tolerate the strong stimulation of pheromone inhalants.</description>
+		<descriptionHyperlinks>
+			<HediffDef>Antypheromone_ShootingHigh</HediffDef>
+			<HediffDef>AntyGlandoverload</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/pheromone/PS</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>false</socialPropernessMatters>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToMake>600</WorkToMake>
+			<MarketValue>25</MarketValue>
+			<Mass>0.005</Mass>
+			<Flammability>2</Flammability>
+			<Nutrition>0.01</Nutrition>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<ingestible>
+			<drugCategory>Hard</drugCategory>
+			<foodType>Processed, Fluid</foodType>
+			<preferability>NeverForNutrition</preferability>
+			<baseIngestTicks>80</baseIngestTicks>
+			<ingestSound>Ingest_Inject</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestCommandString>Inhale {0}</ingestCommandString>
+			<ingestReportString>Inhaling {0}.</ingestReportString>
+			<useEatingSpeedStat>false</useEatingSpeedStat>
+			<chairSearchRadius>0</chairSearchRadius>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>Anty_pheromone_outcome</hediffDef>
+					<severity>0.1</severity>
+					<toleranceChemical>Antypheromone_ShootingHigh_Addiction_chemical</toleranceChemical>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>Antypheromonestim</researchPrerequisite>
+				<recipeUsers>
+					<li>DrugLab</li>
+				</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<Anty_pheromone>4</Anty_pheromone>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>Antypheromone_ShootingHigh_Addiction_chemical</chemical>
+				<needLevelOffset>1.00</needLevelOffset>
+				<addictiveness>0</addictiveness>
+				<listOrder>1040</listOrder>
+				<isCombatEnhancingDrug>true</isCombatEnhancingDrug>
+			</li>
+		</comps>
+		<thingCategories Inherit="False">
+			<li>DrugAntyThingCategoryDef</li>
+		</thingCategories>
+	</ThingDef>
+	
+	<ChemicalDef>
+		<defName>Antypheromone_ShootingHigh_Addiction_chemical</defName>
+		<label>pheromone</label>
+		<addictionHediff>Antypheromone_ChargeHigh_Addiction</addictionHediff>
+		<canBinge>false</canBinge>
+		<generateAddictionGenes>false</generateAddictionGenes>
+	</ChemicalDef>
+  
+	<HediffDef>
+		<defName>Antypheromone_ShootingHigh</defName>
+		<hediffClass>Hediff_High</hediffClass>
+		<label>Anty Shooting pheromone</label>
+		<description>Pheromone glands released an unusual amount of shooting pheromone, giving a large boost shooting ability.</description>
+		<descriptionHyperlinks>
+			<ThingDef>Antypheromone_Shooting</ThingDef>
+			<HediffDef>AntyGlandoverload</HediffDef>
+		</descriptionHyperlinks>
+		<defaultLabelColor>(1,0.2,0.2)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-8</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>Shootingpheromone</stateEffecter>
+				<severityIndices>0~5</severityIndices>
+			</li>
+		</comps>
+			<stages>
+				<li>
+					<statOffsets>
+						<MeleeHitChance>-4</MeleeHitChance>
+						<MeleeDodgeChance>-4</MeleeDodgeChance>
+						<AimingDelayFactor>-0.5</AimingDelayFactor>
+					</statOffsets>
+					<statFactors>
+						<MoveSpeed>0.8</MoveSpeed>
+					</statFactors>
+					<capMods>
+						<li>
+							<capacity>Sight</capacity>
+							<offset>0.25</offset>
+						</li>
+					</capMods>
+				</li>
+			</stages>
+	</HediffDef>
+
+	<ThingDef ParentName="MakeableDrugBase">
+		<defName>Antypheromone_Suicide</defName>
+		<label>Anty detonation phermone</label>
+		<description>An inhaler filled with phermone that hyperstimulates Anty's acidsac. Inhalation causes a powerful red-burst explosion. It also affects surrounding proties.\n\n Larvae cannot tolerate the strong stimulation of pheromone inhalants.</description>
+		<descriptionHyperlinks>
+			<HediffDef>Antypheromone_SuicideHigh</HediffDef>
+			<AbilityDef>Antypheromone_Suicideburst</AbilityDef>
+			<HediffDef>AntyGlandoverload</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/pheromone/PE</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>false</socialPropernessMatters>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToMake>600</WorkToMake>
+			<MarketValue>25</MarketValue>
+			<Mass>0.005</Mass>
+			<Flammability>2</Flammability>
+			<Nutrition>0.01</Nutrition>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<ingestible>
+			<drugCategory>Hard</drugCategory>
+			<foodType>Processed, Fluid</foodType>
+			<preferability>NeverForNutrition</preferability>
+			<baseIngestTicks>20</baseIngestTicks>
+			<ingestSound>Ingest_Inject</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestCommandString>Inhale {0}</ingestCommandString>
+			<ingestReportString>Inhaling {0}.</ingestReportString>
+			<useEatingSpeedStat>false</useEatingSpeedStat>
+			<chairSearchRadius>0</chairSearchRadius>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>Anty_pheromone_outcome</hediffDef>
+					<severity>0.1</severity>
+					<toleranceChemical>Antypheromone_SuicideHigh_Addiction_chemical</toleranceChemical>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>Antypheromonestim</researchPrerequisite>
+				<recipeUsers>
+					<li>DrugLab</li>
+				</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<Anty_pheromone>4</Anty_pheromone>
+			<Refleum>1</Refleum>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>Antypheromone_SuicideHigh_Addiction_chemical</chemical>
+				<needLevelOffset>1.00</needLevelOffset>
+				<addictiveness>0</addictiveness>
+				<listOrder>1040</listOrder>
+				<isCombatEnhancingDrug>true</isCombatEnhancingDrug>
+			</li>
+		</comps>
+		<thingCategories Inherit="False">
+			<li>DrugAntyThingCategoryDef</li>
+		</thingCategories>
+	</ThingDef>
+	
+	<ChemicalDef>
+		<defName>Antypheromone_SuicideHigh_Addiction_chemical</defName>
+		<label>pheromone</label>
+		<addictionHediff>Antypheromone_ChargeHigh_Addiction</addictionHediff>
+		<canBinge>false</canBinge>
+		<generateAddictionGenes>false</generateAddictionGenes>
+	</ChemicalDef>
+  
+	<HediffDef>
+		<defName>Antypheromone_SuicideHigh</defName>
+		<hediffClass>Hediff_High</hediffClass>
+		<label>Anty detonation pheromone</label>
+		<description>Preparing for a powerful explosion.</description>
+		<descriptionHyperlinks>
+			<ThingDef>Antypheromone_Suicide</ThingDef>
+		</descriptionHyperlinks>
+		<defaultLabelColor>(0.2,1,0.2)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-8</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>Suicidepheromone</stateEffecter>
+				<severityIndices>0~5</severityIndices>
+			</li>
+			<li Class="HediffCompProperties_GiveAbility">
+				<abilityDef>Antypheromone_Suicideburst</abilityDef>
+			</li>
+		</comps>
+			<stages>
+				<li>
+					<minSeverity>0</minSeverity>
+					<vomitMtbDays>0.02</vomitMtbDays>
+				</li>
+				<li>
+					<minSeverity>0.15</minSeverity>
+				</li>
+			</stages>
+	</HediffDef>
+	
+	<AbilityDef>
+		<defName>Antypheromone_Suicideburst</defName>
+		<label>detonation burst</label>
+		<description>Preparing for a powerful explosion.</description>
+		<jobDef>CastAbilityOnThingWithoutWeapon_Anty</jobDef>
+		<iconPath>Things/Item/pheromone/PE</iconPath>
+		<cooldownTicksRange>10000</cooldownTicksRange>
+		<aiCanUse>true</aiCanUse>
+		<ai_SearchAOEForTargets>true</ai_SearchAOEForTargets>
+		<targetRequired>false</targetRequired>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<showCastingProgressBar>true</showCastingProgressBar>
+		<verbProperties>
+			  <verbClass>Verb_CastAbility</verbClass>
+			  <warmupEffecter>Suicidepheromone_Burst_Warmup</warmupEffecter>
+			  <warmupTime>1</warmupTime>
+			  <requireLineOfSight>false</requireLineOfSight>
+			  <range>2.5</range>
+			  <drawAimPie>false</drawAimPie>      
+			  <targetParams>
+					<canTargetSelf>true</canTargetSelf>
+			  </targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompAbility_Anty.CompProperties_AbilityAntyBurst">
+				<radius>2.5</radius>
+				<ApplyDamage>AT_AcidBomb_C</ApplyDamage>
+				<SpawnThing>Filth_ApproachSmoke_B</SpawnThing>
+				<UseEffecter>Fleck_AcidPuff</UseEffecter>
+			</li>
+		</comps>
+	</AbilityDef>
+	
+	<JobDef ParentName="CastAbilityOnThing">
+		<defName>CastAbilityOnThingWithoutWeapon_Anty</defName>
+		<neverShowWeapon>true</neverShowWeapon>
+		<playerInterruptible>false</playerInterruptible>
+	</JobDef>
+	
+	<ThingDef Name="AT_SuicideBase" Abstract="True">
+		<thingClass>ThingWithComps</thingClass>
+		<category>Item</category>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<altitudeLayer>Item</altitudeLayer>
+		<stackLimit>1</stackLimit>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<rotatable>false</rotatable>
+		<pathCost>14</pathCost>
+		<tickerType>Normal</tickerType>
+		<tradeability>None</tradeability>
+	</ThingDef>
+	
+	<DamageDef ParentName="AT_AcidBomb_B">
+		<defName>AT_AcidBomb_C</defName>
+		<soundExplosion>Explosion_Acid_SB</soundExplosion>
+		<minDamageToFragment>10</minDamageToFragment>
+		<externalViolence>false</externalViolence>
+		<defaultArmorPenetration>2</defaultArmorPenetration>
+		<defaultDamage>350</defaultDamage>
+	</DamageDef>
+	
+	<AbilityDef>
+		<defName>ProtyDoll_Suicideburst</defName>
+		<label>???</label>
+		<description>???</description>
+		<jobDef>CastAbilityOnThingWithoutWeapon_Anty</jobDef>
+		<iconPath>Protylike/Proty_south</iconPath>
+		<cooldownTicksRange>10000</cooldownTicksRange>
+		<aiCanUse>true</aiCanUse>
+		<ai_SearchAOEForTargets>true</ai_SearchAOEForTargets>
+		<targetRequired>false</targetRequired>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<showCastingProgressBar>true</showCastingProgressBar>
+		<verbProperties>
+			  <verbClass>Verb_CastAbility</verbClass>
+			  <warmupEffecter>ProtydollWakingUp</warmupEffecter>
+			  <warmupTime>3.5</warmupTime>
+			  <requireLineOfSight>false</requireLineOfSight>
+			  <range>10.5</range>
+			  <drawAimPie>false</drawAimPie>      
+			  <targetParams>
+					<canTargetSelf>true</canTargetSelf>
+			  </targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompAbility_Anty.CompProperties_AbilityAntyBurst">
+				<radius>1.1</radius>
+				<ApplyDamage>AT_AcidBomb</ApplyDamage>
+				<SpawnThing>EggProty_Dummy</SpawnThing>
+				<UseEffecter>Impact_ATAcid</UseEffecter>
+			</li>
+			<li Class="CompProperties_AbilityGiveHediff">
+				<compClass>CompAbilityEffect_GiveHediff</compClass>
+				<hediffDef>aciddecomposition</hediffDef>
+				<onlyBrain>True</onlyBrain>
+				<onlyApplyToSelf>True</onlyApplyToSelf>
+				<replaceExisting>true</replaceExisting>
+				<severity>1.5</severity>
+			</li>
+		</comps>
+	</AbilityDef>
+	
+	<EffecterDef>
+		<defName>ProtydollWakingUp</defName>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_Sustainer</subEffecterClass>
+				<soundDef>ProtydollWakingUp</soundDef>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<moteDef>ProtydollWakingUp</moteDef>
+				<burstCount>7</burstCount>
+				<initialDelayTicks>5</initialDelayTicks>
+				<ticksBetweenMotes>43</ticksBetweenMotes>
+				<rotation>-150~150</rotation>
+				<positionRadius>0.66</positionRadius>
+				<speed>0.6~1.1</speed>
+				<spawnLocType>OnSource</spawnLocType>
+				<maxMoteCount>3</maxMoteCount>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<fleckDef>ProtydollWakingUp</fleckDef>
+				<burstCount>1</burstCount>
+				<ticksBetweenMotes>43</ticksBetweenMotes>
+				<rotation>-150~150</rotation>
+				<positionRadius>0</positionRadius>
+				<speed>0</speed>
+				<spawnLocType>OnSource</spawnLocType>
+				<maxMoteCount>3</maxMoteCount>
+			</li>
+		</children>
+	</EffecterDef>
+  
+	<SoundDef>
+		<defName>ProtydollWakingUp</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>3</maxSimultaneous>
+		<sustain>True</sustain>
+		<priorityMode>PrioritizeNearest</priorityMode>
+		<subSounds>
+		  <li>
+			<grains>
+			  <li Class="AudioGrain_Folder" MayRequire="Ludeon.RimWorld.Biotech">
+				<clipFolderPath>Buildings/InsectCocoon/Wakeup</clipFolderPath>
+			  </li>
+			  <li Class="AudioGrain_Folder">
+                <clipFolderPath>Pawn/Animal/Megascarab/Megascarab_Angry</clipFolderPath>
+              </li>
+			</grains>
+			<volumeRange>20</volumeRange>
+			<muteWhenPaused>True</muteWhenPaused>
+			<tempoAffectedByGameSpeed>true</tempoAffectedByGameSpeed>
+			<sustainLoopDurationRange>0.7166</sustainLoopDurationRange>
+		  </li>
+		</subSounds>
+	</SoundDef>
+	
+	<ThingDef ParentName="MoteBase">
+		<defName>ProtydollWakingUp</defName>
+		<thingClass>MoteThrown</thingClass>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<mote>
+			<fadeInTime>0.03</fadeInTime>
+			<fadeOutTime>1</fadeOutTime>
+			<solidTime>0</solidTime>
+			<growthRate>1.0</growthRate>
+		</mote>
+		<graphicData>
+			<texPath>Things/Filth/PoolSoft</texPath>
+			<graphicClass>Graphic_MoteRandom</graphicClass>
+			<color>(140, 142, 100, 150)</color>
+		</graphicData>
+	</ThingDef>
+	
+	<FleckDef ParentName="FleckGlowDistortBackground">
+		<defName>ProtydollWakingUp</defName>
+		<fleckSystemClass>FleckSystemThrown</fleckSystemClass>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.01</fadeInTime>
+		<fadeOutTime>0.1</fadeOutTime>
+		<solidTime>0.0</solidTime>
+		<growthRate>-2</growthRate>
+		<graphicData>
+			<texPath>Things/Mote/Black</texPath>
+			<shaderParameters>
+			<_distortionIntensity>0.01</_distortionIntensity>
+			<_brightnessMultiplier>1</_brightnessMultiplier>
+			</shaderParameters>
+			<drawSize>2</drawSize>
+		</graphicData>
+	</FleckDef>
+</Defs>

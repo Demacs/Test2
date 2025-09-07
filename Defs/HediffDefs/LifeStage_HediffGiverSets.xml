@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<HediffGiverSetDef>
+		<defName>Anty_HediffGiverSet</defName>
+		<hediffGivers>
+			<li Class="HediffGiver_RandomAgeCurved_NoAlramAnty">
+				<hediff>AT_LarvaLearningAid</hediff>
+				<allowOnLodgers>false</allowOnLodgers>
+				<allowOnQuestRewardPawns>false</allowOnQuestRewardPawns>
+				<allowOnQuestReservedPawns>false</allowOnQuestReservedPawns>
+				<allowOnBeggars>false</allowOnBeggars>
+				<minPlayerPopulation>1</minPlayerPopulation>
+				<ageFractionMtbDaysCurve>
+					<points>
+						<li>(0, 0.001)</li>
+						<li>(0.03, 0.001)</li>
+						<li>(0.039999, 0.25)</li>
+						<li>(0.04, 999999)</li>
+						<li>(1, 999999)</li>
+					</points>
+				</ageFractionMtbDaysCurve>
+			</li>
+		</hediffGivers>
+	</HediffGiverSetDef>
+	
+	<!-- <HediffGiverSetDef>
+		<defName>AntyHiveguard_HediffGiverSet</defName>
+	</HediffGiverSetDef> -->
+	
+	<HediffGiverSetDef>
+		<defName>AntyBloodlossOption_HediffGiverSet</defName>
+		<hediffGivers>
+			<li Class="HediffGiver_Bleeding">
+				<hediff>AT_BloodLoss</hediff>
+			</li>
+		</hediffGivers>
+	</HediffGiverSetDef>
+
+</Defs>

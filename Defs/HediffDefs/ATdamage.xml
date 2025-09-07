@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HediffDef ParentName="InjuryBase">
+		<defName>Chemicaldissolution</defName>
+		<label>Acid melt</label>
+		<labelNoun>Acid melt</labelNoun>
+		<description>Acid melt.\n\n0.1Damage/5second for 20second.\n\nIf there is more than 60 acid damage to a body part, the part is destroyed.</description>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<lethalSeverity>120</lethalSeverity>
+		<comps>
+			<li Class="HediffCompProperties_TendDuration">
+				<labelTendedWell>bandaged</labelTendedWell>
+				<labelTendedWellInner>tended</labelTendedWellInner>
+				<labelSolidTendedWell>tended</labelSolidTendedWell>
+			</li>
+			<li Class="HediffCompProperties_Infecter">
+				<infectionChance>0.1</infectionChance>
+			</li>
+			<li Class="HediffCompProperties_GetsPermanent">
+				<permanentLabel>Acid melt scar</permanentLabel>
+			</li>
+			<li Class="ContDamAnty.HediffCompProperties_ContinuousDamage">
+				<damageDef>AT_AcidDamage</damageDef>
+				<ticksPerDamage>300</ticksPerDamage>
+				<damageAmount>0.1</damageAmount>
+				<endTicks>1200</endTicks><!-- 20초 -->
+			</li>
+		</comps>
+		<injuryProps>
+			<painPerSeverity>0.0125</painPerSeverity>
+			<averagePainPerSeverityPermanent>0.006</averagePainPerSeverityPermanent>
+			<canMerge>true</canMerge>
+			<bleedRate>0.01</bleedRate>
+			<destroyedLabel>melt off</destroyedLabel>
+			<destroyedOutLabel>melt out</destroyedOutLabel>
+		</injuryProps>
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+			</li>
+			<li>
+				<minSeverity>60</minSeverity>
+				<destroyPart>true</destroyPart>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="InjuryBase">
+		<defName>Chemicaldissolution_con</defName>
+		<label>Acid melt</label>
+		<labelNoun>Acid melt</labelNoun>
+		<description>Acid melt</description>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<comps>
+			<li Class="HediffCompProperties_TendDuration">
+				<labelTendedWell>bandaged</labelTendedWell>
+				<labelTendedWellInner>tended</labelTendedWellInner>
+				<labelSolidTendedWell>tended</labelSolidTendedWell>
+			</li>
+			<li Class="HediffCompProperties_Infecter">
+				<infectionChance>0.1</infectionChance>
+			</li>
+			<li Class="HediffCompProperties_GetsPermanent">
+				<permanentLabel>Acid melt scar</permanentLabel>
+			</li>
+			<li Class="ContDamAnty.HediffCompProperties_ContinuousDamage">
+				<damageDef>AT_AcidDamage</damageDef>
+				<ticksPerDamage>300000</ticksPerDamage>
+				<damageAmount>100</damageAmount>
+				<endTicks>300060</endTicks>
+			</li>
+		</comps>
+		<injuryProps>
+			<painPerSeverity>0.0125</painPerSeverity>
+			<averagePainPerSeverityPermanent>0.006</averagePainPerSeverityPermanent>
+			<canMerge>true</canMerge>
+			<bleedRate>0.01</bleedRate>
+			<destroyedLabel>melt off</destroyedLabel>
+			<destroyedOutLabel>melt out</destroyedOutLabel>
+		</injuryProps>
+	</HediffDef>
+	
+	<DamageDef Name="AT_AcidDamage">
+		<defName>AT_AcidDamage</defName>
+		<label>Acid melt</label>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has been Acid melt to death.</deathMessage>
+		<hediff>Chemicaldissolution_con</hediff>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<impactSoundType>AntyAcid_Bullet</impactSoundType>
+		<damageEffecter>Impact_ATAcid</damageEffecter>
+		<armorCategory>Blunt</armorCategory>
+		<overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+		<defaultArmorPenetration>0.1</defaultArmorPenetration>
+		<isRanged>true</isRanged>
+		<makesAnimalsFlee>true</makesAnimalsFlee>
+		<makesBlood>false</makesBlood>
+	</DamageDef>
+	
+	
+	
+	<HediffDef ParentName="InjuryBase">
+		<defName>Chemicaldissolution_high</defName>
+		<label>Red burst melt</label>
+		<labelNoun>Red burst melt</labelNoun>
+		<description>Red burst melt.\n\n0.3Damage/5second for 40second.\n\nIf there is more than 35 Red burst damage to a body part, the part is destroyed.</description>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<lethalSeverity>120</lethalSeverity>
+		<comps>
+			<li Class="HediffCompProperties_TendDuration">
+				<labelTendedWell>bandaged</labelTendedWell>
+				<labelTendedWellInner>tended</labelTendedWellInner>
+				<labelSolidTendedWell>tended</labelSolidTendedWell>
+			</li>
+			<li Class="HediffCompProperties_Infecter">
+				<infectionChance>0.1</infectionChance>
+			</li>
+			<li Class="HediffCompProperties_GetsPermanent">
+				<permanentLabel>Red burst melt scar</permanentLabel>
+			</li>
+			<li Class="ContDamAnty.HediffCompProperties_ContinuousDamage">
+				<damageDef>AT_AcidDamage_High</damageDef>
+				<ticksPerDamage>300</ticksPerDamage>
+				<damageAmount>0.3</damageAmount>
+				<endTicks>2400</endTicks><!-- 40초 -->
+			</li>
+		</comps>
+		<injuryProps>
+			<painPerSeverity>0.0125</painPerSeverity>
+			<averagePainPerSeverityPermanent>0.006</averagePainPerSeverityPermanent>
+			<canMerge>true</canMerge>
+			<bleedRate>0.04</bleedRate>
+			<destroyedLabel>melt off</destroyedLabel>
+			<destroyedOutLabel>melt out</destroyedOutLabel>
+		</injuryProps>
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+			</li>
+			<li>
+				<minSeverity>35</minSeverity>
+				<destroyPart>true</destroyPart>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="InjuryBase">
+		<defName>Chemicaldissolution_con_high</defName>
+		<label>Red burst melt</label>
+		<labelNoun>Red burst melt</labelNoun>
+		<description>Red burst melt</description>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<comps>
+			<li Class="HediffCompProperties_TendDuration">
+				<labelTendedWell>bandaged</labelTendedWell>
+				<labelTendedWellInner>tended</labelTendedWellInner>
+				<labelSolidTendedWell>tended</labelSolidTendedWell>
+			</li>
+			<li Class="HediffCompProperties_Infecter">
+				<infectionChance>0.1</infectionChance>
+			</li>
+			<li Class="HediffCompProperties_GetsPermanent">
+				<permanentLabel>Red burst melt scar</permanentLabel>
+			</li>
+			<li Class="ContDamAnty.HediffCompProperties_ContinuousDamage">
+				<damageDef>AT_AcidDamage_High</damageDef>
+				<ticksPerDamage>300000</ticksPerDamage>
+				<damageAmount>100</damageAmount>
+				<endTicks>300060</endTicks>
+			</li>
+		</comps>
+		<injuryProps>
+			<painPerSeverity>0.0125</painPerSeverity>
+			<averagePainPerSeverityPermanent>0.006</averagePainPerSeverityPermanent>
+			<canMerge>true</canMerge>
+			<bleedRate>0.04</bleedRate>
+			<destroyedLabel>melt off</destroyedLabel>
+			<destroyedOutLabel>melt out</destroyedOutLabel>
+		</injuryProps>
+	</HediffDef>
+	
+	<DamageDef Name="AT_AcidDamage_High">
+		<defName>AT_AcidDamage_High</defName>
+		<label>Red burst melt</label>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has been Red burst melt to death.</deathMessage>
+		<hediff>Chemicaldissolution_con_high</hediff>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<impactSoundType>AntyAcid_Bullet</impactSoundType>
+		<damageEffecter>Fleck_AcidPuff</damageEffecter>
+		<armorCategory>Blunt</armorCategory>
+		<overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+		<defaultArmorPenetration>0.1</defaultArmorPenetration>
+		<isRanged>true</isRanged>
+		<makesAnimalsFlee>true</makesAnimalsFlee>
+		<makesBlood>false</makesBlood>
+	</DamageDef>
+	
+	
+	<HediffDef ParentName="InjuryBase">
+		<defName>glueBomb</defName>
+		<label>Combat glue</label>
+		<labelNoun>Combat glue</labelNoun>
+		<description>Combat glue</description>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>0</disappearsAfterTicks>
+			</li>
+			<li Class="HediffCompProperties_TendDuration">
+				<labelTendedWell>bandaged</labelTendedWell>
+				<labelTendedWellInner>tended</labelTendedWellInner>
+				<labelSolidTendedWell>tended</labelSolidTendedWell>
+			</li>
+			<li Class="HediffCompProperties_Infecter">
+				<infectionChance>0</infectionChance>
+			</li>
+			<li Class="HediffCompProperties_GetsPermanent">
+				<permanentLabel>Combat glue scar</permanentLabel>
+			</li>
+		</comps>
+		<injuryProps>
+			<painPerSeverity>0</painPerSeverity>
+			<averagePainPerSeverityPermanent>0</averagePainPerSeverityPermanent>
+			<canMerge>true</canMerge>
+			<bleedRate>0</bleedRate>
+			<destroyedLabel>Destroyed</destroyedLabel>
+			<destroyedOutLabel>Destroyed</destroyedOutLabel>
+		</injuryProps>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+				<minSeverity>0</minSeverity>
+			</li>
+		</stages>
+	</HediffDef>
+	<HediffDef>
+		<defName>AT_glue</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Combat glue</label>
+		<labelNoun>Combat glue</labelNoun>
+		<description>Combat glue is on it.</description>
+		<defaultLabelColor>(0.2,1,0.5)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-3.5</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>Combatglue</stateEffecter>
+				<severityIndices>0~5</severityIndices>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.05</offset>
+					</li>
+				</capMods>
+				<statFactors>
+					<MoveSpeed>0.9</MoveSpeed>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>0.3</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.1</offset>
+					</li>
+				</capMods>
+				<statFactors>
+					<MoveSpeed>0.8</MoveSpeed>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>0.45</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.15</offset>
+					</li>
+				</capMods>
+				<statFactors>
+					<MoveSpeed>0.7</MoveSpeed>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>0.6</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.2</offset>
+					</li>
+				</capMods>
+				<statFactors>
+					<MoveSpeed>0.6</MoveSpeed>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>AT_glue_Link</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Combat glue</label>
+		<labelNoun>Combat glue</labelNoun>
+		<description>Combat glue is on it.</description>
+		<defaultLabelColor>(0.2,1,0.5)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-7</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.2</offset>
+					</li>
+				</capMods>
+				<statFactors>
+					<MoveSpeed>0.6</MoveSpeed>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>AT_Shield</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Physical force neutralization shield</label>
+		<description>Physical force neutralization shield.</description>
+		<defaultLabelColor>(0.7,0,0.5)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>600</disappearsAfterTicks>
+			</li>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>AT_Shield</stateEffecter>
+				<severityIndices>0~5</severityIndices>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+				<statFactors>
+					<IncomingDamageFactor>0</IncomingDamageFactor>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>AT_Acceleration</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Acceleration Aura</label>
+		<description>Acceleration Aura.</description>
+		<defaultLabelColor>(0.7,0,0.5)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>600</disappearsAfterTicks>
+			</li>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>AT_Acceleration</stateEffecter>
+				<severityIndices>0~5</severityIndices>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+				<statFactors>
+					<MoveSpeed>1.5</MoveSpeed>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<!-- <HediffDef>
+		<defName>AT_Ret</defName>
+		<hediffClass>HediffMakeWeaponAnty.Hediff_HediffMakeWeapon</hediffClass>
+		<label>test</label>
+		<description>.</description>
+		<defaultLabelColor>(0.2,1,0.5)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffMakeWeaponAnty.HediffCompProperties_HediffMakeWeapon">
+				<weaponThingDef>AT_hydroheliumion_A</weaponThingDef>
+			</li>
+		</comps>
+		<stages>
+		</stages>
+	</HediffDef> -->
+	
+	<!-- <PawnKnockback.DamageKnockbackDef>
+		<bulletTipDef/>
+		<noKnockbackIfDeflected>false</noKnockbackIfDeflected>
+		<useExplosionCenter>false</useExplosionCenter>
+
+		<pullInstead>true</pullInstead>
+		<pullToNearbySpotInstead>false</pullToNearbySpotInstead>
+		<knockbackSpeedMultiplier>1</knockbackSpeedMultiplier>
+		<knockbackHeightMultiplier>0</knockbackHeightMultiplier>
+		<knockbackRadiusMin>4.0</knockbackRadiusMin>
+		<knockbackRadiusMax>4.0</knockbackRadiusMax>
+		
+		<landingDamage>Stun</landingDamage>
+		<landingDamageAmount>2.0</landingDamageAmount>
+		
+		<useHarpoonGraphic>true</useHarpoonGraphic>
+		<harpoonUseHarpoonUnitInstead>true</harpoonUseHarpoonUnitInstead>
+		<harpoonUnit>0.5</harpoonUnit>
+		<harpoonSineZAmp>1</harpoonSineZAmp>
+		<harpoonSineSpeed>0.1</harpoonSineSpeed>
+		<harpoonSegements>30</harpoonSegements>
+		
+		<graphicDataHarpoonRope>
+			<texPath>WeaponTex/Harpoon_Tongue</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicDataHarpoonRope>
+		
+		<flyerToApply>AT_TongueFlyerDef</flyerToApply>
+		<emptyFlyerToApply>AT_EmptyTonguePullFlyerDef</emptyFlyerToApply>
+		
+		<defName>AT_TongueDamageDef</defName>
+		<label>Impact</label>
+		<workerClass>PawnKnockback.DamageWorker_Knockback</workerClass>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} is dead.</deathMessage>
+		<hediff>Crush</hediff>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<impactSoundType>AntyHammerSound</impactSoundType>
+		<armorCategory>Blunt</armorCategory>
+		<overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+		<isRanged>false</isRanged>
+		<makesAnimalsFlee>true</makesAnimalsFlee>
+		
+		<defaultDamage>2</defaultDamage>
+		<defaultArmorPenetration>1</defaultArmorPenetration>
+	</PawnKnockback.DamageKnockbackDef>
+
+	<ThingDef ParentName="PawnFlyerBase">
+		<defName>AT_TongueFlyerDef</defName>
+		<thingClass>PawnKnockback.PawnKnockback</thingClass>
+		<pawnFlyer>
+			<flightDurationMin>0.58</flightDurationMin>
+				<flightSpeed>42</flightSpeed>
+		</pawnFlyer>
+	</ThingDef>
+	
+	<ThingDef ParentName="PawnFlyerBase">
+		<defName>AT_EmptyTonguePullFlyerDef</defName>
+		<thingClass>PawnKnockback.PawnEmptyFlyer</thingClass>
+		<pawnFlyer>
+			<flightDurationMin>0.35</flightDurationMin>
+			<flightSpeed>25</flightSpeed>
+		</pawnFlyer>
+	</ThingDef> -->
+
+</Defs>

@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<AlienRace.AlienBackstoryDef Name="AntyBackStory" Abstract="True">
+		<skillGains>
+			<Construction>1</Construction>
+			<Plants>1</Plants>
+			<Mining>2</Mining>
+		</skillGains>
+	</AlienRace.AlienBackstoryDef>
+
+	<!-- 일반유충 -->	
+	
+	<AlienRace.AlienBackstoryDef ParentName="AntyBackStory" Name="Anty_Larva_B_lazy">
+		<defName>Anty_Larva_B_lazy</defName>
+		<title>Anty Lazy Larva</title>
+		<titleShort>Anty</titleShort>
+		<description>[PAWN_nameDef] was a slothful larva. Even just squirming was too much for [PAWN_nameDef]. Kind hearted friends tried to love, but [PAWN_pronoun] considered their attentions a nuisance. Naturally, nobody was left to love [PAWN_objective].</description>
+		<slot>Childhood</slot>
+		
+		<skillGains>
+			<Artistic>3</Artistic>
+			<Shooting>-2</Shooting>
+			<Crafting>2</Crafting>
+		</skillGains>
+		
+		<forcedTraitsChance>
+		</forcedTraitsChance>
+		
+		<workDisables>
+		</workDisables>
+		
+		<spawnCategories>
+			<li>ATlarva_A</li>
+			<li>ATlarva_B</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef ParentName="Anty_Larva_B_lazy">
+		<defName>Anty_Larva_B_lazy_Drop</defName>
+		<spawnCategories Inherit="False">
+			<li>ATLarva_Melee_Drop</li>
+		</spawnCategories>
+		<!-- <forcedHediffs Inherit="False">
+		<li>AntySoldierbirth</li>
+		</forcedHediffs> -->
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef ParentName="Anty_Larva_B_Brave">
+		<defName>Anty_Larva_B_Brave_Drop</defName>
+		<spawnCategories Inherit="False">
+			<li>ATLarva_Melee_Drop</li>
+		</spawnCategories>
+		<!-- <forcedHediffs Inherit="False">
+		<li>AntySoldierbirth</li>
+		</forcedHediffs> -->
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef ParentName="AntyBackStory" Name="Anty_Larva_B_Brave">
+		<defName>Anty_Larva_B_Brave</defName>
+		<title>Anty Brave Larva</title>
+		<titleShort>Anty</titleShort>
+		<description>[PAWN_nameDef] was one daring larva. [PAWN_pronoun] enjoyed extreme activities such as rolling from over the small ledge, squirming over a hard and round surface, and fighting off some mean flies. [PAWN_objective] didn't enjoy the part where he got scolded for it by the nannies.</description>
+		<slot>Childhood</slot>
+		
+		<skillGains>
+			<Shooting>-2</Shooting>
+			<Melee>4</Melee>
+		</skillGains>
+		
+		<forcedTraitsChance>
+		</forcedTraitsChance>
+		
+		<workDisables>
+		</workDisables>
+		
+		<spawnCategories>
+			<li>ATlarva_A</li>
+			<li>ATlarva_B</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef ParentName="AntyBackStory">
+		<defName>Anty_Larva_B_Evil</defName>
+		<title>Anty Evil Larva</title>
+		<titleShort>Anty</titleShort>
+		<description>[PAWN_nameDef] was an evil larva. [PAWN_pronoun] pretended to be sick to get sweeter jelly, bullied a weaker larva to get the attention of others, and even pulled a nanny's leg!</description>
+		<slot>Childhood</slot>
+		
+		<skillGains>
+			<Medicine>4</Medicine>
+			<Shooting>3</Shooting>
+			<Crafting>2</Crafting>
+		</skillGains>
+		
+		<forcedTraitsChance>
+		</forcedTraitsChance>
+		
+		<workDisables>
+		</workDisables>
+		
+		<spawnCategories>
+			<li>ATlarva_A</li>
+			<li>ATlarva_B</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef ParentName="AntyBackStory">
+		<defName>Anty_Larva_B_Rough</defName>
+		<title>Anty Rough Larva</title>
+		<titleShort>Anty</titleShort>
+		<description>[PAWN_nameDef] was a larva with a short temper. [PAWN_pronoun] often burst into anger over nothing, which often made him a target by evil friends of his. But all [PAWN_nameDef] ever wanted was not to be interrupted while he was focusing for perfect squirming.</description>
+		<slot>Childhood</slot>
+		
+		<skillGains>
+			<Intellectual>3</Intellectual>
+			<Artistic>-3</Artistic>
+			<Crafting>3</Crafting>
+		</skillGains>
+		
+		<forcedTraitsChance>
+		</forcedTraitsChance>
+		
+		<workDisables>
+		</workDisables>
+		
+		<spawnCategories>
+			<li>ATlarva_A</li>
+			<li>ATlarva_B</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef ParentName="AntyBackStory">
+		<defName>Anty_Larva_B_Kind</defName>
+		<title>Anty Kind Larva</title>
+		<titleShort>Anty</titleShort>
+		<description>[PAWN_nameDef] was a kind larvae. [PAWN_pronoun] shared the nutrient jelly with [PAWN_possessive] friends who didn't get to eat, and sided with brave friend who was getting scolded by the nanny.</description>
+		<slot>Childhood</slot>
+		
+		<skillGains>
+			<Medicine>4</Medicine>
+			<Crafting>1</Crafting>
+		</skillGains>
+		
+		<forcedTraitsChance>
+		</forcedTraitsChance>
+		
+		<workDisables>
+		</workDisables>
+		
+		<spawnCategories>
+			<li>ATlarva_A</li>
+			<li>ATlarva_B</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef ParentName="AntyBackStory">
+		<defName>Anty_Larva_B_Idiot</defName>
+		<title>Anty Idiot Larva</title>
+		<titleShort>Anty</titleShort>
+		<description>[PAWN_nameDef] was not the brightest larva. Even squirming needed to be demonstrated multiple times by the nanny and spilled the food every time [PAWN_pronoun] ate. Over time, [PAWN_pronoun] learned to be better than anyone when it comes to a simple task!</description>
+		<slot>Childhood</slot>
+		
+		<skillGains>
+			<Shooting>-8</Shooting>
+			<Melee>4</Melee>
+		</skillGains>
+		
+		<forcedTraitsChance>
+		</forcedTraitsChance>
+		
+		<workDisables>
+			<li>Intellectual</li>
+		</workDisables>
+		
+		<spawnCategories>
+			<li>ATlarva_A</li>
+			<li>ATlarva_B</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef ParentName="AntyBackStory">
+		<defName>Anty_Larva_B_Smart</defName>
+		<title>Anty Smart Larva</title>
+		<titleShort>Anty</titleShort>
+		<description>[PAWN_nameDef] was a very smart larva. [PAWN_pronoun] mastered squirming even before hatching and was passionate about what [PAWN_pronoun] will do in the future during the study time. All for the cost of losing friends, that is.</description>
+		<slot>Childhood</slot>
+		
+		<skillGains>
+			<Melee>-5</Melee>
+			<Medicine>1</Medicine>
+			<Intellectual>4</Intellectual>
+		</skillGains>
+		
+		<forcedTraitsChance>
+		</forcedTraitsChance>
+		
+		<workDisables>
+		</workDisables>
+		
+		<spawnCategories>
+			<li>ATlarva_A</li>
+			<li>ATlarva_B</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef ParentName="AntyBackStory">
+		<defName>Anty_Larva_B_Quiet</defName>
+		<title>Anty Quiet Larva</title>
+		<titleShort>Anty</titleShort>
+		<description>[PAWN_nameDef] was a quiet larva. [PAWN_possessive] daily routine was nothing but eat and poop, and occasionally squirmed discretely, because [PAWN_possessive] attention was always focused on those pesky flies! Which, later [PAWN_pronoun] learned, that when you let the nannies know, they usually shoo them away.</description>
+		<slot>Childhood</slot>
+		
+		<skillGains>
+			<Shooting>-4</Shooting>
+			<Artistic>4</Artistic>
+			<Crafting>2</Crafting>
+		</skillGains>
+		
+		<forcedTraitsChance>
+		</forcedTraitsChance>
+		
+		<workDisables>
+			<li>Social</li>
+		</workDisables>
+		
+		<spawnCategories>
+			<li>ATlarva_A</li>
+			<li>ATlarva_B</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	
+	
+	<AlienRace.AlienBackstoryDef ParentName="AntyBackStory" Name="Anty_Amigo_B_Rangedinfantry">
+		<defName>Anty_Amigo_B_Rangedinfantry</defName>
+		<title>Anty Ranged infantry</title>
+		<titleShort>Ranged infantry</titleShort>
+		<description>[PAWN_nameDef] is a ranged infantry.\n\nRanged infantry class was created to engage in a real war, despite the fact that Anties prefer close-quarter combat.\n\nEntities with talent in shooting or less than ideal physical abilities are usually chosen, and trained to master every type of weapon through rigorous training.</description>
+		<slot>Adulthood</slot>
+		
+		<skillGains>
+			<Shooting>4</Shooting>
+		</skillGains>
+		
+		<forcedTraitsChance>
+		</forcedTraitsChance>
+		
+		<workDisables>
+		</workDisables>
+		
+		<spawnCategories>
+			<li>ATAmigo_Ranged</li>
+			<li>ATAmigo_B</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef ParentName="Anty_Amigo_B_Rangedinfantry">
+		<defName>Anty_Amigo_B_Rangedinfantry_Drop</defName>
+		<spawnCategories Inherit="False">
+			<li>ATAmigo_Ranged_Drop</li>
+		</spawnCategories>
+		<!-- <forcedHediffs Inherit="False">
+			<li>AntySoldierbirth</li>
+		</forcedHediffs> -->
+		<forcedTraitsChance>
+			<li>
+				<defName>AT_Solidexoskeleton</defName>
+			</li>
+		</forcedTraitsChance>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef ParentName="AntyBackStory" Name="Anty_Amigo_B_Meleeinfantry">
+		<defName>Anty_Amigo_B_Meleeinfantry</defName>
+		<title>Anty Melee infantry</title>
+		<titleShort>Melee infantry</titleShort>
+		<description>[PAWN_nameDef]is a Melee infantry.\n\nMelee infantry was there ever since the existence of Anties, which make up for over 30% of the Anties population.\n\nUsually, entities with better physical abilities or less fear of death are chosen. They are put through rigorous training to master every kind of melee weapons and to march fearlessly into the gunfires of both enemies and allies.</description>
+		<slot>Adulthood</slot>
+		
+		<skillGains>
+			<Melee>4</Melee>
+		</skillGains>
+		
+		<forcedTraitsChance>
+		</forcedTraitsChance>
+		
+		<workDisables>
+		</workDisables>
+		
+		<spawnCategories>
+			<li>ATAmigo_Melee</li>
+			<li>ATAmigo_B</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef ParentName="Anty_Amigo_B_Meleeinfantry">
+		<defName>Anty_Amigo_B_Meleeinfantry_Drop</defName>
+		<spawnCategories Inherit="False">
+			<li>ATAmigo_Melee_Drop</li>
+		</spawnCategories>
+		<!-- <forcedHediffs Inherit="False">
+			<li>AntySoldierbirth</li>
+		</forcedHediffs> -->
+		<forcedTraitsChance>
+			<li>
+				<defName>AT_Solidexoskeleton</defName>
+			</li>
+		</forcedTraitsChance>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef ParentName="AntyBackStory">
+		<defName>Anty_Amigo_B_Normalinfantry</defName>
+		<title>Anty general infantry</title>
+		<titleShort>general infantry</titleShort>
+		<description>[PAWN_nameDef] is a general infantry.\n\nMay carry out a role as both close-quarter or ranged infantry, depending on the situation. They are capable of handling every type of weapon, but they are not as proficient in either, unlike the specialized class.</description>
+		<slot>Adulthood</slot>
+		
+		<skillGains>
+			<Shooting>2</Shooting>
+			<Melee>2</Melee>
+		</skillGains>
+		
+		<forcedTraitsChance>
+		</forcedTraitsChance>
+		
+		<workDisables>
+		</workDisables>
+		
+		<spawnCategories>
+			<li>ATAmigo_Ranged</li>
+			<li>ATAmigo_Melee</li>
+			<li>ATAmigo_B</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef ParentName="AntyBackStory">
+		<defName>Anty_Amigo_B_Commander</defName>
+		<title>Anty Commander</title>
+		<titleShort>Commander</titleShort>
+		<description>[PAWN_nameDef] is a commander.\n\nTo command the hive's military, they are equipped with strong pheromone glands. This property allows them to give more commands with higher accuracy, unlike other entities.</description>
+		<slot>Adulthood</slot>
+		
+		<skillGains>
+			<Shooting>3</Shooting>
+			<Melee>3</Melee>
+		</skillGains>
+		
+		<forcedTraitsChance>
+		</forcedTraitsChance>
+		
+		<workDisables>
+		</workDisables>
+		
+		<spawnCategories>
+			<li>ATAmigo_Commander</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef Name="Proty_Doll">
+		<defName>Proty_Doll</defName>
+		<title>Wild Proty Doll</title>
+		<titleShort>Wild Proty</titleShort>
+		<description>[PAWN_nameDef] is Wandering through the wilds, joined the Wild Proty Hive.</description>
+		<slot>Adulthood</slot>
+		
+		<skillGains>
+		</skillGains>
+
+		<forcedHediffs>
+			<li>AT_Proty_Reborn</li>
+		</forcedHediffs>
+		
+		<forcedTraitsChance>
+		</forcedTraitsChance>
+		
+		<workDisables>
+			<li>Intellectual</li>
+			<li>ManualSkilled</li>
+			<li>Artistic</li>
+			<li>Cooking</li>
+		</workDisables>
+		
+		<spawnCategories>
+			<li>Proty_Doll</li>
+		</spawnCategories>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef ParentName="Proty_Doll">
+		<defName>Proty_Doll_B</defName>
+		<slot>Childhood</slot>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+	</AlienRace.AlienBackstoryDef>
+</Defs>

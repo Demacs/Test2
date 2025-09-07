@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="BaseFilth">
+		<defName>AT_Filth_Floordrawing</defName>
+		<label>floordrawing</label>
+		<graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Filth/AntyFloordrawing</texPath>
+			<shaderType>TransparentBelowSnow</shaderType>
+		</graphicData>
+		<statBases>
+			<Beauty>0</Beauty>
+		</statBases>
+		<filth>
+			<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
+			<disappearsInDays>1~2</disappearsInDays>
+			<cleaningWorkToReduceThickness>12</cleaningWorkToReduceThickness>
+			<canFilthAttach>false</canFilthAttach>
+			<cleaningSound>Interact_CleanFilth_Dirt</cleaningSound>
+		</filth>
+	</ThingDef>
+
+	<ThingDef ParentName="AnimalThingBase" Name="ProtyBase" Abstract="True">
+		<comps>
+			<li Class="CompProperties_SpawnerFilth">
+				<filthDef>AT_Filth_Floordrawing</filthDef>
+				<spawnCountOnSpawn>1</spawnCountOnSpawn>
+				<spawnMtbHours>52</spawnMtbHours>
+				<spawnRadius>1</spawnRadius>
+			</li>
+		</comps>
+		<statBases>
+			<MoveSpeed>5.75</MoveSpeed>
+			<ArmorRating_Blunt>0.07</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+			<ComfyTemperatureMin>-35</ComfyTemperatureMin>
+			<MarketValue>350</MarketValue>
+			<LeatherAmount>0</LeatherAmount>
+			<ToxicResistance>-2</ToxicResistance>
+			<ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">-2</ToxicEnvironmentResistance><!-- 환경 독성민감도 -->
+			<Flammability>2</Flammability>
+			<PsychicSensitivity>0</PsychicSensitivity>
+			<MeatAmount>20</MeatAmount>
+			<FilthRate>0.4</FilthRate>
+			<Mass>100</Mass>
+		</statBases>
+		<uiIconScale>2</uiIconScale>
+		<tools>
+			<li>
+				<label>BigJaw</label>
+				<capacities>
+				<li>Bite</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>1.05</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>10</amount>
+						</li>
+						<li>
+							<def>Bite</def>
+							<amount>5</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+				<soundMeleeHit>Pawn_Melee_HumanBite_Hit</soundMeleeHit>
+				<soundMeleeMiss>Pawn_Melee_HumanBite_Miss</soundMeleeMiss>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+				<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>1.15</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.4</chanceFactor>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+		</tools>
+		<race>
+			<!-- <isImmuneToInfection>true</isImmuneToInfection> -->
+			<canBecomeShambler>false</canBecomeShambler>
+			<body>Anty</body>
+			<fleshType>Anty_flesh</fleshType>
+			<baseBodySize>0.5</baseBodySize>
+			<baseHungerRate>0.2</baseHungerRate>
+			<baseHealthScale>0.5</baseHealthScale>
+			<useMeatFrom>Megaspider</useMeatFrom>
+			<trainability>Advanced</trainability>
+			<needsRest>false</needsRest>
+			<wildness>0.1</wildness>
+			<manhunterOnDamageChance>0.5</manhunterOnDamageChance>
+			<manhunterOnTameFailChance>0</manhunterOnTameFailChance>
+			<lifeExpectancy>10</lifeExpectancy>
+			<herdAnimal>true</herdAnimal>
+			<packAnimal>true</packAnimal>
+			<predator>true</predator>
+			<maxPreyBodySize>2.15</maxPreyBodySize>
+			<lifeStageAges>
+				<li>
+					<def>EusocialInsectLarva</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>EusocialInsectJuvenile</def>
+					<minAge>0.03</minAge>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0.2</minAge>
+					<soundWounded>Pawn_Megascarab_Wounded</soundWounded>
+					<soundDeath>Pawn_Megascarab_Death</soundDeath>
+					<soundCall>Pawn_Megascarab_Call</soundCall>
+					<soundAngry>Pawn_Megascarab_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+			<willNeverEat>
+				<li>Nutritional_jelly_thing</li>
+				<li>Antypheromone_Charge_Fix</li>
+				<li>Antypheromone_Shooting</li>
+				<li>Antypheromone_Suicide</li>
+				<li>EggAnty</li>
+				<li>AT_EggHiveguard</li>
+				<li>AT_EggDreadnought</li>
+				
+				<li MayRequire="Ludeon.RimWorld.Biotech">AT_Eggswarmy</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">AT_EggTriJaw</li>
+				
+				<li MayRequire="Ludeon.RimWorld.Biotech">EggAnty_Dorylus</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">EggAnty_Linepithema_humile</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">EggAnty_Solenopsis_Invicta</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">EggAnty_Anoplolepis_gracilipes</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">EggAnty_Tapinoma_melanocephalum</li>
+			</willNeverEat>
+			<foodType>OmnivoreHuman</foodType>
+			<bloodDef>Filth_BloodInsect</bloodDef>
+			<meatColor>(160,168,139)</meatColor>
+			<meatMarketValue>0.5</meatMarketValue>
+			<thinkTreeMain>Animal</thinkTreeMain>
+			<thinkTreeConstant>AnimalConstant</thinkTreeConstant>
+		</race>
+		<tradeTags>
+			<li>Anty_Bug</li>
+		</tradeTags>
+		<damageMultipliers>
+		<li>
+			<damageDef>AT_AcidDamage</damageDef>
+			<multiplier>0</multiplier>
+		</li>
+		<li>
+			<damageDef>AT_AcidDamage_High</damageDef>
+			<multiplier>0</multiplier>
+		</li>
+		<li>
+			<damageDef>AT_glueBomb</damageDef>
+			<multiplier>0</multiplier>
+		</li>
+		<li>
+			<damageDef>AT_glueBomb_B</damageDef>
+			<multiplier>0</multiplier>
+		</li>
+		<li>
+			<damageDef>AT_AcidBullet</damageDef>
+			<multiplier>0.8</multiplier>
+		</li>
+		<li>
+			<damageDef>AT_AcidBomb</damageDef>
+			<multiplier>0.8</multiplier>
+		</li>
+		<li>
+			<damageDef>AT_AcidBomb_B</damageDef>
+			<multiplier>0.8</multiplier>
+		</li>
+		<li>
+			<damageDef>AT_AcidBomb_C</damageDef>
+			<multiplier>0.02</multiplier>
+		</li>
+		<li>
+			<damageDef>Thump</damageDef>
+			<multiplier>0</multiplier>
+		</li>
+		<li>
+			<damageDef>Bomb</damageDef>
+			<multiplier>0.1</multiplier>
+		</li>
+		<li>
+			<damageDef>BombSuper</damageDef>
+			<multiplier>0.1</multiplier>
+		</li>
+		</damageMultipliers>
+	</ThingDef>
+
+	<ThingDef ParentName="ProtyBase">
+		<defName>Anty_prototype</defName>
+		<label>proty</label>
+		<description>An ancestor of Anties in earlier stage of the project. Unlike the Anties, they are closer to ants than human, which lacks intelligence to recieve delicate commands.\n\nBy the time the Anties escaped from the lab, they were drawn to the Hive by pheromones. This wasn't intentional but Anties are liked them, saying they were like a puppy And delicious.\n\nProty's average height are 95cm, human type and ant type are same.</description>
+		<race>
+			<canBecomeShambler>true</canBecomeShambler>
+		</race>
+		<comps>
+			<li Class="CompProperties_EggLayer">
+				<eggUnfertilizedDef>EggProty</eggUnfertilizedDef>
+				<eggFertilizedDef>EggProty</eggFertilizedDef>
+				<eggFertilizationCountMax>1</eggFertilizationCountMax>
+				<eggLayIntervalDays>7</eggLayIntervalDays>
+				<eggCountRange>1</eggCountRange>
+				<eggLayFemaleOnly>false</eggLayFemaleOnly>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>Anty_prototype</defName>
+		<label>proty</label>
+		<race>Anty_prototype</race>
+		<combatPower>90</combatPower>
+		<canArriveManhunter>false</canArriveManhunter>
+		<ecoSystemWeight>0.15</ecoSystemWeight>
+		<defaultFactionType>AT_PlayerFaction</defaultFactionType>
+		<maxGenerationAge>3</maxGenerationAge>
+		<minGenerationAge>2</minGenerationAge>
+	<alternateGraphicChance>0.5</alternateGraphicChance>
+	<alternateGraphics>
+		<li><texPath>Protylike/ProtyA</texPath></li>
+		<li><texPath>Protylike/ProtyB</texPath></li>
+		<li><texPath>Protylike/ProtyC</texPath></li>
+		<li><texPath>Protylike/ProtyD</texPath></li>
+		<li><texPath>Protylike/ProtyE</texPath></li>
+		<li><texPath>Protylike/ProtyF</texPath></li>
+		<li><texPath>Protylike/ProtyG</texPath></li>
+		<li><texPath>Protylike/ProtyH</texPath></li>
+		<li><texPath>Protylike/ProtyI</texPath></li>
+		<li><texPath>Protylike/ProtyJ</texPath></li>
+		<li><texPath>Protylike/ProtyK</texPath></li>
+		<li><texPath>Protylike/ProtyL</texPath></li>
+		<li><texPath>Protylike/ProtyM</texPath></li>
+		<li><texPath>Protylike/ProtyN</texPath></li>
+		<li><texPath>Protylike/ProtyO</texPath></li>
+		<li><texPath>Protylike/ProtyP</texPath></li>
+		<li><texPath>Protylike/ProtyQ</texPath></li>
+	</alternateGraphics>
+		<lifeStages>
+		<li>
+			<bodyGraphicData>
+				<texPath>Protylike/Proty</texPath>
+				<drawSize>1</drawSize>
+				<color>(255,255,255)</color>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+				<texPath>Protylike/ProtyDE</texPath>
+				<drawSize>1</drawSize>
+			</dessicatedBodyGraphicData>
+		</li>
+		<li>
+			<bodyGraphicData>
+				<texPath>Protylike/Proty</texPath>
+				<drawSize>1.25</drawSize>
+				<color>(255,255,255)</color>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+				<texPath>Protylike/ProtyDE</texPath>
+				<drawSize>1.25</drawSize>
+			</dessicatedBodyGraphicData>
+		</li>
+		<li>
+			<bodyGraphicData>
+				<texPath>Protylike/Proty</texPath>
+				<drawSize>1.5</drawSize>
+				<color>(255,255,255)</color>
+				<shadowData>
+					<volume>(0.2, 0.3, 0.2)</volume>
+					<offset>(0,0,0)</offset>
+				</shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+				<texPath>Protylike/ProtyDE</texPath>
+				<drawSize>1.5</drawSize>
+			</dessicatedBodyGraphicData>
+		</li>
+		</lifeStages>
+	</PawnKindDef>
+	
+	<ThingDef ParentName="EggFertBase" Name="EggProty_Base">
+		<defName>EggProty</defName>
+		<label>Proty egg</label>
+		<description>This is Proty's egg.</description>
+		<graphicData>
+			<color>(245,120,120)</color>
+		</graphicData>
+		<statBases>
+			<MarketValue>7.0</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Hatcher">
+				<hatcherDaystoHatch>1</hatcherDaystoHatch>
+				<hatcherPawn>Anty_prototype</hatcherPawn>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="EggUnfertBase">
+		<defName>EggProtyUn</defName>
+		<label>Proty egg(unfert.)</label>
+		<description>An unfertilized egg of Proty.</description>
+		<graphicData>
+			<color>(145,20,145)</color>
+		</graphicData>
+		<statBases>
+			<MarketValue>7.0</MarketValue>
+		</statBases>
+	</ThingDef>
+
+	<ThingDef ParentName="ProtyBase">
+		<defName>Anty_prototype_Wild</defName>
+		<label>Wild proty</label>
+		<description>An ancestor of Anties in earlier stage of the project. Unlike the Anties, they are closer to ants than human, which lacks intelligence to recieve delicate commands.\n\nBy the time the Anties escaped from the lab, they were drawn to the Hive by pheromones. This wasn't intentional but Anties are liked them, saying they were like a puppy And delicious.\n\nProty's average height are 95cm, human type and ant type are same.\n\nThey are independently evolving individuals outside the sphere of influence of Anties. It's a little smarter than the regular Proty.</description>
+		<comps Inherit="false"/>
+		<race>
+			<intelligence>ToolUser</intelligence>
+		</race>
+		<tradeTags Inherit="false">
+		</tradeTags>
+		<tradeability>None</tradeability>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase" Name="Anty_prototype_Wild_KindBase">
+		<defName>Anty_prototype_Wild</defName>
+		<label>Wild proty</label>
+		<race>Anty_prototype_Wild</race>
+		<combatPower>90</combatPower>
+		<isFighter>true</isFighter>
+		<canArriveManhunter>false</canArriveManhunter>
+		<ecoSystemWeight>0.15</ecoSystemWeight>
+		<defaultFactionType>ProtyHive</defaultFactionType>
+		<maxGenerationAge>3</maxGenerationAge>
+		<minGenerationAge>2</minGenerationAge>
+	<alternateGraphicChance>0.5</alternateGraphicChance>
+	<alternateGraphics>
+		<li><texPath>Protylike/ProtyA</texPath></li>
+		<li><texPath>Protylike/ProtyB</texPath></li>
+		<li><texPath>Protylike/ProtyC</texPath></li>
+		<li><texPath>Protylike/ProtyD</texPath></li>
+		<li><texPath>Protylike/ProtyE</texPath></li>
+		<li><texPath>Protylike/ProtyF</texPath></li>
+		<li><texPath>Protylike/ProtyG</texPath></li>
+		<li><texPath>Protylike/ProtyH</texPath></li>
+		<li><texPath>Protylike/ProtyI</texPath></li>
+		<li><texPath>Protylike/ProtyJ</texPath></li>
+		<li><texPath>Protylike/ProtyK</texPath></li>
+		<li><texPath>Protylike/ProtyL</texPath></li>
+		<li><texPath>Protylike/ProtyM</texPath></li>
+		<li><texPath>Protylike/ProtyN</texPath></li>
+		<li><texPath>Protylike/ProtyO</texPath></li>
+		<li><texPath>Protylike/ProtyP</texPath></li>
+		<li><texPath>Protylike/ProtyQ</texPath></li>
+	</alternateGraphics>
+		<lifeStages>
+		<li>
+			<bodyGraphicData>
+				<texPath>Protylike/Proty</texPath>
+				<drawSize>1</drawSize>
+				<color>(255,255,255)</color>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+				<texPath>Protylike/ProtyDE</texPath>
+				<drawSize>1</drawSize>
+			</dessicatedBodyGraphicData>
+		</li>
+		<li>
+			<bodyGraphicData>
+				<texPath>Protylike/Proty</texPath>
+				<drawSize>1.25</drawSize>
+				<color>(255,255,255)</color>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+				<texPath>Protylike/ProtyDE</texPath>
+				<drawSize>1.25</drawSize>
+			</dessicatedBodyGraphicData>
+		</li>
+		<li>
+			<bodyGraphicData>
+				<texPath>Protylike/Proty</texPath>
+				<drawSize>1.5</drawSize>
+				<color>(255,255,255)</color>
+				<shadowData>
+					<volume>(0.2, 0.3, 0.2)</volume>
+					<offset>(0,0,0)</offset>
+				</shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+				<texPath>Protylike/ProtyDE</texPath>
+				<drawSize>1.5</drawSize>
+			</dessicatedBodyGraphicData>
+		</li>
+		</lifeStages>
+		
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="Anty_prototype_Wild_KindBase">
+		<defName>Anty_prototype_Wild_Melee</defName>
+		<label>Wild proty</label>
+		<weaponMoney>200~3150</weaponMoney>
+		<weaponTags>
+			<li>NeolithicMeleeBasic</li>
+			<li>NeolithicMeleeDecent</li>
+		</weaponTags>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="Anty_prototype_Wild_KindBase">
+		<defName>Anty_prototype_Wild_Range</defName>
+		<label>Wild proty</label>
+		<weaponMoney>1000~3150</weaponMoney>
+		<weaponTags>
+			<li>SimpleGun</li>
+			<li>Revolver</li>
+		</weaponTags>
+	</PawnKindDef>
+	
+	
+	<ThingDef ParentName="EggFertBase">
+		<defName>EggProty_Dummy</defName>
+		<label>???</label>
+		<description>???</description>
+		<graphicData>
+			<color>(245,120,120)</color>
+		</graphicData>
+		<comps Inherit="false">
+			<li Class="CompProperties_Hatcher">
+				<hatcherDaystoHatch>0.0001</hatcherDaystoHatch>
+				<hatcherPawn>Anty_prototype</hatcherPawn>
+			</li>
+		</comps>
+		<thingCategories Inherit="false" />
+		<tradeability>None</tradeability>
+	</ThingDef>
+	
+	<!-- <AlienRace.ThingDef_AlienRace ParentName="HumanRace">
+		<defName>Tribal_Proty</defName>
+		<label>???</label>
+		<description>???</description>
+		<race>
+			<baseHealthScale>0.5</baseHealthScale>
+			<useMeatFrom>Human</useMeatFrom>
+			<needsRest>false</needsRest>
+			<bloodDef>Filth_BloodInsect</bloodDef>
+		</race>
+		<killedLeavings>
+			<EggProty_Dummy>3</EggProty_Dummy>
+		</killedLeavings>
+	</AlienRace.ThingDef_AlienRace>
+	
+	<AlienRace.ThingDef_AlienRace ParentName="AntyBase">
+		<defName>Tribal_Proty_Anty</defName>
+		<label>???</label>
+		<description>???</description>
+		<race>
+			<baseHealthScale>0.5</baseHealthScale>
+			<useMeatFrom>Anty</useMeatFrom>
+			<needsRest>false</needsRest>
+		</race>
+		<killedLeavings>
+			<EggProty_Dummy>3</EggProty_Dummy>
+		</killedLeavings>
+	</AlienRace.ThingDef_AlienRace> -->
+	
+</Defs>

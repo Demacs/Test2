@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<AlienRace.RaceSettings>
+		<defName>AT_Race_Setting</defName>
+		<pawnKindSettings>
+			<startingColonists>
+				<li>
+					<pawnKindEntries>
+						<li>
+							<kindDefs>
+								<li>AT_Colonist</li>
+							</kindDefs>
+							<chance>100</chance>
+						</li>
+					</pawnKindEntries>
+					<factionDefs>
+						<li>AT_PlayerFaction</li>
+					</factionDefs>
+				</li>
+				<li>
+					<pawnKindEntries>
+						<li>
+							<kindDefs>
+								<li>AT_Colonist_C</li>
+							</kindDefs>
+							<chance>100</chance>
+						</li>
+					</pawnKindEntries>
+					<factionDefs>
+						<li>AT_PlayerFaction_B</li>
+					</factionDefs>
+				</li>
+			</startingColonists>
+			
+			<!-- <alienslavekinds>
+				<li>
+					<kindDefs>
+						<li>AT_Colonist</li>
+						<li>AT_Colonist_C</li>
+					</kindDefs>
+					<chance>0.01</chance>
+				</li>
+			</alienslavekinds>
+			
+			<alienrefugeekinds>
+				<li>
+					<kindDefs>
+						<li>AT_Rifle_A</li>
+						<li>AT_Charge_B</li>
+					</kindDefs>
+					<chance>0.01</chance>
+				</li>
+			</alienrefugeekinds> -->
+			
+			<alienwandererkinds>
+				<li>
+					<pawnKindEntries>
+						<li>
+							<kindDefs>
+								<li>AT_Rifle_A</li>
+								<li>AT_Charge_B</li>
+							</kindDefs>
+							<chance>1.0</chance>
+						</li>
+					</pawnKindEntries>
+					<factionDefs>
+						<li>AntyHive</li>
+						<li>AntyHive_B</li>
+						<li>AT_PlayerFaction_B</li>
+						<li>AT_PlayerFaction</li>
+					</factionDefs>
+				</li>
+			</alienwandererkinds>
+		</pawnKindSettings>
+	</AlienRace.RaceSettings>
+	
+	<StatDef>
+		<defName>AT_BreedingSpeed</defName>
+		<label>Anty Egg Breeding Speed</label>
+		<description>Breeding Speed.</description>
+		<category>PawnWork</category>
+		<defaultBaseValue>0</defaultBaseValue>
+		<noSkillOffset>20</noSkillOffset>
+		<minValue>0</minValue>
+		<toStringStyle>PercentZero</toStringStyle>
+		<toStringStyleUnfinalized>FloatOne</toStringStyleUnfinalized>
+		<postProcessCurve>
+		  <points>
+			<li>(-20, 0.01)</li>
+			<li>(0, 0)</li>
+			<li>(0.1, 0.1)</li>
+			<li>(100, 2)</li>
+			<li>(200, 4)</li>
+			<li>(300, 6)</li>
+		  </points>
+		</postProcessCurve>
+		<displayPriorityInCategory>4541</displayPriorityInCategory>
+	</StatDef>
+	
+	<DrugPolicyDef>
+		<defName>Anty_Melee</defName>
+		<label>Anty Melee</label>
+		<entries>
+			<li>
+				<drug>Beer</drug>
+				<allowedForJoy>true</allowedForJoy>
+			</li>
+			<li>
+				<drug>Ambrosia</drug>
+				<allowedForJoy>true</allowedForJoy>
+			</li>
+			<li>
+				<drug>PsychiteTea</drug>
+				<allowedForJoy>true</allowedForJoy>
+			</li>
+			<li>
+				<drug>Antypheromone_Charge_Fix</drug>
+				<takeToInventory>1</takeToInventory>
+			</li>
+			<li>
+				<drug>Antypheromone_Suicide</drug>
+				<takeToInventory>1</takeToInventory>
+			</li>
+		</entries>
+	</DrugPolicyDef>
+	
+	<DrugPolicyDef>
+		<defName>Anty_Ranged</defName>
+		<label>Anty Ranged</label>
+		<entries>
+			<li>
+				<drug>Beer</drug>
+				<allowedForJoy>true</allowedForJoy>
+			</li>
+			<li>
+				<drug>Ambrosia</drug>
+				<allowedForJoy>true</allowedForJoy>
+			</li>
+			<li>
+				<drug>PsychiteTea</drug>
+				<allowedForJoy>true</allowedForJoy>
+			</li>
+			<li>
+				<drug>Antypheromone_Shooting</drug>
+				<takeToInventory>1</takeToInventory>
+			</li>
+		</entries>
+	</DrugPolicyDef>
+	
+	<DrugPolicyDef>
+		<defName>Anty_Hybrid</defName>
+		<label>Anty Hybrid</label>
+		<entries>
+			<li>
+				<drug>Beer</drug>
+				<allowedForJoy>true</allowedForJoy>
+			</li>
+			<li>
+				<drug>Ambrosia</drug>
+				<allowedForJoy>true</allowedForJoy>
+			</li>
+			<li>
+				<drug>PsychiteTea</drug>
+				<allowedForJoy>true</allowedForJoy>
+			</li>
+			<li>
+				<drug>Antypheromone_Shooting</drug>
+				<takeToInventory>1</takeToInventory>
+			</li>
+			<li>
+				<drug>Antypheromone_Charge_Fix</drug>
+				<takeToInventory>1</takeToInventory>
+			</li>
+		</entries>
+	</DrugPolicyDef>
+	
+	<rjw.RaceGroupDef MayRequire="rim.job.world">
+		<defName>AntyGroup</defName>
+		<raceNames>
+			<li>Anty</li>
+			<li>AT_dreadnought</li>
+			<li>AT_Hiveguard</li>
+			<li MayRequire="Ludeon.RimWorld.Biotech">AT_TriJaw</li>
+		</raceNames>
+		<anuses>
+			<li>InsectAnus</li>
+		</anuses>
+		<femaleBreasts>
+			<li>FeaturelessChest</li>
+		</femaleBreasts>
+		<femaleGenitals>
+			<!-- <li>OvipositorM</li> -->
+		</femaleGenitals>
+		<maleBreasts>
+			<li>FeaturelessChest</li>
+		</maleBreasts>
+		<maleGenitals>
+			<li>OvipositorMAnty</li>
+		</maleGenitals>
+		<tags>
+			<li>Chitin</li>
+		</tags>
+		<hasSingleGender>true</hasSingleGender>
+		<teenAge>1</teenAge>
+		<adultAge>2</adultAge>
+		
+		<hasFertility>true</hasFertility>
+		<hasPregnancy>true</hasPregnancy>
+		<oviPregnancy>true</oviPregnancy>
+		<ImplantEggs>true</ImplantEggs>
+		
+		<eggFertilizedDef>EggProtyUn</eggFertilizedDef>
+		<eggUnfertilizedDef>EggProtyUn</eggUnfertilizedDef>
+		<eggProgressUnfertilizedMax>0.05</eggProgressUnfertilizedMax>
+		<eggLayIntervalDays>60</eggLayIntervalDays>
+	</rjw.RaceGroupDef>
+	
+	<rjw.RaceGroupDef MayRequire="rim.job.world">
+		<defName>AntyPrototypeGroup</defName>
+		<raceNames>
+			<li>Anty_prototype</li>
+			<li>Anty_prototype_Wild</li>
+			<li MayRequire="Ludeon.RimWorld.Biotech">Anty_swarmy</li>
+		</raceNames>
+		
+		<anuses>
+			<li>InsectAnus</li>
+		</anuses>
+
+		<femaleBreasts>
+			<li>FeaturelessChest</li>
+		</femaleBreasts>
+
+		<femaleGenitals>
+			<li>Vagina</li>
+		</femaleGenitals>
+		
+		<maleBreasts>
+			<li>FeaturelessChest</li>
+		</maleBreasts>
+
+		<maleGenitals>
+			<li>HemiPenis</li>
+		</maleGenitals>
+
+		<tags>
+			<li>Chitin</li>
+		</tags>
+		<raceSexDrive>1.0</raceSexDrive>
+		<hasSingleGender>false</hasSingleGender>
+		<hasFertility>true</hasFertility>
+		<hasPregnancy>true</hasPregnancy>
+		<oviPregnancy>false</oviPregnancy>
+		<ImplantEggs>false</ImplantEggs>
+		
+		<eggFertilizedDef>EggProty</eggFertilizedDef>
+		<eggUnfertilizedDef>EggProtyUn</eggUnfertilizedDef>
+		
+		<eggProgressUnfertilizedMax>0.95</eggProgressUnfertilizedMax>
+		<eggLayIntervalDays>3</eggLayIntervalDays>
+	</rjw.RaceGroupDef>
+	
+	<rjw.RacePartDef MayRequire="rim.job.world">
+		<defName>OvipositorMAnty</defName>
+		<hediffName>OvipositorAnty</hediffName>
+		<fluidModifier>1</fluidModifier>
+		<severityCurve>
+			<points>
+				<li>(0.0, 0.7)</li>
+				<li>(0.5, 0.8)</li>
+				<li>(1.0, 1.0)</li>
+			</points>
+		</severityCurve>
+	</rjw.RacePartDef>
+	
+	<rjw.HediffDef_SexPart MayRequire="rim.job.world">
+		<defName>OvipositorAnty</defName>
+		<label>composite ovipositor (Anty)</label>
+		<labelNoun>an composite ovipositor</labelNoun>
+		<description>An composite ovipositor. Lays eggs inside host. it cannot fertilize the eggs.</description>
+		<descriptionHyperlinks>
+			<ThingDef>OvipositorF</ThingDef>
+		</descriptionHyperlinks>
+		<spawnThingOnRemoved>OvipositorF</spawnThingOnRemoved>
+		<fluid>Cum</fluid>
+		<fluidMultiplier>1.55</fluidMultiplier>
+		<sizeProfile>OvipositorAntySizes</sizeProfile>
+		<genitalFamily>Penis</genitalFamily>
+		<defaultBodyPart>Genitals</defaultBodyPart>
+		<genitalTags>
+			<li>CanPenetrate</li>
+		</genitalTags>
+		<partTags>
+			<li>Internal</li>
+			<li>Rigid</li>
+			<li>Ridged</li>
+			<li>Tapered</li>
+			<li>Long</li>
+			<li>Multiple</li>
+		</partTags>
+		<comps>
+			<li Class="rjw.HediffCompProperties_SexPart" />
+			<li Class="rjw.HediffCompProperties_GrowsWithOwner" />
+		</comps>
+		
+		<defaultBodyPartList>
+			<!--
+			<li>Head</li>
+			<li>Genitals</li>
+			<li>Chest</li>
+			<li>Anus</li>
+			-->
+		</defaultBodyPartList>
+		<!-- <everVisible>true</everVisible> -->
+		<isBad>false</isBad>
+		<priceImpact>false</priceImpact>
+		<produceFluidOnOrgasm>true</produceFluidOnOrgasm>
+		<allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
+		<keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+		<hediffClass>rjw.Hediff_NaturalSexPart</hediffClass>
+		<defaultLabelColor>(0.5, 0.8, 0.5)</defaultLabelColor>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+		</addedPartProps>
+		<!-- Not currently used by base game-->
+		<organicAddedBodypart>true</organicAddedBodypart>
+		
+		<stages>
+			<li>
+				<minSeverity>0.01</minSeverity>
+			</li>
+			<li>
+				<minSeverity>0.20</minSeverity>
+			</li>
+			<li>
+				<minSeverity>0.40</minSeverity>
+			</li>
+			<li>
+				<minSeverity>0.60</minSeverity>
+			</li>
+			<li>
+				<minSeverity>0.80</minSeverity>
+			</li>
+			<li>
+				<minSeverity>1.01</minSeverity>
+			</li>
+		</stages>
+	</rjw.HediffDef_SexPart>
+	
+	<rjw.PartSizeConfigDef Name="OvipositorAntySizes" MayRequire="rim.job.world">
+		<defName>OvipositorAntySizes</defName>
+		<label>OvipositorAntySizes</label>
+		<bodysizescale>false</bodysizescale>
+		<girths>
+			<li>8</li>
+			<li>10</li>
+			<li>12</li>
+			<li>13</li>
+			<li>14</li>
+			<li>15</li>
+		</girths>
+		<lengths>
+			<li>25</li>
+			<li>30</li>
+			<li>32</li>
+			<li>34</li>
+			<li>38</li>
+			<li>40</li>
+		</lengths>
+	</rjw.PartSizeConfigDef>
+	
+	<rjw.HediffDef_InsectEgg MayRequire="rim.job.world">
+		<defName>RJW_AntyHiveEgg</defName>
+		<label>Anty egg</label>
+		<parentDefs Inherit="False">
+			<li>AT_Dreadnought_A</li>
+			<li>AT_Dreadnought_B</li>
+			
+			<li>AT_Hiveguard_A</li>
+			<li>AT_Hiveguard_B</li>
+			
+			<li>AT_TriJaw_A</li>
+			<li>AT_TriJaw_B</li>
+			
+			<li>AT_Colonist</li>
+			<li>AT_Colonist_B</li>
+			<li>AT_Colonist_C</li>
+			<li>AT_Colonist_Baby</li>
+			<li>AT_Colonist_Baby_Bio</li>
+			<li>AT_Power_A_test</li>
+			
+			<li>Anty_Commander</li>
+			<li>AT_Raid_A</li>
+			<li>AT_Rifle_A</li>
+			<li>AT_Charge_A</li>
+			<li>AT_Sapper_A</li>
+			<li>AT_Sapper_B</li>
+			<li>AT_Rifle_B</li>
+			<li>AT_Charge_B</li>
+			<li>AT_Launcher_A</li>
+			<li>AT_Launcher_B</li>
+			<li>AT_SingleUse</li>
+			<li>AT_Power</li>
+			<li>AT_Power_A</li>
+			<li>AT_Power_A_B</li>
+			<li>AT_Power_A_C</li>
+			<li>AT_Power_B</li>
+			<li>AT_Power_C</li>
+			<li>AT_Power_D</li>
+			<li>AT_PP_S</li>
+			
+			<li>Anty_Commander_title</li>
+			<li>AT_PP_S_title</li>
+			<li>AT_Launcher_A_title</li>
+			<li>AT_Rifle_B_title</li>
+		</parentDefs>
+		<childrenDefs Inherit="False">
+			<li>AT_Colonist_Baby</li>
+			<li>AT_Colonist_Baby_Bio</li>
+		</childrenDefs>
+		<UnFertEggDef>AntyExoskeleton</UnFertEggDef>
+		<FertEggDef>AntyExoskeleton</FertEggDef>
+		
+		<preventsPregnancy>true</preventsPregnancy>
+		<eggsize>0.55</eggsize>
+		<selffertilized>false</selffertilized>
+		
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>30000</disappearsAfterTicks>
+			</li>
+		</comps>
+		
+		<hediffClass>rjw.Hediff_InsectEgg</hediffClass>
+		<description>This is an egg that did not grow properly. It disappears over time.</description>
+		<defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+		<initialSeverity>0.01</initialSeverity>
+		<pregnant>false</pregnant>
+		<isBad>false</isBad>
+		<tendable>false</tendable>
+		<!-- <canbefertilized>canbefertilized</canbefertilized> -->
+		<stages>
+			<li>
+				<minSeverity>0.01</minSeverity>
+			</li>
+			<li>
+				<minSeverity>0.02</minSeverity>
+			</li>
+			<li>
+				<minSeverity>0.05</minSeverity>
+			</li>
+			<li>
+				<minSeverity>0.10</minSeverity>
+			</li>
+			<li>
+				<minSeverity>0.15</minSeverity>
+			</li>
+			<li>
+				<minSeverity>0.20</minSeverity>
+			</li>
+			<li>
+				<minSeverity>0.25</minSeverity>
+			</li>
+			<li>
+				<minSeverity>0.30</minSeverity>
+			</li>
+			<li>
+				<minSeverity>0.40</minSeverity>
+			</li>
+			<li>
+				<minSeverity>0.50</minSeverity>
+			</li>
+			<li>
+				<minSeverity>0.75</minSeverity>
+			</li>
+			<li>
+				<minSeverity>0.9</minSeverity>
+			</li>
+		</stages>
+	</rjw.HediffDef_InsectEgg>
+</Defs>

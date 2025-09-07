@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Bases -->
+
+  <HeadTypeDef ParentName="AverageBase" Name="AT_HeadtypeBase" Abstract="True">
+  </HeadTypeDef>
+  
+  <HeadTypeDef ParentName="AT_HeadtypeBase" Name="AT_MaleHeadtypeBase" Abstract="True">
+	<gender>Male</gender>
+  </HeadTypeDef>
+  
+  <HeadTypeDef ParentName="AT_HeadtypeBase" Name="AT_FemaleHeadtypeBase" Abstract="True">
+	<gender>Female</gender>
+  </HeadTypeDef>
+  
+  
+  <HeadTypeDef ParentName="AT_MaleHeadtypeBase">
+    <defName>AT_Male_AverageOD</defName>
+    <graphicPath>Antylike/Heads/Male_AntyODA</graphicPath>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="AT_FemaleHeadtypeBase">
+    <defName>AT_Female_AverageODA</defName>
+    <graphicPath>Antylike/Heads/Female_AntyODA</graphicPath>
+  </HeadTypeDef>
+  
+  <HeadTypeDef ParentName="AT_FemaleHeadtypeBase">
+    <defName>AT_Female_AverageODB</defName>
+    <graphicPath>Antylike/Heads/Female_AntyODB</graphicPath>
+  </HeadTypeDef>
+  
+  <HeadTypeDef ParentName="AT_FemaleHeadtypeBase">
+    <defName>AT_Female_AverageODC</defName>
+    <graphicPath>Antylike/Heads/Female_AntyODC</graphicPath>
+  </HeadTypeDef>
+
+
+  <HeadTypeDef ParentName="AT_MaleHeadtypeBase">
+    <defName>AT_Male_AverageNormal</defName>
+    <graphicPath>Antylike/Heads/Male_AntyA_1</graphicPath>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="AT_FemaleHeadtypeBase">
+    <defName>AT_Female_AverageNormalAone</defName>
+    <graphicPath>Antylike/Heads/Female_AntyA_1</graphicPath>
+  </HeadTypeDef>
+  
+  <HeadTypeDef ParentName="AT_FemaleHeadtypeBase">
+    <defName>AT_Female_AverageNormalAtwo</defName>
+    <graphicPath>Antylike/Heads/Female_AntyA_2</graphicPath>
+  </HeadTypeDef>
+  
+  <HeadTypeDef ParentName="AT_FemaleHeadtypeBase">
+    <defName>AT_Female_AverageNormalAthree</defName>
+    <graphicPath>Antylike/Heads/Female_AntyA_3</graphicPath>
+  </HeadTypeDef>
+  
+  <HeadTypeDef ParentName="AT_FemaleHeadtypeBase">
+    <defName>AT_Female_AverageNormalAzero</defName>
+    <graphicPath>Antylike/Heads/Female_AntyA</graphicPath>
+  </HeadTypeDef>
+  
+  
+  <HeadTypeDef ParentName="AT_FemaleHeadtypeBase">
+    <defName>AT_Female_AverageNormalBone</defName>
+    <graphicPath>Antylike/Heads/Female_AntyB_1</graphicPath>
+  </HeadTypeDef>
+  
+  <HeadTypeDef ParentName="AT_FemaleHeadtypeBase">
+    <defName>AT_Female_AverageNormalBtwo</defName>
+    <graphicPath>Antylike/Heads/Female_AntyB_2</graphicPath>
+  </HeadTypeDef>
+  
+  <HeadTypeDef ParentName="AT_FemaleHeadtypeBase">
+    <defName>AT_Female_AverageNormalBthree</defName>
+    <graphicPath>Antylike/Heads/Female_AntyB_3</graphicPath>
+  </HeadTypeDef>
+  
+  <HeadTypeDef ParentName="AT_FemaleHeadtypeBase">
+    <defName>AT_Female_AverageNormalBzero</defName>
+    <graphicPath>Antylike/Heads/Female_AntyB</graphicPath>
+  </HeadTypeDef>
+  
+  
+  <HeadTypeDef ParentName="AT_FemaleHeadtypeBase">
+    <defName>AT_Female_AverageNormalCone</defName>
+    <graphicPath>Antylike/Heads/Female_AntyC_1</graphicPath>
+  </HeadTypeDef>
+  
+  <HeadTypeDef ParentName="AT_FemaleHeadtypeBase">
+    <defName>AT_Female_AverageNormalCtwo</defName>
+    <graphicPath>Antylike/Heads/Female_AntyC_2</graphicPath>
+  </HeadTypeDef>
+  
+  <HeadTypeDef ParentName="AT_FemaleHeadtypeBase">
+    <defName>AT_Female_AverageNormalCthree</defName>
+    <graphicPath>Antylike/Heads/Female_AntyC_3</graphicPath>
+  </HeadTypeDef>
+  
+  <HeadTypeDef ParentName="AT_FemaleHeadtypeBase">
+    <defName>AT_Female_AverageNormalCzero</defName>
+    <graphicPath>Antylike/Heads/Female_AntyC</graphicPath>
+  </HeadTypeDef>
+  
+  <HeadTypeDef ParentName="AT_FemaleHeadtypeBase">
+    <defName>AT_Female_AverageExtraCzero</defName>
+    <graphicPath>Antylike/Heads/Female_AntyD</graphicPath>
+  </HeadTypeDef>
+  
+  
+  <HeadTypeDef ParentName="AT_MaleHeadtypeBase">
+    <defName>AT_Male_DreadnoughtA</defName>
+    <graphicPath>Dreadnoughtlike/Heads/Male_DreadnoughtA</graphicPath>
+  </HeadTypeDef>
+  
+  <HeadTypeDef ParentName="AT_MaleHeadtypeBase">
+    <defName>AT_Male_HiveguardA</defName>
+    <graphicPath>Hiveguardlike/Heads/Male_HiveguardA</graphicPath>
+  </HeadTypeDef>
+  
+  <HeadTypeDef ParentName="AT_FemaleHeadtypeBase">
+    <defName>AT_Female_DreadnoughtA</defName>
+    <graphicPath>Dreadnoughtlike/Heads/Female_DreadnoughtA</graphicPath>
+  </HeadTypeDef>
+  
+  <HeadTypeDef ParentName="AT_FemaleHeadtypeBase">
+    <defName>AT_Female_HiveguardA</defName>
+    <graphicPath>Hiveguardlike/Heads/Female_HiveguardA</graphicPath>
+  </HeadTypeDef>
+  
+  <HeadTypeDef ParentName="AT_MaleHeadtypeBase">
+    <defName>AT_Male_TriJawA</defName>
+    <graphicPath>TriJawlike/Heads/Male_TriJawA</graphicPath>
+  </HeadTypeDef>
+  
+  <HeadTypeDef ParentName="AT_FemaleHeadtypeBase">
+    <defName>AT_Female_TriJawA</defName>
+    <graphicPath>TriJawlike/Heads/Female_TriJawA</graphicPath>
+  </HeadTypeDef>
+
+</Defs>

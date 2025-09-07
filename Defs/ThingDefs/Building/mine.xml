@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<ThingDef ParentName="TrapIEDBase">
+		<defName>AT_TP_AMM</defName>
+		<label>Repurposed Landmine</label>
+		<description>A landmine with advanced mechanoid detector, which can detonate when it sense mechanoid even from a distance. It can also works like a regular landmine against other targets.\n\nIt is filled with concentrated red-burst, which makes it effective against not only mechanoids, but all types of enemies.</description>
+		<descriptionHyperlinks>
+			<HediffDef>Chemicaldissolution_high</HediffDef>
+			<ThingDef>Anty_Recyclecore</ThingDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Building/SI/AT_FM</texPath>
+		</graphicData>
+		<designatorDropdown>Mine_TP_AMM</designatorDropdown>
+		<costList>
+			<Anty_Recyclecore>1</Anty_Recyclecore>
+			<AntyExoskeleton>10</AntyExoskeleton>
+			<Refleum>5</Refleum>
+			<Uranium>10</Uranium>
+		</costList>
+		<designationHotKey>Misc7</designationHotKey>
+		<comps>
+			<li Class="CompProperties_Explosive">
+			<explosiveRadius>0.9</explosiveRadius>
+			<explosiveDamageType>AT_AcidBomb_B</explosiveDamageType>
+			<damageAmountBase>0</damageAmountBase>
+			<armorPenetrationBase>0</armorPenetrationBase>
+			<preExplosionSpawnThingDef>AT_TP_AMM_field</preExplosionSpawnThingDef>
+			<preExplosionSpawnChance>1</preExplosionSpawnChance>
+			<wickTicks>35</wickTicks>
+			<startWickHitPointsPercent>0.99</startWickHitPointsPercent>
+			<startWickOnDamageTaken>
+				<li>Bullet</li>
+				<li>Arrow</li>
+				<li>ArrowHighVelocity</li>
+				<li>AT_AcidBullet</li>
+				<li>AT_AcidBomb</li>
+				<li>AT_AcidBomb_B</li>
+				<li>AT_AcidBomb_C</li>
+				<li>Flame</li>
+			</startWickOnDamageTaken>
+			</li>
+			<li Class="CompProperties_UseEffect">
+				<compClass>CompUseEffect_StartWick</compClass>
+			</li>
+			<li Class="CompProperties_ProximityFuse">
+				<target>Mech_CentipedeBlaster</target>
+				<radius>3.9</radius>
+			</li>
+			<li Class="CompProperties_ProximityFuse">
+				<target>Mech_CentipedeGunner</target>
+				<radius>3.9</radius>
+			</li>
+			<li Class="CompProperties_ProximityFuse">
+				<target>Mech_CentipedeBurner</target>
+				<radius>3.9</radius>
+			</li>
+			<li Class="CompProperties_ProximityFuse">
+				<target>Mech_Lancer</target>
+				<radius>2</radius>
+			</li>
+			<li Class="CompProperties_ProximityFuse">
+				<target>Mech_Scyther</target>
+				<radius>2.1</radius>
+			</li>
+			<li Class="CompProperties_ProximityFuse">
+				<target>Mech_Pikeman</target>
+				<radius>2.9</radius>
+			</li>
+			<li Class="CompProperties_ProximityFuse">
+				<target>Mech_Termite</target>
+				<radius>2.9</radius>
+			</li>
+			<li Class="CompProperties_MoteEmitter">
+				<mote>Mote_IngressbreakerRadius</mote>
+				<maintain>True</maintain>
+				<saveKeysPrefix>glow</saveKeysPrefix>
+			</li>
+		</comps>
+		<specialDisplayRadius>3.9</specialDisplayRadius>
+		<building>
+			<trapPeacefulWildAnimalsSpringChanceFactor>1</trapPeacefulWildAnimalsSpringChanceFactor>
+		</building>
+		<researchPrerequisites>
+			<li>Largecolony</li>
+		</researchPrerequisites>
+		<designationCategory>Antybuilding</designationCategory>
+	</ThingDef>
+	
+	<ThingDef ParentName="AT_SuicideBase">
+		<defName>AT_TP_AMM_field</defName>
+		<label>AT_TP_AMM_field</label>
+		<category>Building</category>
+		<thingClass>Building</thingClass>
+		<graphicData>
+			<texPath>Things/Building/SI/AT_FM_Active</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_MoteEmitter">
+				<mote>Mote_IngressbreakerRadius</mote>
+				<maintain>True</maintain>
+				<saveKeysPrefix>glow</saveKeysPrefix>
+			</li>
+			<li Class="CompProperties_MoteEmitter">
+				<mote>Mote_PsychicEmanatorEffect_Anty_Acceleration</mote>
+				<emissionInterval>55</emissionInterval>
+			</li>
+			<li Class="CompProperties_SmokeCloudMaker">
+				<sourceStreamEffect>GraserBeam_End_AT</sourceStreamEffect>
+				<cloudRadius>3.9</cloudRadius>
+				<fleckScale>2</fleckScale>
+				<cloudFleck>AT_TP_AMM_field</cloudFleck>
+				<fleckSpawnMTB>25</fleckSpawnMTB>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>5.2</glowRadius>
+				<glowColor>(255,0,0,0)</glowColor>
+			</li>
+			<li Class="CompProperties_RangeHediffAnty">
+				<hediff>AT_Damage_AMM</hediff>
+				<range>3.9</range>
+				<severityPerSecond>1</severityPerSecond>
+			</li>
+			<li Class="CompProperties_Lifespan">
+				<lifespanTicks>2400</lifespanTicks>
+			</li>
+		</comps>
+		<killedLeavings>
+			<Anty_Recyclecore>1</Anty_Recyclecore>
+		</killedLeavings>
+	</ThingDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>AT_TP_AMM_field</defName>
+		<graphicData>
+				<texPath>Things/Weapons/AcidSmoke</texPath>
+				<renderInstanced>true</renderInstanced>
+				<color>(60,0,0)</color>
+				<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.50</fadeInTime>
+		<solidTime>5</solidTime>
+		<fadeOutTime>0.5</fadeOutTime>
+		<growthRate>0.05</growthRate>
+	</FleckDef>
+	
+	<HediffDef>
+		<defName>AT_Damage_AMM</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>AT_Damage_AMM</label>
+		<description>AT_Damage_AMM.</description>
+		<defaultLabelColor>(0.2,1,0.5)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>60</disappearsAfterTicks>
+			</li>
+			<li Class="ContDamAnty.HediffCompProperties_ContinuousDamage">
+				<damageDef>AT_AcidDamage_High</damageDef>
+				<ticksPerDamage>60</ticksPerDamage>
+				<damageAmount>6</damageAmount>
+				<endTicks>61</endTicks>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<ThingDef ParentName="MoteBase" Name="Mote_IngressbreakerRadius">
+		<defName>Mote_IngressbreakerRadius</defName>
+		<mote>
+			<fadeInTime>5</fadeInTime>
+			<solidTime>5</solidTime>
+			<fadeOutTime>15</fadeOutTime>
+			<needsMaintenance>True</needsMaintenance>
+		</mote>
+		<graphicData>
+			<texPath>Things/Mote/IngressbreakerRadius</texPath>
+			<shaderType>MoteProximityScannerRadius</shaderType>
+			<color>(1, 0.1, 0.1, 0.35)</color>
+			<drawSize>7.7</drawSize>
+			<shaderParameters>
+				<_smokeScrollSpeed>0.1</_smokeScrollSpeed>
+				<_rotationSpeed>0.05</_rotationSpeed>
+				<_smokeAmount>0.1</_smokeAmount>
+				<_MainTex>/Things/Mote/IngressbreakerRadius</_MainTex>
+				<_ScanTex>/Things/Mote/IngressbreakerRadius</_ScanTex>
+				<_SmokeTex>/Things/Mote/IngressbreakerRadius</_SmokeTex>
+			</shaderParameters>
+		</graphicData>
+	</ThingDef>
+</Defs>

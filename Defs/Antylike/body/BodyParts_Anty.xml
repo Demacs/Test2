@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<BodyPartDef>
+		<defName>AntyTool</defName>
+		<label>Anty petiole</label>
+		<hitPoints>35</hitPoints>
+		<skinCovered>true</skinCovered>
+		<bleedRate>1</bleedRate>
+		<canSuggestAmputation>false</canSuggestAmputation>
+	</BodyPartDef>
+	
+	<BodyPartGroupDef>
+		<defName>AntyToolkit</defName>
+		<label>Anty petiole</label>
+		<listOrder>110</listOrder>
+	</BodyPartGroupDef>
+  
+    <BodyPartDef>
+		<defName>Antyabdomen</defName>
+		<label>Abdomen</label>
+		<hitPoints>35</hitPoints>
+		<skinCovered>true</skinCovered>
+		<bleedRate>1</bleedRate>
+		<canSuggestAmputation>false</canSuggestAmputation>
+	</BodyPartDef>
+
+	<BodyPartDef>
+		<defName>ExoThorax</defName>
+		<label>Thorax Exoskeleton</label>
+		<hitPoints>1.4</hitPoints>
+		<skinCovered>true</skinCovered>
+		<solid>true</solid>
+		<bleedRate>0</bleedRate>
+			<destroyableByDamage>false</destroyableByDamage>
+	</BodyPartDef>
+  
+    <BodyPartDef>
+		<defName>Exoabdomen</defName>
+		<label>Abdomen Exoskeleton</label>
+		<hitPoints>1.4</hitPoints>
+		<skinCovered>true</skinCovered>
+		<solid>true</solid>
+		<bleedRate>0</bleedRate>
+			<destroyableByDamage>false</destroyableByDamage>
+	</BodyPartDef>
+  
+    <BodyPartDef>
+		<defName>ExoHead</defName>
+		<label>Head Exoskeleton</label>
+		<hitPoints>1.4</hitPoints>
+		<skinCovered>true</skinCovered>
+		<solid>true</solid>
+		<bleedRate>0</bleedRate>
+			<destroyableByDamage>false</destroyableByDamage>
+	</BodyPartDef>
+
+	<BodyPartDef>
+		<defName>ExoArm</defName>
+		<label>Arm Exoskeleton</label>
+		<hitPoints>1.4</hitPoints>
+		<skinCovered>true</skinCovered>
+		<solid>true</solid>
+		<bleedRate>0</bleedRate>
+			<destroyableByDamage>false</destroyableByDamage>
+	</BodyPartDef>
+  
+    <BodyPartDef>
+		<defName>ExoLeg</defName>
+		<label>Leg Exoskeleton</label>
+		<hitPoints>1.4</hitPoints>
+		<skinCovered>true</skinCovered>
+		<solid>true</solid>
+		<bleedRate>0</bleedRate>
+			<destroyableByDamage>false</destroyableByDamage>
+	</BodyPartDef>
+	
+	<HediffDef Name="AT_ExoAddedBodyPartBase" ParentName="AddedBodyPartBase" Abstract="True">
+		<defaultLabelColor>(0.6, 0.0, 0.6)</defaultLabelColor>
+		<addedPartProps>
+		  <solid>false</solid>
+		  <partEfficiency>0.75</partEfficiency>
+		</addedPartProps>
+		<countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
+	</HediffDef>
+	
+	<ThingDef Name="AT_ExoBodyPartProstheticMakeableBase" ParentName="BodyPartProstheticBase" Abstract="True">
+		<graphicData>
+			<texPath>Things/Item/Health/HealthItem</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.80</drawSize>
+			<color>(150,0,50)</color>
+		</graphicData>
+		<recipeMaker Inherit="False">
+		  <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		  <workSkill>Crafting</workSkill>
+		  <effectWorking>Smith</effectWorking>
+		  <soundWorking>Recipe_Smith</soundWorking>
+		  <recipeUsers>
+			<li>AntyCopyTableMachining</li>
+		  </recipeUsers>
+		  <skillRequirements>
+			<Crafting>5</Crafting>
+		  </skillRequirements>
+		  <unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
+		  <researchPrerequisite>Prosthetics</researchPrerequisite>
+		</recipeMaker>
+		<costList Inherit="False">
+		  <Steel>5</Steel>
+		  <AntyExoskeleton>40</AntyExoskeleton>
+		</costList>
+		<thingCategories>
+			<li>ManufacturedAntyThingCategoryDef</li>
+		</thingCategories>
+	</ThingDef>
+	
+	<HediffDef ParentName="AT_ExoAddedBodyPartBase">
+		<defName>AT_ExoProstheticLeg</defName>
+		<label>alternative organism leg</label>
+		<labelNoun>a alternative organism leg</labelNoun>
+		<description>An installed alternative organism leg.</description>
+		<descriptionHyperlinks><ThingDef>AT_ExoProstheticLeg</ThingDef></descriptionHyperlinks>
+		<spawnThingOnRemoved>AT_ExoProstheticLeg</spawnThingOnRemoved>
+	</HediffDef>
+
+	<ThingDef ParentName="AT_ExoBodyPartProstheticMakeableBase">
+		<defName>AT_ExoProstheticLeg</defName>
+		<label>alternative organism leg</label>
+		<description>It is a symbiotic organism with a limited role.\n\nit is very inconvenient because it requires small communication to move.</description>
+		<descriptionHyperlinks><RecipeDef>InstallAT_ExoProstheticLeg</RecipeDef></descriptionHyperlinks>
+		<statBases>
+		  <Mass>3</Mass>
+		</statBases>
+		<techHediffsTags>
+		  <li>Simple</li>
+		</techHediffsTags>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+		<defName>InstallAT_ExoProstheticLeg</defName>
+		<label>install alternative organism leg</label>
+		<description>Install a alternative organism leg.</description>
+		<descriptionHyperlinks>
+		  <ThingDef>AT_ExoProstheticLeg</ThingDef>
+		  <HediffDef>AT_ExoProstheticLeg</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing alternative organism leg.</jobString>
+		<ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>AT_ExoProstheticLeg</li>
+			  </thingDefs>
+			</filter>
+			<count>1</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+		  <thingDefs>
+			<li>AT_ExoProstheticLeg</li>
+		  </thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+		  <li>Leg</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>AT_ExoProstheticLeg</addsHediff>
+	</RecipeDef>
+	
+	<HediffDef ParentName="AT_ExoAddedBodyPartBase">
+		<defName>AT_ExoProstheticArm</defName>
+		<label>alternative organism Arm</label>
+		<labelNoun>a alternative organism Arm</labelNoun>
+		<description>An installed alternative organism Arm.</description>
+		<descriptionHyperlinks><ThingDef>AT_ExoProstheticArm</ThingDef></descriptionHyperlinks>
+		<spawnThingOnRemoved>AT_ExoProstheticArm</spawnThingOnRemoved>
+	</HediffDef>
+
+	<ThingDef ParentName="AT_ExoBodyPartProstheticMakeableBase">
+		<defName>AT_ExoProstheticArm</defName>
+		<label>alternative organism Arm</label>
+		<description>It is a symbiotic organism with a limited role.\n\nit is very inconvenient because it requires small communication to move.</description>
+		<descriptionHyperlinks><RecipeDef>InstallAT_ExoProstheticArm</RecipeDef></descriptionHyperlinks>
+		<statBases>
+		  <Mass>3</Mass>
+		</statBases>
+		<techHediffsTags>
+		  <li>Simple</li>
+		</techHediffsTags>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartProstheticBase">
+		<defName>InstallAT_ExoProstheticArm</defName>
+		<label>install alternative organism Arm</label>
+		<description>Install a alternative organism Arm.</description>
+		<descriptionHyperlinks>
+		  <ThingDef>AT_ExoProstheticArm</ThingDef>
+		  <HediffDef>AT_ExoProstheticArm</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing alternative organism Arm.</jobString>
+		<ingredients>
+		  <li>
+			<filter>
+			  <thingDefs>
+				<li>AT_ExoProstheticArm</li>
+			  </thingDefs>
+			</filter>
+			<count>1</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+		  <thingDefs>
+			<li>AT_ExoProstheticArm</li>
+		  </thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+		  <li>Shoulder</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>AT_ExoProstheticArm</addsHediff>
+	</RecipeDef>
+</Defs>

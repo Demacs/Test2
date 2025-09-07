@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<AlienRace.ThingDef_AlienRace ParentName="AT_PawnBase">
+		<defName>AT_Hiveguard</defName>
+		<label>Anty Hive guard</label>
+		<description>They are bioweapons recreated after Mechanoids by the Anties.\n\Hive guard are possessed only the most advanced Hives and are stationed at the last lines of defense.\n\nThey are equipped with High-angle intercepting systems. Unlike High-angle shields, they deny both incoming and outgoing projectiles.(Dlc) \n\nIf the Hive guard are seen on the battlefront, it means child's play is over.</description>
+		<alienRace>
+			<generalSettings>
+				<chemicalSettings>
+					<li>
+						<chemical>Antypheromone_ChargeHigh_Addiction_chemical</chemical>
+						<reactions>
+							<li Class="IngestionOutcomeDoer_GiveHediff">
+								<hediffDef>Antypheromone_ChargeHigh</hediffDef>
+								<chance>1</chance>
+								<doToGeneratedPawnIfAddicted>false</doToGeneratedPawnIfAddicted>
+							</li>
+							<li Class="IngestionOutcomeDoer_GiveHediff">
+								<hediffDef>AntyGlandoverload</hediffDef>
+								<severity>0.4</severity>
+							</li>
+						</reactions>
+					</li>
+					<li>
+						<chemical>Antypheromone_SuicideHigh_Addiction_chemical</chemical>
+						<reactions>
+							<li Class="IngestionOutcomeDoer_GiveHediff">
+								<hediffDef>Antypheromone_SuicideHigh</hediffDef>
+								<chance>1</chance>
+								<doToGeneratedPawnIfAddicted>false</doToGeneratedPawnIfAddicted>
+							</li>
+						</reactions>
+					</li>
+				</chemicalSettings>
+
+			<alienPartGenerator>
+				<borderScale>2</borderScale>
+				<atlasScale>4</atlasScale>
+				<headTypes><!--머리-->
+					<li>AT_Male_HiveguardA</li>
+					<li>AT_Female_HiveguardA</li>
+				</headTypes><!--머리-->
+				
+				<bodyTypes><!--몸-->
+					<li>Thin</li>
+				</bodyTypes><!--몸-->
+				
+				<headOffset>(0,0)</headOffset><!--머리위치-->
+				
+				<customDrawSize>(2.5,2.5)</customDrawSize><!--전체크기-->
+				<customHeadDrawSize>(2.5,2.5)</customHeadDrawSize><!--머리크기-->
+				<customPortraitDrawSize>(2.5,2.5)</customPortraitDrawSize><!--초상화크기-->
+
+				<colorChannels><!--색-->
+				<li>
+					<name>skin</name>
+					<first Class="AlienRace.ColorGenerator_SkinColorMelanin">
+						<minMelanin>0</minMelanin>
+						<maxMelanin>0</maxMelanin>
+					</first>
+					<second Class="AlienRace.ColorGenerator_CustomAlienChannel">
+						<colorChannel>skin_1</colorChannel>
+					</second>					
+				</li>
+				<li><!--헤어컬러-->
+					<name>hair</name>
+					<first Class="ColorGenerator_Options">
+						<options>
+							<li>
+								<weight>15</weight>
+								<only>(255,255,255)</only>
+							</li>
+						</options>
+					</first>
+					<second Class="ColorGenerator_Single">
+						<color>(255, 255, 255)</color>
+					</second>
+				</li>
+				</colorChannels><!--색-->
+			</alienPartGenerator>
+			</generalSettings>
+		
+			<graphicPaths><!-- 텍스쳐 -->
+					<!-- <head>Hiveguardlike/Heads/</head>
+					<body>Hiveguardlike/Bodies/</body> -->
+					<head>
+						<path>Hiveguardlike/Heads/Female_HiveguardA</path>
+						<extendedGraphics>
+							<Hediff MayRequire="Ludeon.RimWorld.Anomaly" For="Ghoul">Hiveguardlike/Heads/Female_HiveguardA</Hediff>
+						</extendedGraphics>
+					</head>
+					<body>
+						<path>Hiveguardlike/Bodies/Naked_Thin</path>
+						<extendedGraphics>
+							<Hediff MayRequire="Ludeon.RimWorld.Anomaly" For="Ghoul">Hiveguardlike/Bodies/Naked_Thin</Hediff>
+						</extendedGraphics>
+					</body>
+					<skeleton>Hiveguardlike/Bodies/Dessicated_Hiveguard_Thin</skeleton>
+					<stump>Antylike/Stump/AT_Stump</stump>
+			</graphicPaths><!-- 텍스쳐 -->
+		
+			<styleSettings>
+				<li>
+					<key>HairDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+					</value>
+				</li>
+				<li>
+					<key>BeardDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+					</value>
+				</li>
+				<li>
+					<key>TattooDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+					</value>
+				</li>
+			</styleSettings>
+			
+			<thoughtSettings>
+				<cannotReceiveThoughts>
+					<li>Naked</li>
+					<li>Pain</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartCovered_Disapproved_Male</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartCovered_Disapproved_Female</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartCovered_Disapproved_Memory</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartCovered_Disapproved_Social_Male</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartCovered_Disapproved_Social_Female</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartButGroinCovered_Disapproved_Male</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartButGroinCovered_Disapproved_Female</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartButGroinCovered_Disapproved_Memory</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartButGroinCovered_Disapproved_Social_Male</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartButGroinCovered_Disapproved_Social_Female</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinUncovered_Disapproved_Male</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinUncovered_Disapproved_Female</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinUncovered_Disapproved_Social_Male</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinUncovered_Disapproved_Social_Female</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinOrChestUncovered_Disapproved_Male</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinOrChestUncovered_Disapproved_Female</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinOrChestUncovered_Disapproved_Social_Male</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinOrChestUncovered_Disapproved_Social_Female</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestOrHairUncovered_Disapproved_Male</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestOrHairUncovered_Disapproved_Female</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestOrHairUncovered_Disapproved_Social_Male</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestOrHairUncovered_Disapproved_Social_Female</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestHairOrFaceUncovered_Disapproved_Male</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestHairOrFaceUncovered_Disapproved_Female</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestHairOrFaceUncovered_Disapproved_Social_Male</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestHairOrFaceUncovered_Disapproved_Social_Female</li>
+				</cannotReceiveThoughts>
+			</thoughtSettings>
+		
+			<raceRestriction><!-- 종족제한 -->
+				<onlyUseRaceRestrictedApparel>true</onlyUseRaceRestrictedApparel><!-- 종족옷제한설정 -->
+				<onlyUseRaceRestrictedWeapons>true</onlyUseRaceRestrictedWeapons>
+				<onlyGetRaceRestrictedTraits>false</onlyGetRaceRestrictedTraits><!-- 종족특성제한설정 -->
+				<onlyEatRaceRestrictedFood>false</onlyEatRaceRestrictedFood>
+			
+				<apparelList><!-- 옷 -->
+				</apparelList><!-- 옷 -->
+				
+				<whiteApparelList>
+					<!-- <li MayRequire="kentington.saveourship2">AT_AP_Space_Breathing</li> -->
+				</whiteApparelList>
+					
+				<buildingList><!-- 건물 -->
+				</buildingList><!-- 건물 -->
+				
+				<weaponList><!-- 무기 -->
+				</weaponList><!-- 무기 -->
+				
+				<researchList><!-- 연구 -->
+				</researchList><!-- 연구 -->
+				
+				<recipeList><!-- 제작 -->
+				</recipeList><!-- 제작 -->
+				
+				<traitList><!-- 특성 -->
+					<!-- <li>AT_Solidexoskeleton</li> -->
+				</traitList><!-- 특성 -->
+				
+				<plantList><!-- 식물 -->
+				</plantList><!-- 식물 -->
+
+				<whiteFoodList>
+				</whiteFoodList>
+				
+			</raceRestriction><!-- 종족제한 -->
+		</alienRace>
+		
+		<statBases><!-- 능력치 -->
+			<MarketValue>100000</MarketValue><!-- 가격 -->
+
+			<MoveSpeed>2.15</MoveSpeed><!-- 이속 -->
+			<Mass>520</Mass><!-- 무게 -->
+			
+			<ComfyTemperatureMax>500</ComfyTemperatureMax><!-- 편한최대온도 -->
+			<ComfyTemperatureMin>-80</ComfyTemperatureMin><!-- 편한최소온도 -->
+			
+			<RestRateMultiplier>1</RestRateMultiplier><!-- 잠 -->
+			<!-- <hungerRateFactor>2.5</hungerRateFactor> --><!-- 허기 -->
+			<EatingSpeed>2</EatingSpeed><!-- 먹는속도 -->
+
+			<CarryingCapacity>110</CarryingCapacity><!-- 운반량 -->
+			<MeatAmount>60</MeatAmount><!-- 고기량 -->
+			<LeatherAmount>30</LeatherAmount><!-- 가죽량 --><!-- 가죽종류 밑에 있음 -->
+			
+			<PainShockThreshold>0.99</PainShockThreshold><!-- 쓰러짐고통 -->
+			<PsychicSensitivity>0</PsychicSensitivity><!-- 정신민감도 -->
+			<MentalBreakThreshold>0.01</MentalBreakThreshold><!-- 정신이상임계 -->
+			<ToxicResistance>1</ToxicResistance><!-- 직접 독성민감도 -->
+			<ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">1</ToxicEnvironmentResistance><!-- 환경 독성민감도 -->
+			<Flammability>0</Flammability><!-- 가연성 -->
+			
+			<MeleeDodgeChance>0</MeleeDodgeChance><!-- 근접회피확률 -->
+			<MeleeHitChance>1</MeleeHitChance><!-- 근접적중확률 -->
+			<AimingDelayFactor>1</AimingDelayFactor><!-- 조준속도 -->
+			<ShootingAccuracyPawn>1</ShootingAccuracyPawn><!-- 조준정확도 -->
+
+			<NegotiationAbility>0</NegotiationAbility><!-- 외교영향력 -->
+			<SellPriceFactor>1</SellPriceFactor><!-- 판매가격 -->
+			<SocialImpact>0.1</SocialImpact><!-- 사회영향력 -->
+			<TradePriceImprovement>0</TradePriceImprovement><!-- 거래가격개선 -->
+
+			<ButcheryMechanoidEfficiency>1</ButcheryMechanoidEfficiency><!-- 메카분해효율 -->
+			<ButcheryMechanoidSpeed>1</ButcheryMechanoidSpeed><!-- 메카분해속도 -->
+			<SmeltingSpeed>1</SmeltingSpeed><!-- 금속제련속도 -->
+			<GeneralLaborSpeed>1</GeneralLaborSpeed><!-- 재단속도 -->
+			<ConstructionSpeed>1</ConstructionSpeed><!-- 건설속도 -->
+
+			<ButcheryFleshEfficiency>1</ButcheryFleshEfficiency><!-- 도축효율 -->
+			<ButcheryFleshSpeed>1</ButcheryFleshSpeed><!-- 도축속도 -->
+			
+			<FoodPoisonChance>1</FoodPoisonChance><!-- 식중독확률 -->
+			<CookSpeed>1</CookSpeed><!-- 조리속도 -->
+
+			<PlantWorkSpeed>1</PlantWorkSpeed><!-- 원예 -->
+
+			<GlobalLearningFactor>1.5</GlobalLearningFactor><!-- 전역학습속도 -->
+			<ResearchSpeed>1</ResearchSpeed><!-- 연구속도 -->
+			
+			<MedicalTendQuality>1</MedicalTendQuality><!-- 치료품질 -->
+			<DrugSynthesisSpeed>1</DrugSynthesisSpeed><!-- 약물생산속도 -->
+			<MedicalSurgerySuccessChance>1</MedicalSurgerySuccessChance><!-- 수술성공확률 -->
+			<ImmunityGainSpeed>1.1</ImmunityGainSpeed><!-- 항체속도 -->
+			
+			<MiningSpeed>4</MiningSpeed><!-- 채굴속도 -->
+			<MiningYield>0.5</MiningYield><!-- 채굴효율 -->
+
+			<ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+			<ArmorRating_Sharp>1.25</ArmorRating_Sharp>
+			
+			<HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
+			<DecompressionResistance MayRequire="kentington.saveourship2">1</DecompressionResistance>
+			<VacuumSpeedMultiplier MayRequire="kentington.saveourship2">4</VacuumSpeedMultiplier>
+		</statBases><!-- 능력치 -->
+		
+		<tools><!-- 육체무기 -->
+			<li>
+				<label>Big jaw</label>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>4</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<extraMeleeDamages>
+					<li>
+						<def>EMP</def>
+						<amount>30</amount>
+						<chance>0.15</chance>
+					</li>
+				</extraMeleeDamages>
+			</li>
+		</tools><!-- 육체무기 -->
+
+		<race><!-- 생태 -->
+			<thinkTreeMain>Humanlike</thinkTreeMain>
+			<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+			<intelligence>Humanlike</intelligence>
+			<makesFootprints>true</makesFootprints>
+			<needsRest>false</needsRest>
+			<lifeExpectancy>150</lifeExpectancy>
+			<leatherDef>Refleum</leatherDef>
+			<nameCategory>HumanStandard</nameCategory>
+			<hasGenders>true</hasGenders>
+			<body>Anty</body>
+			<baseBodySize>5</baseBodySize>
+			<baseHealthScale>5</baseHealthScale>
+			<foodType>OmnivoreHuman</foodType>
+			<gestationPeriodDays>99999</gestationPeriodDays>
+			<fleshType>Anty_flesh</fleshType>
+			<bloodDef>Filth_MachineBits</bloodDef>
+			<meatColor>(20,120,20)</meatColor>
+			<nameGenerator>Antypawn_rule</nameGenerator>
+			<nameGeneratorFemale>Antypawn_rule</nameGeneratorFemale>
+			<mateMtbHours>99999</mateMtbHours>
+			<useMeatFrom>Anty</useMeatFrom>
+			
+			<litterSizeCurve>
+					<points>
+						<li>(0, 100)</li>
+						<li>(1, 0)</li>
+					</points>
+			</litterSizeCurve>
+			
+			<lifeStageAges>
+			<li>
+				<def>AntyChild</def>
+				<minAge>0</minAge>
+				<soundWounded>AT_Mutant_Wounded</soundWounded>
+				<soundDeath>AT_Mutant_Death</soundDeath>
+			</li>
+			<li>
+				<def>HumanlikeAdult</def>
+				<minAge>3</minAge>
+				<soundWounded>AT_Mutant_Wounded</soundWounded>
+				<soundDeath>AT_Mutant_Death</soundDeath>
+			</li>
+			<li>
+				<def>HumanlikeChild</def>
+				<minAge>999999999</minAge>
+				<soundWounded>AT_Mutant_Wounded</soundWounded>
+				<soundDeath>AT_Mutant_Death</soundDeath>
+			</li>
+			</lifeStageAges>
+			
+			<lifeStageWorkSettings MayRequire="Ludeon.RimWorld.Biotech">
+				<Firefighter>0</Firefighter>
+				<Patient>0</Patient>
+				<Doctor>0</Doctor>
+				<PatientBedRest>0</PatientBedRest>
+				<Childcare MayRequire="Ludeon.RimWorld.Biotech">0</Childcare>
+				<BasicWorker>0</BasicWorker>
+				<Warden>0</Warden>
+				<Handling>0</Handling>
+				<Cooking>0</Cooking>
+				<Hunting>0</Hunting>
+				<Construction>0</Construction>
+				<Growing>0</Growing>
+				<Mining>0</Mining>
+				<PlantCutting>0</PlantCutting>
+				<Smithing>0</Smithing>
+				<Tailoring>0</Tailoring>
+				<Art>0</Art>
+				<Crafting>0</Crafting>
+				<Hauling>0</Hauling>
+				<Cleaning>0</Cleaning>
+				<Research>0</Research>
+			</lifeStageWorkSettings>
+
+			<soundMeleeHitPawn>AT_Mutant_Attack</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>AT_Mutant_Attack</soundMeleeHitBuilding>
+			<soundMeleeMiss>AT_Mutant_Attack</soundMeleeMiss>
+			<specialShadowData>
+				<volume>(0.3, 0.8, 0.4)</volume>
+				<offset>(0,0,-0.3)</offset>
+			</specialShadowData>
+			<ageGenerationCurve>
+			<points>
+				<li MayRequire="Ludeon.RimWorld.Biotech">(0,0)</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">(0.001,43)</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">(8,86)</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">(12.5,118)</li>  <!-- Exclude 12.5-13 years to avoid spawning pawns who are very close to becoming adults -->  
+				<li MayRequire="Ludeon.RimWorld.Biotech">(12.51,0)</li>  
+				<li MayRequire="Ludeon.RimWorld.Biotech">(13,0)</li>      
+				<li MayRequire="Ludeon.RimWorld.Biotech">(13.001,122)</li><!-- End exclude -->
+				<li MayRequire="Ludeon.RimWorld.Biotech">(13.999,130)</li>
+				<li>(14,0)</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">(14.001,130)</li>
+				<li>(16,2)</li>
+				<li>(21,180)</li>
+				<li>(25,100)</li>
+				<li>(28,80)</li>
+				<li>(100,10)</li>
+				<li>(150,0)</li>
+				<!-- <li>(0,0)</li>
+				<li>(1,20)</li>
+				<li>(2,100)</li>
+				<li>(3,40)</li>
+				<li>(4,20)</li>
+				<li>(5,0)</li>
+				<li>(16,0)</li> -->
+			</points>
+			</ageGenerationCurve>
+				<hediffGiverSets>
+					<li>Anty_HediffGiverSet</li>
+					<li>AntyBloodlossOption_HediffGiverSet</li>
+				</hediffGiverSets>
+		</race><!-- 생태 -->
+		<damageMultipliers>
+			<li>
+				<damageDef>EMP</damageDef>
+				<multiplier>0</multiplier>
+			</li>
+			<li>
+				<damageDef>Stun</damageDef>
+				<multiplier>0</multiplier>
+			</li>
+			<li MayRequire="kentington.saveourship2">
+				<damageDef>VacuumDamage</damageDef>
+				<multiplier>0</multiplier>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Biotech">
+				<damageDef>Vaporize</damageDef>
+				<multiplier>0.05</multiplier>
+			</li>
+		</damageMultipliers>
+		<comps>
+			<li MayRequireAnyOf="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Biotech" Class="CompProperties_ProjectileInterceptor">
+				<radius>7.5</radius>
+				<interceptAirProjectiles>true</interceptAirProjectiles>
+				<interceptGroundProjectiles>false</interceptGroundProjectiles>
+				<interceptNonHostileProjectiles>false</interceptNonHostileProjectiles>
+				<interceptOutgoingProjectiles>true</interceptOutgoingProjectiles>
+				<color>(0.8, 0.1, 0.1)</color>
+				<idlePulseSpeed>5</idlePulseSpeed>
+				<minIdleAlpha>0.05</minIdleAlpha>
+				<disarmedByEmpForTicks>60</disarmedByEmpForTicks>
+				<activeSound>Broadshield_Ambience</activeSound>
+				<chargeIntervalTicks>3600</chargeIntervalTicks>
+				<chargeDurationTicks>600</chargeDurationTicks>
+			</li>
+			<li Class="CompProperties_RangeHediffAnty">
+				<hediff>AntyHiveguardCover</hediff>
+				<range>1.9</range>
+				<severityPerSecond>0.2</severityPerSecond>
+				<onlyColonists>true</onlyColonists>
+			</li>
+		</comps>
+		<pathCost>55</pathCost>
+		<fillPercent>0.99</fillPercent>
+	</AlienRace.ThingDef_AlienRace>
+
+	<PawnKindDef ParentName="AntyPlayerBasePawnKind">
+		<defName>AT_Hiveguard_A</defName>
+		<label>Anty Hive guard</label>
+		<defaultFactionType>AntyHive_B</defaultFactionType>
+		<isFighter>true</isFighter>
+		<combatPower>250</combatPower>
+		<race>AT_Hiveguard</race>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>Hiveguard_Melee_Drop</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>		
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<chemicalAddictionChance>0</chemicalAddictionChance>
+		<initialWillRange>10~50</initialWillRange>
+		<initialResistanceRange>10~60</initialResistanceRange>
+		<inventoryOptions>
+			<subOptionsChooseOne>
+			<li>
+				<thingDef>Antypheromone_Charge_Fix</thingDef>
+				<countRange>1</countRange>
+			</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+		<apparelTags>
+			<li MayRequire="kentington.saveourship2">AntyEVA</li>
+		</apparelTags>
+		<apparelMoney>
+			<min>2550</min>
+			<max>3800</max>
+		</apparelMoney>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="AntyPlayerBasePawnKind">
+		<defName>AT_Hiveguard_B</defName>
+		<label>Anty Hive guard</label>
+		<defaultFactionType>AT_PlayerFaction</defaultFactionType>
+		<isFighter>true</isFighter>
+		<combatPower>120</combatPower>
+		<race>AT_Hiveguard</race>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>Hiveguard_Melee_Drop</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>		
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<chemicalAddictionChance>0</chemicalAddictionChance>
+		<initialWillRange>10~50</initialWillRange>
+		<initialResistanceRange>10~60</initialResistanceRange>
+		<maxGenerationAge>19</maxGenerationAge>
+		<minGenerationAge>0</minGenerationAge>
+	</PawnKindDef>
+
+	<AlienRace.AlienBackstoryDef Name="HiveguardBackStory" Abstract="True">
+		<skillGains>
+			<Melee>5</Melee>
+		</skillGains>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef ParentName="HiveguardBackStory">
+		<defName>AT_HiveguardBackStory</defName>
+		<title>Hive guard</title>
+		<titleShort>Hive guard</titleShort>
+		<description>They are bioweapons recreated after Mechanoids by the Anties.\n\Hive guard are possessed only the most advanced Hives and are stationed at the last lines of defense.\n\nThey are equipped with High-angle intercepting systems. Unlike High-angle shields, they deny both incoming and outgoing projectiles.(Dlc) \n\nIf the Hive guard are seen on the battlefront, it means child's play is over.</description>
+		<spawnCategories Inherit="False">
+			<li>Hiveguard_Melee_Drop</li>
+		</spawnCategories>
+		<slot>Adulthood</slot>
+		<forcedHediffs>
+			<li>AntyHiveguardbirth</li>
+		</forcedHediffs>
+		<workDisables>
+			<li>Caring</li>
+			<!-- <li>Commoner</li> -->
+			<li>Social</li>
+			<!-- <li>AllWork</li> -->
+			<li>Cooking</li>
+			<!-- <li>ManualSkilled</li> -->
+			<li>Constructing</li>
+			<li>PlantWork</li>
+			<li>Crafting</li>
+			<li>Artistic</li>
+			<li>Intellectual</li>
+		</workDisables>
+		<!-- <workAllows>Violent,Firefighting,Mining,AllWork,Commoner,ManualSkilled,ManualDumb,Hauling,Shooting,Hunting</workAllows> -->
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef ParentName="HiveguardBackStory">
+		<defName>AT_HiveguardBackStory_B</defName>
+		<title>Hive guard</title>
+		<titleShort>Hive guard</titleShort>
+		<description>They are bioweapons recreated after Mechanoids by the Anties.\n\Hive guard are possessed only the most advanced Hives and are stationed at the last lines of defense.\n\nThey are equipped with High-angle intercepting systems. Unlike High-angle shields, they deny both incoming and outgoing projectiles.(Dlc) \n\nIf the Hive guard are seen on the battlefront, it means child's play is over.</description>
+		<spawnCategories Inherit="False">
+			<li>Hiveguard_Melee_Drop</li>
+		</spawnCategories>
+		<slot>Childhood</slot>
+		<forcedHediffs>
+			<li>AntyHiveguardbirth</li>
+		</forcedHediffs>
+		<workDisables>
+			<li>Caring</li>
+			<!-- <li>Commoner</li> -->
+			<li>Social</li>
+			<!-- <li>AllWork</li> -->
+			<li>Cooking</li>
+			<!-- <li>ManualSkilled</li> -->
+			<li>Constructing</li>
+			<li>PlantWork</li>
+			<li>Crafting</li>
+			<li>Artistic</li>
+			<li>Intellectual</li>
+		</workDisables>
+		<!-- <workAllows>Violent,Firefighting,Mining,AllWork,Commoner,ManualSkilled,ManualDumb,Hauling,Shooting,Hunting</workAllows> -->
+	</AlienRace.AlienBackstoryDef>
+
+	
+	<HediffDef>
+		<defName>AntyHiveguardbirth</defName>
+		<label>Anty Hive guard</label>
+		<description>Anty Hive guard.</description>
+		<isBad>false</isBad>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<initialSeverity>0.01</initialSeverity>
+		<maxSeverity>1.0</maxSeverity>
+		<everCurableByItem>false</everCurableByItem>
+		<comps>
+			<li Class="HediffCompProperties_Discoverable">
+				<sendLetterWhenDiscovered>true</sendLetterWhenDiscovered>
+				<discoverLetterLabel>Hive guard birth</discoverLetterLabel>
+				<discoverLetterText>{0}</discoverLetterText>
+				<letterType>AT_Soldierbirth</letterType>
+				<messageType>PositiveEvent</messageType>
+			</li>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>100</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+				<becomeVisible>false</becomeVisible>
+			</li>
+			<li>
+				<minSeverity>0.02</minSeverity>
+				<painFactor>0.1</painFactor>
+				<statFactors>
+					<IncomingDamageFactor>0.7</IncomingDamageFactor>
+					<InjuryHealingFactor>2.2</InjuryHealingFactor>
+				</statFactors>
+				<makeImmuneTo>
+					<li>GutWorms</li>
+					<li>MuscleParasites</li>
+					<li>FibrousMechanites</li>
+					<li>SensoryMechanites</li>
+					<li>WoundInfection</li>
+					<li>Flu</li>
+				</makeImmuneTo>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>AntyHiveguardCover</defName>
+		<label>Protection</label>
+		<description>provide cover 99%, Incoming Damage *70%</description>
+		<isBad>false</isBad>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<initialSeverity>0.1</initialSeverity>
+		<maxSeverity>0.1</maxSeverity>
+		<everCurableByItem>false</everCurableByItem>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>240</disappearsAfterTicks>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<statFactors>
+					<IncomingDamageFactor>0.7</IncomingDamageFactor>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<ThingDef ParentName="EggFertBase">
+		<defName>AT_EggHiveguard</defName>
+		<label>Hive guard cocoon</label>
+		<description>This is Anty Hive guard's cocoon.</description>
+		<graphicData>
+			<texPath>Things/Item/AT_cocoon_B</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<color>(255,255,255)</color>
+			<onGroundRandomRotateAngle>45</onGroundRandomRotateAngle>
+			<drawSize>4</drawSize>
+		</graphicData>
+		<uiIconScale>1</uiIconScale>
+		<statBases>
+			<MarketValue>520.0</MarketValue>
+			<Mass>120</Mass>
+		</statBases>
+		<stackLimit>1</stackLimit>
+		<comps Inherit="False">
+			<li Class="Anty_EggClass.CompProperties_Hatcher_Anty">
+				<hatcherDaystoHatch>10</hatcherDaystoHatch>
+				<hatcherPawn>AT_Hiveguard_B</hatcherPawn>
+				<hatcherxeno MayRequire="Ludeon.RimWorld.Biotech">AntyXenotype</hatcherxeno>
+			</li>
+			<li Class="CompProperties_SpawnerFilth">
+				<filthDef>Filth_Slime</filthDef>
+				<spawnCountOnSpawn>5</spawnCountOnSpawn>
+				<spawnMtbHours>10</spawnMtbHours>
+				<spawnRadius>1.9</spawnRadius>
+			</li>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>6000</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+			<li Class="CompProperties_TemperatureRuinable">
+				<minSafeTemperature>-20</minSafeTemperature>
+				<maxSafeTemperature>120</maxSafeTemperature>
+				<progressPerDegreePerTick>0.00003</progressPerDegreePerTick>
+			</li>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<thingCategories Inherit="False">
+			<li>EggAntyThingCategoryDef</li>
+		</thingCategories>
+	</ThingDef>
+</Defs>

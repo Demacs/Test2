@@ -1,0 +1,1060 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+	<PawnKindDef Name="AntyPlayerBasePawnKind" Abstract="True">
+		<race>Anty</race>
+		<combatPower>30</combatPower>
+		<isFighter>false</isFighter>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<defaultFactionType>AT_PlayerFaction</defaultFactionType>
+		<initialWillRange>10~20</initialWillRange>
+		<initialResistanceRange>10~40</initialResistanceRange>
+		<xenotypeSet>
+			<xenotypeChances>
+				<AntyXenotype MayRequire="Ludeon.RimWorld.Biotech">100</AntyXenotype>
+				
+				<Baseliner MayRequire="Ludeon.RimWorld.Biotech">0</Baseliner>
+
+				<Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0</Dirtmole>
+				<Genie MayRequire="Ludeon.RimWorld.Biotech">0</Genie>
+				<Hussar MayRequire="Ludeon.RimWorld.Biotech">0</Hussar>
+				<Sanguophage MayRequire="Ludeon.RimWorld.Biotech">0</Sanguophage>
+				<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0</Neanderthal>
+				<Pigskin MayRequire="Ludeon.RimWorld.Biotech">0</Pigskin>
+				<Impid MayRequire="Ludeon.RimWorld.Biotech">0</Impid>
+				<Waster MayRequire="Ludeon.RimWorld.Biotech">0</Waster>
+				<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0</Yttakin>
+				<Highmate MayRequire="Ludeon.RimWorld.Biotech">0</Highmate>
+			</xenotypeChances>
+		</xenotypeSet>
+		<useFactionXenotypes>false</useFactionXenotypes>
+	</PawnKindDef>
+
+	<!-- 앤티 플레이어 정착민 -->
+	<PawnKindDef Name="AT_Colonist" ParentName="AntyPlayerBasePawnKind">
+		<defName>AT_Colonist</defName>
+		<label>Anty Scout</label>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>ATlarva_A</li>
+					<li>ATlarva_B</li>
+					<li>ATAmigo_B</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>		
+		<chemicalAddictionChance>0</chemicalAddictionChance>
+		<apparelTags>
+			<li>AntyL</li>
+		</apparelTags>
+		<apparelAllowHeadgearChance>0.6</apparelAllowHeadgearChance>
+		<apparelMoney>
+			<min>550</min>
+			<max>800</max>
+		</apparelMoney>
+		<apparelRequired>
+		</apparelRequired>
+		<backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+		<maxGenerationAge>18</maxGenerationAge>
+		<minGenerationAge>16</minGenerationAge>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="AT_Colonist">
+		<defName>AT_Colonist_B</defName>
+		<defaultFactionType>AT_PlayerFaction_B</defaultFactionType>
+		<apparelTags Inherit="False">
+			<li>AntyShooter</li>
+		</apparelTags>
+		<apparelMoney Inherit="False">
+			<min>550</min>
+			<max>800</max>
+		</apparelMoney>
+		<apparelRequired Inherit="False">
+			<li>AT_AP_Shooter_A</li>
+		</apparelRequired>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="AT_Colonist">
+		<defName>AT_Colonist_C</defName>
+		<defaultFactionType>AT_PlayerFaction_C</defaultFactionType>
+		<apparelTags Inherit="False">
+			<li>AntyShooter</li>
+		</apparelTags>
+		<apparelMoney Inherit="False">
+			<min>2550</min>
+			<max>2800</max>
+		</apparelMoney>
+		<apparelRequired Inherit="False">
+			<li>AT_AP_Shooter_A</li>
+			<li>AT_AP_Head_A</li>
+			<li>AT_AP_Flakvest</li>
+			<li>AT_AP_Additionalarmorplate_A</li>
+			<li>AT_Apparel_chunk</li>
+		</apparelRequired>
+		<weaponMoney>
+			<min>1300</min>
+			<max>1700</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>AcidRifle_R</li>
+		</weaponTags>
+		<inventoryOptions>
+			<subOptionsChooseOne>
+			<li>
+				<thingDef>Antypheromone_Shooting</thingDef>
+				<countRange>1</countRange>
+			</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="AT_Colonist">
+		<defName>AT_Colonist_Baby</defName>
+		<label>Anty</label>
+		<apparelTags Inherit="False">
+		</apparelTags>
+		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<apparelMoney Inherit="False">
+		</apparelMoney>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<maxGenerationAge>19</maxGenerationAge>
+		<minGenerationAge>0</minGenerationAge>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="AT_Colonist">
+		<defName>AT_Colonist_Baby_Bio</defName>
+		<label>Anty</label>
+		<apparelTags Inherit="False">
+		</apparelTags>
+		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<apparelMoney Inherit="False">
+		</apparelMoney>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<maxGenerationAge>1</maxGenerationAge>
+		<minGenerationAge>0</minGenerationAge>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="AntyArmyBase_RB">
+		<defName>AT_Power_A_test</defName>
+		<label>Anty Reinforced infantry</label>
+		<defaultFactionType>AT_PlayerFaction</defaultFactionType>
+		<isFighter>true</isFighter>
+		<combatPower>190</combatPower>
+		<maxGenerationAge>18</maxGenerationAge>
+		<minGenerationAge>16</minGenerationAge>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<weaponMoney>
+			<min>2500</min>
+			<max>3000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>hydroheliumion_A</li>
+		</weaponTags>
+		<apparelRequired>
+			<li>AT_AP_Power_A</li>
+			<!-- <li>AT_AP_Shooter_A</li> -->
+			<li>AT_AP_Power_Head_A</li>
+			<li>AT_AP_AdditionalPower_A</li>
+			<li MayRequire="Ludeon.RimWorld.Royalty">Apparel_PackBroadshield</li>
+		</apparelRequired>
+		<apparelMoney>
+			<min>3000</min>
+			<max>6000</max>
+		</apparelMoney>
+		<techHediffsChance>1</techHediffsChance>
+		<techHediffsMoney>
+			<min>3000</min>
+			<max>5400</max>
+		</techHediffsMoney>
+		<techHediffsTags>
+			<li>Advanced_AT</li>
+		</techHediffsTags>
+	</PawnKindDef>
+
+	<!-- 앤티NPC 기본 -->
+
+	<PawnKindDef Name="AntyBasePawnKind" Abstract="True">
+		<race>Anty</race>
+		<isFighter>true</isFighter>
+		<combatPower>30</combatPower>
+		<defaultFactionType>AntyHive</defaultFactionType>
+		<chemicalAddictionChance>0</chemicalAddictionChance>
+		<invNutrition>2.55</invNutrition>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<maxGenerationAge>25</maxGenerationAge>
+		
+		<initialWillRange>10~20</initialWillRange>
+		<initialResistanceRange>10~40</initialResistanceRange>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<styleItemTags>
+			<li>
+				<tag>Rural</tag>
+				<baseWeight>1</baseWeight>
+				<weightFactor>1</weightFactor>
+			</li>
+		</styleItemTags>
+		<biocodeWeaponChance>0.05</biocodeWeaponChance>
+		<xenotypeSet>
+			<xenotypeChances>
+				<AntyXenotype MayRequire="Ludeon.RimWorld.Biotech">1</AntyXenotype>
+				
+				<Baseliner MayRequire="Ludeon.RimWorld.Biotech">0</Baseliner>
+
+				<Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0</Dirtmole>
+				<Genie MayRequire="Ludeon.RimWorld.Biotech">0</Genie>
+				<Hussar MayRequire="Ludeon.RimWorld.Biotech">0</Hussar>
+				<Sanguophage MayRequire="Ludeon.RimWorld.Biotech">0</Sanguophage>
+				<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0</Neanderthal>
+				<Pigskin MayRequire="Ludeon.RimWorld.Biotech">0</Pigskin>
+				<Impid MayRequire="Ludeon.RimWorld.Biotech">0</Impid>
+				<Waster MayRequire="Ludeon.RimWorld.Biotech">0</Waster>
+				<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0</Yttakin>
+				<Highmate MayRequire="Ludeon.RimWorld.Biotech">0</Highmate>
+			</xenotypeChances>
+		</xenotypeSet>
+	</PawnKindDef>
+
+	<!-- 앤티 지휘관 -->
+
+	<PawnKindDef ParentName="AntyBasePawnKind" Name="Anty_Commander">
+		<defName>Anty_Commander</defName>
+		<label>Anty Commander</label>
+		<combatPower>130</combatPower>
+		<isFighter>true</isFighter>
+		<trader>true</trader>
+		<factionLeader>true</factionLeader>
+		<forceNormalGearQuality>false</forceNormalGearQuality>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<maxGenerationAge>25</maxGenerationAge>
+		 
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>ATlarva_B</li>
+					<li>ATAmigo_Commander</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>				
+		<apparelTags>
+			<li>AntyALL</li>
+			<li>BeltDefensePop</li>
+			<li>AntyCommender</li>
+		</apparelTags>
+		<apparelMoney>
+			<min>800</min>
+			<max>1100</max>
+		</apparelMoney>
+		<apparelRequired>
+			<li>AT_AP_Additionalarmorplate_A</li>
+			<li>AT_AP_Shooter_A</li>
+			<li>AT_AP_Head_B</li>
+			<li>AT_AP_CO_B</li>
+			<li MayRequire="Ludeon.RimWorld.Royalty">Apparel_PackBroadshield</li>
+		</apparelRequired>
+		<weaponTags>
+			<li>AcidRifle_R</li>
+			<li>AT_Proty_spawner</li>
+		</weaponTags>
+		<weaponMoney>
+			<min>1400</min>
+			<max>2500</max>
+		</weaponMoney>
+		<techHediffsChance>0.25</techHediffsChance>
+		<techHediffsMoney>
+			<min>800</min>
+			<max>1400</max>
+		</techHediffsMoney>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<biocodeWeaponChance>1</biocodeWeaponChance>
+	</PawnKindDef>
+	
+	<!-- 앤티 사수, 전사 -->
+
+	<PawnKindDef Name="AntyArmyBase_R" ParentName="AntyBasePawnKind" Abstract="True">
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<isFighter>true</isFighter>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<maxGenerationAge>25</maxGenerationAge>
+		 
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>ATlarva_B</li>
+					<li>ATAmigo_Ranged</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>			
+		<apparelTags>
+			<li>AntyALL</li>
+			<li>AntyShooter</li>
+			<li>AntyME</li>
+			<li>AntyShooterHEAD</li>
+		</apparelTags>
+		<apparelMoney>
+			<min>400</min>
+			<max>2000</max>
+		</apparelMoney>
+	</PawnKindDef>
+	
+	<PawnKindDef Name="AntyArmyBase_M" ParentName="AntyBasePawnKind" Abstract="True">
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<isFighter>true</isFighter>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<maxGenerationAge>25</maxGenerationAge>
+		 
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>ATlarva_B</li>
+					<li>ATAmigo_Melee</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>			
+		<apparelTags>
+			<li>AntyALL</li>
+			<li>AntyShooter</li>
+			<li>AntyME</li>
+		</apparelTags>
+		<apparelMoney>
+			<min>400</min>
+			<max>2000</max>
+		</apparelMoney>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="AntyArmyBase_R" Name="AntyRaiderBase">
+		<defName>AT_Raid_A</defName>
+		<label>Anty Scout</label>
+		<isFighter>true</isFighter>
+		<combatPower>90</combatPower>
+		<maxGenerationAge>25</maxGenerationAge>
+		 
+		<weaponMoney>
+			<min>400</min>
+			<max>410</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>AcidCross_A</li>
+			<li>MedievalMeleeBasic</li>
+		</weaponTags>
+		<apparelTags>
+			<li>AntyALL</li>
+		</apparelTags>
+		<apparelMoney>
+			<min>400</min>
+			<max>800</max>
+		</apparelMoney>
+	</PawnKindDef>
+	
+	
+	<PawnKindDef Name="AntyArmyBase_RB" ParentName="AntyBasePawnKind" Abstract="True">
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<isFighter>true</isFighter>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<maxGenerationAge>25</maxGenerationAge>
+		 
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>ATlarva_B</li>
+					<li>ATAmigo_Ranged</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>			
+		<apparelTags Inherit="False">
+			<li>AntyALL</li>
+			<li>AntyShooter</li>
+			<li>AntyShooterHEAD</li>
+		</apparelTags>
+		<apparelMoney>
+			<min>400</min>
+			<max>2000</max>
+		</apparelMoney>
+		<inventoryOptions>
+			<skipChance>0.8</skipChance>
+			<subOptionsChooseOne>
+			<li>
+				<thingDef>Antypheromone_Shooting</thingDef>
+				<countRange>1</countRange>
+			</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+	
+	<PawnKindDef Name="AntyArmyBase_MB" ParentName="AntyBasePawnKind" Abstract="True">
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<isFighter>true</isFighter>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<maxGenerationAge>25</maxGenerationAge>
+		 
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>ATlarva_B</li>
+					<li>ATAmigo_Melee</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<apparelTags Inherit="False">
+			<li>AntyALL</li>
+			<li>AntyShooter</li>
+			<li>AntyShooterHEAD</li>
+		</apparelTags>
+		<apparelMoney>
+			<min>400</min>
+			<max>2000</max>
+		</apparelMoney>
+		<inventoryOptions>
+			<skipChance>0.5</skipChance>
+			<subOptionsChooseOne>
+			<li>
+				<thingDef>Antypheromone_Charge_Fix</thingDef>
+				<countRange>1</countRange>
+			</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+	
+
+	<PawnKindDef ParentName="AntyArmyBase_RB">
+		<defName>AT_Rifle_A</defName>
+		<label>Anty Ranged infantry</label>
+		<isFighter>true</isFighter>
+		<combatPower>90</combatPower>
+		<maxGenerationAge>25</maxGenerationAge>
+		 
+		<weaponMoney>
+			<min>400</min>
+			<max>1300</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>AcidCross_A</li>
+			<li>AcidRifle</li>
+		</weaponTags>
+		<apparelTags>
+			<li>AntyME</li>
+		</apparelTags>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="AntyArmyBase_MB">
+		<defName>AT_Charge_A</defName>
+		<label>Anty Melee infantry</label>
+		<isFighter>true</isFighter>
+		<combatPower>100</combatPower>
+		<maxGenerationAge>25</maxGenerationAge>
+		 
+		<weaponMoney>
+			<min>140</min>
+			<max>800</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>ATCharge</li>
+		</weaponTags>
+		<apparelTags>
+			<li>AntyME</li>
+		</apparelTags>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="AntyArmyBase_R">
+		<defName>AT_Sapper_A</defName>
+		<label>Anty Sapper</label>
+		<isFighter>true</isFighter>
+		<combatPower>150</combatPower>
+		<maxGenerationAge>25</maxGenerationAge>
+		 
+		<canBeSapper>true</canBeSapper>
+		<isGoodBreacher>true</isGoodBreacher>
+		<apparelAllowHeadgearChance>0.7</apparelAllowHeadgearChance>
+		<weaponMoney>
+			<min>545</min>
+			<max>650</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>ATCharge</li>
+			<li>GrenadeSmoke</li>
+			<li>GrenadeDestructive</li>
+		</weaponTags>
+		<apparelRequired>
+			<li>AT_AP_Additionalarmorplate_A</li>
+			<li>AT_AP_Shooter_A</li>
+			<li>AT_AP_Flakvest</li>
+		</apparelRequired>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="AntyArmyBase_R">
+		<defName>AT_Sapper_B</defName>
+		<label>Anty Dum Sapper</label>
+		<isFighter>true</isFighter>
+		<combatPower>150</combatPower>
+		<maxGenerationAge>25</maxGenerationAge>
+		 
+		<canBeSapper>true</canBeSapper>
+		<isGoodBreacher>true</isGoodBreacher>
+		<apparelAllowHeadgearChance>0.7</apparelAllowHeadgearChance>
+		<weaponMoney>
+			<min>545</min>
+			<max>650</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>ATCharge</li>
+			<li>GrenadeSmoke</li>
+			<li>GrenadeDestructive</li>
+		</weaponTags>
+		<apparelRequired>
+			<li>AT_AP_Additionalarmorplate_A</li>
+			<li>AT_AP_Shooter_A</li>
+			<li>AT_AP_Head_A</li>
+			<li>AT_AP_Flakvest</li>
+		</apparelRequired>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="AntyArmyBase_RB" Name="AT_Rifle_B">
+		<defName>AT_Rifle_B</defName>
+		<label>Anty Ranged infantry</label>
+		<isFighter>true</isFighter>
+		<combatPower>120</combatPower>
+		<maxGenerationAge>25</maxGenerationAge>
+		 
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<weaponMoney>
+			<min>1300</min>
+			<max>1700</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>AcidRifle_R</li>
+		</weaponTags>
+		<apparelRequired>
+			<li>AT_AP_Additionalarmorplate_A</li>
+			<li>AT_AP_Shooter_A</li>
+			<li>AT_AP_Flakvest</li>
+		</apparelRequired>
+		<apparelMoney>
+			<min>1200</min>
+			<max>2500</max>
+		</apparelMoney>
+		<biocodeWeaponChance>0.1</biocodeWeaponChance>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="AntyArmyBase_MB">
+		<defName>AT_Charge_B</defName>
+		<label>Anty Melee infantry</label>
+		<isFighter>true</isFighter>
+		<combatPower>120</combatPower>
+		<maxGenerationAge>25</maxGenerationAge>
+		 
+		<apparelAllowHeadgearChance>0.7</apparelAllowHeadgearChance>
+		<weaponMoney>
+			<min>800</min>
+			<max>1500</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>ATCharge</li>
+			<li>MedievalMeleeBasic</li>
+		</weaponTags>
+		<apparelTags>
+			<li>BeltDefense</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>AT_AP_Additionalarmorplate_A</li>
+			<li>AT_AP_Shooter_A</li>
+			<!-- <li>AT_AP_Head_A</li> -->
+			<!-- <li>AT_AP_Flakvest</li> -->
+		</apparelRequired>
+		<apparelMoney>
+			<min>1200</min>
+			<max>2500</max>
+		</apparelMoney>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="AntyArmyBase_RB" Name="AT_Launcher_A">
+		<defName>AT_Launcher_A</defName>
+		<label>Anty Launcher Shooter</label>
+		<isFighter>true</isFighter>
+		<combatPower>130</combatPower>
+		<maxGenerationAge>25</maxGenerationAge>
+		 
+		<apparelAllowHeadgearChance>0.85</apparelAllowHeadgearChance>
+		<canBeSapper>true</canBeSapper>
+		<weaponMoney>
+			<min>1700</min>
+			<max>1800</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>AcidLauncher_A</li>
+		</weaponTags>
+		<apparelRequired>
+			<li>AT_AP_Additionalarmorplate_A</li>
+			<li>AT_AP_Shooter_A</li>
+			<li>AT_AP_Head_A</li>
+			<!-- <li>AT_AP_Flakvest</li> -->
+		</apparelRequired>
+		<apparelMoney>
+			<min>2000</min>
+			<max>3000</max>
+		</apparelMoney>
+		<biocodeWeaponChance>0.1</biocodeWeaponChance>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="AntyArmyBase_RB">
+		<defName>AT_Launcher_B</defName>
+		<label>Anty Launcher Shooter</label>
+		<isFighter>true</isFighter>
+		<combatPower>130</combatPower>
+		<maxGenerationAge>25</maxGenerationAge>
+		 
+		<apparelAllowHeadgearChance>0.85</apparelAllowHeadgearChance>
+		<canBeSapper>true</canBeSapper>
+		<weaponMoney>
+			<min>1700</min>
+			<max>1800</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>AcidLauncher_B</li>
+		</weaponTags>
+		<apparelRequired>
+			<li>AT_AP_Additionalarmorplate_A</li>
+			<li>AT_AP_Shooter_A</li>
+			<li>AT_AP_Head_A</li>
+			<!-- <li>AT_AP_Flakvest</li> -->
+		</apparelRequired>
+		<apparelMoney>
+			<min>2000</min>
+			<max>3000</max>
+		</apparelMoney>
+		<biocodeWeaponChance>0.1</biocodeWeaponChance>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="AntyArmyBase_R">
+		<defName>AT_SingleUse</defName>
+		<label>Anty Firepower infantry</label>
+		<isFighter>true</isFighter>
+		<combatPower>300</combatPower>
+		<maxGenerationAge>25</maxGenerationAge>
+		 
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<canBeSapper>true</canBeSapper>
+		<weaponMoney>
+			<min>1000</min>
+			<max>2000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>GunSingleUse</li>
+		</weaponTags>
+		<apparelRequired>
+			<li>AT_AP_Additionalarmorplate_A</li>
+			<li>AT_AP_Shooter_A</li>
+			<li>AT_AP_Head_A</li>
+			<li>AT_AP_Flakvest</li>
+		</apparelRequired>
+		<apparelMoney>
+			<min>1200</min>
+			<max>3000</max>
+		</apparelMoney>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="AntyArmyBase_RB">
+		<defName>AT_Power</defName>
+		<label>Anty Enhanced Infantry</label>
+		<isFighter>true</isFighter>
+		<combatPower>210</combatPower>
+		<maxGenerationAge>25</maxGenerationAge>
+		 
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<backstoryFiltersOverride Inherit="False">
+			<li>
+				<categories>
+					<li>ATAmigo_Ranged_Drop</li>
+					<li>ATLarva_Melee_Drop</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<weaponMoney>
+			<min>1800</min>
+			<max>2500</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>AcidRifle_R</li>
+			<li>AcidRifle_L</li>
+			<li>AcidRifle_M</li>
+		</weaponTags>
+		<apparelRequired>
+			<li>AT_AP_Power_A</li>
+			<li>AT_AP_Shooter_A</li>
+			<li>AT_AP_Power_Head_A</li>
+			<li>AT_AP_AdditionalPower_A</li>
+		</apparelRequired>
+		<apparelMoney>
+			<min>3000</min>
+			<max>6000</max>
+		</apparelMoney>
+		<techHediffsRequired>
+			<li MayRequire="Ludeon.RimWorld.Royalty">DeathAcidifier</li>
+		</techHediffsRequired>
+		<biocodeWeaponChance>1</biocodeWeaponChance>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="AntyArmyBase_RB">
+		<defName>AT_Power_A</defName>
+		<label>Anty Enhanced Ranged Infantry</label>
+		<isFighter>true</isFighter>
+		<combatPower>220</combatPower>
+		<maxGenerationAge>25</maxGenerationAge>
+		 
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<backstoryFiltersOverride Inherit="False">
+			<li>
+				<categories>
+					<li>ATAmigo_Ranged_Drop</li>
+					<li>ATLarva_Melee_Drop</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<weaponMoney>
+			<min>2500</min>
+			<max>3000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>hydroheliumion_A</li>
+		</weaponTags>
+		<apparelRequired>
+			<li>AT_AP_Power_A</li>
+			<li>AT_AP_Shooter_A</li>
+			<li>AT_AP_Power_Head_A</li>
+			<li>AT_AP_AdditionalPower_A</li>
+			
+		</apparelRequired>
+		<apparelMoney>
+			<min>3000</min>
+			<max>6000</max>
+		</apparelMoney>
+		<techHediffsRequired>
+			<li MayRequire="Ludeon.RimWorld.Royalty">DeathAcidifier</li>
+		</techHediffsRequired>
+		<biocodeWeaponChance>1</biocodeWeaponChance>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="AntyArmyBase_RB">
+		<defName>AT_Power_A_B</defName>
+		<label>Anty Enhanced Ranged Infantry</label>
+		<isFighter>true</isFighter>
+		<combatPower>220</combatPower>
+		<maxGenerationAge>25</maxGenerationAge>
+		 
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<backstoryFiltersOverride Inherit="False">
+			<li>
+				<categories>
+					<li>ATAmigo_Ranged_Drop</li>
+					<li>ATLarva_Melee_Drop</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<weaponMoney>
+			<min>2500</min>
+			<max>3000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>hydroheliumion_B</li>
+		</weaponTags>
+		<apparelRequired>
+			<li>AT_AP_Power_A</li>
+			<li>AT_AP_Shooter_A</li>
+			<li>AT_AP_Power_Head_A</li>
+			<li>AT_AP_AdditionalPower_A</li>
+			
+		</apparelRequired>
+		<apparelMoney>
+			<min>3000</min>
+			<max>6000</max>
+		</apparelMoney>
+		<techHediffsRequired>
+			<li MayRequire="Ludeon.RimWorld.Royalty">DeathAcidifier</li>
+		</techHediffsRequired>
+		<biocodeWeaponChance>1</biocodeWeaponChance>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="AntyArmyBase_RB">
+		<defName>AT_Power_A_C</defName>
+		<label>Anty Enhanced Ranged Infantry</label>
+		<isFighter>true</isFighter>
+		<combatPower>300</combatPower>
+		<maxGenerationAge>25</maxGenerationAge>
+		 
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<backstoryFiltersOverride Inherit="False">
+			<li>
+				<categories>
+					<li>ATAmigo_Ranged_Drop</li>
+					<li>ATLarva_Melee_Drop</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<weaponMoney>
+			<min>2700</min>
+			<max>3000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>hydroheliumion_D</li>
+		</weaponTags>
+		<apparelRequired>
+			<li>AT_AP_Power_A</li>
+			<li>AT_AP_Shooter_A</li>
+			<li>AT_AP_Power_Head_A</li>
+			<li>AT_AP_AdditionalPower_A</li>
+			
+		</apparelRequired>
+		<apparelMoney>
+			<min>3000</min>
+			<max>6000</max>
+		</apparelMoney>
+		<techHediffsRequired>
+			<li MayRequire="Ludeon.RimWorld.Royalty">DeathAcidifier</li>
+		</techHediffsRequired>
+		<biocodeWeaponChance>1</biocodeWeaponChance>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="AntyArmyBase_MB">
+		<defName>AT_Power_B</defName>
+		<label>Anty Enhanced Melee Infantry</label>
+		<isFighter>true</isFighter>
+		<combatPower>280</combatPower>
+		<maxGenerationAge>25</maxGenerationAge>
+		 
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<backstoryFiltersOverride Inherit="False">
+			<li>
+				<categories>
+					<li>ATAmigo_Melee_Drop</li>
+					<li>ATLarva_Melee_Drop</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<weaponMoney>
+			<min>2000</min>
+			<max>3000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>ATCharge_R</li>
+		</weaponTags>
+		<apparelRequired>
+			<li>Apparel_ShieldBelt</li>
+			<li>AT_AP_Power_D</li>
+			<li>AT_AP_Shooter_A</li>
+			<li>AT_AP_Power_Head_D</li>
+			<li>AT_AP_AdditionalPower_D</li>
+			
+		</apparelRequired>
+		<apparelMoney>
+			<min>3000</min>
+			<max>6000</max>
+		</apparelMoney>
+		<techHediffsRequired>
+			<li MayRequire="Ludeon.RimWorld.Royalty">DeathAcidifier</li>
+		</techHediffsRequired>
+		<biocodeWeaponChance>1</biocodeWeaponChance>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="AntyArmyBase_RB">
+		<defName>AT_Power_C</defName>
+		<label>Anty Enhanced Grenadier</label>
+		<isFighter>true</isFighter>
+		<combatPower>325</combatPower>
+		<maxGenerationAge>25</maxGenerationAge>
+		 
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<backstoryFiltersOverride Inherit="False">
+			<li>
+				<categories>
+					<li>ATAmigo_Ranged_Drop</li>
+					<li>ATLarva_Melee_Drop</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<canBeSapper>true</canBeSapper>
+		<weaponMoney>
+			<min>3500</min>
+			<max>3800</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>hydroheliumion_C</li>
+		</weaponTags>
+		<apparelRequired>
+			<li>AT_AP_Power_C</li>
+			<li>AT_AP_Shooter_A</li>
+			<li>AT_AP_Power_Head_C</li>
+			<li>AT_AP_AdditionalPower_C</li>
+			
+		</apparelRequired>
+		<apparelMoney>
+			<min>3000</min>
+			<max>6000</max>
+		</apparelMoney>
+		<techHediffsRequired>
+			<li MayRequire="Ludeon.RimWorld.Royalty">DeathAcidifier</li>
+		</techHediffsRequired>
+		<biocodeWeaponChance>1</biocodeWeaponChance>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="AntyArmyBase_MB">
+		<defName>AT_Power_D</defName>
+		<label>Anty Enhanced Melee Infantry</label>
+		<isFighter>true</isFighter>
+		<combatPower>280</combatPower>
+		<maxGenerationAge>25</maxGenerationAge>
+		 
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<backstoryFiltersOverride Inherit="False">
+			<li>
+				<categories>
+					<li>ATAmigo_Melee_Drop</li>
+					<li>ATLarva_Melee_Drop</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<weaponMoney>
+			<min>2000</min>
+			<max>3000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>ATCharge_R</li>
+		</weaponTags>
+		<apparelRequired>
+			<li>Apparel_ShieldBelt</li>
+			<li>AT_AP_Power_D</li>
+			<li>AT_AP_Shooter_A</li>
+			<li>AT_AP_Power_Head_D</li>
+			<li>AT_AP_AdditionalPower_D</li>
+			
+		</apparelRequired>
+		<apparelMoney>
+			<min>3000</min>
+			<max>6000</max>
+		</apparelMoney>
+		<inventoryOptions  Inherit="False">
+			<subOptionsChooseOne>
+			<li>
+				<thingDef>Antypheromone_Suicide</thingDef>
+				<countRange>1</countRange>
+			</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+		<techHediffsRequired>
+			<li MayRequire="Ludeon.RimWorld.Royalty">DeathAcidifier</li>
+		</techHediffsRequired>
+		<biocodeWeaponChance>1</biocodeWeaponChance>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="AntyArmyBase_RB" Name="AT_PP_S">
+		<defName>AT_PP_S</defName>
+		<label>Anty Special diplomat</label>
+		<isFighter>true</isFighter>
+		<isGoodBreacher>true</isGoodBreacher>
+		<combatPower>400</combatPower>
+		<maxGenerationAge>25</maxGenerationAge>
+		 
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<weaponMoney>
+			<min>1500</min>
+			<max>2500</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>EmpireGrenadeDestructive</li>
+			<li>Anty_GunSingleUse_PP</li>
+		</weaponTags>
+		<apparelRequired>
+			<li>AT_AP_Additionalarmorplate_A</li>
+			<li>AT_AP_Shooter_A</li>
+			<li>AT_AP_Head_B</li>
+			
+		</apparelRequired>
+		<apparelMoney>
+			<min>1000</min>
+			<max>3000</max>
+		</apparelMoney>
+		<techHediffsChance>0.6</techHediffsChance>
+		<techHediffsMoney>
+			<min>800</min>
+			<max>1400</max>
+		</techHediffsMoney>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="Anty_Commander">
+		<defName>Anty_Commander_title</defName>
+		<defaultFactionType>AntyHive_B</defaultFactionType>
+	</PawnKindDef>
+	<PawnKindDef ParentName="AT_PP_S">
+		<defName>AT_PP_S_title</defName>
+		<defaultFactionType>AntyHive_B</defaultFactionType>
+	</PawnKindDef>
+	<PawnKindDef ParentName="AT_Launcher_A">
+		<defName>AT_Launcher_A_title</defName>
+		<defaultFactionType>AntyHive_B</defaultFactionType>
+	</PawnKindDef>
+	<PawnKindDef ParentName="AT_Rifle_B">
+		<defName>AT_Rifle_B_title</defName>
+		<defaultFactionType>AntyHive_B</defaultFactionType>
+	</PawnKindDef>
+
+	<PawnKindDef Name="Proty_Doll_Base" ParentName="Tribal_Hunter">
+		<!-- <race>Tribal_Proty</race> -->
+		<defName>Tribal_Proty</defName>
+		<label>Tribal Proty Doll</label>
+		<trader>true</trader>
+		<factionLeader>true</factionLeader>
+		<isFighter>true</isFighter>
+		<apparelRequired Inherit="False">
+			<li>Apparel_TribalHeaddress</li>
+		</apparelRequired>
+		<initialWillRange>2~4</initialWillRange>
+		<initialResistanceRange>9~15</initialResistanceRange>
+		<backstoryFiltersOverride Inherit="false">
+			<li>
+				<categories>
+					<li>Proty_Doll</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<defaultFactionType>ProtyHive</defaultFactionType>
+		<inventoryOptions Inherit="false">
+		</inventoryOptions>
+		<abilities>
+			<li>ProtyDoll_Suicideburst</li>
+		</abilities>
+	</PawnKindDef>
+	
+	<PawnKindDef Name="Proty_Doll_AntyBase" ParentName="AntyRaiderBase">
+		<!-- <race>Anty</race> -->
+		<defName>Tribal_Proty_Anty</defName>
+		<label>Anty Proty Doll</label>
+		<trader>true</trader>
+		<factionLeader>true</factionLeader>
+		<isFighter>true</isFighter>
+		<initialWillRange>2~4</initialWillRange>
+		<initialResistanceRange>9~15</initialResistanceRange>
+		<backstoryFiltersOverride Inherit="false">
+			<li>
+				<categories>
+					<li>Proty_Doll</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<defaultFactionType>ProtyHive</defaultFactionType>
+		<inventoryOptions Inherit="false">
+		</inventoryOptions>
+		<abilities>
+			<li>ProtyDoll_Suicideburst</li>
+		</abilities>
+	</PawnKindDef>
+
+</Defs>

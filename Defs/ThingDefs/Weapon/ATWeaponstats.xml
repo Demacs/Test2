@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- <formatString>{0} s</formatString> -->
+	
+	<StatDef Name="AT_pelletCount">
+		<defName>AT_pelletCount</defName>
+		<label>pellet Count</label>
+		
+		<description>This weapon fires multiple bullets at once.</description>
+		
+		<category>Weapon_Ranged</category>
+		<defaultBaseValue>0</defaultBaseValue>
+		<minValue>0</minValue>
+		<hideAtValue>0</hideAtValue>
+		<maxValue>1000</maxValue>
+		<showIfUndefined>false</showIfUndefined>
+		<displayPriorityInCategory>5500</displayPriorityInCategory>
+	</StatDef>
+
+	<StatDef Name="AT_Acid_damage">
+		<defName>AT_Acid_damage</defName>
+		<label>Continuous damage</label>
+		
+		<description>This is continuous damage that this weapon can inflict.</description>
+		<formatString>{0}/5s</formatString>
+		
+		<category>Weapon_Ranged</category>
+		<defaultBaseValue>0</defaultBaseValue>
+		<minValue>0</minValue>
+		<hideAtValue>0</hideAtValue>
+		<maxValue>1000</maxValue>
+		<toStringStyle>FloatOne</toStringStyle>
+		<showIfUndefined>false</showIfUndefined>
+		<displayPriorityInCategory>5499</displayPriorityInCategory>
+	</StatDef>
+	
+	<StatDef ParentName="AT_Acid_damage">
+		<defName>AT_Acid_damage_Melee</defName>
+		<category>Weapon_Melee</category>
+	</StatDef>
+	
+	<StatDef Name="AT_Acid_damage_duration">
+		<defName>AT_Acid_damage_duration</defName>
+		<label>Continuous damage duration</label>
+		
+		<description>This is continuous damage duration that this weapon can inflict.</description>
+		<formatString>{0}s</formatString>
+		
+		<category>Weapon_Ranged</category>
+		<defaultBaseValue>0</defaultBaseValue>
+		<minValue>0</minValue>
+		<hideAtValue>0</hideAtValue>
+		<maxValue>1000</maxValue>
+		<showIfUndefined>false</showIfUndefined>
+		<displayPriorityInCategory>5498</displayPriorityInCategory>
+	</StatDef>
+	
+	<StatDef ParentName="AT_Acid_damage_duration">
+		<defName>AT_Acid_damage_duration_Melee</defName>
+		<category>Weapon_Melee</category>
+	</StatDef>
+	
+	<StatDef Name="AT_Acid_damage_destruction">
+		<defName>AT_Acid_damage_destruction</defName>
+		<label>Cumulative value required for part destruction</label>
+		
+		<description>If this weapon deals this much damage to an body-part, it will destroy that body-part regardless of its remaining HP.</description>
+		
+		<category>Weapon_Ranged</category>
+		<defaultBaseValue>0</defaultBaseValue>
+		<minValue>0</minValue>
+		<hideAtValue>0</hideAtValue>
+		<maxValue>1000</maxValue>
+		<showIfUndefined>false</showIfUndefined>
+		<displayPriorityInCategory>5497</displayPriorityInCategory>
+	</StatDef>
+	
+	<StatDef ParentName="AT_Acid_damage_destruction">
+		<defName>AT_Acid_damage_destruction_Melee</defName>
+		<category>Weapon_Melee</category>
+	</StatDef>
+
+</Defs>

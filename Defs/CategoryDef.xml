@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<DesignationCategoryDef>
+		<defName>Antybuilding</defName>
+		<label>AntyHive</label>
+		<order>600</order>
+		<specialDesignatorClasses>
+			<li>Designator_Cancel</li>
+			<li>Designator_Deconstruct</li>
+		</specialDesignatorClasses>
+	</DesignationCategoryDef>
+	
+	<ThingCategoryDef>
+		<defName>EggAntyThingCategoryDef</defName>
+		<label>EggAnty</label>
+		<parent>Manufactured</parent>
+		<iconPath>Things/Item/AntyEgg</iconPath>
+		<resourceReadoutRoot>false</resourceReadoutRoot>
+    </ThingCategoryDef>
+	
+	<ThingCategoryDef>
+		<defName>ManufacturedAntyThingCategoryDef</defName>
+		<label>Anty Manufactured</label>
+		<parent>Manufactured</parent>
+		<iconPath>Things/Item/AntyCore</iconPath>
+    </ThingCategoryDef>
+	
+	<ThingCategoryDef>
+		<defName>DrugAntyThingCategoryDef</defName>
+		<label>Anty Drug</label>
+		<parent>Drugs</parent>
+		<iconPath>Things/Item/pheromone/PT</iconPath>
+		<resourceReadoutRoot>false</resourceReadoutRoot>
+    </ThingCategoryDef>
+  
+</Defs>

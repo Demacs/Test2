@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RulePackDef>
+		<defName>NamerFactionAnty</defName>
+
+		<rulePack>
+			<rulesStrings>
+				<li>r_name->Swarm of Chocolate</li>
+				<li>r_name->Swarm of Strawberry candy</li>
+				<li>r_name->Swarm of Cinnamon candy</li>
+				<li>r_name->Swarm of White chocolate</li>
+				<li>r_name->Swarm of Biscuit</li>
+				<li>r_name->Swarm of Grape candy</li>
+				<li>r_name->Swarm of Sugar</li>
+				<li>r_name->Swarm of Macaroon</li>
+				<li>r_name->Swarm of Cheese</li>
+				<li>r_name->Swarm of Strawberry brain</li>
+				<li>r_name->Swarm of Cheese ball</li>
+				
+				<li>r_name->Swarm of Paraponera</li>
+				<li>r_name->Swarm of Polyrhachis</li>
+				<li>r_name->Swarm of Formica</li>
+				<li>r_name->Swarm of Polyergus</li>
+				<li>r_name->Swarm of Nylanderia</li>
+				<li>r_name->Swarm of Cataglyphis</li>
+				<li>r_name->Swarm of Colobopsis</li>
+				<li>r_name->Swarm of Dorylus</li>
+				<li>r_name->Swarm of Solenopsis</li>
+				<li>r_name->Swarm of Dinoponera</li>
+				<li>r_name->Swarm of Odontomachus</li>
+				<li>r_name->Swarm of Myrmecia</li>
+				<li>r_name->Swarm of Cephalotes</li>
+				<li>r_name->Swarm of Oecophylla</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+	
+	<RulePackDef>
+		<defName>NamerFactionAnty_Daceton</defName>
+
+		<rulePack>
+			<rulesStrings>
+				<li>r_name->Swarm of Daceton armigerum</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
+  
+	<RulePackDef>
+		<defName>NamerSettlementAnty</defName>
+			<rulePack>
+				<rulesStrings>
+
+					<li>r_name(p=12)->[townname_wordgen]</li>
+					<li>r_name(p=4)->[townname_combo]</li>
+					<li>r_name->[townname_near]</li>
+		
+					<li>topicalnoun->[Vegetable]</li>
+					<li>topicalnoun->[Game]</li>
+					<li>topicalnoun->[BodyPart]</li>
+
+					<li>townname_combo->[topicalnoun] [TerrainFeature] [ATSwarm]</li>
+					<li>townname_combo->[topicalnoun] [Community] [ATSwarm]</li>
+					<li>townname_combo->[topicalnoun]'s [TerrainFeature] [ATSwarm]</li>
+					<li>townname_combo->[topicalnoun]'s [Community] [ATSwarm]</li>
+					<li>townname_combo(p=2)->[concept_positive]'s [TerrainFeature] [ATSwarm]</li>
+					<li>townname_combo(p=2)->[concept_positive] [TerrainFeature] [ATSwarm]</li>
+					<li>townname_combo(p=2)->[concept_positive] [Community] [ATSwarm]</li>
+					<li>townname_combo(p=3)->[Character]'s [TerrainFeature] [ATSwarm]</li>
+					<li>townname_combo(p=3)->[Character]'s [Community] [ATSwarm]</li>
+
+					<li>townname_near->[nearnameinitial]-at-the-[TerrainFeature] [ATSwarm]</li>
+					<li>townname_near->[nearnameinitial]-by-the-[TerrainFeature] [ATSwarm]</li>
+					<li>townname_near->[nearnameinitial]-on-the-[TerrainFeature] [ATSwarm]</li>
+					<li>nearnameinitial->[townname_wordgen]</li>
+					<li>nearnameinitial->[Community]</li>
+
+					<li>townname_wordgen(p=2)->[SylE][SylE] [ATSwarm]</li>
+					<li>townname_wordgen(p=2)->[SylE][SylE][SylE] [ATSwarm]</li>
+					<li>townname_wordgen(p=2)->[SylE] [ATSwarm]</li>
+					<li>townname_wordgen(p=2)->[SylE][SylE] [ATSwarm]</li>
+					<li>townname_wordgen->[TerrainFeature] [ATSwarm]</li>
+					<li>townname_wordgen->[topicalnoun] [ATSwarm]</li>
+					<li>ATSwarm->Prisoner Butchering house</li>
+					<li>ATSwarm->Breeding ground</li>
+					<li>ATSwarm->corpse recycling center</li>
+					<li>ATSwarm->Gathering spot</li>
+					<li>ATSwarm->Patient Butchering house</li>
+					<li>ATSwarm->Nutritional Jelly Factory</li>
+					<li>ATSwarm->Attack base</li>
+					<li>ATSwarm->Defense base</li>
+				</rulesStrings>
+				<rulesFiles>
+					<li>townname_fixed->Names/OutlanderTown</li>
+					<li>concept_positive->Words/Nouns/Concepts_Positive</li>
+				</rulesFiles>
+			</rulePack>
+	</RulePackDef>
+	
+	
+	
+	<RulePackDef>
+		<defName>AntypawnName</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>AT_Mix->[FirstAT]-[SideAT]</li>
+				<li>AT_First->[FirstAT]</li>
+				<li>AT_Side->[SideAT]</li>				
+				<li>AT_Last->[LastAT]</li>
+			</rulesStrings>
+			<rulesFiles>
+				<li>FirstAT->Name/Anty/First</li>
+				<li>LastAT->Name/Anty/Last</li>
+				<li>SideAT->Name/Anty/Side</li>
+			</rulesFiles>
+		</rulePack>
+	</RulePackDef>
+
+	<RulePackDef>
+		<defName>Antypawn_rule</defName>
+		<include>
+			<li>AntypawnName</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>r_name->[AT_Last] '[AT_Mix]' [AT_Last]</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+	
+	<RulePackDef>
+		<defName>NamerIdeoAnty</defName>
+		<include>
+			<li>GlobalUtility</li>
+			<li>AntypawnName</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>r_ideoName->Behavior pattern [AT_Last]</li>
+				<li>r_ideoAdjective->[AT_First]</li>
+				<li>r_memberName->[AT_Side]</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+	
+	<RulePackDef>
+		<defName>NamerIdeoAnty_rule</defName>
+		<include>
+			<li>NamerIdeoAnty</li>
+		</include>
+	</RulePackDef>
+	
+	<RulePackDef>
+		<defName>AntyGod_rule</defName>
+		<include>
+			<li>AntypawnName</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>name->[AT_First] [AT_Side] [AT_Last]</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+	
+	<RulePackDef>
+		<defName>DeityTypeMakerAnty_rule</defName>
+		<include>
+			<li>AntypawnName</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>r_deityType->[AT_First] [AT_First]</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+	
+	<RulePackDef>
+		<defName>LeaderTitleMakerAnty_rule</defName>
+		<include>
+			<li>AntypawnName</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>r_leaderTitle(p=6)-> Tight jaw</li>
+				<li>r_leaderTitle(p=3)-> Trap jaw</li>
+				<li>r_leaderTitle(p=1)-> Sharp jaw</li>
+				<li>r_leaderTitle(p=1)-> Melted jaw</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+	
+</Defs>

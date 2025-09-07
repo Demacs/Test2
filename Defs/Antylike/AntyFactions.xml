@@ -1,0 +1,1803 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- <ScenPartDef>
+		<defName>AT_Disable_SettlementGen</defName>
+		<label>Disable enemy base creation on starting map(don't remove)</label>
+		<scenPartClass>ScenPart_DisableMapGen</scenPartClass>
+		<genStep>Settlement_Anty</genStep>
+		<category>Rule</category>
+		<selectionWeight>0</selectionWeight>
+		<summaryPriority>500</summaryPriority>
+		<maxUses>1</maxUses>
+	</ScenPartDef>
+	
+	<GenStepDef>
+		<defName>Settlement_Anty</defName>
+		<order>400</order>
+		<genStep Class="GenStep_Settlement">
+		  <count>1</count>
+		  <nearMapCenter>true</nearMapCenter>
+		</genStep>
+	</GenStepDef> -->
+
+	<FactionDef Abstract="True" Name="AT_PlayerFactionBase">
+		<settlementTexturePath>Icon/ATP_Icon</settlementTexturePath>
+		<colorSpectrum>
+		  <li>(1, 1, 1)</li>
+		</colorSpectrum>
+		<raidLootValueFromPointsCurve>
+			<points>
+			  <li>(35,     15)</li>
+			  <li>(100,   120)</li>
+			  <li>(1000,  500)</li>
+			  <li>(2000,  800)</li>
+			  <li>(4000, 1000)</li>
+			</points>
+		</raidLootValueFromPointsCurve>
+	</FactionDef>
+	
+  <!-- 앤티 플레이어 -->
+	<FactionDef ParentName="AT_PlayerFactionBase">
+		<defName>AT_PlayerFaction</defName>
+		<label>New Hive</label>
+		<description>Your Anty Hive.</description>
+		<isPlayer>true</isPlayer>
+		<basicMemberKind>AT_Colonist</basicMemberKind>
+		<pawnSingular>Anty</pawnSingular>
+		<pawnsPlural>Anties</pawnsPlural>
+		<techLevel>Industrial</techLevel>
+		<backstoryCategories>
+			<li>Offworld</li>
+		</backstoryCategories>
+		<allowedCultures>
+			<li>AntyCulture</li>
+		</allowedCultures>
+		<factionIconPath>Icon/ATP_Icon</factionIconPath>
+		<settlementTexturePath>Icon/ATP_HomeIcon</settlementTexturePath>
+		<playerInitialSettlementNameMaker>NamerFactionAnty</playerInitialSettlementNameMaker>
+		<factionNameMaker>NamerFactionAnty</factionNameMaker>
+		<settlementNameMaker>NamerSettlementAnty</settlementNameMaker>
+		<melaninRange>0</melaninRange>
+		<startingResearchTags>
+			<li>ClassicStart</li>
+		</startingResearchTags>
+		<apparelStuffFilter>
+			<thingDefs>
+				<li>Leather_Pig</li>
+				<li>Leather_Human</li>
+				<li>AntyExoskeleton</li>
+			</thingDefs>
+		</apparelStuffFilter>
+	</FactionDef>
+
+	<FactionDef ParentName="AT_PlayerFactionBase">
+		<defName>AT_PlayerFaction_B</defName>
+		<label>Invasion-Hive</label>
+		<description>Your Anty Hive.</description>
+		<isPlayer>true</isPlayer>
+		<basicMemberKind>AT_Colonist_B</basicMemberKind>
+		<pawnSingular>Anty</pawnSingular>
+		<pawnsPlural>Anties</pawnsPlural>
+		<techLevel>Industrial</techLevel>
+		<backstoryCategories>
+			<li>Offworld</li>
+		</backstoryCategories>
+		<allowedCultures>
+			<li>AntyCulture</li>
+		</allowedCultures>
+		<factionIconPath>Icon/ATP_Icon</factionIconPath>
+		<settlementTexturePath>Icon/ATP_HomeIcon</settlementTexturePath>
+		<playerInitialSettlementNameMaker>NamerFactionAnty</playerInitialSettlementNameMaker>
+		<factionNameMaker>NamerFactionAnty</factionNameMaker>
+		<settlementNameMaker>NamerSettlementAnty</settlementNameMaker>
+		<melaninRange>0</melaninRange>
+		<startingResearchTags>
+			<li>ClassicStart</li>
+		</startingResearchTags>
+		<apparelStuffFilter>
+			<thingDefs>
+				<li>Leather_Pig</li>
+				<li>Leather_Human</li>
+				<li>AntyExoskeleton</li>
+			</thingDefs>
+		</apparelStuffFilter>
+		<permanentEnemyToEveryoneExcept>
+			<li>AntyHive</li>
+			<li>AntyHive_B</li>
+			<li>AntyHive_C</li>
+			<li MayRequire="AhnDemi.PanieltheAutomata">PN_indistryFaction</li>
+			<li MayRequire="AhnDemi.PanieltheAutomata">PN_SubsidiaryFaction</li>
+			
+		</permanentEnemyToEveryoneExcept>
+	</FactionDef>
+	
+	<FactionDef ParentName="AT_PlayerFactionBase">
+		<defName>AT_PlayerFaction_C</defName>
+		<label>Invasion-Hive cluster</label>
+		<description>Your Anty Hive.</description>
+		<isPlayer>true</isPlayer>
+		<basicMemberKind>AT_Colonist_C</basicMemberKind>
+		<pawnSingular>Anty</pawnSingular>
+		<pawnsPlural>Anties</pawnsPlural>
+		<techLevel>Industrial</techLevel>
+		<backstoryCategories>
+			<li>Offworld</li>
+		</backstoryCategories>
+		<allowedCultures>
+			<li>AntyCulture</li>
+		</allowedCultures>
+		<factionIconPath>Icon/ATP_Icon</factionIconPath>
+		<settlementTexturePath>Icon/ATP_HomeIcon</settlementTexturePath>
+		<playerInitialSettlementNameMaker>NamerFactionAnty</playerInitialSettlementNameMaker>
+		<factionNameMaker>NamerFactionAnty</factionNameMaker>
+		<settlementNameMaker>NamerSettlementAnty</settlementNameMaker>
+		<melaninRange>0</melaninRange>
+		<startingResearchTags>
+			<li>ClassicStart</li>
+			<li>AntyLargeInvasionHive</li>
+		</startingResearchTags>
+		<apparelStuffFilter>
+			<thingDefs>
+				<li>Leather_Pig</li>
+				<li>Leather_Human</li>
+				<li>AntyExoskeleton</li>
+			</thingDefs>
+		</apparelStuffFilter>
+		<permanentEnemyToEveryoneExcept>
+			<li>AntyHive</li>
+			<li>AntyHive_B</li>
+			<li>AntyHive_C</li>
+			<li MayRequire="AhnDemi.PanieltheAutomata">PN_indistryFaction</li>
+			<li MayRequire="AhnDemi.PanieltheAutomata">PN_SubsidiaryFaction</li>
+			
+		</permanentEnemyToEveryoneExcept>
+	</FactionDef>
+  
+  
+  <!-- 앤티NPC -->
+
+	<FactionDef ParentName="FactionBase" Name="AntyFactionBase" Abstract="True">
+		<pawnSingular>Anty</pawnSingular>
+		<pawnsPlural>Anties</pawnsPlural>
+		<listOrderPriority>40</listOrderPriority>
+		<settlementGenerationWeight>1</settlementGenerationWeight>
+		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		<canMakeRandomly>true</canMakeRandomly>
+		<canSiege>true</canSiege>
+		<canStageAttacks>true</canStageAttacks>
+		<humanlikeFaction>true</humanlikeFaction>
+		<canUseAvoidGrid>true</canUseAvoidGrid>
+		<leaderTitle>Swarm Lord</leaderTitle>
+		<factionIconPath>Icon/AT_Icon</factionIconPath>
+		<factionNameMaker>NamerFactionAnty</factionNameMaker>
+		<settlementNameMaker>NamerSettlementAnty</settlementNameMaker>
+		<raidLootMaker>AntyRaidLootMaker</raidLootMaker>
+		
+		<dropPodActive>ActiveDropPodAnty</dropPodActive>
+		<dropPodIncoming>DropPodIncomingAnty</dropPodIncoming>
+
+		<requiredMemes> <!--필수로 들어가는 meme지정-->
+			<li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+		</requiredMemes>
+		<disallowedMemes> <!--포함시키지 않는 meme지정-->
+			<li MayRequire="Ludeon.RimWorld.Ideology">FleshPurity</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">MaleSupremacy</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">FemaleSupremacy</li>
+		</disallowedMemes>
+		<disallowedPrecepts>
+			<li MayRequire="Ludeon.RimWorld.Ideology">ApparelDesired_Strong_Subordinate</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">ApparelDesired_Soft_Subordinate</li>
+		</disallowedPrecepts>
+		<structureMemeWeights>    <!--기반이념(종교같은 큰틀)의 비율-->
+			<Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Ideological>
+		</structureMemeWeights>
+		<xenotypeSet>
+			<xenotypeChances>
+				<Baseliner MayRequire="Ludeon.RimWorld.Biotech">1</Baseliner>
+
+				<Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0</Dirtmole>
+				<Genie MayRequire="Ludeon.RimWorld.Biotech">0</Genie>
+				<Hussar MayRequire="Ludeon.RimWorld.Biotech">0</Hussar>
+				<Sanguophage MayRequire="Ludeon.RimWorld.Biotech">0</Sanguophage>
+				<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0</Neanderthal>
+				<Pigskin MayRequire="Ludeon.RimWorld.Biotech">0</Pigskin>
+				<Impid MayRequire="Ludeon.RimWorld.Biotech">0</Impid>
+				<Waster MayRequire="Ludeon.RimWorld.Biotech">0</Waster>
+				<Yttakin MayRequire="Ludeon.RimWorld.Biotech">0</Yttakin>
+				<Highmate MayRequire="Ludeon.RimWorld.Biotech">0</Highmate>
+			</xenotypeChances>
+		</xenotypeSet>
+		
+		<caravanTraderKinds>
+			<li>Caravan_AT_REA</li>
+		</caravanTraderKinds>
+		<visitorTraderKinds>
+			<li>Visitor_Outlander_Standard</li>
+			<li>Caravan_AT_REA</li>
+		</visitorTraderKinds>
+		<baseTraderKinds>
+			<li>Base_Outlander_Standard</li>
+			<li>Caravan_AT_REA</li>
+		</baseTraderKinds>
+		
+		<techLevel>Spacer</techLevel>
+		<backstoryCategories>
+			<li>Offworld</li>
+		</backstoryCategories>
+		<allowedCultures>
+			<li>AntyCulture</li>
+		</allowedCultures>
+		<melaninRange>0</melaninRange>
+		<maxPawnCostPerTotalPointsCurve>
+			<points>
+				<li>(0,35)</li>
+				<li>(70, 50)</li>
+				<li>(700, 100)</li>
+				<li>(1300, 150)</li>
+				<li>(100000, 13000)</li>
+			</points>
+		</maxPawnCostPerTotalPointsCurve>
+		<raidLootValueFromPointsCurve>
+			<points>
+			  <li>(35,     15)</li>
+			  <li>(100,   120)</li>
+			  <li>(1000,  500)</li>
+			  <li>(2000,  800)</li>
+			  <li>(4000, 1000)</li>
+			</points>
+		</raidLootValueFromPointsCurve>
+		<raidCommonalityFromPointsCurve>
+			<points>
+				<li>(10,  1)</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">(11,  2)</li>
+				<li>(700,  1)</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">(750,  3)</li>
+				<li>(2400, 1.5)</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">(2450, 3.5)</li>
+				<li>(3800, 2.1)</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">(3850, 4.1)</li>
+				<li>(5000, 2.2)</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">(5050, 4.2)</li>
+				<li>(6500, 2.4)</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">(6550, 5.5)</li>
+				<li>(8000, 2.6)</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">(8050, 6.6)</li>
+			</points>
+		</raidCommonalityFromPointsCurve>
+		<pawnGroupMakers>
+			<!-- 초기악성 재고 -->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>100</commonality>
+			<maxTotalPoints>2500</maxTotalPoints>
+			<disallowedStrategies>
+				<li>ImmediateAttackSappers</li>
+				<li>Siege</li>
+			</disallowedStrategies>
+			<options>
+				<AT_Raid_A>25</AT_Raid_A>
+				<Anty_prototype>75</Anty_prototype>
+			</options> 
+		</li>
+		
+			<!-- 초기일반 -->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>100</commonality>
+			<maxTotalPoints>2500</maxTotalPoints>
+			<disallowedStrategies>
+				<li>ImmediateAttackSappers</li>
+				<li>Siege</li>
+			</disallowedStrategies>
+			<options>
+				<AT_Raid_A>75</AT_Raid_A>
+				<AT_Rifle_A>25</AT_Rifle_A>
+				<Anty_prototype>10</Anty_prototype>
+			</options> 
+		</li>
+		
+			<!-- 일반 -->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>100</commonality>
+			<maxTotalPoints>3500</maxTotalPoints>
+			<disallowedStrategies>
+				<li>ImmediateAttackSappers</li>
+			</disallowedStrategies>
+			<options>
+				<AT_Raid_A>50</AT_Raid_A>
+				<AT_Rifle_A>25</AT_Rifle_A>
+				<AT_Charge_A>25</AT_Charge_A>
+				<Anty_prototype>10</Anty_prototype>
+			</options> 
+		</li>
+
+			<!-- 정규 근거리 -->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>80</commonality>
+			<maxTotalPoints>5000</maxTotalPoints>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<AT_Raid_A>10</AT_Raid_A>
+				<AT_Rifle_A>10</AT_Rifle_A>
+				<AT_Charge_A>40</AT_Charge_A>
+				<Anty_Commander>5</Anty_Commander>
+				<AT_Charge_B>30</AT_Charge_B>
+				<AT_Launcher_B>5</AT_Launcher_B>
+				<Anty_prototype>10</Anty_prototype>
+			</options> 
+		</li>
+		
+			<!-- 정규 악성 재고 -->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>80</commonality>
+			<maxTotalPoints>5000</maxTotalPoints>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<Anty_Commander>5</Anty_Commander>
+				<Anty_prototype>30</Anty_prototype>
+			</options> 
+		</li>
+
+			<!-- 정규 원거리 -->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>60</commonality>
+			<maxTotalPoints>5000</maxTotalPoints>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<AT_Raid_A>10</AT_Raid_A>
+				<AT_Rifle_A>40</AT_Rifle_A>
+				<Anty_Commander>5</Anty_Commander>
+				<AT_Sapper_A>5</AT_Sapper_A>
+				<AT_Rifle_B>30</AT_Rifle_B>
+				<AT_Launcher_A>5</AT_Launcher_A>
+				<AT_Launcher_B>5</AT_Launcher_B>
+				<Anty_prototype>10</Anty_prototype>
+			</options> 
+		</li>
+
+			<!-- 정규 혼합 -->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>60</commonality>
+			<maxTotalPoints>5000</maxTotalPoints>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<AT_Raid_A>10</AT_Raid_A>
+				<AT_Rifle_A>20</AT_Rifle_A>
+				<AT_Charge_A>20</AT_Charge_A>
+				<Anty_Commander>5</Anty_Commander>
+				<AT_Sapper_A>5</AT_Sapper_A>
+				<AT_Rifle_B>15</AT_Rifle_B>
+				<AT_Charge_B>15</AT_Charge_B>
+				<AT_Launcher_A>5</AT_Launcher_A>
+				<AT_Launcher_B>5</AT_Launcher_B>
+			</options> 
+		</li>
+
+			<!-- 정규-화력강화 근거리 -->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>10</commonality>
+			<maxTotalPoints>7000</maxTotalPoints>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<Anty_Commander>5</Anty_Commander>
+				<AT_Sapper_A>5</AT_Sapper_A>
+				<AT_Sapper_B>5</AT_Sapper_B>
+				<AT_Charge_B>80</AT_Charge_B>
+				<AT_Launcher_B>5</AT_Launcher_B>
+			</options> 
+		</li>
+
+			<!-- 정규-화력강화 원거리 -->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>10</commonality>
+			<maxTotalPoints>7000</maxTotalPoints>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<Anty_Commander>5</Anty_Commander>
+				<AT_Sapper_A>5</AT_Sapper_A>
+				<AT_Sapper_B>5</AT_Sapper_B>
+				<AT_Rifle_B>80</AT_Rifle_B>
+				<AT_Launcher_A>5</AT_Launcher_A>
+			</options> 
+		</li>
+
+			<!-- 정규-화력강화 혼합 -->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>10</commonality>
+			<maxTotalPoints>7000</maxTotalPoints>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<Anty_Commander>5</Anty_Commander>
+				<AT_Sapper_A>5</AT_Sapper_A>
+				<AT_Sapper_B>5</AT_Sapper_B>
+				<AT_Rifle_B>40</AT_Rifle_B>
+				<AT_Charge_B>40</AT_Charge_B>
+				<AT_Launcher_A>5</AT_Launcher_A>
+			</options> 
+		</li>
+
+			<!-- 정규-중앙드랍, 브리칭 -->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>5</commonality>
+			<disallowedStrategies>
+				<li>Siege</li>
+				<li>ImmediateAttack</li>
+				<li>ImmediateAttackSmart</li>
+				<li>StageThenAttack</li>
+			</disallowedStrategies>
+			<options>
+				<Anty_Commander>5</Anty_Commander>
+				<AT_Sapper_A>5</AT_Sapper_A>
+				<AT_Sapper_B>5</AT_Sapper_B>
+				<AT_Rifle_B>35</AT_Rifle_B>
+				<AT_Charge_B>40</AT_Charge_B>
+				<AT_Launcher_A>5</AT_Launcher_A>
+				<AT_Launcher_B>5</AT_Launcher_B>
+				<AT_PP_S>1</AT_PP_S>
+			</options> 
+		</li>
+		
+			<!-- 정규-중앙드랍 -->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>15</commonality>
+			<disallowedStrategies>
+				<li>Siege</li>
+				<li>ImmediateAttack</li>
+				<li>ImmediateAttackSmart</li>
+				<li>StageThenAttack</li>
+				<li>ImmediateAttackSappers</li>
+			</disallowedStrategies>
+			<options>
+				<Anty_Commander>5</Anty_Commander>
+				<AT_Charge_B>20</AT_Charge_B>
+				<AT_Rifle_B>70</AT_Rifle_B>
+				<AT_Launcher_A>5</AT_Launcher_A>
+			</options> 
+		</li>
+		
+			<!-- 전차화 습격 1단계 근거리-->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>5</commonality>
+			<maxTotalPoints>8500</maxTotalPoints>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<AT_Charge_B>70</AT_Charge_B>
+				<AT_Power_B>20</AT_Power_B>
+				<AT_Launcher_B>5</AT_Launcher_B>
+				<Anty_Commander>5</Anty_Commander>
+			</options> 
+		</li>
+
+			<!-- 전차화 습격 1단계 원거리-->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>5</commonality>
+			<maxTotalPoints>8500</maxTotalPoints>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<AT_Rifle_B>70</AT_Rifle_B>
+				<AT_Power>20</AT_Power>
+				<AT_Launcher_A>5</AT_Launcher_A>
+				<Anty_Commander>5</Anty_Commander>
+			</options> 
+		</li>
+
+			<!-- 전차화 습격 1단계 혼합-->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>5</commonality>
+			<maxTotalPoints>8500</maxTotalPoints>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<AT_Rifle_B>35</AT_Rifle_B>
+				<AT_Charge_B>35</AT_Charge_B>
+				<AT_Power_B>10</AT_Power_B>
+				<AT_Power>10</AT_Power>
+				<AT_Launcher_B>5</AT_Launcher_B>
+				<Anty_Commander>5</Anty_Commander>
+			</options> 
+		</li>
+
+			<!-- 전차화 습격 2단계 근거리-->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>3</commonality>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<AT_Charge_B>20</AT_Charge_B>
+				<AT_Power_A_B>10</AT_Power_A_B>
+				<AT_Power_A_C>10</AT_Power_A_C>
+				<AT_Power_B>50</AT_Power_B>
+				<AT_Launcher_B>5</AT_Launcher_B>
+				<Anty_Commander>5</Anty_Commander>
+			</options> 
+		</li>
+
+			<!-- 전차화 습격 2단계 원거리-->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>3</commonality>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<AT_Rifle_B>10</AT_Rifle_B>
+				<AT_Power>10</AT_Power>
+				<AT_Power_A>50</AT_Power_A>
+				<AT_Power_A_B>10</AT_Power_A_B>
+				<AT_Launcher_A>10</AT_Launcher_A>
+				<AT_Launcher_B>5</AT_Launcher_B>
+				<Anty_Commander>5</Anty_Commander>
+			</options> 
+		</li>
+
+			<!-- 전차화 습격 2단계 혼합-->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>3</commonality>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<AT_Rifle_B>10</AT_Rifle_B>
+				<AT_Power>10</AT_Power>
+				<AT_Power_A>25</AT_Power_A>
+				<AT_Power_A_B>5</AT_Power_A_B>
+				<AT_Power_B>25</AT_Power_B>
+				<AT_Launcher_A>10</AT_Launcher_A>
+				<AT_Launcher_B>5</AT_Launcher_B>
+				<Anty_Commander>5</Anty_Commander>
+			</options> 
+		</li>
+
+			<!-- 전차화 습격 3단계 근거리-->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>1</commonality>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<AT_Power_A_B>30</AT_Power_A_B>
+				<AT_Power_A_C>10</AT_Power_A_C>
+				<AT_Power_B>50</AT_Power_B>
+				<AT_Power_C>5</AT_Power_C>
+				<Anty_Commander>5</Anty_Commander>
+			</options> 
+		</li>
+	
+			<!-- 전차화 습격 3단계 원거리-->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>1</commonality>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<AT_Power_A>50</AT_Power_A>
+				<AT_Power_A_B>30</AT_Power_A_B>
+				<AT_Power_C>5</AT_Power_C>
+				<Anty_Commander>5</Anty_Commander>
+			</options> 
+		</li>
+
+			<!-- 전차화 습격 3단계 혼합-->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>1</commonality>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<AT_Power_B>25</AT_Power_B>
+				<AT_Power_A>25</AT_Power_A>
+				<AT_Power_A_B>30</AT_Power_A_B>
+				<AT_Power_C>5</AT_Power_C>
+				<Anty_Commander>5</Anty_Commander>
+			</options> 
+		</li>
+
+		<li>
+			<kindDef>Settlement</kindDef>
+			<options>
+				<AT_Rifle_B>10</AT_Rifle_B>
+				<AT_Launcher_A>5</AT_Launcher_A>
+				<AT_Launcher_B>5</AT_Launcher_B>
+				<AT_Charge_B>10</AT_Charge_B>
+				<AT_Power>5</AT_Power>
+				<AT_Power_A>10</AT_Power_A>
+				<AT_Power_A_B>10</AT_Power_A_B>
+				<AT_Power_A_C>10</AT_Power_A_C>
+				<AT_Power_B>10</AT_Power_B>
+				<AT_Power_C>5</AT_Power_C>
+				<Anty_Commander>5</Anty_Commander>
+				<AT_SingleUse>5</AT_SingleUse>
+				<AT_Dreadnought_A>5</AT_Dreadnought_A>
+				<AT_Hiveguard_A>2</AT_Hiveguard_A>
+			</options>
+		</li>
+		
+		<li>
+			<kindDef>Peaceful</kindDef>
+			<options>
+				<AT_Charge_B>15</AT_Charge_B>
+				<AT_Rifle_B>20</AT_Rifle_B>
+				<AT_Charge_A>15</AT_Charge_A>
+				<AT_Rifle_A>20</AT_Rifle_A>
+			</options>
+		</li>
+	  
+		<li>
+        <kindDef>Trader</kindDef>
+			<commonality>5</commonality>
+			<traders>
+				<Anty_Commander>10</Anty_Commander>
+				<Yuran_Colonist_Miko MayRequire="RooAndGloomy.YuranRaceMod">1</Yuran_Colonist_Miko>
+			</traders>
+			<carriers>
+				<Elephant>6</Elephant>
+				<Muffalo>6</Muffalo>
+				<Dromedary>5</Dromedary>
+			</carriers>
+			<guards>
+				<AT_Charge_B>40</AT_Charge_B>
+				<AT_Rifle_B>20</AT_Rifle_B>
+				<AT_Charge_A>15</AT_Charge_A>
+				<AT_Rifle_A>20</AT_Rifle_A>
+				<AT_SingleUse>3</AT_SingleUse>
+				<AT_Raid_A>1</AT_Raid_A>
+			</guards>
+		</li>
+		
+		<li>
+        <kindDef>Trader</kindDef>
+			<commonality>2</commonality>
+			<traders>
+				<Anty_Commander>2</Anty_Commander>
+				<Yuran_Colonist_Miko MayRequire="RooAndGloomy.YuranRaceMod">1</Yuran_Colonist_Miko>
+			</traders>
+			<carriers>
+				<Elephant>6</Elephant>
+				<Muffalo>6</Muffalo>
+				<Dromedary>5</Dromedary>
+			</carriers>
+			<guards>
+				<AT_Charge_B>40</AT_Charge_B>
+				<AT_Power>20</AT_Power>
+				<AT_Charge_A>15</AT_Charge_A>
+				<AT_Power_A_B>20</AT_Power_A_B>
+				<AT_SingleUse>3</AT_SingleUse>
+				<AT_Dreadnought_A>1</AT_Dreadnought_A>
+			</guards>
+		</li>
+		
+		<li MayRequire="Ludeon.RimWorld.Ideology">
+			<kindDef>Miners</kindDef>
+			<commonality>1</commonality>
+			<options>
+				<AT_Charge_B>40</AT_Charge_B>
+				<AT_Power>20</AT_Power>
+				<AT_Charge_A>15</AT_Charge_A>
+				<AT_Power_A_B>20</AT_Power_A_B>
+			</options>
+		</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">
+			<kindDef>Hunters</kindDef>
+			<commonality>1</commonality>
+			<options>
+				<AT_Charge_B>40</AT_Charge_B>
+				<AT_Power>20</AT_Power>
+				<AT_Charge_A>15</AT_Charge_A>
+				<AT_Power_A_B>20</AT_Power_A_B>
+			</options>
+		</li>
+		</pawnGroupMakers>
+		<settlementTexturePath>Icon/AT_Icon</settlementTexturePath>
+		<allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
+		<maxConfigurableAtWorldCreation>3</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>15</configurationListOrderPriority>
+	</FactionDef>
+  
+  
+	<FactionDef ParentName="AntyFactionBase">
+		<defName>AntyHive</defName>
+		<label>Anty Invasion-Hive</label>
+		<autoFlee>false</autoFlee>
+		<hostileToFactionlessHumanlikes>true</hostileToFactionlessHumanlikes>
+		<description>As the species with genes of ants, they excel at construction and war, especially war of attrition.\n\nThey travel everywhere in space and try to settle any planet with a lifeform, whether sapient or not.\n\nThe scouting Anties land on the surface first, then rapidly construct bases, and send environmental analysis to the hive waiting in the orbit.\n\nOnce the hive obtain the data, they gear up suited for that environment they are to face and drop down to the surface. Then, they start playing out their war.\n\nThis Hive is very aggressive. anything that is not a Symbiotic-Hive, they will attack first.</description>
+		<colorSpectrum>
+		  <li>(1, 1, 1)</li>
+		  <li>(1, 1, 1)</li>
+		</colorSpectrum>
+		<naturalEnemy>true</naturalEnemy>
+	</FactionDef>
+
+	<FactionDef ParentName="AntyFactionBase">
+		<defName>AntyHive_B</defName>
+		<label>Anty Symbiotic-Hive</label>
+		<leaderTitle>Symbiosis Officer</leaderTitle>
+		<settlementGenerationWeight>0.2</settlementGenerationWeight>
+		<autoFlee>false</autoFlee>
+		<hostileToFactionlessHumanlikes>true</hostileToFactionlessHumanlikes>
+		<description>As the species with genes of ants, they excel at construction and war, especially war of attrition.\n\nThey travel everywhere in space and try to settle any planet with a lifeform, whether sapient or not.\n\nThe scouting Anties land on the surface first, then rapidly construct bases, and send environmental analysis to the hive waiting in the orbit.\n\nOnce the hive obtain the data, they gear up suited for that environment they are to face and drop down to the surface. Then, they start playing out their war.\n\nThis Hive likes to mingle with other Hives. But they don't want to mingle with other races at all.</description>
+		<colorSpectrum>
+		  <li>(1, 1, 1)</li>
+		  <li>(1, 1, 1)</li>
+		</colorSpectrum>
+		<settlementTexturePath>Icon/AT_Icon_B</settlementTexturePath>
+		<factionIconPath>Icon/AT_Icon_B</factionIconPath>
+		<permanentEnemyToEveryoneExcept>
+			<li>AntyHive</li>
+			<li>AntyHive_B</li>
+			<li>AntyHive_C</li>
+			<li>AT_PlayerFaction</li>
+			<li>AT_PlayerFaction_B</li>
+			<li>AT_PlayerFaction_C</li>
+			
+		</permanentEnemyToEveryoneExcept>
+		<raidCommonalityFromPointsCurve Inherit="false">
+			<points>
+				<li>(10,  0)</li>
+				<li>(8000, 0)</li>
+			</points>
+		</raidCommonalityFromPointsCurve>
+		
+		<royalTitleTags MayRequire="Ludeon.RimWorld.Royalty">
+			<li>AntyTitle</li>
+		</royalTitleTags>
+		<royalTitleInheritanceWorkerClass MayRequire="Ludeon.RimWorld.Royalty">RoyalTitleInheritanceWorker</royalTitleInheritanceWorkerClass>
+		<royalTitleInheritanceRelations MayRequire="Ludeon.RimWorld.Royalty">
+			<li>Child</li>
+			<li>Grandchild</li>
+			<li>GreatGrandchild</li>
+			<li>NephewOrNiece</li>
+			<li>Spouse</li>
+			<li>Sibling</li>
+			<li>HalfSibling</li>
+			<li>Cousin</li>
+			<li>Parent</li>
+			<li>UncleOrAunt</li>
+		</royalTitleInheritanceRelations>
+		<royalFavorLabel MayRequire="Ludeon.RimWorld.Royalty">Medal of Hive</royalFavorLabel>
+		<royalFavorIconPath MayRequire="Ludeon.RimWorld.Royalty">Icon/AT_Icon_B</royalFavorIconPath>
+		<caravanTraderKinds MayRequire="Ludeon.RimWorld.Royalty">
+			<li>Caravan_AT_REB</li>
+		</caravanTraderKinds>
+		
+		<pawnGroupMakers Inherit="false">
+			<!-- 초기일반 -->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>80</commonality>
+			<maxTotalPoints>2500</maxTotalPoints>
+			<disallowedStrategies>
+				<li>ImmediateAttackSappers</li>
+				<li>Siege</li>
+			</disallowedStrategies>
+			<options>
+				<AT_Raid_A>75</AT_Raid_A>
+				<AT_Rifle_A>25</AT_Rifle_A>
+				<Anty_prototype>10</Anty_prototype>
+			</options> 
+		</li>
+		
+			<!-- 일반 -->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>80</commonality>
+			<maxTotalPoints>3500</maxTotalPoints>
+			<disallowedStrategies>
+				<li>ImmediateAttackSappers</li>
+			</disallowedStrategies>
+			<options>
+				<AT_Raid_A>50</AT_Raid_A>
+				<AT_Rifle_A>25</AT_Rifle_A>
+				<AT_Charge_A>25</AT_Charge_A>
+				<Anty_prototype>10</Anty_prototype>
+			</options> 
+		</li>
+
+			<!-- 정규 근거리 -->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>30</commonality>
+			<maxTotalPoints>5000</maxTotalPoints>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<AT_Raid_A>10</AT_Raid_A>
+				<AT_Rifle_A>10</AT_Rifle_A>
+				<AT_Charge_A>40</AT_Charge_A>
+				<Anty_Commander_title>5</Anty_Commander_title>
+				<AT_Charge_B>30</AT_Charge_B>
+				<AT_Launcher_B>5</AT_Launcher_B>
+				<Anty_prototype>10</Anty_prototype>
+			</options> 
+		</li>
+
+			<!-- 정규 원거리 -->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>30</commonality>
+			<maxTotalPoints>5000</maxTotalPoints>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<AT_Raid_A>10</AT_Raid_A>
+				<AT_Rifle_A>40</AT_Rifle_A>
+				<Anty_Commander_title>5</Anty_Commander_title>
+				<AT_Sapper_A>5</AT_Sapper_A>
+				<AT_Rifle_B_title>30</AT_Rifle_B_title>
+				<AT_Launcher_A_title>5</AT_Launcher_A_title>
+				<AT_Launcher_B>5</AT_Launcher_B>
+			</options> 
+		</li>
+
+			<!-- 정규 혼합 -->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>30</commonality>
+			<maxTotalPoints>5000</maxTotalPoints>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<AT_Raid_A>10</AT_Raid_A>
+				<AT_Rifle_A>20</AT_Rifle_A>
+				<AT_Charge_A>20</AT_Charge_A>
+				<Anty_Commander_title>5</Anty_Commander_title>
+				<AT_Sapper_A>5</AT_Sapper_A>
+				<AT_Rifle_B_title>15</AT_Rifle_B_title>
+				<AT_Charge_B>15</AT_Charge_B>
+				<AT_Launcher_A_title>5</AT_Launcher_A_title>
+				<AT_Launcher_B>5</AT_Launcher_B>
+			</options> 
+		</li>
+
+			<!-- 정규-화력강화 근거리 -->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>20</commonality>
+			<maxTotalPoints>7000</maxTotalPoints>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<Anty_Commander_title>5</Anty_Commander_title>
+				<AT_Sapper_A>5</AT_Sapper_A>
+				<AT_Sapper_B>5</AT_Sapper_B>
+				<AT_Charge_B>80</AT_Charge_B>
+				<AT_Launcher_B>5</AT_Launcher_B>
+			</options> 
+		</li>
+
+			<!-- 정규-화력강화 원거리 -->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>20</commonality>
+			<maxTotalPoints>7000</maxTotalPoints>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<Anty_Commander_title>5</Anty_Commander_title>
+				<AT_Sapper_A>5</AT_Sapper_A>
+				<AT_Sapper_B>5</AT_Sapper_B>
+				<AT_Rifle_B_title>80</AT_Rifle_B_title>
+				<AT_Launcher_A_title>5</AT_Launcher_A_title>
+			</options> 
+		</li>
+
+			<!-- 정규-화력강화 혼합 -->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>20</commonality>
+			<maxTotalPoints>7000</maxTotalPoints>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<Anty_Commander_title>5</Anty_Commander_title>
+				<AT_Sapper_A>5</AT_Sapper_A>
+				<AT_Sapper_B>5</AT_Sapper_B>
+				<AT_Rifle_B_title>40</AT_Rifle_B_title>
+				<AT_Charge_B>40</AT_Charge_B>
+				<AT_Launcher_A_title>5</AT_Launcher_A_title>
+			</options> 
+		</li>
+
+			<!-- 정규-중앙드랍, 브리칭 -->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>10</commonality>
+			<disallowedStrategies>
+				<li>Siege</li>
+				<li>ImmediateAttack</li>
+				<li>ImmediateAttackSmart</li>
+				<li>StageThenAttack</li>
+			</disallowedStrategies>
+			<options>
+				<Anty_Commander_title>5</Anty_Commander_title>
+				<AT_Sapper_A>5</AT_Sapper_A>
+				<AT_Sapper_B>5</AT_Sapper_B>
+				<AT_Rifle_B_title>35</AT_Rifle_B_title>
+				<AT_Charge_B>40</AT_Charge_B>
+				<AT_Launcher_A_title>5</AT_Launcher_A_title>
+				<AT_Launcher_B>5</AT_Launcher_B>
+				<AT_PP_S_title>1</AT_PP_S_title>
+			</options> 
+		</li>
+		
+			<!-- 정규-중앙드랍 -->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>15</commonality>
+			<disallowedStrategies>
+				<li>Siege</li>
+				<li>ImmediateAttack</li>
+				<li>ImmediateAttackSmart</li>
+				<li>StageThenAttack</li>
+				<li>ImmediateAttackSappers</li>
+			</disallowedStrategies>
+			<options>
+				<Anty_Commander_title>5</Anty_Commander_title>
+				<AT_Charge_B>20</AT_Charge_B>
+				<AT_Rifle_B_title>70</AT_Rifle_B_title>
+				<AT_Launcher_A_title>5</AT_Launcher_A_title>
+			</options> 
+		</li>
+		
+			<!-- 전차화 습격 1단계 근거리-->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>5</commonality>
+			<maxTotalPoints>8500</maxTotalPoints>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<AT_Charge_B>70</AT_Charge_B>
+				<AT_Power_B>20</AT_Power_B>
+				<AT_Launcher_B>5</AT_Launcher_B>
+				<Anty_Commander_title>5</Anty_Commander_title>
+			</options> 
+		</li>
+
+			<!-- 전차화 습격 1단계 원거리-->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>5</commonality>
+			<maxTotalPoints>8500</maxTotalPoints>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<AT_Rifle_B_title>70</AT_Rifle_B_title>
+				<AT_Power>20</AT_Power>
+				<AT_Launcher_A_title>5</AT_Launcher_A_title>
+				<Anty_Commander_title>5</Anty_Commander_title>
+			</options> 
+		</li>
+
+			<!-- 전차화 습격 1단계 혼합-->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>5</commonality>
+			<maxTotalPoints>8500</maxTotalPoints>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<AT_Rifle_B_title>35</AT_Rifle_B_title>
+				<AT_Charge_B>35</AT_Charge_B>
+				<AT_Power_B>10</AT_Power_B>
+				<AT_Power>10</AT_Power>
+				<AT_Launcher_B>5</AT_Launcher_B>
+				<Anty_Commander_title>5</Anty_Commander_title>
+			</options> 
+		</li>
+
+			<!-- 전차화 습격 2단계 근거리-->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>3</commonality>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<AT_Charge_B>20</AT_Charge_B>
+				<AT_Power_A_B>10</AT_Power_A_B>
+				<AT_Power_A_C>10</AT_Power_A_C>
+				<AT_Power_B>50</AT_Power_B>
+				<AT_Launcher_B>5</AT_Launcher_B>
+				<Anty_Commander_title>5</Anty_Commander_title>
+			</options> 
+		</li>
+
+			<!-- 전차화 습격 2단계 원거리-->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>3</commonality>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<AT_Rifle_B_title>10</AT_Rifle_B_title>
+				<AT_Power>10</AT_Power>
+				<AT_Power_A>50</AT_Power_A>
+				<AT_Power_A_B>10</AT_Power_A_B>
+				<AT_Launcher_A_title>10</AT_Launcher_A_title>
+				<AT_Launcher_B>5</AT_Launcher_B>
+				<Anty_Commander_title>5</Anty_Commander_title>
+			</options> 
+		</li>
+
+			<!-- 전차화 습격 2단계 혼합-->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>3</commonality>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<AT_Rifle_B_title>10</AT_Rifle_B_title>
+				<AT_Power>10</AT_Power>
+				<AT_Power_A>25</AT_Power_A>
+				<AT_Power_A_B>5</AT_Power_A_B>
+				<AT_Power_B>25</AT_Power_B>
+				<AT_Launcher_A_title>10</AT_Launcher_A_title>
+				<AT_Launcher_B>5</AT_Launcher_B>
+				<Anty_Commander_title>5</Anty_Commander_title>
+			</options> 
+		</li>
+
+			<!-- 전차화 습격 3단계 근거리-->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>1</commonality>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<AT_Power_A_B>30</AT_Power_A_B>
+				<AT_Power_A_C>10</AT_Power_A_C>
+				<AT_Power_B>50</AT_Power_B>
+				<AT_Power_C>5</AT_Power_C>
+				<Anty_Commander_title>5</Anty_Commander_title>
+			</options> 
+		</li>
+	
+			<!-- 전차화 습격 3단계 원거리-->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>1</commonality>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<AT_Power_A>50</AT_Power_A>
+				<AT_Power_A_B>30</AT_Power_A_B>
+				<AT_Power_C>5</AT_Power_C>
+				<Anty_Commander_title>5</Anty_Commander_title>
+			</options> 
+		</li>
+
+			<!-- 전차화 습격 3단계 혼합-->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>1</commonality>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<AT_Power_B>25</AT_Power_B>
+				<AT_Power_A>25</AT_Power_A>
+				<AT_Power_A_B>30</AT_Power_A_B>
+				<AT_Power_C>5</AT_Power_C>
+				<Anty_Commander_title>5</Anty_Commander_title>
+			</options> 
+		</li>
+
+		<li>
+			<kindDef>Settlement</kindDef>
+			<maxTotalPoints>5500</maxTotalPoints>
+			<options>
+				<AT_Rifle_B_title>10</AT_Rifle_B_title>
+				<AT_Launcher_A_title>10</AT_Launcher_A_title>
+				<AT_Launcher_B>10</AT_Launcher_B>
+				<AT_Charge_B>50</AT_Charge_B>
+				<AT_SingleUse>10</AT_SingleUse>
+			</options>
+		</li>
+
+		<li>
+			<kindDef>Settlement</kindDef>
+			<options>
+				<AT_Rifle_B>10</AT_Rifle_B>
+				<AT_Launcher_A>5</AT_Launcher_A>
+				<AT_Launcher_B>5</AT_Launcher_B>
+				<AT_Charge_B>10</AT_Charge_B>
+				<AT_Power>5</AT_Power>
+				<AT_Power_A>10</AT_Power_A>
+				<AT_Power_A_B>10</AT_Power_A_B>
+				<AT_Power_A_C>10</AT_Power_A_C>
+				<AT_Power_B>10</AT_Power_B>
+				<AT_Power_C>5</AT_Power_C>
+				<Anty_Commander_title>5</Anty_Commander_title>
+				<AT_SingleUse>5</AT_SingleUse>
+				<AT_Dreadnought_A>5</AT_Dreadnought_A>
+				<AT_Hiveguard_A>15</AT_Hiveguard_A>
+			</options>
+		</li>
+
+		<li>
+			<kindDef>Settlement</kindDef>
+			<options>
+				<AT_Power_A_B>20</AT_Power_A_B>
+				<AT_Power_A_C>20</AT_Power_A_C>
+				<AT_Power_B>40</AT_Power_B>
+				<AT_Power_C>10</AT_Power_C>
+				<AT_Dreadnought_A>1</AT_Dreadnought_A>
+				<AT_Hiveguard_A>15</AT_Hiveguard_A>
+			</options>
+		</li>
+
+		<li>
+			<kindDef>Settlement</kindDef>
+			<options>
+				<AT_Launcher_B>10</AT_Launcher_B>
+				<AT_Power_A>40</AT_Power_A>
+				<AT_Power_A_B>20</AT_Power_A_B>
+				<AT_Power_A_C>20</AT_Power_A_C>
+				<AT_Power_C>5</AT_Power_C>
+				<AT_Dreadnought_A>5</AT_Dreadnought_A>
+				<AT_Hiveguard_A>15</AT_Hiveguard_A>
+			</options>
+		</li>
+		
+		<li>
+			<kindDef>Peaceful</kindDef>
+			<options>
+				<AT_Charge_B>15</AT_Charge_B>
+				<AT_Rifle_B_title>20</AT_Rifle_B_title>
+				<AT_Charge_A>15</AT_Charge_A>
+				<AT_Rifle_A>20</AT_Rifle_A>
+			</options>
+		</li>
+	  
+		<li>
+        <kindDef>Trader</kindDef>
+			<traders>
+				<Anty_Commander_title>1</Anty_Commander_title>
+			</traders>
+			<carriers>
+				<Elephant>6</Elephant>
+				<Muffalo>6</Muffalo>
+				<Dromedary>5</Dromedary>
+			</carriers>
+			<guards>
+				<AT_Charge_B>40</AT_Charge_B>
+				<AT_Rifle_B_title>20</AT_Rifle_B_title>
+				<AT_Charge_A>15</AT_Charge_A>
+				<AT_Rifle_A>20</AT_Rifle_A>
+				<AT_SingleUse>3</AT_SingleUse>
+				<AT_Raid_A>1</AT_Raid_A>
+			</guards>
+		</li>
+		</pawnGroupMakers>
+	</FactionDef>
+	
+	<FactionDef ParentName="AntyFactionBase">
+		<defName>AntyHive_C</defName>
+		<label>Anty Mutant Hive</label>
+		<settlementGenerationWeight>1</settlementGenerationWeight>
+		<autoFlee>false</autoFlee>
+		<canSiege>false</canSiege>
+		<hostileToFactionlessHumanlikes>true</hostileToFactionlessHumanlikes>
+		<description>It is a very powerful Hive made up mainly of mutants.</description>
+		<colorSpectrum>
+		  <li>(1, 1, 1)</li>
+		  <li>(1, 1, 1)</li>
+		</colorSpectrum>
+		<settlementTexturePath>Icon/AT_Icon_C</settlementTexturePath>
+		<factionIconPath>Icon/AT_Icon_C</factionIconPath>
+		<factionNameMaker>NamerFactionAnty_Daceton</factionNameMaker>
+		<requiredCountAtGameStart>0</requiredCountAtGameStart>
+		<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+		<permanentEnemyToEveryoneExcept>
+			<li>AntyHive</li>
+			<li>AntyHive_B</li>
+			<li>AT_PlayerFaction</li>
+			<li>AT_PlayerFaction_B</li>
+			<li>AT_PlayerFaction_C</li>
+			
+		</permanentEnemyToEveryoneExcept>
+		<raidCommonalityFromPointsCurve Inherit="false">
+			<points>
+				<li>(10, 0)</li>
+				<li>(8000, 3.0)</li>
+			</points>
+		</raidCommonalityFromPointsCurve>
+		<pawnGroupMakers Inherit="false">
+			<!-- 초기일반 -->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>80</commonality>
+			<maxTotalPoints>2500</maxTotalPoints>
+			<disallowedStrategies>
+				<li>ImmediateAttackSappers</li>
+			</disallowedStrategies>
+			<options>
+				<AT_Raid_A>75</AT_Raid_A>
+				<AT_Rifle_A_Mutant>25</AT_Rifle_A_Mutant>
+				<Anty_prototype>10</Anty_prototype>
+				<Anty_swarmy MayRequire="Ludeon.RimWorld.Biotech">15</Anty_swarmy>
+			</options> 
+		</li>
+		
+			<!-- 일반 악성 재고 혼합 -->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>80</commonality>
+			<maxTotalPoints>3500</maxTotalPoints>
+			<disallowedStrategies>
+				<li>ImmediateAttackSappers</li>
+			</disallowedStrategies>
+			<options>
+				<AT_Raid_A>50</AT_Raid_A>
+				<AT_Rifle_A_Mutant>25</AT_Rifle_A_Mutant>
+				<Anty_prototype>40</Anty_prototype>
+				<Anty_swarmy MayRequire="Ludeon.RimWorld.Biotech">15</Anty_swarmy>
+			</options> 
+		</li>
+		
+			<!-- 일반 -->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>80</commonality>
+			<maxTotalPoints>3500</maxTotalPoints>
+			<disallowedStrategies>
+				<li>ImmediateAttackSappers</li>
+			</disallowedStrategies>
+			<options>
+				<AT_Raid_A>50</AT_Raid_A>
+				<AT_Rifle_A_Mutant>25</AT_Rifle_A_Mutant>
+				<AT_Charge_A_Mutant>40</AT_Charge_A_Mutant>
+				<Anty_prototype>20</Anty_prototype>
+				<Anty_swarmy MayRequire="Ludeon.RimWorld.Biotech">15</Anty_swarmy>
+			</options> 
+		</li>
+
+			<!-- 정규 혼합 -->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>30</commonality>
+			<maxTotalPoints>5000</maxTotalPoints>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<AT_Rifle_A_Mutant>10</AT_Rifle_A_Mutant>
+				<Anty_Commander_Mutant>5</Anty_Commander_Mutant>
+				<AT_Charge_A_Mutant>40</AT_Charge_A_Mutant>
+				<AT_Charge_B_Mutant>20</AT_Charge_B_Mutant>
+				<Anty_swarmy MayRequire="Ludeon.RimWorld.Biotech">15</Anty_swarmy>
+			</options> 
+		</li>
+
+			<!-- 정규-화력강화 혼합 -->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>20</commonality>
+			<maxTotalPoints>7000</maxTotalPoints>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<AT_Charge_B_Mutant>40</AT_Charge_B_Mutant>
+				<Anty_Commander_Mutant>5</Anty_Commander_Mutant>
+				<Anty_swarmy MayRequire="Ludeon.RimWorld.Biotech">15</Anty_swarmy>
+			</options> 
+		</li>
+
+			<!-- 정규-중앙드랍, 브리칭 -->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>10</commonality>
+			<disallowedStrategies>
+				<li>ImmediateAttack</li>
+				<li>ImmediateAttackSmart</li>
+				<li>StageThenAttack</li>
+			</disallowedStrategies>
+			<options>
+				<Anty_Commander_Mutant>5</Anty_Commander_Mutant>
+				<AT_Charge_B_Mutant>80</AT_Charge_B_Mutant>
+				<Anty_swarmy MayRequire="Ludeon.RimWorld.Biotech">15</Anty_swarmy>
+			</options> 
+		</li>
+		
+			<!-- 악성 재고 습격 -->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>5</commonality>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<Anty_swarmy MayRequire="Ludeon.RimWorld.Biotech">100</Anty_swarmy>
+			</options> 
+		</li>
+		
+			<!-- 전차화 습격 1단계 혼합-->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>5</commonality>
+			<maxTotalPoints>8500</maxTotalPoints>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<AT_Charge_B_Mutant>70</AT_Charge_B_Mutant>
+				<AT_Power_B_Mutant>40</AT_Power_B_Mutant>
+				<AT_Dreadnought_A>1</AT_Dreadnought_A>
+				<Anty_Commander_Mutant>5</Anty_Commander_Mutant>
+				<AT_TriJaw_A MayRequire="Ludeon.RimWorld.Biotech">1</AT_TriJaw_A>
+				<Anty_swarmy MayRequire="Ludeon.RimWorld.Biotech">15</Anty_swarmy>
+			</options> 
+		</li>
+
+			<!-- 전차화 습격 2단계 혼합-->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>3</commonality>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<AT_Power_A_B_Mutant>20</AT_Power_A_B_Mutant>
+				<AT_Power_A_C_Mutant>20</AT_Power_A_C_Mutant>
+				<AT_Power_B_Mutant>70</AT_Power_B_Mutant>
+				<AT_Dreadnought_A>1</AT_Dreadnought_A>
+				<Anty_Commander_Mutant>5</Anty_Commander_Mutant>
+				<AT_TriJaw_A MayRequire="Ludeon.RimWorld.Biotech">1</AT_TriJaw_A>
+				<Anty_swarmy MayRequire="Ludeon.RimWorld.Biotech">15</Anty_swarmy>
+			</options> 
+		</li>
+
+			<!-- 전차화 습격 3단계 혼합-->
+		<li> 
+			<kindDef>Combat</kindDef>
+			<commonality>1</commonality>
+			<disallowedStrategies>
+			</disallowedStrategies>
+			<options>
+				<AT_Dreadnought_A>1</AT_Dreadnought_A>
+				<AT_Power_B_Mutant>70</AT_Power_B_Mutant>
+				<AT_Power_A_B_Mutant>30</AT_Power_A_B_Mutant>
+				<AT_Power_A_C_Mutant>20</AT_Power_A_C_Mutant>
+				<AT_Power_C_Mutant>20</AT_Power_C_Mutant>
+				<Anty_Commander_Mutant>5</Anty_Commander_Mutant>
+				<AT_TriJaw_A MayRequire="Ludeon.RimWorld.Biotech">1</AT_TriJaw_A>
+				<Anty_swarmy MayRequire="Ludeon.RimWorld.Biotech">15</Anty_swarmy>
+			</options> 
+		</li>
+
+		<li>
+			<kindDef>Settlement</kindDef>
+			<maxTotalPoints>5500</maxTotalPoints>
+			<options>
+				<AT_Rifle_B_title>10</AT_Rifle_B_title>
+				<AT_Launcher_A_title>10</AT_Launcher_A_title>
+				<AT_Launcher_B>10</AT_Launcher_B>
+				<AT_Charge_B>50</AT_Charge_B>
+			</options>
+		</li>
+
+		<li>
+			<kindDef>Settlement</kindDef>
+			<options>
+				<AT_Rifle_B>10</AT_Rifle_B>
+				<AT_Launcher_A>5</AT_Launcher_A>
+				<AT_Launcher_B>5</AT_Launcher_B>
+				<AT_Charge_B>10</AT_Charge_B>
+				<AT_Power>5</AT_Power>
+				<AT_Power_A>10</AT_Power_A>
+				<AT_Power_A_B_Mutant>10</AT_Power_A_B_Mutant>
+				<AT_Power_A_C_Mutant>10</AT_Power_A_C_Mutant>
+				<AT_Power_B>10</AT_Power_B>
+				<AT_Power_C_Mutant>5</AT_Power_C_Mutant>
+				<Anty_Commander_Mutant>5</Anty_Commander_Mutant>
+				<AT_SingleUse>5</AT_SingleUse>
+				<AT_Dreadnought_A>5</AT_Dreadnought_A>
+				<AT_Hiveguard_A>15</AT_Hiveguard_A>
+				<AT_TriJaw_A MayRequire="Ludeon.RimWorld.Biotech">1</AT_TriJaw_A>
+			</options>
+		</li>
+
+		<li>
+			<kindDef>Settlement</kindDef>
+			<options>
+				<AT_Power_A_B_Mutant>20</AT_Power_A_B_Mutant>
+				<AT_Power_A_C_Mutant>20</AT_Power_A_C_Mutant>
+				<AT_Power_B>10</AT_Power_B>
+				<AT_Power_C_Mutant>10</AT_Power_C_Mutant>
+				<AT_Dreadnought_A>40</AT_Dreadnought_A>
+				<AT_Hiveguard_A>15</AT_Hiveguard_A>
+				<AT_TriJaw_A MayRequire="Ludeon.RimWorld.Biotech">1</AT_TriJaw_A>
+			</options>
+		</li>
+
+		<li>
+			<kindDef>Settlement</kindDef>
+			<options>
+				<AT_Launcher_B>10</AT_Launcher_B>
+				<AT_Power_A>10</AT_Power_A>
+				<AT_Power_A_B_Mutant>20</AT_Power_A_B_Mutant>
+				<AT_Power_A_C_Mutant>10</AT_Power_A_C_Mutant>
+				<AT_Power_C_Mutant>5</AT_Power_C_Mutant>
+				<AT_Dreadnought_A>50</AT_Dreadnought_A>
+				<AT_Hiveguard_A>15</AT_Hiveguard_A>
+				<AT_TriJaw_A MayRequire="Ludeon.RimWorld.Biotech">1</AT_TriJaw_A>
+			</options>
+		</li>
+		
+		<li>
+			<kindDef>Peaceful</kindDef>
+			<options>
+				<AT_Charge_B>15</AT_Charge_B>
+				<AT_Rifle_B_title>20</AT_Rifle_B_title>
+				<AT_Dreadnought_A>50</AT_Dreadnought_A>
+				<AT_Rifle_A_Mutant>20</AT_Rifle_A_Mutant>
+			</options>
+		</li>
+	  
+		<li>
+        <kindDef>Trader</kindDef>
+			<traders>
+				<Anty_Commander_Mutant>1</Anty_Commander_Mutant>
+			</traders>
+			<carriers>
+				<Elephant>6</Elephant>
+				<Muffalo>6</Muffalo>
+				<Dromedary>5</Dromedary>
+			</carriers>
+			<guards>
+				<AT_Dreadnought_A>50</AT_Dreadnought_A>
+				<AT_Rifle_B_title>20</AT_Rifle_B_title>
+				<AT_Charge_A>15</AT_Charge_A>
+				<AT_Rifle_A_Mutant>20</AT_Rifle_A_Mutant>
+				<AT_SingleUse>3</AT_SingleUse>
+				<AT_Raid_A>1</AT_Raid_A>
+			</guards>
+		</li>
+		</pawnGroupMakers>
+	</FactionDef>
+	
+	<ThingSetMakerDef>
+		<defName>AntyRaidLootMaker</defName>
+			<root Class="ThingSetMaker_MarketValue">
+				<fixedParams>
+					<filter>
+						<thingDefs>
+							<li>Silver</li>
+							<li>MedicineIndustrial</li>
+							<li>Neutroamine</li>
+							<li>GoJuice</li>
+							<li>Heart</li>
+							<li>Lung</li>
+							<li>Kidney</li>
+							<li>Liver</li>
+						</thingDefs>
+					</filter>
+				</fixedParams>
+			</root>
+	</ThingSetMakerDef>
+
+	<CultureDef>
+		<defName>AntyCulture</defName>
+		<label>Anty Hive</label>
+		<description>Anty Hive</description>
+		<ideoNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerIdeoAnty_rule</ideoNameMaker>
+		<deityNameMaker MayRequire="Ludeon.RimWorld.Ideology">AntyGod_rule</deityNameMaker>
+		<deityTypeMaker MayRequire="Ludeon.RimWorld.Ideology">DeityTypeMakerAnty_rule</deityTypeMaker>
+		<leaderTitleMaker MayRequire="Ludeon.RimWorld.Ideology">LeaderTitleMakerAnty_rule</leaderTitleMaker>
+		<festivalNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerFestivalAstropolitan</festivalNameMaker>
+		<allowedPlaceTags>
+			<li>OriginSpacer</li>
+		</allowedPlaceTags>
+		<iconPath>Icon/AT_Icon_B</iconPath>
+		<iconColor>(1.0, 1.0, 1.0)</iconColor>
+		<thingStyleCategories>
+			<li MayRequire="Ludeon.RimWorld.Ideology">
+				<category>Techist</category>
+				<priority>2</priority>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">
+				<category>Spikecore</category>
+				<priority>2</priority>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">
+				<category>Morbid</category>
+				<priority>2</priority>
+			</li>
+		</thingStyleCategories>
+		<styleItemTags>
+			<li>
+				<tag>Urban</tag>
+				<baseWeight>1</baseWeight>
+				<weightFactor>1</weightFactor>
+			</li>
+			<li>
+				<tag>Rural</tag>
+				<baseWeight>1</baseWeight>
+				<weightFactor>1</weightFactor>
+			</li>
+			<li>
+				<tag>NoBeard</tag>
+				<baseWeight>1</baseWeight>
+				<weightFactor>1</weightFactor>
+			</li>
+			<li>
+				<tag>TattooFaceTribal</tag>
+				<baseWeight>0.4</baseWeight>
+				<weightFactor>1</weightFactor>
+			</li>
+			<li>
+				<tag>TattooBodyTribal</tag>
+				<baseWeight>0.4</baseWeight>
+				<weightFactor>1</weightFactor>
+			</li>
+			<li>
+				<tag>NoTattoo</tag>
+				<baseWeight>1</baseWeight>
+				<weightFactor>1</weightFactor>
+			</li>
+		</styleItemTags>
+	</CultureDef>
+
+	<StyleItemCategoryDef>
+		<defName>AThair</defName>
+		<label>Anty hair style</label>
+	</StyleItemCategoryDef>
+
+	<FactionDef ParentName="AntyFactionBase">
+		<defName>ProtyHive</defName>
+		<label>Wild Proty Hive</label>
+		<leaderTitle>emergency food</leaderTitle>
+		<fixedName>Wild Proty Hive</fixedName>
+		<description>Wild Proty Hive.</description>
+		<pawnSingular>Proty</pawnSingular>
+		<pawnsPlural>Proties</pawnsPlural>
+		<settlementGenerationWeight>0.1</settlementGenerationWeight>
+		<requiredCountAtGameStart>0</requiredCountAtGameStart>
+		<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+		<factionIconPath>Icon/AT_Icon_P</factionIconPath>
+		<backstoryCategories Inherit="false">
+			<li>Tribal</li>
+			<li>Proty_Doll</li>
+		</backstoryCategories>
+		<colorSpectrum Inherit="false">
+			<li>(1, 1, 1)</li>
+		</colorSpectrum>
+		<raidCommonalityFromPointsCurve Inherit="false">
+			<points>
+				<li>(100,  1.25)</li>
+				<li>(8000, 2.55)</li>
+			</points>
+		</raidCommonalityFromPointsCurve>
+		<maxPawnCostPerTotalPointsCurve Inherit="false">
+			<points>
+				<li>(0,35)</li>
+				<li>(70, 50)</li>
+				<li>(700, 100)</li>
+				<li>(1300, 150)</li>
+				<li>(100000, 10000)</li>
+			</points>
+		</maxPawnCostPerTotalPointsCurve>
+		<autoFlee>true</autoFlee>
+		<canUseAvoidGrid>false</canUseAvoidGrid>
+		<techLevel>Animal</techLevel>
+		<canSiege>false</canSiege>
+		<settlementTexturePath>Icon/AT_Icon_P</settlementTexturePath>
+		<allowedArrivalTemperatureRange>0~60</allowedArrivalTemperatureRange>
+		<maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>90</configurationListOrderPriority>
+		<caravanTraderKinds Inherit="false">
+			<li>Caravan_Proty</li>
+		</caravanTraderKinds>
+		<visitorTraderKinds Inherit="false">
+			<li>Caravan_Proty</li>
+		</visitorTraderKinds>
+		<baseTraderKinds Inherit="false">
+			<li>Caravan_Proty</li>
+		</baseTraderKinds>
+		<pawnGroupMakers Inherit="false">
+			<li>
+				<kindDef>Combat</kindDef>
+				<options>
+					<Anty_prototype_Wild>1000</Anty_prototype_Wild>
+					<Anty_prototype_Wild_Melee>100</Anty_prototype_Wild_Melee>
+					<Anty_prototype_Wild_Range>50</Anty_prototype_Wild_Range>
+					<Tribal_Proty>1</Tribal_Proty>
+					<Tribal_Proty_Anty>2</Tribal_Proty_Anty>
+					<Tribal_Proty_Miho MayRequire="miho.fortifiedoutremer">5</Tribal_Proty_Miho>
+					<Tribal_Proty_Yuran MayRequire="RooAndGloomy.YuranRaceMod">5</Tribal_Proty_Yuran>
+					<Tribal_Proty_Maru MayRequire="VAMV.MaruRaceMod">5</Tribal_Proty_Maru>
+					<Tribal_Proty_Ratkin MayRequire="Solaris.RatkinRaceMod">5</Tribal_Proty_Ratkin>
+				</options>
+			</li>
+			<li>
+				<kindDef>Settlement</kindDef>
+				<options>
+					<Anty_prototype_Wild>100</Anty_prototype_Wild>
+					<Anty_prototype_Wild_Melee>100</Anty_prototype_Wild_Melee>
+					<Anty_prototype_Wild_Range>50</Anty_prototype_Wild_Range>
+					<Tribal_Proty>1</Tribal_Proty>
+					<Tribal_Proty_Anty>2</Tribal_Proty_Anty>
+					<Tribal_Proty_Miho MayRequire="miho.fortifiedoutremer">5</Tribal_Proty_Miho>
+					<Tribal_Proty_Yuran MayRequire="RooAndGloomy.YuranRaceMod">5</Tribal_Proty_Yuran>
+					<Tribal_Proty_Maru MayRequire="VAMV.MaruRaceMod">5</Tribal_Proty_Maru>
+					<Tribal_Proty_Ratkin MayRequire="Solaris.RatkinRaceMod">5</Tribal_Proty_Ratkin>
+				</options>
+			</li>
+			
+			<li>
+				<kindDef>Peaceful</kindDef>
+				<options>
+					<Anty_prototype_Wild>100</Anty_prototype_Wild>
+					<Tribal_Proty>1</Tribal_Proty>
+					<Tribal_Proty_Anty>2</Tribal_Proty_Anty>
+					<Tribal_Proty_Miho MayRequire="miho.fortifiedoutremer">5</Tribal_Proty_Miho>
+					<Tribal_Proty_Yuran MayRequire="RooAndGloomy.YuranRaceMod">5</Tribal_Proty_Yuran>
+					<Tribal_Proty_Maru MayRequire="VAMV.MaruRaceMod">5</Tribal_Proty_Maru>
+					<Tribal_Proty_Ratkin MayRequire="Solaris.RatkinRaceMod">5</Tribal_Proty_Ratkin>
+				</options>
+			</li>
+			<li>
+				<kindDef>Trader</kindDef>
+					<traders>
+						<Tribal_Proty>1</Tribal_Proty>
+						<Tribal_Proty_Anty>2</Tribal_Proty_Anty>
+						<Tribal_Proty_Miho MayRequire="miho.fortifiedoutremer">5</Tribal_Proty_Miho>
+						<Tribal_Proty_Yuran MayRequire="RooAndGloomy.YuranRaceMod">5</Tribal_Proty_Yuran>
+						<Tribal_Proty_Maru MayRequire="VAMV.MaruRaceMod">5</Tribal_Proty_Maru>
+						<Tribal_Proty_Ratkin MayRequire="Solaris.RatkinRaceMod">5</Tribal_Proty_Ratkin>
+					</traders>
+					<carriers>
+						<Elephant>6</Elephant>
+						<Muffalo>6</Muffalo>
+						<Dromedary>5</Dromedary>
+					</carriers>
+					<guards>
+						<Anty_prototype_Wild>5</Anty_prototype_Wild>
+						<Anty_prototype_Wild_Melee>1</Anty_prototype_Wild_Melee>
+						<Anty_prototype_Wild_Range>1</Anty_prototype_Wild_Range>
+					</guards>
+			</li>
+		</pawnGroupMakers>
+	</FactionDef>
+	
+	<ThingDef ParentName="ActiveDropPod">
+		<defName>ActiveDropPodAnty</defName>
+		<soundOpen>DropPod_Open_Mechanoid</soundOpen>
+		<graphicData>
+			<texPath>Things/Building/AntyDrop/DropPodReady</texPath>
+			<drawSize>(2.2,2.2)</drawSize>
+		</graphicData>
+		<damageMultipliers>
+			<li>
+				<damageDef>AT_AcidDamage</damageDef>
+				<multiplier>0</multiplier>
+			</li>
+			<li>
+				<damageDef>AT_AcidDamage_High</damageDef>
+				<multiplier>0</multiplier>
+			</li>
+			<li>
+				<damageDef>AT_glueBomb</damageDef>
+				<multiplier>0</multiplier>
+			</li>
+			<li>
+				<damageDef>AT_glueBomb_B</damageDef>
+				<multiplier>0</multiplier>
+			</li>
+			<li>
+				<damageDef>Thump</damageDef>
+				<multiplier>0</multiplier>
+			</li>
+			<li>
+				<damageDef>AT_AcidBullet</damageDef>
+				<multiplier>0</multiplier>
+			</li>
+			<li>
+				<damageDef>AT_AcidBomb</damageDef>
+				<multiplier>0</multiplier>
+			</li>
+			<li>
+				<damageDef>AT_AcidBomb_B</damageDef>
+				<multiplier>0</multiplier>
+			</li>
+			<li>
+				<damageDef>AT_AcidBomb_C</damageDef>
+				<multiplier>0</multiplier>
+			</li>
+			<li>
+				<damageDef>Flame</damageDef>
+				<multiplier>0</multiplier>
+			</li>
+			<li>
+				<damageDef>Burn</damageDef>
+				<multiplier>0</multiplier>
+			</li>
+		</damageMultipliers>
+	</ThingDef>
+	
+	<ThingDef ParentName="DropPodIncoming" Name="DropPodIncomingAntyBase">
+		<defName>DropPodIncomingAnty</defName>
+		<graphicData>
+			<texPath>Things/Building/AntyDrop/DropPodAngle</texPath>
+			<drawSize>(2.2,2.2)</drawSize>
+		</graphicData>
+		<skyfaller>
+			<anticipationSound>DropPod_Fall_Mechanoid</anticipationSound>
+			<impactSound>DropPod_Impact</impactSound>
+			<explosionRadius>1.9</explosionRadius>
+			<explosionDamage>AT_AcidBomb_B</explosionDamage>
+			<explosionDamageFactor>0.01</explosionDamageFactor>
+		</skyfaller>
+		<damageMultipliers>
+			<li>
+				<damageDef>AT_AcidDamage</damageDef>
+				<multiplier>0</multiplier>
+			</li>
+			<li>
+				<damageDef>AT_AcidDamage_High</damageDef>
+				<multiplier>0</multiplier>
+			</li>
+			<li>
+				<damageDef>AT_glueBomb</damageDef>
+				<multiplier>0</multiplier>
+			</li>
+			<li>
+				<damageDef>AT_glueBomb_B</damageDef>
+				<multiplier>0</multiplier>
+			</li>
+			<li>
+				<damageDef>Thump</damageDef>
+				<multiplier>0</multiplier>
+			</li>
+			<li>
+				<damageDef>AT_AcidBullet</damageDef>
+				<multiplier>0</multiplier>
+			</li>
+			<li>
+				<damageDef>AT_AcidBomb</damageDef>
+				<multiplier>0</multiplier>
+			</li>
+			<li>
+				<damageDef>AT_AcidBomb_B</damageDef>
+				<multiplier>0</multiplier>
+			</li>
+			<li>
+				<damageDef>AT_AcidBomb_C</damageDef>
+				<multiplier>0</multiplier>
+			</li>
+			<li>
+				<damageDef>Flame</damageDef>
+				<multiplier>0</multiplier>
+			</li>
+			<li>
+				<damageDef>Burn</damageDef>
+				<multiplier>0</multiplier>
+			</li>
+		</damageMultipliers>
+	</ThingDef>
+	
+	<!-- <ThingDef ParentName="DropPodIncomingAntyBase">
+		<defName>DropPodIncomingAntySpawn</defName>
+		<killedLeavings Inherit="false">
+			<AT_Bunker_Ready>1</AT_Bunker_Ready>
+		</killedLeavings>
+	</ThingDef> -->
+ 
+</Defs>

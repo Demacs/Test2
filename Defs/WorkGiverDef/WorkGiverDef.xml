@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<WorkGiverDef>
+		<defName>DoBillsAnty_breeding_Spot</defName>
+		<label>make things</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Anty_breeding</workType>
+		<priorityInType>25</priorityInType>
+		<fixedBillGiverDefs>
+			<li>Anty_breeding_Spot</li>
+		</fixedBillGiverDefs>
+		<verb>work</verb>
+		<gerund>working at</gerund>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+	
+	<WorkTypeDef>
+		<defName>Anty_breeding</defName>
+		<labelShort>Breeding</labelShort>
+		<pawnLabel>Breeder</pawnLabel>
+		<gerundLabel>working with</gerundLabel>
+		<description>work of Anty breeding spot.</description>
+		<verb>working with</verb>
+		<naturalPriority>410</naturalPriority>
+		<alwaysStartActive>false</alwaysStartActive>
+		<workTags>
+			<li>Commoner</li>
+			<li>AllWork</li>
+		</workTags>
+	</WorkTypeDef>
+
+</Defs>
