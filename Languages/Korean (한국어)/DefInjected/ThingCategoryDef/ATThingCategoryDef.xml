@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <ATApparel.label>앤티 의류</ATApparel.label>
+  <AThat.label>앤티 모자</AThat.label>
+  <ATgear.label>앤티 보호구</ATgear.label>
+  <ATHeadgear.label>앤티 머리보호구</ATHeadgear.label>
+  <AT_Weapons.label>앤티 무기</AT_Weapons.label>
+  <EggAntyThingCategoryDef.label>앤티 알</EggAntyThingCategoryDef.label>
+  <ManufacturedAntyThingCategoryDef.label>앤티 생산품</ManufacturedAntyThingCategoryDef.label>
+</LanguageData>

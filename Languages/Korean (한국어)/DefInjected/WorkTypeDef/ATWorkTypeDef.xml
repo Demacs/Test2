@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  
+	<Anty_breeding.label>번식장 작업</Anty_breeding.label>
+	<Anty_breeding.labelShort>번식장 작업</Anty_breeding.labelShort>
+	<Anty_breeding.pawnLabel>번식자</Anty_breeding.pawnLabel>
+	<Anty_breeding.gerundLabel>번식장 작업</Anty_breeding.gerundLabel>
+	<Anty_breeding.description>앤티 번식장 작업입니다.</Anty_breeding.description>
+	<Anty_breeding.verb>에서 작업</Anty_breeding.verb>
+
+</LanguageData>

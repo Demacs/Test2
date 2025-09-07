@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  
+	<AT_BreedingSpeed.label>앤티 알 산란속도</AT_BreedingSpeed.label>
+	<AT_BreedingSpeed.description>산란속도.</AT_BreedingSpeed.description>
+	
+	<AT_pelletCount.label>펠릿 수</AT_pelletCount.label>
+	<AT_pelletCount.description>이 무기는 한 번에 여러 개의 총알을 발사합니다.</AT_pelletCount.description>
+	
+	<AT_Acid_damage.label>지속피해량</AT_Acid_damage.label>
+	<AT_Acid_damage.description>이 무기가 가할 수 있는 지속피해입니다.</AT_Acid_damage.description>
+	<AT_Acid_damage.formatString>{0}/5초</AT_Acid_damage.formatString>
+	
+	<AT_Acid_damage_duration.label>지속피해 지속시간</AT_Acid_damage_duration.label>
+	<AT_Acid_damage_duration.description>이 무기가 가할 수 있는 지속피해의 지속시간입니다.</AT_Acid_damage_duration.description>
+	<AT_Acid_damage_duration.formatString>{0}초</AT_Acid_damage_duration.formatString>
+	
+	<AT_Acid_damage_destruction.label>부위파괴 요구 누적치</AT_Acid_damage_destruction.label>
+	<AT_Acid_damage_destruction.description>이 무기가 한 부위에 이 만큼의 피해를 입히면 남은 체력에 상관 없이 그 부위를 파괴합니다.</AT_Acid_damage_destruction.description>
+
+	<AT_Acid_damage_Melee.label>지속피해량</AT_Acid_damage_Melee.label>
+	<AT_Acid_damage_Melee.description>이 무기가 가할 수 있는 지속피해입니다.</AT_Acid_damage_Melee.description>
+	<AT_Acid_damage_Melee.formatString>{0}/5초</AT_Acid_damage_Melee.formatString>
+	
+	<AT_Acid_damage_duration_Melee.label>지속피해 지속시간</AT_Acid_damage_duration_Melee.label>
+	<AT_Acid_damage_duration_Melee.description>이 무기가 가할 수 있는 지속피해의 지속시간입니다.</AT_Acid_damage_duration_Melee.description>
+	<AT_Acid_damage_duration_Melee.formatString>{0}초</AT_Acid_damage_duration_Melee.formatString>
+	
+	<AT_Acid_damage_destruction_Melee.label>부위파괴 요구 누적치</AT_Acid_damage_destruction_Melee.label>
+	<AT_Acid_damage_destruction_Melee.description>이 무기가 한 부위에 이 만큼의 피해를 입히면 남은 체력에 상관 없이 그 부위를 파괴합니다.</AT_Acid_damage_destruction_Melee.description>
+
+</LanguageData>

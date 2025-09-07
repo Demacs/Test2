@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  
+	<Anty_Dorylus.label>도릴루스</Anty_Dorylus.label>
+	<Anty_Dorylus.description>장님개미 유전자. 시야를 대가로 강력한 근접전 능력을 가짐.</Anty_Dorylus.description>
+	<Anty_Linepithema_humile.label>라인피테마</Anty_Linepithema_humile.label>
+	<Anty_Linepithema_humile.description>민개미 유전자. 짧은 수명과 빠른 번식력을 가짐.</Anty_Linepithema_humile.description>
+	<Anty_Solenopsis_Invicta.label>솔레놉시스</Anty_Solenopsis_Invicta.label>
+	<Anty_Solenopsis_Invicta.description>붉은 불개미 유전자. 원거리전 능력을 대가로 강력한 근접전 능력을 가짐.</Anty_Solenopsis_Invicta.description>
+	<Anty_Anoplolepis_gracilipes.label>아노플로레피스</Anty_Anoplolepis_gracilipes.label>
+	<Anty_Anoplolepis_gracilipes.description>미친개미 유전자. 매우 짧은 수명과 매우 빠른 번식력을 가짐.</Anty_Anoplolepis_gracilipes.description>
+	<Anty_Tapinoma_melanocephalum.label>타피노마</Anty_Tapinoma_melanocephalum.label>
+	<Anty_Tapinoma_melanocephalum.description>유령개미 유전자. 뛰어난 위장력과 환경 적응력을 가짐.</Anty_Tapinoma_melanocephalum.description>
+	<Aggression_friendlyaggression_Anty.label>우호적 공격성</Aggression_friendlyaggression_Anty.label>
+	<Aggression_friendlyaggression_Anty.description>싸움이 곧 대화다.</Aggression_friendlyaggression_Anty.description>
+	<AntyAcidResistant.label>산성내성</AntyAcidResistant.label>
+	<AntyAcidResistant.description>이 유전자의 보유자는 빠르게 작용하는 특수한 땀샘과 내산성 피부를 가지고 있습니다. 이들은 산성으로 인한 피해를 적게 받습니다.</AntyAcidResistant.description>
+	<SuperAntyAcidResistant.label>초강산내성</SuperAntyAcidResistant.label>
+	<SuperAntyAcidResistant.description>이 유전자의 보유자는 빠르게 작용하는 특수한 땀샘과 내산성 피부를 가지고 있습니다. 이들은 초강산으로 인한 피해를 적게 받습니다.</SuperAntyAcidResistant.description>
+
+	<AntyCompoundeyes.label>다중겹눈</AntyCompoundeyes.label>
+	<AntyCompoundeyes.description>이 유전자의 보유자는 어두운 곳에서도 잘 볼 수 있으며 어둠과 관련된 기분 저하에 영향을 받지 않습니다.\n\n이들은 홀눈과 겹눈이 합쳐진 특수한 눈을 가지고 있습니다.</AntyCompoundeyes.description>
+
+	<AntyDecomposer.label>분해자</AntyDecomposer.label>
+	<AntyDecomposer.description>이 유전자의 보유자는 유전적으로 물체의 내부 구조에 대한 호기심을 가지고 있습니다.</AntyDecomposer.description>
+	
+	<AntyGeneticFlexibility.label>유전적 유연성</AntyGeneticFlexibility.label>
+	<AntyGeneticFlexibility.description>이 유전자의 보유자는 유전자 변이에 매우 유연하게 반응합니다.</AntyGeneticFlexibility.description>
+</LanguageData>

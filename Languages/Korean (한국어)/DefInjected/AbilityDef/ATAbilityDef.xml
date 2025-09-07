@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <Antypheromone_Suicideburst.label>자폭</Antypheromone_Suicideburst.label>
+  <Antypheromone_Suicideburst.description>강력한 폭발을 준비합니다.</Antypheromone_Suicideburst.description>
+
+  <AT_AP_SideAbility_AT_AP_Power_Head_E.label>레이저 유도</AT_AP_SideAbility_AT_AP_Power_Head_E.label>
+  <AT_AP_SideAbility_AT_AP_Power_Head_E.description>적을 표시해 더욱 효과적으로 타격할 수 있도록 합니다.</AT_AP_SideAbility_AT_AP_Power_Head_E.description>
+
+  <AT_AP_SideAbility_AT_AP_Power_E.label>투명화</AT_AP_SideAbility_AT_AP_Power_E.label>
+  <AT_AP_SideAbility_AT_AP_Power_E.description>순간적으로 빛을 왜곡해 적의 시야에서 벗어납니다.</AT_AP_SideAbility_AT_AP_Power_E.description>
+</LanguageData>

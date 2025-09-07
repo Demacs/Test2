@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <InstallAT_ExoProstheticLeg.label>다리 대체생물 설치</InstallAT_ExoProstheticLeg.label>
+  <InstallAT_ExoProstheticLeg.description>다리 대체생물을 설치합니다.</InstallAT_ExoProstheticLeg.description>
+  <InstallAT_ExoProstheticLeg.jobString>다리 대체생물 설치</InstallAT_ExoProstheticLeg.jobString>
+  
+  <InstallAT_ExoProstheticArm.label>팔 대체생물 설치</InstallAT_ExoProstheticArm.label>
+  <InstallAT_ExoProstheticArm.description>팔 대체생물을 설치합니다.</InstallAT_ExoProstheticArm.description>
+  <InstallAT_ExoProstheticArm.jobString>팔 대체생물 설치</InstallAT_ExoProstheticArm.jobString>
+
+  <Make_ActivatedRefleum.label>활성 리플리움 제작</Make_ActivatedRefleum.label>
+  <Make_ActivatedRefleum.description>리플리움으로 함선 엔진의 연료를 만들어냅니다.</Make_ActivatedRefleum.description>
+  <Make_ActivatedRefleum.jobString>활성 리플리움 제작</Make_ActivatedRefleum.jobString>
+
+  <AntyCorpseFlesh.label>재활용코어 제작(심장)</AntyCorpseFlesh.label>
+  <AntyCorpseFlesh.description>시체들을 이용하여 유기물 관리 코어를 만들어 냅니다.</AntyCorpseFlesh.description>
+  <AntyCorpseFlesh.jobString>재활용코어 제작(심장)</AntyCorpseFlesh.jobString>
+  
+  <AntyCorpseFlesh_B.label>재활용코어 제작(생체공학 심장)</AntyCorpseFlesh_B.label>
+  <AntyCorpseFlesh_B.description>시체들을 이용하여 유기물 관리 코어를 만들어 냅니다.</AntyCorpseFlesh_B.description>
+  <AntyCorpseFlesh_B.jobString>재활용코어 제작(생체공학 심장)</AntyCorpseFlesh_B.jobString>
+  
+  <AntyCorpseFlesh_C.label>재활용코어 제작(리플리움)</AntyCorpseFlesh_C.label>
+  <AntyCorpseFlesh_C.description>리플리움을 이용하여 유기물 관리 코어를 만들어 냅니다.</AntyCorpseFlesh_C.description>
+  <AntyCorpseFlesh_C.jobString>재활용코어 제작(리플리움)</AntyCorpseFlesh_C.jobString>
+  
+  <ButcherCorpseFlesh_mass.label>대량도축</ButcherCorpseFlesh_mass.label>
+  <ButcherCorpseFlesh_mass.description>3구의 시체를 한번에 도축합니다.</ButcherCorpseFlesh_mass.description>
+  <ButcherCorpseFlesh_mass.jobString>대량도축.</ButcherCorpseFlesh_mass.jobString>
+  <AT_ButcherCorpseMechanoid.label>대량분해</AT_ButcherCorpseMechanoid.label>
+  <AT_ButcherCorpseMechanoid.description>3구의 메카노이드 시체를 한번에 분해합니다.</AT_ButcherCorpseMechanoid.description>
+  <AT_ButcherCorpseMechanoid.jobString>대량분해.</AT_ButcherCorpseMechanoid.jobString>
+  <CookNutritional_jelly.label>영양 젤리 조리</CookNutritional_jelly.label>
+  <CookNutritional_jelly.description>영양 젤리를 조리합니다.</CookNutritional_jelly.description>
+  <CookNutritional_jelly.jobString>영양 젤리 조리.</CookNutritional_jelly.jobString>
+  <CookBattlestimulation_jelly.label>전투자극 젤리 조리</CookBattlestimulation_jelly.label>
+  <CookBattlestimulation_jelly.description>전투자극 젤리를 조리합니다.</CookBattlestimulation_jelly.description>
+  <CookBattlestimulation_jelly.jobString>전투자극 젤리 조리.</CookBattlestimulation_jelly.jobString>
+  <CookEraser_jelly.label>초기화젤리 조리</CookEraser_jelly.label>
+  <CookEraser_jelly.description>초기화젤리를 조리합니다.</CookEraser_jelly.description>
+  <CookEraser_jelly.jobString>초기화 젤리 조리.</CookEraser_jelly.jobString>
+  <Anty_Copy_ComponentIndustrial.label>부품복제</Anty_Copy_ComponentIndustrial.label>
+  <Anty_Copy_ComponentIndustrial.description>이미 만들어진 부품을 보고 복제합니다. 하지만 복잡한 작업이기 때문에 오래 걸리고 재료 또한 많이 소모됩니다.</Anty_Copy_ComponentIndustrial.description>
+  <Anty_Copy_ComponentIndustrial.jobString>부품복제.</Anty_Copy_ComponentIndustrial.jobString>
+  
+  <pheromone-stim.label>페로몬 자극</pheromone-stim.label>
+  <pheromone-stim.description>앤티들의 페로몬 분비선을 자극하여 농축된 페로몬을 생산합니다.</pheromone-stim.description>
+  <pheromone-stim.jobString>페로몬 자극.</pheromone-stim.jobString>
+  
+  <CureInjury_AT_Acidmelt_A.label>산성용해 치료(1 의약품)</CureInjury_AT_Acidmelt_A.label>
+  <CureInjury_AT_Acidmelt_A.description>산성용해를 치료합니다.</CureInjury_AT_Acidmelt_A.description>
+  <CureInjury_AT_Acidmelt_A.successfullyRemovedHediffMessage>{0} 은(는) {1}의 산성용해를 성공적으로 치료하였습니다.</CureInjury_AT_Acidmelt_A.successfullyRemovedHediffMessage>
+  <CureInjury_AT_Acidmelt_A.jobString>산성용해 치료.</CureInjury_AT_Acidmelt_A.jobString>
+  
+  <CureInjury_AT_Acidmelt_B.label>레드버스트용해 치료(2 의약품)</CureInjury_AT_Acidmelt_B.label>
+  <CureInjury_AT_Acidmelt_B.description>레드버스트용해를 치료합니다.</CureInjury_AT_Acidmelt_B.description>
+  <CureInjury_AT_Acidmelt_B.successfullyRemovedHediffMessage>{0} 은(는) {1}의 레드버스트용해를 성공적으로 치료하였습니다.</CureInjury_AT_Acidmelt_B.successfullyRemovedHediffMessage>
+  <CureInjury_AT_Acidmelt_B.jobString>레드버스트용해 치료.</CureInjury_AT_Acidmelt_B.jobString>
+  
+  <CureInjury_AT_Acidmelt_A_con.label>산성용해 치료(1 의약품)</CureInjury_AT_Acidmelt_A_con.label>
+  <CureInjury_AT_Acidmelt_A_con.description>산성용해를 치료합니다.</CureInjury_AT_Acidmelt_A_con.description>
+  <CureInjury_AT_Acidmelt_A_con.successfullyRemovedHediffMessage>{0} 은(는) {1}의 산성용해를 성공적으로 치료하였습니다.</CureInjury_AT_Acidmelt_A_con.successfullyRemovedHediffMessage>
+  <CureInjury_AT_Acidmelt_A_con.jobString>산성용해 치료.</CureInjury_AT_Acidmelt_A_con.jobString>
+  
+  <CureInjury_AT_Acidmelt_B_con.label>레드버스트용해 치료(2 의약품)</CureInjury_AT_Acidmelt_B_con.label>
+  <CureInjury_AT_Acidmelt_B_con.description>레드버스트용해를 치료합니다.</CureInjury_AT_Acidmelt_B_con.description>
+  <CureInjury_AT_Acidmelt_B_con.successfullyRemovedHediffMessage>{0} 은(는) {1}의 레드버스트용해를 성공적으로 치료하였습니다.</CureInjury_AT_Acidmelt_B_con.successfullyRemovedHediffMessage>
+  <CureInjury_AT_Acidmelt_B_con.jobString>레드버스트용해 치료.</CureInjury_AT_Acidmelt_B_con.jobString>
+  
+  <InstallAT_Reinforcedexoskeleton.label>앤티 강화 외골격 장착</InstallAT_Reinforcedexoskeleton.label>
+  <InstallAT_Reinforcedexoskeleton.description>앤티 강화 외골격을 장착합니다.</InstallAT_Reinforcedexoskeleton.description>
+  <InstallAT_Reinforcedexoskeleton.jobString>앤티 강화 외골격 장착</InstallAT_Reinforcedexoskeleton.jobString>
+  
+  <AT_Aphidextract-stim.label>진딧물화 수술</AT_Aphidextract-stim.label>
+  <AT_Aphidextract-stim.description>유전자 변형을 일으켜 양분이 농축된 체액을 배출하도록 신체를 개조하는 수술입니다.\n\n 뇌가 극단적으로 자극되어 손상되는 부작용이 있습니다.\n\n 앤티들에게는 아무련 영향이 없습니다.</AT_Aphidextract-stim.description>
+  <AT_Aphidextract-stim.jobString>진딧물화 수술중.</AT_Aphidextract-stim.jobString>
+
+  <InstallAT_AntyIncreasedviabilitySurgery.label>생존력 증대수술</InstallAT_AntyIncreasedviabilitySurgery.label>
+  <InstallAT_AntyIncreasedviabilitySurgery.description>앤티들의 몸에 리플리움을 주입하여 생존력을 높이는 수술입니다.</InstallAT_AntyIncreasedviabilitySurgery.description>
+  <InstallAT_AntyIncreasedviabilitySurgery.jobString>생존력 증대중.</InstallAT_AntyIncreasedviabilitySurgery.jobString>
+  
+  <CureAntyTransitionRefleum.label>변이 리플리움 제거</CureAntyTransitionRefleum.label>
+  <CureAntyTransitionRefleum.description>변이 리플리움을 제거합니다.</CureAntyTransitionRefleum.description>
+  <CureAntyTransitionRefleum.successfullyRemovedHediffMessage>{0} 은(는) {1}의 변이 리플리움을 성공적으로 제거하였습니다.</CureAntyTransitionRefleum.successfullyRemovedHediffMessage>
+  <CureAntyTransitionRefleum.jobString>변이 리플리움 제거중.</CureAntyTransitionRefleum.jobString>
+
+  <EVOR_Surgery_Tail_Blade_Anty.label>칼날꼬리 장착</EVOR_Surgery_Tail_Blade_Anty.label>
+  <EVOR_Surgery_Tail_Blade_Anty.description>칼날꼬리를 장착합니다.</EVOR_Surgery_Tail_Blade_Anty.description>
+  <EVOR_Surgery_Tail_Blade_Anty.jobString>칼날꼬리 장착.</EVOR_Surgery_Tail_Blade_Anty.jobString>
+  
+  <EVOR_Surgery_Tail_Hand_Anty.label>조작꼬리 장착</EVOR_Surgery_Tail_Hand_Anty.label>
+  <EVOR_Surgery_Tail_Hand_Anty.description>조작꼬리 장착합니다.</EVOR_Surgery_Tail_Hand_Anty.description>
+  <EVOR_Surgery_Tail_Hand_Anty.jobString>조작꼬리 장착.</EVOR_Surgery_Tail_Hand_Anty.jobString>
+
+  <AntyCorpsesqueeze.label>시체 쥐어짜기</AntyCorpsesqueeze.label>
+  <AntyCorpsesqueeze.description>시체들을 이용하여 진액을 만들어 냅니다.</AntyCorpsesqueeze.description>
+  <AntyCorpsesqueeze.jobString>시체 쥐어짜기</AntyCorpsesqueeze.jobString>
+  
+  <CookProtyGum.label>프로티 껌 조리 ×10</CookProtyGum.label>
+  <CookProtyGum.description>가죽을 자르고 튀겨 프로티 껌을 만듭니다.</CookProtyGum.description>
+  <CookProtyGum.jobString>프로티 껌 조리</CookProtyGum.jobString>
+
+  <InstallAT_ReinforcedJaw.label>앤티 강화 턱 장착</InstallAT_ReinforcedJaw.label>
+  <InstallAT_ReinforcedJaw.description>앤티 강화 턱을 장착합니다.</InstallAT_ReinforcedJaw.description>
+  <InstallAT_ReinforcedJaw.jobString>앤티 강화 턱 장착</InstallAT_ReinforcedJaw.jobString>
+
+  <AT_Dreadnought_metamorphosis.label>드레드노트 변태 수술</AT_Dreadnought_metamorphosis.label>
+  <AT_Dreadnought_metamorphosis.description>변이 리플리움을 이용해서 강인하고 거대한 육체로 변태할 수 있게 하는 수술입니다. 변이 리플리움의 무작위성 변이를 막기위해 진액과 영양젤리를 사용합니다.</AT_Dreadnought_metamorphosis.description>
+  <AT_Dreadnought_metamorphosis.jobString>드레드노트 변태 수술중.</AT_Dreadnought_metamorphosis.jobString>
+
+  <AT_Hiveguard_metamorphosis.label>하이브가드 변태 수술</AT_Hiveguard_metamorphosis.label>
+  <AT_Hiveguard_metamorphosis.description>변이 리플리움을 이용해서 강인하고 거대한 육체로 변태할 수 있게 하는 수술입니다. 변이 리플리움의 무작위성 변이를 막기위해 진액과 영양젤리를 사용합니다.</AT_Hiveguard_metamorphosis.description>
+  <AT_Hiveguard_metamorphosis.jobString>하이브가드 변태 수술중.</AT_Hiveguard_metamorphosis.jobString>
+
+  <Anty_Make_Egg.label>산란</Anty_Make_Egg.label>
+  <Anty_Make_Egg.description>다음 세대를 만들어 냅니다.</Anty_Make_Egg.description>
+  <Anty_Make_Egg.jobString>산란 중.</Anty_Make_Egg.jobString>
+
+  <Anty_Make_pheromone.label>페로몬 팩 제작</Anty_Make_pheromone.label>
+  <Anty_Make_pheromone.description>페로몬 팩 제작.</Anty_Make_pheromone.description>
+  <Anty_Make_pheromone.jobString>페로몬 팩 제작 중.</Anty_Make_pheromone.jobString>
+  
+  <Anty_Make_TransitionRefleum.label>실험형 변이 리플리움 제작</Anty_Make_TransitionRefleum.label>
+  <Anty_Make_TransitionRefleum.description>실험형 변이 리플리움 제작.</Anty_Make_TransitionRefleum.description>
+  <Anty_Make_TransitionRefleum.jobString>실험형 변이 리플리움 제작 중</Anty_Make_TransitionRefleum.jobString>
+  
+  <Anty_Make_Dreadnought.label>드레드노트 고치 제작</Anty_Make_Dreadnought.label>
+  <Anty_Make_Dreadnought.description>드레드노트 고치 제작.</Anty_Make_Dreadnought.description>
+  <Anty_Make_Dreadnought.jobString>드레드노트 고치 제작 중</Anty_Make_Dreadnought.jobString>
+  
+  <Anty_Make_Hiveguard.label>하이브가드 고치 제작</Anty_Make_Hiveguard.label>
+  <Anty_Make_Hiveguard.description>하이브가드 고치 제작.</Anty_Make_Hiveguard.description>
+  <Anty_Make_Hiveguard.jobString>하이브가드 고치 제작 중</Anty_Make_Hiveguard.jobString>
+  
+  <Anty_Make_TriJaw.label>트라이조 고치 제작</Anty_Make_TriJaw.label>
+  <Anty_Make_TriJaw.description>트라이조 고치 제작.</Anty_Make_TriJaw.description>
+  <Anty_Make_TriJaw.jobString>트라이조 고치 제작 중</Anty_Make_TriJaw.jobString>
+  
+  <Anty_Make_Egg_Dorylus.label>도릴루스 산란</Anty_Make_Egg_Dorylus.label>
+  <Anty_Make_Egg_Dorylus.description>다음 세대를 만들어 냅니다.</Anty_Make_Egg_Dorylus.description>
+  <Anty_Make_Egg_Dorylus.jobString>산란 중.</Anty_Make_Egg_Dorylus.jobString>
+  
+  <Anty_Make_Egg_Linepithema.label>라인피테마 산란</Anty_Make_Egg_Linepithema.label>
+  <Anty_Make_Egg_Linepithema.description>다음 세대를 만들어 냅니다.</Anty_Make_Egg_Linepithema.description>
+  <Anty_Make_Egg_Linepithema.jobString>산란 중.</Anty_Make_Egg_Linepithema.jobString>
+  
+  <Anty_Make_Egg_Solenopsis.label>솔레놉시스 산란</Anty_Make_Egg_Solenopsis.label>
+  <Anty_Make_Egg_Solenopsis.description>다음 세대를 만들어 냅니다.</Anty_Make_Egg_Solenopsis.description>
+  <Anty_Make_Egg_Solenopsis.jobString>산란 중.</Anty_Make_Egg_Solenopsis.jobString>
+  
+  <Anty_Make_Egg_Anoplolepis.label>아노플로레피스 산란</Anty_Make_Egg_Anoplolepis.label>
+  <Anty_Make_Egg_Anoplolepis.description>다음 세대를 만들어 냅니다.</Anty_Make_Egg_Anoplolepis.description>
+  <Anty_Make_Egg_Anoplolepis.jobString>산란 중.</Anty_Make_Egg_Anoplolepis.jobString>
+  
+  <Anty_Make_Egg_Tapinoma.label>타피노마 산란</Anty_Make_Egg_Tapinoma.label>
+  <Anty_Make_Egg_Tapinoma.description>다음 세대를 만들어 냅니다.</Anty_Make_Egg_Tapinoma.description>
+  <Anty_Make_Egg_Tapinoma.jobString>산란 중.</Anty_Make_Egg_Tapinoma.jobString>
+  
+  <Anty_Make_Swarmy.label>스워미 알 제작</Anty_Make_Swarmy.label>
+  <Anty_Make_Swarmy.description>스워미 알 제작.</Anty_Make_Swarmy.description>
+  <Anty_Make_Swarmy.jobString>스워미 알 제작</Anty_Make_Swarmy.jobString>
+  
+  <aciddecomposition.label>분해</aciddecomposition.label>
+  <aciddecomposition.description>의학 연습을 위해 대상을 분해합니다.</aciddecomposition.description>
+  <aciddecomposition.jobString>분해 시술 중.</aciddecomposition.jobString>
+
+  <Anty_Generestoration.label>유전자 복원</Anty_Generestoration.label>
+  <Anty_Generestoration.description>유전자 재성장을 제거합니다.</Anty_Generestoration.description>
+  <Anty_Generestoration.jobString>유전자 재성장을 제거</Anty_Generestoration.jobString>
+  
+  <Anty_upgrade_AcidAssaultRifle.label>산성무기 개량 (산성 돌격소총)</Anty_upgrade_AcidAssaultRifle.label>
+  <Anty_upgrade_AcidAssaultRifle.description>산성 소총을 산성 돌격소총으로 개량합니다.</Anty_upgrade_AcidAssaultRifle.description>
+  <Anty_upgrade_AcidAssaultRifle.jobString>산성무기 개량(산성 돌격소총)</Anty_upgrade_AcidAssaultRifle.jobString>
+  
+  <Anty_upgrade_AcidLineRifle.label>산성무기 개량 (산성 전열소총)</Anty_upgrade_AcidLineRifle.label>
+  <Anty_upgrade_AcidLineRifle.description>산성 소총을 산성 전열소총으로 개량합니다.</Anty_upgrade_AcidLineRifle.description>
+  <Anty_upgrade_AcidLineRifle.jobString>산성무기 개량(산성 전열소총)</Anty_upgrade_AcidLineRifle.jobString>
+  
+  <Anty_upgrade_LMG.label>산성무기 개량 (산성 경기관총)</Anty_upgrade_LMG.label>
+  <Anty_upgrade_LMG.description>산성 돌격소총이나 전열소총을 산성 경기관총으로 개량합니다.</Anty_upgrade_LMG.description>
+  <Anty_upgrade_LMG.jobString>산성무기 개량(산성 경기관총)</Anty_upgrade_LMG.jobString>
+  
+  <Anty_upgrade_AcidLauncher.label>산성무기 개량 (산성 유탄발사기)</Anty_upgrade_AcidLauncher.label>
+  <Anty_upgrade_AcidLauncher.description>산성 돌격소총이나 전열소총을 산성 유탄발사기로 개량합니다.</Anty_upgrade_AcidLauncher.description>
+  <Anty_upgrade_AcidLauncher.jobString>산성무기 개량(산성 유탄발사기)</Anty_upgrade_AcidLauncher.jobString>
+  
+  
+</LanguageData>

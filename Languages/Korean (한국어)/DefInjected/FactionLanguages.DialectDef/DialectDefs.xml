@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+	<Anty_Standard.label>표준 앤티 방언</Anty_Standard.label>
+	<Anty_Standard.description>간단한 암호화가 적용된 언어입니다.</Anty_Standard.description>
+	
+	<Anty_Mutant.label>앤티 변이체 방언</Anty_Mutant.label>
+	<Anty_Mutant.description>3중 나선 암호화가 적용된 언어입니다.</Anty_Mutant.description>
+</LanguageData>

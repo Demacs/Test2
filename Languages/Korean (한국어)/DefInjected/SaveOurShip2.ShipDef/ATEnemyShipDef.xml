@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <AT_debris_class_scout.label>부스러기급 정찰선</AT_debris_class_scout.label>
+  <AT_debris_class_armored_scout.label>부스러기급 장갑 정찰선</AT_debris_class_armored_scout.label>
+  <AT_debris_class_scout_fleet.label>부스러기급 정찰선 편대</AT_debris_class_scout_fleet.label>
+  <AT_piece_class_assault_ship.label>조각급 돌격선</AT_piece_class_assault_ship.label>
+  <AT_orbital_oppressor.label>궤도 장악기</AT_orbital_oppressor.label>
+  <AT_bndle_class_cruiser.label>덩어리급 순양함</AT_bndle_class_cruiser.label>
+  
+  <AntyStartShip.label>부스러기급 개척선</AntyStartShip.label>
+</LanguageData>

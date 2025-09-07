@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <AT_Colonist_Baby.label>앤티</AT_Colonist_Baby.label>
+  <AT_Colonist.label>앤티 정찰병</AT_Colonist.label>
+  <AT_Colonist_B.label>앤티 정찰병</AT_Colonist_B.label>
+  <AT_Colonist_C.label>앤티 정찰병</AT_Colonist_C.label>
+  <ATB_Colonist.label>앤티 정착민</ATB_Colonist.label>
+  <AT_Raid_A.label>앤티 정찰병</AT_Raid_A.label>
+  <Anty_Commander.label>앤티 지휘관</Anty_Commander.label>
+  <AT_Rifle_A.label>앤티 원거리 보병</AT_Rifle_A.label>
+  <AT_Charge_A.label>앤티 근거리 보병</AT_Charge_A.label>
+  <AT_Sapper_A.label>앤티 공병</AT_Sapper_A.label>
+  <AT_Sapper_B.label>앤티 멍청한 공병</AT_Sapper_B.label>
+  <AT_Rifle_B.label>앤티 원거리 보병</AT_Rifle_B.label>
+  <AT_Charge_B.label>앤티 근거리 보병</AT_Charge_B.label>
+  <AT_Launcher_A.label>앤티 유탄사수</AT_Launcher_A.label>
+  <AT_Launcher_B.label>앤티 유탄사수</AT_Launcher_B.label>
+  <AT_SingleUse.label>앤티 화력보병</AT_SingleUse.label>
+  <AT_Power.label>앤티 원거리 강화보병</AT_Power.label>
+  <AT_Power_A.label>앤티 원거리 강화보병</AT_Power_A.label>
+  <AT_Power_A_B.label>앤티 원거리 강화보병</AT_Power_A_B.label>
+  <AT_Power_A_C.label>앤티 원거리 강화보병</AT_Power_A_C.label>
+  <AT_Power_B.label>앤티 근거리 강화보병</AT_Power_B.label>
+  <AT_Power_C.label>앤티 강화 유탄사수</AT_Power_C.label>
+  <AT_Power_D.label>앤티 근거리 강화보병</AT_Power_D.label>
+  <AT_PP_S.label>앤티 특별 외교관</AT_PP_S.label>
+  <Anty_prototype.label>프로티</Anty_prototype.label>
+  <Anty_prototype_E.label>프로티</Anty_prototype_E.label>
+  <AT_Dreadnought_A.label>앤티 드레드노트</AT_Dreadnought_A.label>
+  <AT_Dreadnought_B.label>앤티 드레드노트</AT_Dreadnought_B.label>
+  <AT_Rifle_B_title.label>앤티 원거리 보병</AT_Rifle_B_title.label>
+  <AT_PP_S_title.label>앤티 특별 외교관</AT_PP_S_title.label>
+  <Anty_Commander_title.label>앤티 지휘관</Anty_Commander_title.label>
+  <AT_Launcher_A_title.label>앤티 유탄사수</AT_Launcher_A_title.label>
+  <Anty_prototype_Wild.label>야생 프로티</Anty_prototype_Wild.label>
+  <Anty_prototype_Wild_Melee.label>야생 프로티</Anty_prototype_Wild_Melee.label>
+  <Anty_prototype_Wild_Range.label>야생 프로티</Anty_prototype_Wild_Range.label>
+  <Tribal_Proty.label>부족민 프로티 인형</Tribal_Proty.label>
+  <Tribal_Proty_Anty.label>앤티 프로티 인형</Tribal_Proty_Anty.label>
+  <Tribal_Proty_Miho.label>미호 프로티 인형</Tribal_Proty_Miho.label>
+  <Tribal_Proty_Yuran.label>유란 프로티 인형</Tribal_Proty_Yuran.label>
+  <Tribal_Proty_Maru.label>마루 프로티 인형</Tribal_Proty_Maru.label>
+  <Tribal_Proty_Ratkin.label>랫킨 프로티 인형</Tribal_Proty_Ratkin.label>
+  <AT_Hiveguard_A.label>앤티 하이브가드</AT_Hiveguard_A.label>
+  <AT_Hiveguard_B.label>앤티 하이브가드</AT_Hiveguard_B.label>
+  <AT_TriJaw_A.label>앤티 트라이조</AT_TriJaw_A.label>
+  <AT_TriJaw_B.label>앤티 트라이조</AT_TriJaw_B.label>
+  <Anty_swarmy.label>스워미</Anty_swarmy.label>
+  
+  <Anty_Commander_Mutant.label>앤티 지휘관</Anty_Commander_Mutant.label>
+  <AT_Rifle_A_Mutant.label>앤티 원거리 보병</AT_Rifle_A_Mutant.label>
+  <AT_Charge_A_Mutant.label>앤티 근거리 보병</AT_Charge_A_Mutant.label>
+  <AT_Charge_B_Mutant.label>앤티 근거리 보병</AT_Charge_B_Mutant.label>
+  <AT_Power_A_B_Mutant.label>앤티 원거리 강화보병</AT_Power_A_B_Mutant.label>
+  <AT_Power_A_C_Mutant.label>앤티 원거리 강화보병</AT_Power_A_C_Mutant.label>
+  <AT_Power_B_Mutant.label>앤티 근거리 강화보병</AT_Power_B_Mutant.label>
+  <AT_Power_C_Mutant.label>앤티 강화 유탄사수</AT_Power_C_Mutant.label>
+  
+</LanguageData>

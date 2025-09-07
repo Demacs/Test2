@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <AT_ExoProstheticArm.label>팔 대체생물</AT_ExoProstheticArm.label>
+  <AT_ExoProstheticArm.description>제한된 역할을 수행하는 공생생물입니다. 하지만 움직이기 위해선 사소한 의사소통이 필요하기에 불편합니다.</AT_ExoProstheticArm.description>
+  <AT_ExoProstheticLeg.label>다리 대체생물</AT_ExoProstheticLeg.label>
+  <AT_ExoProstheticLeg.description>제한된 역할을 수행하는 공생생물입니다. 하지만 움직이기 위해선 사소한 의사소통이 필요하기에 불편합니다.</AT_ExoProstheticLeg.description>
+  
+  
+  <ActivatedRefleum.label>활성 리플리움</ActivatedRefleum.label>
+  <ActivatedRefleum.description>자가분열과 포식을 무한히 반복하는 상태의 리플리움입니다. 이 과정에서 엄청난 열이 발생합니다.</ActivatedRefleum.description>
+  
+  <AT_AP_Glass_A.label>앤티 안경</AT_AP_Glass_A.label>
+  <AT_AP_Glass_A.description>겹눈에 맞게 제작된 안경입니다. 평범한 사람이 착용하면 어지러움증을 호소할 수 있습니다.</AT_AP_Glass_A.description>
+
+	<AT_Filth_Floordrawing.label>바닥 낙서</AT_Filth_Floordrawing.label>
+  <Anty_prototype.label>프로티</Anty_prototype.label>
+  <Anty_prototype.description>프로젝트 초기에 만들어졌던 앤티들의 조상입니다. 현재의 앤티들과는 달리 인간보다는 개미에 더 가까우며 그만큼 지능이 떨어져 자세한 지시를 이해할 수 없습니다.\n\n앤티들이 실험실을 탈출할 무렵에 페로몬에 이끌려 군체에 합류하게 되었습니다. 앤티들이 의도한 것은 아니었지만 앤티들은 프로티들이 강아지 같고 맛있다며 좋아했습니다.\n\n프로티의 신장은 평균 95cm로 인간형, 개미형 모두 동일합니다.</Anty_prototype.description>
+  <Anty_prototype.tools.0.label>큰 턱</Anty_prototype.tools.0.label>
+  <Anty_prototype.tools.1.label>머리</Anty_prototype.tools.1.label>
+  <EggProty.label>프로티 유정란</EggProty.label>
+  <EggProty.description>프로티의 알입니다.</EggProty.description>
+  <EggProtyUn.label>프로티 무정란</EggProtyUn.label>
+  <EggProtyUn.description>프로티의 알입니다. 수정되지 않았습니다.</EggProtyUn.description>
+  <Nutritional_jelly_thing.label>영양 젤리</Nutritional_jelly_thing.label>
+  <Nutritional_jelly_thing.description>앤티들의 생식 개체들이 먹는 젤리입니다. 하지만 이것은 진짜 젤리가 아닌 유전자 변형을 유도하는 약물입니다. 이것을 섭취하게 되면, 성별에 관계 없이 체내에 알주머니를 가지게 됩니다. 앤티 유충들과 중상자들은 이 변태과정을 버틸 수 없습니다.</Nutritional_jelly_thing.description>
+  <Nutritional_jelly_thing.ingestible.ingestCommandString>{0} 섭취</Nutritional_jelly_thing.ingestible.ingestCommandString>
+  <Nutritional_jelly_thing.ingestible.ingestReportString>{0} 섭취중</Nutritional_jelly_thing.ingestible.ingestReportString>
+  <Battlestimulation_jelly_thing.label>전투자극 젤리</Battlestimulation_jelly_thing.label>
+  <Battlestimulation_jelly_thing.description>앤티들의 전투 개체들이 먹는 젤리입니다. 하지만 이것은 진짜 젤리가 아닌 유전자 변형을 유도하는 약물입니다. 이것을 섭취하게 되면, 신체능력이 비약적으로 강화됩니다. 앤티 유충들과 중상자들은 이 변태과정을 버틸 수 없습니다.</Battlestimulation_jelly_thing.description>
+  <Battlestimulation_jelly_thing.ingestible.ingestCommandString>{0} 섭취</Battlestimulation_jelly_thing.ingestible.ingestCommandString>
+  <Battlestimulation_jelly_thing.ingestible.ingestReportString>{0} 섭취중</Battlestimulation_jelly_thing.ingestible.ingestReportString>
+  <Eraser_jelly_thing.label>초기화 젤리</Eraser_jelly_thing.label>
+  <Eraser_jelly_thing.description>앤티들이 신체의 특성을 지우고 원래의 상태로 돌아가기 위해서 먹는 젤리입니다. 하지만 이것은 진짜 젤리가 아닌 유전자 변형을 유도하는 약물입니다. 이것을 섭취하게 되면, 다른 젤리들로 추가된 신체능력이 사라집니다. 앤티 유충들과 중상자들은 이 변태과정을 버틸 수 없습니다.</Eraser_jelly_thing.description>
+  <Eraser_jelly_thing.ingestible.ingestCommandString>{0} 섭취</Eraser_jelly_thing.ingestible.ingestCommandString>
+  <Eraser_jelly_thing.ingestible.ingestReportString>{0} 섭취중</Eraser_jelly_thing.ingestible.ingestReportString>
+  <AT_AP_St_A.label>앤티 셔츠</AT_AP_St_A.label>
+  <AT_AP_St_A.description>앤티들이 방구석에서 즐겨입는 옷입니다.</AT_AP_St_A.description>
+  <AT_AP_St_B.label>앤티 케이프 셔츠</AT_AP_St_B.label>
+  <AT_AP_St_B.description>쌀쌀한 바람이 불 때에 앤티들이 야외에서 즐겨입는 옷입니다. 리본 내부에는 철사가 들어있어 목을 조르기에 좋습니다.</AT_AP_St_B.description>
+  <AT_AP_St_C.label>앤티 케이프 코트</AT_AP_St_C.label>
+  <AT_AP_St_C.description>추운 겨울에 앤티들이 찾는 옷입니다. 강렬한 붉은색은 어디에서도 눈에 잘 보입니다.</AT_AP_St_C.description>
+  <AT_AP_St_D.label>앤티 재킷</AT_AP_St_D.label>
+  <AT_AP_St_D.description>뒷부분에 앤티들의 상징인 턱의 형상이 새겨진 재킷입니다. 길거리에서 이 재킷을 입은 앤티 무리들과 만난다면 유감이네요, 그들의 식사는 당신입니다.</AT_AP_St_D.description>
+  <AT_AP_St_F.label>앤티 크롭탑</AT_AP_St_F.label>
+  <AT_AP_St_F.description>앤티의 신체에서 땀이 배출될 수 있는 부위를 최대한 노출시킨 옷입니다.</AT_AP_St_F.description>
+  <AT_AP_Chain_A.label>앤티 사슬갑옷</AT_AP_Chain_A.label>
+  <AT_AP_Chain_A.description>앤티들이 전장에서 몸을 보호하기 위해서 입었던 초창기 방어구입니다. 판금갑옷만큼 튼튼하지는 않지만 움직이기는 휠씬 수월합니다.</AT_AP_Chain_A.description>
+  <AT_AP_Helm_A.label>앤티 판금투구</AT_AP_Helm_A.label>
+  <AT_AP_Helm_A.description>앤티들이 남는 철을 가지고 대충 만들어낸 판금 투구입니다.</AT_AP_Helm_A.description>
+  <AT_AP_Additionalchain_A.label>앤티 추가사슬갑옷</AT_AP_Additionalchain_A.label>
+  <AT_AP_Additionalchain_A.description>앤티들의 허리 뒷부분에 있는 하복부를 보호하기 위해서 개발된 장갑판 입니다.</AT_AP_Additionalchain_A.description>
+  <AT_AP_Shooter_A.label>앤티 전투복</AT_AP_Shooter_A.label>
+  <AT_AP_Shooter_A.description>앤티들의 전투복입니다. 온도 변화에 따라 땀을 배출시키고 공기를 순환시켜 냉각효과를 가지거나, 반대로 공기의 순환을 막아 보온효과를 가지기도 합니다.</AT_AP_Shooter_A.description>
+  <AT_AP_Head_A.label>앤티 방탄모</AT_AP_Head_A.label>
+  <AT_AP_Head_A.description>위장도색을 한 방탄모 입니다.</AT_AP_Head_A.description>
+  <AT_AP_Head_B.label>앤티 지휘관 방탄모</AT_AP_Head_B.label>
+  <AT_AP_Head_B.description>지휘관 전용 방탄모 입니다.</AT_AP_Head_B.description>
+  <AT_AP_Flakvest.label>앤티 방탄조끼</AT_AP_Flakvest.label>
+  <AT_AP_Flakvest.description>총탄을 효과적으로 막을 수 있는 앤티들의 방탄조끼입니다. 성능은 좋지만 유연성이 부족한 방탄판을 사용하여 움직이기가 조금 불편합니다.</AT_AP_Flakvest.description>
+  <AT_AP_Additionalarmorplate_A.label>앤티 추가장갑판</AT_AP_Additionalarmorplate_A.label>
+  <AT_AP_Additionalarmorplate_A.description>앤티들의 허리 뒷부분에 있는 하복부를 보호하기 위해서 개발된 장갑판 입니다.</AT_AP_Additionalarmorplate_A.description>
+  <AT_AP_SH_A.label>앤티 전투복 덮개</AT_AP_SH_A.label>
+  <AT_AP_SH_A.description>앤티 병사들이 걸치는 망토입니다. 위장색을 유지하면서도 여러 환경에 적응할 수 있도록 만들어진 옷으로 방어 성능은 그리 좋지 않지만 추위와 더위에 유연하게 대처할 수 있습니다.</AT_AP_SH_A.description>
+  <AT_AP_CO_A.label>앤티 지휘관 케이프</AT_AP_CO_A.label>
+  <AT_AP_CO_A.description>앤티 지휘관들이 걸치는 케이프 입니다. 단순히 계급을 나타내기 위한 옷으로, 방어 성능은 거의 없지만 추위와 더위를 어느정도 막아줍니다.</AT_AP_CO_A.description>
+  <AT_AP_CO_B.label>앤티 지휘관 망토</AT_AP_CO_B.label>
+  <AT_AP_CO_B.description>앤티 지휘관들이 걸치는 망토 입니다. 단순히 계급을 나타내기 위한 옷으로, 방어 성능은 거의 없지만 추위를 어느정도 막아줍니다.</AT_AP_CO_B.description>
+  
+  <AT_AP_Power_A.label>앤티 카타글리피스 아머</AT_AP_Power_A.label>
+  <AT_AP_Power_A.description>앤티들이 자신들의 약점인 독과 불에 대응하기 위해서 개발된 강화복입니다. 리플리움을 기반으로 한 다수의 방열, 단열판이 온도에 따라 작동하며 체내에 들어오는 독성 물질을 정화합니다. 하지만 여전히 식중독에는 걸립니다.\n\n내장된 사격통제 시스템이 조준을 도와줍니다.\n\n이동속도를 증가시키는 역장을 펼칠 수 있습니다.</AT_AP_Power_A.description>
+  <AT_AP_Power_Head_A.label>앤티 카타글리피스 헬멧</AT_AP_Power_Head_A.label>
+  <AT_AP_Power_Head_A.description>앤티들이 자신들의 약점인 독과 불에 대응하기 위해서 개발된 강화복 헬멧입니다. 리플리움을 기반으로 한 다수의 방열, 단열판이 온도에 따라 작동하며 체내에 들어오는 독성 물질을 정화합니다. 하지만 여전히 식중독에는 걸립니다.</AT_AP_Power_Head_A.description>
+  <AT_AP_AdditionalPower_A.label>앤티 카타글리피스 사이드아머</AT_AP_AdditionalPower_A.label>
+  <AT_AP_AdditionalPower_A.description>앤티들이 자신들의 약점인 불에 대응하기 위해서 개발된 강화복입니다. 리플리움을 기반으로 한 다수의 방열, 단열판이 온도에 따라 작동합니다.</AT_AP_AdditionalPower_A.description>
+  <AT_AP_Power_A.comps.CompReloadable.chargeNoun>가속장</AT_AP_Power_A.comps.CompReloadable.chargeNoun>
+  <AT_AP_Power_A.verbs.0.label>가속장 발사</AT_AP_Power_A.verbs.0.label>
+  
+  <AT_AP_Power_B.label>앤티 카타글리피스 커멘더 아머</AT_AP_Power_B.label>
+  <AT_AP_Power_B.description>앤티들이 자신들의 약점인 독과 불에 대응하기 위해서 개발된 강화복입니다. 리플리움을 기반으로 한 다수의 방열, 단열판이 온도에 따라 작동하며 체내에 들어오는 독성 물질을 정화합니다. 하지만 여전히 식중독에는 걸립니다.\n\n이동속도를 증가시키는 역장을 펼칠 수 있습니다.</AT_AP_Power_B.description>
+  <AT_AP_Power_Head_B.label>앤티 카타글리피스 커멘더 헬멧</AT_AP_Power_Head_B.label>
+  <AT_AP_Power_Head_B.description>앤티들이 자신들의 약점인 독과 불에 대응하기 위해서 개발된 강화복 헬멧입니다. 리플리움을 기반으로 한 다수의 방열, 단열판이 온도에 따라 작동하며 체내에 들어오는 독성 물질을 정화합니다. 하지만 여전히 식중독에는 걸립니다.</AT_AP_Power_Head_B.description>
+  <AT_AP_AdditionalPower_B.label>앤티 카타글리피스 커멘더 사이드아머</AT_AP_AdditionalPower_B.label>
+  <AT_AP_AdditionalPower_B.description>앤티들이 자신들의 약점인 불에 대응하기 위해서 개발된 강화복입니다. 리플리움을 기반으로 한 다수의 방열, 단열판이 온도에 따라 작동합니다.</AT_AP_AdditionalPower_B.description>
+  <AT_AP_Power_B.comps.CompReloadable.chargeNoun>가속장</AT_AP_Power_B.comps.CompReloadable.chargeNoun>
+  <AT_AP_Power_B.verbs.0.label>가속장 발사</AT_AP_Power_B.verbs.0.label>
+  
+  <AT_AP_Power_C.label>앤티 디노포네라 아머</AT_AP_Power_C.label>
+  <AT_AP_Power_C.description>앤티들이 자신들의 약점인 독과 불에 대응하기 위해서 개발된 강화복입니다. 리플리움을 기반으로 한 다수의 방열, 단열판이 온도에 따라 작동하며 체내에 들어오는 독성 물질을 정화합니다. 하지만 여전히 식중독에는 걸립니다.\n\n 두터운 장갑 때문에 이동이 불편하지만 모든 피해를 흡수하는 보호막을 전개할 수 있습니다.</AT_AP_Power_C.description>
+  <AT_AP_Power_Head_C.label>앤티 디노포네라 헬멧</AT_AP_Power_Head_C.label>
+  <AT_AP_Power_Head_C.description>앤티들이 자신들의 약점인 독과 불에 대응하기 위해서 개발된 강화복 헬멧입니다. 리플리움을 기반으로 한 다수의 방열, 단열판이 온도에 따라 작동하며 체내에 들어오는 독성 물질을 정화합니다. 하지만 여전히 식중독에는 걸립니다.</AT_AP_Power_Head_C.description>
+  <AT_AP_AdditionalPower_C.label>앤티 디노포네라 사이드아머</AT_AP_AdditionalPower_C.label>
+  <AT_AP_AdditionalPower_C.description>앤티들이 자신들의 약점인 불에 대응하기 위해서 개발된 강화복입니다. 리플리움을 기반으로 한 다수의 방열, 단열판이 온도에 따라 작동합니다.</AT_AP_AdditionalPower_C.description>
+  <AT_AP_Power_C.comps.CompReloadable.chargeNoun>물리력 차단 보호막</AT_AP_Power_C.comps.CompReloadable.chargeNoun>
+  <AT_AP_Power_C.verbs.0.label>물리력 차단 보호막 발사</AT_AP_Power_C.verbs.0.label>
+  <BulletExecutionerChain.label>물리력 차단 보호막</BulletExecutionerChain.label>
+  
+  <AT_AP_Power_D.label>앤티 파라포네라 아머</AT_AP_Power_D.label>
+  <AT_AP_Power_D.description>앤티들이 자신들의 약점인 독과 불에 대응하기 위해서 개발된 강화복입니다. 리플리움을 기반으로 한 다수의 방열, 단열판이 온도에 따라 작동하며 체내에 들어오는 독성 물질을 정화합니다. 하지만 여전히 식중독에는 걸립니다.\n\n적의 무장을 해제시킬 수 있습니다.</AT_AP_Power_D.description>
+  <AT_AP_Power_Head_D.label>앤티 파라포네라 헬멧</AT_AP_Power_Head_D.label>
+  <AT_AP_Power_Head_D.description>앤티들이 자신들의 약점인 독과 불에 대응하기 위해서 개발된 강화복 헬멧입니다. 리플리움을 기반으로 한 다수의 방열, 단열판이 온도에 따라 작동하며 체내에 들어오는 독성 물질을 정화합니다. 하지만 여전히 식중독에는 걸립니다.</AT_AP_Power_Head_D.description>
+  <AT_AP_AdditionalPower_D.label>앤티 파라포네라 사이드아머</AT_AP_AdditionalPower_D.label>
+  <AT_AP_AdditionalPower_D.description>앤티들이 자신들의 약점인 불에 대응하기 위해서 개발된 강화복입니다. 리플리움을 기반으로 한 다수의 방열, 단열판이 온도에 따라 작동합니다.</AT_AP_AdditionalPower_D.description>
+  <AT_AP_Power_D.comps.CompReloadable.chargeNoun>외교용 바늘</AT_AP_Power_D.comps.CompReloadable.chargeNoun>
+  <AT_AP_Power_D.verbs.0.label>외교용 바늘 발사</AT_AP_Power_D.verbs.0.label>
+  <AT_BulletParaponeraLauncher.label>외교용 바늘</AT_BulletParaponeraLauncher.label>
+
+  <AT_AP_Power_E.label>앤티 닐란데리아 아머</AT_AP_Power_E.label>
+  <AT_AP_Power_E.description>앤티들이 자신들의 약점인 독과 불에 대응하기 위해서 개발된 강화복입니다. 리플리움을 기반으로 한 다수의 방열, 단열판이 온도에 따라 작동하며 체내에 들어오는 독성 물질을 정화합니다. 하지만 여전히 식중독에는 걸립니다.\n\n순간적으로 적의 시야를 교란해 효과적으로 회피할 수 있습니다.</AT_AP_Power_E.description>
+  <AT_AP_Power_Head_E.label>앤티 닐란데리아 헬멧</AT_AP_Power_Head_E.label>
+  <AT_AP_Power_Head_E.description>앤티들이 자신들의 약점인 독과 불에 대응하기 위해서 개발된 강화복 헬멧입니다. 리플리움을 기반으로 한 다수의 방열, 단열판이 온도에 따라 작동하며 체내에 들어오는 독성 물질을 정화합니다. 하지만 여전히 식중독에는 걸립니다.\n\n장갑은 얇지만, 레이저로 아군의 공격을 유도해 효과적으로 타격할 수 있게 합니다.</AT_AP_Power_Head_E.description>
+  <AT_AP_AdditionalPower_E.label>앤티 닐란데리아 사이드아머</AT_AP_AdditionalPower_E.label>
+  <AT_AP_AdditionalPower_E.description>앤티들이 자신들의 약점인 불에 대응하기 위해서 개발된 강화복입니다. 리플리움을 기반으로 한 다수의 방열, 단열판이 온도에 따라 작동합니다.\n\n장갑은 얇지만, 주변에 지혈성 가스를 방출합니다.</AT_AP_AdditionalPower_E.description>
+  
+  <AntyCopyTailoringBench.label>앤티 재봉대</AntyCopyTailoringBench.label>
+  <AntyCopyTailoringBench.description>앤티들이 기존의 재봉대를 모방하여 만든 재봉대 입니다.</AntyCopyTailoringBench.description>
+  <AntyCopyTableMachining.label>앤티 기계가공대</AntyCopyTableMachining.label>
+  <AntyCopyTableMachining.description>앤티들이 기존의 기계가공대를 모방하여 만들어낸 기계가공대입니다, 금속과 같은 무기물뿐만 아니라 유기물의 가공과 합성, 유기물과 무기물간의 가공과 합성까지 가능합니다.</AntyCopyTableMachining.description>
+  <AntyTableButcher.label>앤티 기계도축대</AntyTableButcher.label>
+  <AntyTableButcher.description>시도 때도 없이 전장에 쌓이는 시체들을 효과적으로 처리하기 위해 앤티들이 개발한 전동 도축대 입니다.</AntyTableButcher.description>
+  
+  <AT_Chart.label>앤티 도축도표</AT_Chart.label>
+  <AT_Chart.description>앤티들이 더 효율적인 도축을 위해 그려둔 다른 종족들의 모습입니다. 낙서 수준의 자료지만, 내장과 일상을 함께하는 앤티들에겐 충분히 도움이 됩니다.</AT_Chart.description>
+  
+  <AntyExoskeleton_Production.label>외골격 자동 채굴장</AntyExoskeleton_Production.label>
+  <AntyExoskeleton_Production.description>앤티들이 더 이상 동료들의 희생 없이 외골격을 생산할 수 있도록 개발한 장치입니다. 내장된 인공지능 코어가 주입된 앤티들의 유전자를 토대로 외골격을 지속적으로 생산합니다.\n진액을 사용하여 생산량을 늘릴 수 있습니다.</AntyExoskeleton_Production.description>
+  <At_farm.label>리플리움 배양기</At_farm.label>
+  <At_farm.description>앤티들의 외골격을 기반으로 생체 금속인 리플리움을 배양할 수 있는 장치입니다.</At_farm.description>
+  <LifePoweredGenerator.label>생명 연소기</LifePoweredGenerator.label>
+  <LifePoweredGenerator.description>진딧물의 진액으로 전기를 생산하는 발전기입니다.</LifePoweredGenerator.description>
+  <Anty_RecycleTurret.label>재활용 포탑-실외장비</Anty_RecycleTurret.label>
+  <Anty_RecycleTurret.description>더 이상 싸울 수 없는 개체들을 재활용하여 만들어낸 자동 포탑입니다. 인원이 부족한 전선의 인원 보충, 기지의 방어 등 다방면으로 활용되는 포탑입니다. 게으른 개체가 사용되기도 합니다. 가끔, 주변을 지나가는 개체들을 뚫어져라 쳐다보는 것 같은 느낌을 줍니다.\n\n 산성유탄을 발사합니다.</Anty_RecycleTurret.description>
+  <Anty_RecycleTurret.comps.2.fuelLabel>재장전까지 남은 탄</Anty_RecycleTurret.comps.2.fuelLabel>
+  <Anty_RecycleTurret.comps.2.fuelGizmoLabel>남은 탄</Anty_RecycleTurret.comps.2.fuelGizmoLabel>
+  <Anty_RecycleTurret.comps.2.outOfFuelMessage>사격불가 : 탄약 없음</Anty_RecycleTurret.comps.2.outOfFuelMessage>
+  <Bullet_RecycleTurret.label>재활용 포탑 유탄</Bullet_RecycleTurret.label>
+  <Gun_RecycleTurret.label>재활용 포탑</Gun_RecycleTurret.label>
+  <Gun_RecycleTurret.description>시체나 환자, 게으른 개체가 들어간 포탑입니다. 가끔, 주변을 지나가는 개체들을 뚫어져라 쳐다보는 것 같은 느낌을 줍니다.</Gun_RecycleTurret.description>
+  
+  <Anty_RecycleTurretB.label>재활용 포탑-실내장비</Anty_RecycleTurretB.label>
+  <Anty_RecycleTurretB.description>더 이상 싸울 수 없는 개체들을 재활용하여 만들어낸 자동 포탑입니다. 인원이 부족한 전선의 인원 보충, 기지의 방어 등 다방면으로 활용되는 포탑입니다. 게으른 개체가 사용되기도 합니다. 가끔, 주변을 지나가는 개체들을 뚫어져라 쳐다보는 것 같은 느낌을 줍니다.\n\n 접착 효과가 있는 산성탄을 발사합니다.</Anty_RecycleTurretB.description>
+  <Anty_RecycleTurretB.comps.2.fuelLabel>재장전까지 남은 탄</Anty_RecycleTurretB.comps.2.fuelLabel>
+  <Anty_RecycleTurretB.comps.2.fuelGizmoLabel>남은 탄</Anty_RecycleTurretB.comps.2.fuelGizmoLabel>
+  <Anty_RecycleTurretB.comps.2.outOfFuelMessage>사격불가 : 탄약 없음</Anty_RecycleTurretB.comps.2.outOfFuelMessage>
+  <Bullet_glueRifle.label>재활용 포탑 탄</Bullet_glueRifle.label>
+  <Gun_RecycleTurretB.label>재활용 포탑</Gun_RecycleTurretB.label>
+  <Gun_RecycleTurretB.description>시체나 환자, 게으른 개체가 들어간 포탑입니다. 가끔, 주변을 지나가는 개체들을 뚫어져라 쳐다보는 것 같은 느낌을 줍니다.</Gun_RecycleTurretB.description>
+
+  <Anty_RecycleTurretC.label>재활용 포탑-교란장비</Anty_RecycleTurretC.label>
+  <Anty_RecycleTurretC.description>더 이상 싸울 수 없는 개체들을 재활용하여 만들어낸 자동 포탑입니다. 인원이 부족한 전선의 인원 보충, 기지의 방어 등 다방면으로 활용되는 포탑입니다. 게으른 개체가 사용되기도 합니다. 가끔, 주변을 지나가는 개체들을 뚫어져라 쳐다보는 것 같은 느낌을 줍니다.\n\n 접착탄을 발사합니다.</Anty_RecycleTurretC.description>
+  <Anty_RecycleTurretC.comps.2.fuelLabel>재장전까지 남은 탄</Anty_RecycleTurretC.comps.2.fuelLabel>
+  <Anty_RecycleTurretC.comps.2.fuelGizmoLabel>남은 탄</Anty_RecycleTurretC.comps.2.fuelGizmoLabel>
+  <Anty_RecycleTurretC.comps.2.outOfFuelMessage>사격불가 : 탄약 없음</Anty_RecycleTurretC.comps.2.outOfFuelMessage>
+  <Gun_RecycleTurretC.label>재활용 포탑</Gun_RecycleTurretC.label>
+  <Gun_RecycleTurretC.description>시체나 환자, 게으른 개체가 들어간 포탑입니다. 가끔, 주변을 지나가는 개체들을 뚫어져라 쳐다보는 것 같은 느낌을 줍니다.</Gun_RecycleTurretC.description>
+  
+  <Anty_RecycleTurretD.label>재활용 포탑-방사장비</Anty_RecycleTurretD.label>
+  <Anty_RecycleTurretD.description>더 이상 싸울 수 없는 개체들을 재활용하여 만들어낸 자동 포탑입니다. 인원이 부족한 전선의 인원 보충, 기지의 방어 등 다방면으로 활용되는 포탑입니다. 게으른 개체가 사용되기도 합니다. 가끔, 주변을 지나가는 개체들을 뚫어져라 쳐다보는 것 같은 느낌을 줍니다.\n\n 접착탄을 발사합니다.</Anty_RecycleTurretD.description>
+  <Anty_RecycleTurretD.comps.2.fuelLabel>재장전까지 남은 탄</Anty_RecycleTurretD.comps.2.fuelLabel>
+  <Anty_RecycleTurretD.comps.2.fuelGizmoLabel>남은 탄</Anty_RecycleTurretD.comps.2.fuelGizmoLabel>
+  <Anty_RecycleTurretD.comps.2.outOfFuelMessage>사격불가 : 탄약 없음</Anty_RecycleTurretD.comps.2.outOfFuelMessage>
+  <Gun_RecycleTurretD.label>재활용 포탑</Gun_RecycleTurretD.label>
+  <Gun_RecycleTurretD.description>시체나 환자, 게으른 개체가 들어간 포탑입니다. 가끔, 주변을 지나가는 개체들을 뚫어져라 쳐다보는 것 같은 느낌을 줍니다.</Gun_RecycleTurretD.description>
+  
+  <AT_Wall.label>반 충격 벽</AT_Wall.label>
+  <AT_Wall.description>지나갈 수 없는 벽입니다. 지붕을 지지할 수 있습니다. 또한 충격을 구조 전체로 흘려보내기 때문에 폭발과 같은 큰 충격에 보다 강한 내구성을 지닙니다.\n\n하지만 한 곳에 집중적으로 가해지는 힘에는 약합니다.\n\nSOS 모드가 있을 경우 선체로 사용할 수 있습니다.</AT_Wall.description>
+  <AT_WallB.label>타액 벽</AT_WallB.label>
+  <AT_WallB.description>지나갈 수 없는 벽입니다. 지붕을 지지할 수 있습니다. 앤티들의 타액으로 흙을 대충 뭉쳐서 만든 것이기에 매우 약합니다.</AT_WallB.description>
+  <AntyAutodoor.label>반 충격 문</AntyAutodoor.label>
+  <AntyAutodoor.description>충격을 구조 전체로 흘려보내기 때문에 폭발과 같은 큰 충격에 보다 강한 내구성을 지닙니다.\n\n하지만 한 곳에 집중적으로 가해지는 힘에는 약합니다.</AntyAutodoor.description>
+
+  <AT_Chunk_A.label>외골격잔해(3H)</AT_Chunk_A.label>
+  <AT_Chunk_A.description>앤티들이 전장에서 조금이라도 더 보호를 제공받기 위해서 사용하는 외골격 더미입니다. 시간이 지나면 사라집니다.</AT_Chunk_A.description>
+  <AT_Barricade_A.label>리플리움 급조엄폐물(3H)</AT_Barricade_A.label>
+  <AT_Barricade_A.description>언제 상황이 급변할지 모르는 전장에서 앤티들이 적의 공격으로 부터 자신들을 보호하기 위해서 개발된 급조 엄폐물입니다. 시간이 지나면 사라집니다.</AT_Barricade_A.description>
+  
+  <AT_Superregenerationdevice.label>앤티 초재생장치</AT_Superregenerationdevice.label>
+  <AT_Superregenerationdevice.description>앤티들이 전장에서 부상당한 전사들을 다시금 전장에 투입하기 위해서 개발한 장치입니다. \n\n상처의 빠른 재생을 위해서 유기 조직이 신체 이곳 저곳을 돌아다니는 바람에 수술에는 적합하지 않습니다.</AT_Superregenerationdevice.description>
+  
+  <AT_TP_AMM.label>재활용 지뢰</AT_TP_AMM.label>
+  <AT_TP_AMM.description>멀리 떨어진 곳에서도 메카노이드를 감지하면 작동하는 지뢰입니다. 일반적인 방법으로도 작동합니다. \n\n 내부에는 응축된 레드버스트가 저장되어 있어, 메카노이드뿐만 아니라 모든 대상에게 치명적입니다.</AT_TP_AMM.description>
+  
+  <AntyExoskeleton.label>앤티 외골격</AntyExoskeleton.label>
+  <AntyExoskeleton.description>앤티의 외골격입니다. 단단하지만 감촉 자체는 사람의 피부와 같습니다. 신체에서 떨어지고 장시간이 지나도 외골격의 세포들은 휴면상태로 버틸 수 있습니다.\n\n외골격은 2중 구조로 이루어져 있는데, 외부는 비자성 금속으로, 내부는 키틴으로 구성되어 있습니다. 그리고 외부의 금속은 사람의 피부와 유사한 얇은 막으로 덮여 있습니다.</AntyExoskeleton.description>
+  
+  <Refleum.label>리플리움</Refleum.label>
+  <Refleum.description>앤티의 외골격을 기반으로 만들어진 금속입니다. 살아있는 금속이라고도 불리며, 만져보면 미약한 고동이 느껴집니다. 특수한 처리과정을 거치지 않고 가공하게 되면 생명체로써의 기능을 잃습니다.</Refleum.description>
+  
+  <Anty_Recyclecore.label>재활용코어</Anty_Recyclecore.label>
+  <Anty_Recyclecore.description>시체들을 이용해 만들어낸 유기물 관리 코어입니다.</Anty_Recyclecore.description>
+  <Mote_AcidBlast.label>Mote</Mote_AcidBlast.label>
+  <Mote_AcidSmoke.label>Mote</Mote_AcidSmoke.label>
+  
+  <AT_AcidRifle.label>산성 소총</AT_AcidRifle.label>
+  <AT_AcidRifle.description>앤티들이 체내에 저장해두는 산성 물질인 앤티산 더 멀리 쏘아낼 수 있게 해주는 현대식 무기의 초기형 입니다.\n\n노즐은 불안정하고 분사기의 출력도 저조해 그리 위력적이지 않습니다.</AT_AcidRifle.description>
+  <AT_AcidRifle.tools.0.label>손잡이</AT_AcidRifle.tools.0.label>
+  <AT_AcidRifle.tools.1.label>총열</AT_AcidRifle.tools.1.label>
+  <Bullet_AcidRifle.label>산성탄</Bullet_AcidRifle.label>
+  
+  <AT_AcidAssaultRifle.label>산성 돌격소총</AT_AcidAssaultRifle.label>
+  <AT_AcidAssaultRifle.description>앤티들이 체내에 저장해두는 산성 물질인 앤티산을 더 멀리, 많이 그리고 빠르게 쏘아낼 수 있게 해주는 무기입니다.\n\n초기형과는 달리 노즐 안정기와 압력 증폭장치를 장착해 사거리와 정확도 모두 우수합니다.</AT_AcidAssaultRifle.description>
+  <AT_AcidAssaultRifle.tools.0.label>손잡이</AT_AcidAssaultRifle.tools.0.label>
+  <AT_AcidAssaultRifle.tools.1.label>총열</AT_AcidAssaultRifle.tools.1.label>
+  
+  <AT_AcidLineRifle.label>산성 전열소총</AT_AcidLineRifle.label>
+  <AT_AcidLineRifle.description>앤티들이 체내에 저장해두는 산성 물질인 앤티산을 더 많이 그리고 빠르게 쏘아낼 수 있게 해주는 무기입니다. 전열과 후열 사이에 자리잡고 양쪽 모두를 지원하기 위해서 개발되었습니다.\n\n 근거리에서 효과적입니다.</AT_AcidLineRifle.description>
+  <AT_AcidLineRifle.tools.0.label>총열</AT_AcidLineRifle.tools.0.label>
+  
+  <AT_LMG.label>산성 경기관총</AT_LMG.label>
+  <AT_LMG.description>앤티들이 체내에 저장해두는 산성 물질인 앤티산을 더 많이 그리고 빠르게 쏘아낼 수 있게 해주는 무기입니다.\n\n 허나 연사력에 치중한 탓에 한 발의 위력은 떨어집니다.</AT_LMG.description>
+  <AT_LMG.tools.0.label>총열</AT_LMG.tools.0.label>
+  
+  <AT_AcidLauncher.label>산성 유탄발사기</AT_AcidLauncher.label>
+  <AT_AcidLauncher.description>앤티들이 체내에 저장해두는 산성 물질인 앤티산을 더 멀리, 더 넓게 쏘아낼 수 있게 해주는 무기입니다.\n\n중갑 대상과 다수에게 효과적입니다.</AT_AcidLauncher.description>
+  <AT_AcidLauncher.tools.0.label>개머리판</AT_AcidLauncher.tools.0.label>
+  <AT_AcidLauncher.tools.1.label>총열</AT_AcidLauncher.tools.1.label>
+  <BulletAcidLauncher.label>산성유탄</BulletAcidLauncher.label>
+  <AT_Combatglue.label>접착 유탄발사기</AT_Combatglue.label>
+  <AT_Combatglue.description>앤티들이 원거리 보병들을 적군의 근거리 보병으로부터 보호하기 위해서 사용하는 전투용 접착제를 발사하는 무기입니다. 앤티들은 이 접착제에 큰 영향을 받지 않습니다.</AT_Combatglue.description>
+  <AT_Combatglue.tools.0.label>개머리판</AT_Combatglue.tools.0.label>
+  <AT_Combatglue.tools.1.label>총열</AT_Combatglue.tools.1.label>
+  <BulletCombatglueLauncher.label>접착유탄</BulletCombatglueLauncher.label>
+  <Filth_AntyGlue.label>전투 접착제</Filth_AntyGlue.label>
+  <Filth_AntyAcid.label>앤티산</Filth_AntyAcid.label>
+  
+  <AT_hydroheliumion_A.label>레드버스트 소총</AT_hydroheliumion_A.label>
+  <AT_hydroheliumion_A.description>앤티들이 메카노이드 같이 장갑이 두텁거나 신체 자체가 강인한 대상을 상대하기 위해서 개발한 무기입니다.\n\n 기존의 산성 무기들과는 달리, 앤티산이 아닌 앤티산과 리플리움의 화합물인 레드버스트를 발사하여 더욱 강력한 위력을 발휘합니다.\n\n 가장 보편적인 형태의 레드버스트 무기입니다.</AT_hydroheliumion_A.description>
+  <AT_hydroheliumion_A.tools.0.label>노즐</AT_hydroheliumion_A.tools.0.label>
+  <Bullethydroheliumion.label>레드버스트탄</Bullethydroheliumion.label>
+  <Filth_ApproachSmoke_B.label>산화 리플리움 가스</Filth_ApproachSmoke_B.label>
+  
+  <AT_hydroheliumion_B.label>레드버스트 전열소총</AT_hydroheliumion_B.label>
+  <AT_hydroheliumion_B.description>앤티들이 메카노이드 같이 장갑이 두텁거나 신체 자체가 강인한 대상을 상대하기 위해서 개발한 무기입니다.\n\n 기존의 산성 무기들과는 달리, 앤티산이 아닌 앤티산과 리플리움의 화합물인 레드버스트를 발사하여 더욱 강력한 위력을 발휘합니다.\n\n 불안정하게 방사하는 노즐 탓에 사거리가 짧지만 긴 사거리를 필요로 하지 않는 시가전에서 유용합니다. 또한 강력한 근접전 위력을 가지고 있기에 적과 백병전을 벌이더라도 문제가 없습니다.\n\n 강력한 EMP기능을 탑재하고 있습니다.</AT_hydroheliumion_B.description>
+  <AT_hydroheliumion_B.tools.0.label>노즐</AT_hydroheliumion_B.tools.0.label>
+  <Bullethydroheliumion_B.label>레드버스트탄</Bullethydroheliumion_B.label>
+  
+  <AT_hydroheliumion_C.label>레드버스트 방사기</AT_hydroheliumion_C.label>
+  <AT_hydroheliumion_C.description>앤티들이 메카노이드 같이 장갑이 두텁거나 신체 자체가 강인한 대상을 상대하기 위해서 개발한 무기입니다.\n\n 기존의 산성 무기들과는 달리, 앤티산이 아닌 앤티산과 리플리움의 화합물인 레드버스트를 발사하여 더욱 강력한 위력을 발휘합니다.\n\n 광범위한 레드버스트 폭발을 일으키는 무기입니다. 움직이지 않고 고정되거나 다수의 적에게 효과적입니다.</AT_hydroheliumion_C.description>
+  <AT_hydroheliumion_C.tools.0.label>노즐</AT_hydroheliumion_C.tools.0.label>
+  <Bullethydroheliumion_C.label>레드버스트탄</Bullethydroheliumion_C.label>
+  <Bullethydroheliumion_C_B.label>레드버스트탄</Bullethydroheliumion_C_B.label>
+
+  <AT_hydroheliumion_D.label>리플리움 가스 방사기</AT_hydroheliumion_D.label>
+  <AT_hydroheliumion_D.description>앤티들이 안정적인 전열공격지원을 위해서 개발한 무기입니다, 다른 레드버스트 무기들과는 다르게 메카노이드 들에게는 효과적이지 않습니다.\n\n산화 리플리움 가스는 앤티들에게 해롭지 않지만, 다른 종족들에게는 위협적입니다.\n\n※다른 종족이 사용할 경우, 사용자도 피해를 받습니다.</AT_hydroheliumion_D.description>
+  <AT_hydroheliumion_D.tools.0.label>노즐</AT_hydroheliumion_D.tools.0.label>
+  <Bullethydroheliumion_D.label>산화 리플리움 가스</Bullethydroheliumion_D.label>
+  <Filth_ApproachSmoke_A.label>산화 리플리움 가스</Filth_ApproachSmoke_A.label>
+  
+  <AT_RedHalberd.label>레드버스트 할버드</AT_RedHalberd.label>
+  <AT_RedHalberd.description>충격시 레드버스트를 쏟아내는 레드버스트 방출기가 내장된 할버드입니다. 방출기와 직접 연결된 창날에 찔리게 되면 대량의 레드버스트를 주입당할 수 있습니다.\n\n 강력한 EMP기능을 탑재하고 있습니다.</AT_RedHalberd.description>
+  <AT_RedHalberd.tools.0.label>도끼</AT_RedHalberd.tools.0.label>
+  <AT_RedHalberd.tools.1.label>창</AT_RedHalberd.tools.1.label>
+  <AT_RedHalberd.tools.2.label>갈고리</AT_RedHalberd.tools.2.label>
+  
+  <AT_Apparel_CombatSmoke.label>리플리움 가스팩</AT_Apparel_CombatSmoke.label>
+  <AT_Apparel_CombatSmoke.description>앤티들이 전장에서 적들의 이동과 시야를 확실하게 억제하기 위해서 개발한 장비입니다.</AT_Apparel_CombatSmoke.description>
+  <BulletCombatSmokeLauncher.label>리플리움 가스 유탄</BulletCombatSmokeLauncher.label>
+  <AT_Apparel_CombatSmoke.comps.CompReloadable.chargeNoun>리플리움 가스 유탄</AT_Apparel_CombatSmoke.comps.CompReloadable.chargeNoun>
+  <AT_Apparel_CombatSmoke.verbs.0.label>리플리움 가스팩 발사</AT_Apparel_CombatSmoke.verbs.0.label>
+  
+  <AT_Apparel_pheromone_TP.label>지정페로몬 킷</AT_Apparel_pheromone_TP.label>
+  <AT_Apparel_pheromone_TP.description>앤티 지휘관들이 병사들에게 공격 지시를 내릴 때 사용하는 장비입니다.</AT_Apparel_pheromone_TP.description>
+  <AT_BulletTargetingLauncher.label>지정유탄</AT_BulletTargetingLauncher.label>
+  <AT_Apparel_pheromone_TP.comps.CompReloadable.chargeNoun>지정페로몬</AT_Apparel_pheromone_TP.comps.CompReloadable.chargeNoun>
+  <AT_Apparel_pheromone_TP.verbs.0.label>지정페로몬 발사</AT_Apparel_pheromone_TP.verbs.0.label>
+  
+  
+  <AT_Apparel_chunk.label>외골격잔해 킷</AT_Apparel_chunk.label>
+  <AT_Apparel_chunk.description>앤티들이 전장에서 조금이라도 더 보호를 제공받기 위해서 사용하는 외골격 더미입니다. 시간이 지나면 사라집니다.</AT_Apparel_chunk.description>
+  <AT_Bulletchunk.label>외골격잔해 설치기</AT_Bulletchunk.label>
+  <AT_Apparel_chunk.comps.CompReloadable.chargeNoun>외골격잔해</AT_Apparel_chunk.comps.CompReloadable.chargeNoun>
+  <AT_Apparel_chunk.verbs.0.label>외골격잔해 발사</AT_Apparel_chunk.verbs.0.label>
+  
+  <AT_Apparel_barricade.label>급조엄폐물 킷</AT_Apparel_barricade.label>
+  <AT_Apparel_barricade.description>언제 상황이 급변할지 모르는 전장에서 앤티들이 적의 공격으로부터 자신들을 보호하기 위해서 개발된 급조 엄폐물입니다. 시간이 지나면 사라집니다.</AT_Apparel_barricade.description>
+  <AT_Bulletbarricade.label>급조엄폐물 설치기</AT_Bulletbarricade.label>
+  <AT_Apparel_barricade.comps.CompReloadable.chargeNoun>급조엄폐물</AT_Apparel_barricade.comps.CompReloadable.chargeNoun>
+  <AT_Apparel_barricade.verbs.0.label>급조엄폐물 발사</AT_Apparel_barricade.verbs.0.label>
+  
+  <AT_Sickle.label>앤티 낫</AT_Sickle.label>
+  <AT_Sickle.description>앤티들이 사용하는 조금 큰 낫입니다.</AT_Sickle.description>
+  <AT_Sickle.tools.0.label>칼날</AT_Sickle.tools.0.label>
+  <AT_Sickle.tools.1.label>손잡이</AT_Sickle.tools.1.label>
+  <AT_Halberd.label>앤티 할버드</AT_Halberd.label>
+  <AT_Halberd.description>앤티 전사들이 전장에서 즐겨 쓰는 할버드입니다. 도끼날은 종종 앤티들의 그림판이 되곤 합니다.</AT_Halberd.description>
+  <AT_Halberd.tools.0.label>도끼</AT_Halberd.tools.0.label>
+  <AT_Halberd.tools.1.label>창</AT_Halberd.tools.1.label>
+  <AT_Halberd.tools.2.label>갈고리</AT_Halberd.tools.2.label>
+  <AT_Hammer.label>앤티 망치</AT_Hammer.label>
+  <AT_Hammer.description>앤티 전사들이 전장에서 즐겨 쓰는 해머 입니다. 평상시에는 환자나 포로들의 머리를 깰 때에 사용됩니다.</AT_Hammer.description>
+  <AT_Hammer.tools.0.label>망치</AT_Hammer.tools.0.label>
+  <AT_AcidCross.label>산성 쇠뇌</AT_AcidCross.label>
+  <AT_AcidCross.description>앤티들이 체내에 저장해두는 산성 물질인 앤티산을 바른 화살을 쏘아냅니다. 평소에도 앤티산을 발라둔다면 화살촉이 녹아버리기에 발사시에 일일히 발라서 발사합니다.</AT_AcidCross.description>
+  <AT_AcidCross.tools.0.label>손잡이</AT_AcidCross.tools.0.label>
+  <AT_Aicdbolt.label>산성 화살</AT_Aicdbolt.label>
+  
+  <AT_PP_S.label>앤티 X-전쟁 선물상자</AT_PP_S.label>
+  <AT_PP_S.tools.0.label>상자 모서리</AT_PP_S.tools.0.label>
+  <Bullet_PP_A.label>선물상자</Bullet_PP_A.label>
+  
+  <Anty_pheromone.label>앤티 페로몬 팩</Anty_pheromone.label>
+  <Anty_pheromone.description>농축된 앤티들의 페로몬을 점막으로 포장한 것입니다.</Anty_pheromone.description>
+  
+  <Antypheromone_Charge.label>앤티 돌격 페로몬</Antypheromone_Charge.label>
+  <Antypheromone_Charge.description>앤티들이 돌격시에 내뿜는 페로몬을 농축하여 만들어낸 흡입제입니다. 흡입시 체내에서도 대량의 돌격 페로몬이 뿜어져 나오며, 근접 전투능력이 비약적으로 상승합니다. 주변의 프로티들도 영향을 받습니다.\n\n 유충들은 페로몬 흡입제의 강력한 자극을 견딜 수 없습니다.</Antypheromone_Charge.description>
+  <Antypheromone_Charge.ingestible.ingestCommandString>{0} 흡입</Antypheromone_Charge.ingestible.ingestCommandString>
+  <Antypheromone_Charge.ingestible.ingestReportString>{0} 흡입중</Antypheromone_Charge.ingestible.ingestReportString>
+  
+  <Antypheromone_Shooting.label>앤티 사격 페로몬</Antypheromone_Shooting.label>
+  <Antypheromone_Shooting.description>앤티들이 사격시에 내뿜는 페로몬을 농축하여 만들어낸 흡입제입니다. 흡입시 체내에서도 대량의 사격 페로몬이 뿜어져 나오며, 사격능력이 비약적으로 상승합니다.</Antypheromone_Shooting.description>
+  <Antypheromone_Shooting.ingestible.ingestCommandString>{0} 흡입</Antypheromone_Shooting.ingestible.ingestCommandString>
+  <Antypheromone_Shooting.ingestible.ingestReportString>{0} 흡입중</Antypheromone_Shooting.ingestible.ingestReportString>
+  
+  <Antypheromone_Suicide.label>앤티 자폭 페로몬</Antypheromone_Suicide.label>
+  <Antypheromone_Suicide.description>앤티들의 산성주머니를 극단적으로 자극하는 페로몬입니다. 이 페로몬을 흡입한 앤티들은 강력한 레드버스트 폭발을 일으킵니다. 주변의 프로티들도 영향을 받습니다.\n\n 유충들은 페로몬 흡입제의 강력한 자극을 견딜 수 없습니다.</Antypheromone_Suicide.description>
+  <Antypheromone_Suicide.ingestible.ingestCommandString>{0} 흡입</Antypheromone_Suicide.ingestible.ingestCommandString>
+  <Antypheromone_Suicide.ingestible.ingestReportString>{0} 흡입중</Antypheromone_Suicide.ingestible.ingestReportString>
+  
+  <AT_Reinforcedexoskeleton_Thing.label>앤티 강화 외골격</AT_Reinforcedexoskeleton_Thing.label>
+  <AT_Reinforcedexoskeleton_Thing.description>리플리움으로 만들어진 앤티의 강화 외골격 입니다. 기존의 외골격과 유기적인 결합을 이루어 아무런 불편함 없이 행동할 수 있으면서도 놀라운 방어성능을 지니고 있습니다.</AT_Reinforcedexoskeleton_Thing.description>
+  
+  <AT_Aphidextract.label>진액</AT_Aphidextract.label>
+  <AT_Aphidextract.description>고농도의 영양분을 함유하고 있는 진액입니다. 영양젤리의 영향으로 여전히 유전자 변형물질의 성질을 가지고 있습니다.</AT_Aphidextract.description>
+  
+  <Shell_AT_glueBomb.label>접착탄</Shell_AT_glueBomb.label>
+  <Shell_AT_glueBomb.description>앤티들이 원거리 보병들을 적군의 근거리 보병으로부터 보호하기 위해서 사용하는 전투용 접착제를 발사하는 무기입니다. 앤티들은 이 접착제에 큰 영향을 받지 않습니다.</Shell_AT_glueBomb.description>
+  <Bullet_Shell_AT_glueBomb.label>접착탄</Bullet_Shell_AT_glueBomb.label>
+  
+  <AT_SuicideBomb.label>자폭</AT_SuicideBomb.label>
+  <AT_SporeBomb.label>포자 방출</AT_SporeBomb.label>
+
+  <ProtyGum.label>프로티 껌</ProtyGum.label>
+  <ProtyGum.description>배고픈 프로티들로 가득한 방에 포로를 가두었을 때 프로티들이 포로를 하루 종일 물어뜯는 것을 보고 앤티들이 고안해낸 프로티용 음식입니다.\n말린 가죽을 튀겨 만든 것으로, 뭐든지 씹으려고 하는 프로티들을 조금이나마 억제할 수 있습니다.</ProtyGum.description>
+
+  <AT_Proty_spawner.label>프로티 유도 페로몬 사출기</AT_Proty_spawner.label>
+  <AT_Proty_spawner.description>지하의 땅굴망에서 대기중인 프로티들에게 신호를 보내는 무기입니다.\n\n보안을 위해 자동 파괴장치가 내장되어 있습니다.</AT_Proty_spawner.description>
+  <AT_Proty_spaBulletProtyspawnerwner.label>프로티 유도 페로몬</AT_Proty_spaBulletProtyspawnerwner.label>
+
+  <AT_Proty_spawner_Tunnel.label>프로티 유도 페로몬</AT_Proty_spawner_Tunnel.label>
+  <AT_Proty_spawner_Tunnel.description>지하의 땅굴망에서 대기중인 프로티들에게 신호를 보내는 장치입니다.</AT_Proty_spawner_Tunnel.description>
+
+  <AT_Proty_spawner_Tunnel_Open.label>프로티 땅굴</AT_Proty_spawner_Tunnel_Open.label>
+  <AT_Proty_spawner_Tunnel_Open.description>지하의 땅굴망에서 대기중이던 프로티들이 빠져나온 구멍입니다.</AT_Proty_spawner_Tunnel_Open.description>
+
+  <AntyTransitionRefleum_Thing.label>변이 리플리움</AntyTransitionRefleum_Thing.label>
+  <AntyTransitionRefleum_Thing.description>앤티의 몸 안에서 영양분과 극히 일부의 유전자를 얻은 리플리움 입니다.\n\n이제는 금속보다 생명체에 더 가까우며, 영양분만 공급이 된다면 무작위성 변이를 일으키는 종양덩어리라고 볼 수도 있습니다.\n\n변이 리플리움은 강력한 전염성을 가지고 있으며 근처에만 가도 전염될 수 있습니다.</AntyTransitionRefleum_Thing.description>
+  <AntyTransitionRefleum_Thing.comps.1.useLabel>먹기</AntyTransitionRefleum_Thing.comps.1.useLabel>
+
+  <AntyTransitionRefleum_Thing_Test.label>실험형 변이 리플리움</AntyTransitionRefleum_Thing_Test.label>
+  <AntyTransitionRefleum_Thing_Test.description>앤티의 몸 안에서 영양분과 극히 일부의 유전자를 얻은 리플리움 입니다.\n\n이제는 금속보다 생명체에 더 가까우며, 영양분만 공급이 된다면 무작위성 변이를 일으키는 종양덩어리라고 볼 수도 있습니다.\n\n변이 리플리움은 강력한 전염성을 가지고 있으며 근처에만 가도 전염될 수 있습니다.</AntyTransitionRefleum_Thing_Test.description>
+  <AntyTransitionRefleum_Thing_Test.comps.1.useLabel>먹기</AntyTransitionRefleum_Thing_Test.comps.1.useLabel>
+
+  <AT_ChargeBomb_Ready_Proty.label>페로몬 폭발</AT_ChargeBomb_Ready_Proty.label>
+  <AT_SuicideBomb_Ready_Proty.label>페로몬 폭발</AT_SuicideBomb_Ready_Proty.label>
+
+  <AT_Apparel_bunker.label>급조 T-벙커 킷</AT_Apparel_bunker.label>
+  <AT_Apparel_bunker.description>언제 상황이 급변할지 모르는 전장에서 앤티들이 적의 공격으로부터 자신들을 보호하기 위해서 개발된 급조 엄폐물입니다. 시간이 지나면 사라집니다.</AT_Apparel_bunker.description>
+  <AT_Apparel_bunker.comps.CompReloadable.chargeNoun>T-벙커</AT_Apparel_bunker.comps.CompReloadable.chargeNoun>
+  <AT_Apparel_bunker.verbs.0.label>T-벙커 발사</AT_Apparel_bunker.verbs.0.label>
+
+  <AT_Apparel_orbitalbombardment.label>앤티 궤도폭격 킷</AT_Apparel_orbitalbombardment.label>
+  <AT_Apparel_orbitalbombardment.description>행성 궤도에서 대기 중인 앤티 함대에게 궤도 폭격을 요청하는 신호를 보낼 수 있는 장치입니다.\n\n범위 내의 모든 목표는 폭격을 당하지만 건물은 대상이 되지 않습니다.</AT_Apparel_orbitalbombardment.description>
+  <AT_Apparel_orbitalbombardment.comps.CompReloadable.chargeNoun>재활용코어</AT_Apparel_orbitalbombardment.comps.CompReloadable.chargeNoun>
+  <AT_Apparel_orbitalbombardment.verbs.0.label>궤도폭격 유도</AT_Apparel_orbitalbombardment.verbs.0.label>
+
+  <Anty_prototype_Wild.label>야생 프로티</Anty_prototype_Wild.label>
+  <Anty_prototype_Wild.description>프로젝트 초기에 만들어졌던 앤티들의 조상입니다. 현재의 앤티들과는 달리 인간보다는 개미에 더 가까우며 그만큼 지능이 떨어져 자세한 지시를 이해할 수 없습니다.\n\n앤티들이 실험실을 탈출할 무렵에 페로몬에 이끌려 군체에 합류하게 되었습니다. 앤티들이 의도한 것은 아니었지만 앤티들은 프로티들이 강아지 같고 맛있다며 좋아했습니다.\n\n프로티의 신장은 평균 95cm로 인간형, 개미형 모두 동일합니다.\n\n앤티들의 영향권에서 벗어나, 독자적으로 진화중인 개체입니다. 일반적인 프로티보다 조금 더 똑똑합니다.</Anty_prototype_Wild.description>
+  <Anty_prototype_Wild.tools.0.label>큰 턱</Anty_prototype_Wild.tools.0.label>
+  <Anty_prototype_Wild.tools.1.label>머리</Anty_prototype_Wild.tools.1.label>
+
+  <AT_RandomBox.label>흙뭉치</AT_RandomBox.label>
+  <AT_RandomBox.description>프로티들이 먹을 수 없는 물건을 넣어둔 흙뭉치입니다.</AT_RandomBox.description>
+  <AT_RandomBox.comps.CompUsable.useLabel>열어보기</AT_RandomBox.comps.CompUsable.useLabel>
+
+
+  <ShipTurret_AT_Redburst.label>레드버스트 함포</ShipTurret_AT_Redburst.label>
+  <ShipTurret_AT_Redburst.description>레드버스트 포탑입니다. 단거리 무장이지만 괴멸적인 피해를 줄 수 있습니다.\n\n발사시 저장된 열을 방출합니다.</ShipTurret_AT_Redburst.description>
+  <ShipTurret_AT_RedburstTOP.label>레드버스트 함포</ShipTurret_AT_RedburstTOP.label>
+  <ShipTurret_AT_RedburstTOP.description>레드버스트 포탑입니다. 단거리 무장이지만 괴멸적인 피해를 줄 수 있습니다.\n\n발사시 저장된 열을 방출합니다.</ShipTurret_AT_RedburstTOP.description>
+  <Proj_AT_Redburst.label>레드버스트</Proj_AT_Redburst.label>
+
+  <ShipTurret_AT_Redburst_Large.label>대형 레드버스트 함포</ShipTurret_AT_Redburst_Large.label>
+  <ShipTurret_AT_Redburst_Large.description>레드버스트 포탑입니다. 단거리 무장이지만 괴멸적인 피해를 줄 수 있습니다.\n\n발사시 저장된 열을 방출합니다.</ShipTurret_AT_Redburst_Large.description>
+  <ShipTurret_AT_Redburst_LargeTOP.label>대형 레드버스트 함포</ShipTurret_AT_Redburst_LargeTOP.label>
+  <ShipTurret_AT_Redburst_LargeTOP.description>레드버스트 포탑입니다. 단거리 무장이지만 괴멸적인 피해를 줄 수 있습니다.\n\n발사시 저장된 열을 방출합니다.</ShipTurret_AT_Redburst_LargeTOP.description>
+  <Proj_AT_Redburst_Large.label>레드버스트 함포</Proj_AT_Redburst_Large.label>
+
+  <ShipTurret_AT_Redburst_XLarge.label>초대형 레드버스트 함포</ShipTurret_AT_Redburst_XLarge.label>
+  <ShipTurret_AT_Redburst_XLarge.description>레드버스트 포탑입니다. 단거리 무장이지만 괴멸적인 피해를 줄 수 있습니다.\n\n발사시 저장된 열을 방출합니다.</ShipTurret_AT_Redburst_XLarge.description>
+  <ShipTurret_AT_Redburst_XLargeTOP.label>초대형 레드버스트 함포</ShipTurret_AT_Redburst_XLargeTOP.label>
+  <ShipTurret_AT_Redburst_XLargeTOP.description>레드버스트 포탑입니다. 단거리 무장이지만 괴멸적인 피해를 줄 수 있습니다.\n\n발사시 저장된 열을 방출합니다.</ShipTurret_AT_Redburst_XLargeTOP.description>
+  <Proj_AT_Redburst_XLarge.label>레드버스트</Proj_AT_Redburst_XLarge.label>
+  
+  <ShipTurret_AT_Redburst_Large_Charge.label>장거리 레드버스트 함포</ShipTurret_AT_Redburst_Large_Charge.label>
+  <ShipTurret_AT_Redburst_Large_Charge.description>레드버스트 포탑입니다.\n\n방열판에 열을 저장할 수 없다면 통풍구나 주변 방에 열을 방출합니다.</ShipTurret_AT_Redburst_Large_Charge.description>
+  <ShipTurret_AT_RedburstTOP_Large_Charge.label>레드버스트 함포</ShipTurret_AT_RedburstTOP_Large_Charge.label>
+  <ShipTurret_AT_RedburstTOP_Large_Charge.description>레드버스트 포탑입니다. 단거리 무장이지만 괴멸적인 피해를 줄 수 있습니다.\n\n방열판에 열을 저장할 수 없다면 통풍구나 주변 방에 열을 방출합니다.</ShipTurret_AT_RedburstTOP_Large_Charge.description>
+  <Proj_AT_Redburst_Large_Charge.label>레드버스트</Proj_AT_Redburst_Large_Charge.label>
+
+  <AT_Wall_Ship_Corner_OneOne.label>앤티 반응장갑 선체 코너(1x1)</AT_Wall_Ship_Corner_OneOne.label>
+  <AT_Wall_Ship_Corner_OneOne.description>치명적인 피해를 받았을 때, 폭발하면서 리플리움 가스를 방출해 추가 피해를 방지합니다.</AT_Wall_Ship_Corner_OneOne.description>
+  
+  <AT_Wall_Ship_Corner_OneOneFlip.label>앤티 반응장갑 선체 코너(1x1)대칭</AT_Wall_Ship_Corner_OneOneFlip.label>
+  <AT_Wall_Ship_Corner_OneOneFlip.description>치명적인 피해를 받았을 때, 폭발하면서 리플리움 가스를 방출해 추가 피해를 방지합니다.</AT_Wall_Ship_Corner_OneOneFlip.description>
+  
+  <AT_Wall_Ship_Corner_OneTwo.label>앤티 반응장갑 선체 코너(1x2)</AT_Wall_Ship_Corner_OneTwo.label>
+  <AT_Wall_Ship_Corner_OneTwo.description>치명적인 피해를 받았을 때, 폭발하면서 리플리움 가스를 방출해 추가 피해를 방지합니다.</AT_Wall_Ship_Corner_OneTwo.description>
+  
+  <AT_Wall_Ship_Corner_OneTwoFlip.label>앤티 반응장갑 선체 코너(1x2)대칭</AT_Wall_Ship_Corner_OneTwoFlip.label>
+  <AT_Wall_Ship_Corner_OneTwoFlip.description>치명적인 피해를 받았을 때, 폭발하면서 리플리움 가스를 방출해 추가 피해를 방지합니다.</AT_Wall_Ship_Corner_OneTwoFlip.description>
+  
+  <AT_Wall_Ship_Corner_OneThree.label>앤티 반응장갑 선체 코너(1x3)</AT_Wall_Ship_Corner_OneThree.label>
+  <AT_Wall_Ship_Corner_OneThree.description>치명적인 피해를 받았을 때, 폭발하면서 리플리움 가스를 방출해 추가 피해를 방지합니다.</AT_Wall_Ship_Corner_OneThree.description>
+  
+  <AT_Wall_Ship_Corner_OneThreeFlip.label>앤티 반응장갑 선체 코너(1x3)대칭</AT_Wall_Ship_Corner_OneThreeFlip.label>
+  <AT_Wall_Ship_Corner_OneThreeFlip.description>치명적인 피해를 받았을 때, 폭발하면서 리플리움 가스를 방출해 추가 피해를 방지합니다.</AT_Wall_Ship_Corner_OneThreeFlip.description>
+
+  <AT_Ship_ComputerCore.label>앤티 함선 코어</AT_Ship_ComputerCore.label>
+  <AT_Ship_ComputerCore.description>함선의 성간 여행을 안내할 수 있는 인공자아가 들어있는 컴퓨터 핵입니다. 궤도에 진입할 경우, 자동으로 궤도 지역을 탐사합니다. 부품 하나만 얹으면...다른 게 될 수도 있죠.</AT_Ship_ComputerCore.description>
+
+  <AT_Ship_Engine_Small.label>소형 레드버스트 엔진</AT_Ship_Engine_Small.label>
+  <AT_Ship_Engine_Small.description>함선을 궤도로 진입시킬 수 있는 레드버스트 기반의 엔진입니다. 성간 여행에는 적합하지 않습니다.</AT_Ship_Engine_Small.description>
+
+  <AT_Ship_Engine.label>레드버스트 엔진</AT_Ship_Engine.label>
+  <AT_Ship_Engine.description>함선을 궤도로 진입시킬 수 있는 레드버스트 기반의 엔진입니다. 성간 여행에는 적합하지 않습니다.</AT_Ship_Engine.description>
+
+  <AT_Ship_Engine_Large.label>대형 레드버스트 엔진</AT_Ship_Engine_Large.label>
+  <AT_Ship_Engine_Large.description>함선을 궤도로 진입시킬 수 있는 레드버스트 기반의 엔진입니다. 성간 여행에는 적합하지 않습니다.</AT_Ship_Engine_Large.description>
+  
+  <AT_AP_Space_Breathing.label>앤티 우주 호흡장치</AT_AP_Space_Breathing.label>
+  <AT_AP_Space_Breathing.description>앤티들이 우주에서 호흡할 수 있도록 해주는 장치입니다.\n앤티, 앤티 변이체에게 유효합니다.\n착용시 얇은 막이 전신을 덮어 우주로부터 신체를 보호합니다.</AT_AP_Space_Breathing.description>
+
+  <Anty_breeding_Spot.label>앤티 번식장</Anty_breeding_Spot.label>
+  <Anty_breeding_Spot.description>앤티들이 알을 낳거나 페로몬 팩을 만드는 장소입니다.</Anty_breeding_Spot.description>
+
+  <At_Aphidfarm.label>진딧물 농장</At_Aphidfarm.label>
+  <At_Aphidfarm.description>메카나이트와 유사한 형태의 진딧물들로 유용한 자원인 진액을 생산합니다.</At_Aphidfarm.description>
+
+  <EggAnty.label>앤티 알</EggAnty.label>
+  <EggAnty.description>앤티의 알입니다.</EggAnty.description>
+
+  <UnfinishedAntyEgg.label>점액 덩어리</UnfinishedAntyEgg.label>
+  <UnfinishedAntyEgg.description>점액 덩어리.</UnfinishedAntyEgg.description>
+  
+  <Antypheromone_Charge_Fix.label>앤티 돌격 페로몬</Antypheromone_Charge_Fix.label>
+  <Antypheromone_Charge_Fix.description>앤티들이 돌격시에 내뿜는 페로몬을 농축하여 만들어낸 흡입제입니다. 흡입시 체내에서도 대량의 돌격 페로몬이 뿜어져 나오며, 근접 전투능력이 비약적으로 상승합니다.</Antypheromone_Charge_Fix.description>
+  <Antypheromone_Charge_Fix.ingestible.ingestCommandString>{0} 흡입</Antypheromone_Charge_Fix.ingestible.ingestCommandString>
+  <Antypheromone_Charge_Fix.ingestible.ingestReportString>{0} 흡입중</Antypheromone_Charge_Fix.ingestible.ingestReportString>
+
+  <At_TransitionRefleumincubator.label>변이 리플리움 배양기</At_TransitionRefleumincubator.label>
+  <At_TransitionRefleumincubator.description>리플리움을 기반으로 질병 위험이 있는 변이 리플리움을 배양할 수 있는 장치입니다.</At_TransitionRefleumincubator.description>
+
+  <AT_EggDreadnought.label>앤티 드레드노트 고치</AT_EggDreadnought.label>
+  <AT_EggDreadnought.description>앤티 드레드노트의 고치입니다.</AT_EggDreadnought.description>
+
+  <AT_EggHiveguard.label>앤티 하이브가드 고치</AT_EggHiveguard.label>
+  <AT_EggHiveguard.description>앤티 하이브가드의 고치입니다.</AT_EggHiveguard.description>
+  
+  <AT_EggTriJaw.label>앤티 트라이조 고치</AT_EggTriJaw.label>
+  <AT_EggTriJaw.description>앤티 트라이조의 고치입니다.</AT_EggTriJaw.description>
+  <AT_SuperAcidLaser.label>레드버스트 레이저</AT_SuperAcidLaser.label>
+  <AT_SuperAcidLaser.description>강력한 레드버스트 무기입니다. 최대 2명을 공격할 수 있습니다.</AT_SuperAcidLaser.description>
+  
+  <EggAnty_Dorylus.label>앤티 도릴루스 알</EggAnty_Dorylus.label>
+  <EggAnty_Dorylus.description>앤티 도릴루스의 알입니다.</EggAnty_Dorylus.description>
+  <EggAnty_Linepithema_humile.label>앤티 라인피테마 알</EggAnty_Linepithema_humile.label>
+  <EggAnty_Linepithema_humile.description>앤티 라인피테마의 알입니다.</EggAnty_Linepithema_humile.description>
+  <EggAnty_Solenopsis_Invicta.label>앤티 솔레놉시스 알</EggAnty_Solenopsis_Invicta.label>
+  <EggAnty_Solenopsis_Invicta.description>앤티 솔레놉시스의 알입니다.</EggAnty_Solenopsis_Invicta.description>
+  <EggAnty_Anoplolepis_gracilipes.label>앤티 아노플로레피스 알</EggAnty_Anoplolepis_gracilipes.label>
+  <EggAnty_Anoplolepis_gracilipes.description>앤티 아노플로레피스의 알입니다.</EggAnty_Anoplolepis_gracilipes.description>
+  <EggAnty_Tapinoma_melanocephalum.label>앤티 타피노마 알</EggAnty_Tapinoma_melanocephalum.label>
+  <EggAnty_Tapinoma_melanocephalum.description>앤티 타피노마의 알입니다.</EggAnty_Tapinoma_melanocephalum.description>
+  
+  <Anty_swarmy.label>스워미</Anty_swarmy.label>
+  <Anty_swarmy.description>변이 리플리움으로 만들어낸 변종 프로티입니다.\n번식 능력을 잃은 대신에, 원거리 공격 능력을 가지게 되었습니다.</Anty_swarmy.description>
+  <Anty_swarmy.tools.0.label>큰 턱</Anty_swarmy.tools.0.label>
+  <Anty_swarmy.tools.1.label>머리</Anty_swarmy.tools.1.label>
+  <AT_Eggswarmy.label>스워미 알</AT_Eggswarmy.label>
+  <AT_Eggswarmy.description>스워미의 알입니다.</AT_Eggswarmy.description>
+  
+  <AT_AcidRifle_swarmy.label>스워미 산</AT_AcidRifle_swarmy.label>
+  <AT_AcidRifle_swarmy.description>스워미 산.</AT_AcidRifle_swarmy.description>
+
+  <Anty_Generestorationcapsule.label>유전자 복원 캡슐</Anty_Generestorationcapsule.label>
+  <Anty_Generestorationcapsule.description>유전자 팩을 섞어서 만든 유전자 복원제입니다.</Anty_Generestorationcapsule.description>
+
+  <AT_Filth_BloodSmear.label>체액</AT_Filth_BloodSmear.label>
+</LanguageData>
